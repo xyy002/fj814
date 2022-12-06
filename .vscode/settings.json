@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "INCLUDES.H": "cpp",
+        "CHIPINIT.C": "cpp",
+        "SUB.H": "cpp",
+        "TOUCH.H": "cpp"
+    }
+}

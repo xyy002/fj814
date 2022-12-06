@@ -1,0 +1,7 @@
+头 低500us 高1ms  8位数据
+
+Hbit = 125L+375H
+Lbit = 125L+125H
+
+HEAT_L  HEAT_H    DATA_L    DATA_H   END L
+500US    1MS      125US     375US       125US   

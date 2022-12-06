@@ -1,0 +1,576 @@
+[p PRO_MODE GLOBOPT AUTOSTATIC RSC14 RSC14E SPACEOPT ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip FT62F08X ]
+[d frameptr 6 ]
+"29 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+[e E3603 . `uc
+DsSty 0
+DsMode 1
+DsStrong 2
+DsHeat 3
+DsManual 4
+DsTime 5
+]
+"68
+[e E3620 . `uc
+Mode0 0
+Mode1 1
+Mode2 2
+Mode3 3
+Mode4 4
+Mode5 5
+]
+"671 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+[e E3610 . `uc
+NullKey 0
+PowerKey 1
+ModeKey 2
+SizeKey 3
+HeatKey 4
+StrongKey 5
+ManualKey 6
+TimeKey 7
+TestKey 8
+]
+"672
+[e E3603 . `uc
+DsSty 0
+DsMode 1
+DsStrong 2
+DsHeat 3
+DsManual 4
+DsTime 5
+]
+"65 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+[e E3610 . `uc
+NullKey 0
+PowerKey 1
+ModeKey 2
+SizeKey 3
+HeatKey 4
+StrongKey 5
+ManualKey 6
+TimeKey 7
+TestKey 8
+]
+"40 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+[e E3738 . `uc
+cmd_pwr 0
+cmd_mode 1
+cmd_str 2
+cmd_heat 3
+cmd_Manual 4
+cmd_Time 5
+]
+"63
+[e E3610 . `uc
+NullKey 0
+PowerKey 1
+ModeKey 2
+SizeKey 3
+HeatKey 4
+StrongKey 5
+ManualKey 6
+TimeKey 7
+TestKey 8
+]
+"211
+[e E3603 . `uc
+DsSty 0
+DsMode 1
+DsStrong 2
+DsHeat 3
+DsManual 4
+DsTime 5
+]
+"5 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+[v _exact_event_process exact_event_process `(v  1 e 1 0 ]
+"43
+[v _WDT_INITIAL WDT_INITIAL `(v  1 e 1 0 ]
+"51
+[v _ISR ISR `II(v  1 e 1 0 ]
+"84
+[v _Sys_init Sys_init `(v  1 e 1 0 ]
+"475
+[v _Time2Initial Time2Initial `(v  1 e 1 0 ]
+"495
+[v _Time4Initial Time4Initial `(v  1 e 1 0 ]
+"588
+[v _UART_INITIAL UART_INITIAL `(v  1 e 1 0 ]
+"612
+[v _DelayUs DelayUs `(v  1 e 1 0 ]
+"626
+[v _DelayMs DelayMs `(v  1 e 1 0 ]
+"656
+[v _TIME_INIT TIME_INIT `(v  1 e 1 0 ]
+"664
+[v _User_init User_init `(v  1 e 1 0 ]
+"675
+[v _Display_init Display_init `(v  1 e 1 0 ]
+"62 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"4 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"4 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"15 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"12 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+[v _PowerKeyExec PowerKeyExec `(v  1 e 1 0 ]
+"54
+[v _ModeKeyExec ModeKeyExec `(v  1 e 1 0 ]
+"77
+[v _ManualKeyExec ManualKeyExec `(v  1 e 1 0 ]
+"100
+[v _HeatKeyExec HeatKeyExec `(v  1 e 1 0 ]
+"115
+[v _StrongKeyExec StrongKeyExec `(v  1 e 1 0 ]
+"152
+[v _main main `(v  1 e 1 0 ]
+"14 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+[v _Rx_Drive Rx_Drive `(v  1 e 1 0 ]
+[v i1_Rx_Drive Rx_Drive `(v  1 e 1 0 ]
+"59
+[v _RxData_Drive RxData_Drive `(v  1 e 1 0 ]
+"37 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+[v _refresh_data refresh_data `(v  1 e 1 0 ]
+"184
+[v _ShowLedData ShowLedData `(v  1 e 1 0 ]
+"208
+[v _SpecialDisplay1 SpecialDisplay1 `(uc  1 e 1 0 ]
+"224
+[v _SpecialDisplay2 SpecialDisplay2 `(uc  1 e 1 0 ]
+"243
+[v _DisplayHandler DisplayHandler `(v  1 e 1 0 ]
+"113 TOUCH.C
+[v _DIV DIV `(v  1 e 1 0 ]
+"202
+[v _TouchInit TouchInit `(v  1 e 1 0 ]
+"229
+[v _TouchInital TouchInital `(v  1 e 1 0 ]
+"296
+[v _MxSet013 MxSet013 `(v  1 e 1 0 ]
+"308
+[v _StartHigeFreq StartHigeFreq `(v  1 e 1 0 ]
+"495
+[v _ReadTouchData ReadTouchData `(v  1 e 1 0 ]
+"1023
+[v _HighFreqCo HighFreqCo `(v  1 e 1 0 ]
+"1059
+[v _DataProcessing DataProcessing `(v  1 s 1 DataProcessing ]
+"1406
+[v _TouchKeyScan TouchKeyScan `(ui  1 e 2 0 ]
+"27 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+[v _send_uart_data send_uart_data `(v  1 e 1 0 ]
+"44
+[v _UartSetEmptyInt UartSetEmptyInt `(v  1 e 1 0 ]
+"22 D:\01通用资料\06 - 工具\工具-20220223\IDE3.0.6\data\include\FT62F08X.h
+[v _STATUS STATUS `VEuc  1 e 1 @3 ]
+"99
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+"125
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+"176
+[v _PORTB PORTB `VEuc  1 e 1 @13 ]
+"191
+[v _PB4 PB4 `VEb  1 e 0 @108 ]
+"192
+[v _PB5 PB5 `VEb  1 e 0 @109 ]
+"227
+[v _PORTC PORTC `VEuc  1 e 1 @14 ]
+"278
+[v _PORTD PORTD `VEuc  1 e 1 @15 ]
+"495
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"501
+[v _TRISA4 TRISA4 `VEb  1 e 0 @1124 ]
+"502
+[v _TRISA5 TRISA5 `VEb  1 e 0 @1125 ]
+"503
+[v _TRISA6 TRISA6 `VEb  1 e 0 @1126 ]
+"504
+[v _TRISA7 TRISA7 `VEb  1 e 0 @1127 ]
+"525
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"529
+[v _TRISB2 TRISB2 `VEb  1 e 0 @1130 ]
+"530
+[v _TRISB3 TRISB3 `VEb  1 e 0 @1131 ]
+"531
+[v _TRISB4 TRISB4 `VEb  1 e 0 @1132 ]
+"534
+[v _TRISB7 TRISB7 `VEb  1 e 0 @1135 ]
+"555
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"557
+[v _TRISC0 TRISC0 `VEb  1 e 0 @1136 ]
+"558
+[v _TRISC1 TRISC1 `VEb  1 e 0 @1137 ]
+"560
+[v _TRISC3 TRISC3 `VEb  1 e 0 @1139 ]
+"561
+[v _TRISC4 TRISC4 `VEb  1 e 0 @1140 ]
+"562
+[v _TRISC5 TRISC5 `VEb  1 e 0 @1141 ]
+"563
+[v _TRISC6 TRISC6 `VEb  1 e 0 @1142 ]
+"564
+[v _TRISC7 TRISC7 `VEb  1 e 0 @1143 ]
+"584
+[v _TRISD TRISD `VEuc  1 e 1 @143 ]
+"591
+[v _TRISD5 TRISD5 `VEb  1 e 0 @1149 ]
+"632
+[v _CKOCON CKOCON `VEuc  1 e 1 @149 ]
+"692
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"752
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"783
+[v _PCKEN PCKEN `VEuc  1 e 1 @154 ]
+"928
+[v _LATA0 LATA0 `VEb  1 e 0 @2144 ]
+"929
+[v _LATA1 LATA1 `VEb  1 e 0 @2145 ]
+"932
+[v _LATA4 LATA4 `VEb  1 e 0 @2148 ]
+"957
+[v _LATB0 LATB0 `VEb  1 e 0 @2152 ]
+"958
+[v _LATB1 LATB1 `VEb  1 e 0 @2153 ]
+"960
+[v _LATB3 LATB3 `VEb  1 e 0 @2155 ]
+"986
+[v _LATC0 LATC0 `VEb  1 e 0 @2160 ]
+"987
+[v _LATC1 LATC1 `VEb  1 e 0 @2161 ]
+"1016
+[v _LATD1 LATD1 `VEb  1 e 0 @2169 ]
+"1017
+[v _LATD2 LATD2 `VEb  1 e 0 @2170 ]
+"1018
+[v _LATD3 LATD3 `VEb  1 e 0 @2171 ]
+"1038
+[v _TIM4CR1 TIM4CR1 `VEuc  1 e 1 @273 ]
+"1063
+[v _TIM4IER TIM4IER `VEuc  1 e 1 @274 ]
+"1065
+[v _T4UIE T4UIE `VEb  1 e 0 @2192 ]
+"1075
+[v _TIM4SR TIM4SR `VEuc  1 e 1 @275 ]
+"1077
+[v _T4UIF T4UIF `VEb  1 e 0 @2200 ]
+"1088
+[v _TIM4EGR TIM4EGR `VEuc  1 e 1 @276 ]
+"1101
+[v _TIM4CNTR TIM4CNTR `VEuc  1 e 1 @277 ]
+"1106
+[v _TIM4PSCR TIM4PSCR `VEuc  1 e 1 @278 ]
+"1126
+[v _TIM4ARR TIM4ARR `VEuc  1 e 1 @279 ]
+"1141
+[v _PSRC0 PSRC0 `VEuc  1 e 1 @282 ]
+"1146
+[v _PSRC1 PSRC1 `VEuc  1 e 1 @283 ]
+"1151
+[v _MISC0 MISC0 `VEuc  1 e 1 @284 ]
+"1196
+[v _WPUA WPUA `VEuc  1 e 1 @396 ]
+"1225
+[v _WPUB WPUB `VEuc  1 e 1 @397 ]
+"1254
+[v _WPUC WPUC `VEuc  1 e 1 @398 ]
+"1283
+[v _WPUD WPUD `VEuc  1 e 1 @399 ]
+"1399
+[v _ANSELA ANSELA `VEuc  1 e 1 @407 ]
+"1443
+[v _PSINK0 PSINK0 `VEuc  1 e 1 @410 ]
+"1447
+[v _PSINK1 PSINK1 `VEuc  1 e 1 @411 ]
+"1450
+[v _PSINK2 PSINK2 `VEuc  1 e 1 @412 ]
+"1455
+[v _PSINK3 PSINK3 `VEuc  1 e 1 @413 ]
+"1501
+[v _WPDA WPDA `VEuc  1 e 1 @524 ]
+"1531
+[v _WPDB WPDB `VEuc  1 e 1 @525 ]
+"1560
+[v _WPDC WPDC `VEuc  1 e 1 @526 ]
+"1590
+[v _WPDD WPDD `VEuc  1 e 1 @527 ]
+"2188
+[v _TIM2CR1 TIM2CR1 `VEuc  1 e 1 @780 ]
+"2211
+[v _TIM2IER TIM2IER `VEuc  1 e 1 @781 ]
+"2213
+[v _T2UIE T2UIE `VEb  1 e 0 @6248 ]
+"2232
+[v _T2UIF T2UIF `VEb  1 e 0 @6256 ]
+"2503
+[v _TIM2ARRH TIM2ARRH `VEuc  1 e 1 @793 ]
+"2507
+[v _TIM2ARRL TIM2ARRL `VEuc  1 e 1 @794 ]
+"2527
+[v _TCKSRC TCKSRC `VEuc  1 e 1 @799 ]
+"3392
+[v _URDATAL URDATAL `VEuc  1 e 1 @1164 ]
+"3411
+[v _URIER URIER `VEuc  1 e 1 @1166 ]
+"3414
+[v _URTE URTE `VEb  1 e 0 @9329 ]
+"3433
+[v _URLCR URLCR `VEuc  1 e 1 @1167 ]
+"3471
+[v _URMCR URMCR `VEuc  1 e 1 @1169 ]
+"3501
+[v _TXEF TXEF `VEb  1 e 0 @9365 ]
+"3544
+[v _URDLL URDLL `VEuc  1 e 1 @1172 ]
+"3549
+[v _URDLH URDLH `VEuc  1 e 1 @1173 ]
+"3696
+[v _TCF TCF `VEb  1 e 0 @9440 ]
+"3928
+[v _ad3nop ad3nop `DCuc  1 e 1 @3 ]
+"4 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+[v _RxBuf RxBuf `[8]uc  1 e 8 0 ]
+"5
+[v _RxBit RxBit `uc  1 e 1 0 ]
+"6
+[v _TmsRxH TmsRxH `uc  1 e 1 0 ]
+"7
+[v _TmsRxL TmsRxL `uc  1 e 1 0 ]
+"8
+[v _RxData RxData `uc  1 e 1 0 ]
+[s S1584 . 1 `VEuc 1 b0 1 0 :1:0 
+`VEuc 1 b1 1 0 :1:1 
+`VEuc 1 b2 1 0 :1:2 
+`VEuc 1 b3 1 0 :1:3 
+`VEuc 1 b4 1 0 :1:4 
+`VEuc 1 b5 1 0 :1:5 
+`VEuc 1 b6 1 0 :1:6 
+`VEuc 1 b7 1 0 :1:7 
+]
+"3 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+[u S1593 . 1 `VES1584 1 OneBits 1 0 `uc 1 AllBits 1 0 ]
+[v _SysFunFlg0 SysFunFlg0 `VES1593  1 e 1 0 ]
+[v _SysFunFlg1 SysFunFlg1 `VES1593  1 e 1 0 ]
+[v _SysFunFlg2 SysFunFlg2 `VES1593  1 e 1 0 ]
+"5
+[v _PwrType PwrType `uc  1 e 1 0 ]
+[v _ModeType ModeType `uc  1 e 1 0 ]
+[v _HeatType HeatType `uc  1 e 1 0 ]
+[v _StrongType StrongType `uc  1 e 1 0 ]
+[v _ManualType ManualType `uc  1 e 1 0 ]
+"9
+[v _BuzzerCnt BuzzerCnt `ui  1 e 2 0 ]
+"18
+[v _DspIndex DspIndex `uc  1 e 1 0 ]
+"20
+[v _readKeyNum readKeyNum `VEui  1 e 2 0 ]
+[v _TouchTimeCount TouchTimeCount `VEui  1 e 2 0 ]
+"186 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.h
+[v _TimeUs TimeUs `VEuc  1 e 1 0 ]
+[v _Time2Ms Time2Ms `VEuc  1 e 1 0 ]
+[v _Time10Ms Time10Ms `VEuc  1 e 1 0 ]
+[v _Time100Ms Time100Ms `VEuc  1 e 1 0 ]
+[v _TimeSec TimeSec `VEuc  1 e 1 0 ]
+[v _TimeMin TimeMin `VEuc  1 e 1 0 ]
+"35 TOUCH.C
+[v _fmd_OriginalData fmd_OriginalData `ui  1 s 2 fmd_OriginalData ]
+"36
+[v _fmd_ReferenceData fmd_ReferenceData `ui  1 s 2 fmd_ReferenceData ]
+"37
+[v _fmd_ResultData fmd_ResultData `ui  1 s 2 fmd_ResultData ]
+"38
+[v _fmd_ResultDataH fmd_ResultDataH `uc  1 s 1 fmd_ResultDataH ]
+"39
+[v _fmd_Null0 fmd_Null0 `uc  1 s 1 fmd_Null0 ]
+"40
+[v _fmd_Null1 fmd_Null1 `uc  1 s 1 fmd_Null1 ]
+"41
+[v _fmd_Null2 fmd_Null2 `uc  1 s 1 fmd_Null2 ]
+"42
+[v _fmd_Null3 fmd_Null3 `uc  1 s 1 fmd_Null3 ]
+"47
+[v _fmd_Keystatus fmd_Keystatus `VEui  1 e 2 0 ]
+"48
+[v _fmd_Keystatus1 fmd_Keystatus1 `VEui  1 e 2 0 ]
+"49
+[v _fmd_Keystatus2 fmd_Keystatus2 `VEui  1 e 2 0 ]
+"55
+[v _fmd_a fmd_a `VEuc  1 e 1 0 ]
+[v _fmd_a1 fmd_a1 `VEuc  1 e 1 0 ]
+[v _fmd_a2 fmd_a2 `VEuc  1 e 1 0 ]
+[v _fmd_a3 fmd_a3 `VEuc  1 e 1 0 ]
+[v _fmd_u fmd_u `VEuc  1 e 1 0 ]
+"62
+[v _fmd_nodownavrdata_Key fmd_nodownavrdata_Key `[15][4]ui  1 s 120 fmd_nodownavrdata_Key ]
+"63
+[v _fmd_nodownsum_Key fmd_nodownsum_Key `[15][4]ui  1 s 120 fmd_nodownsum_Key ]
+"68
+[v _fmd_theUsedChannel fmd_theUsedChannel `[15]uc  1 s 15 fmd_theUsedChannel ]
+"29 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\touch.h
+[v _FWHEELSILERB FWHEELSILERB `DC[4]uc  1 e 4 0 ]
+"30
+[v _SWHEELSILERB SWHEELSILERB `DC[4]uc  1 e 4 0 ]
+"4 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+[v _send_buf send_buf `VE[6]uc  1 e 6 0 ]
+"152 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"193
+} 0
+"43 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+[v _WDT_INITIAL WDT_INITIAL `(v  1 e 1 0 ]
+{
+"49
+} 0
+"664
+[v _User_init User_init `(v  1 e 1 0 ]
+{
+"673
+} 0
+"656
+[v _TIME_INIT TIME_INIT `(v  1 e 1 0 ]
+{
+"661
+} 0
+"588
+[v _UART_INITIAL UART_INITIAL `(v  1 e 1 0 ]
+{
+"604
+} 0
+"229 TOUCH.C
+[v _TouchInital TouchInital `(v  1 e 1 0 ]
+{
+"295
+} 0
+"495 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+[v _Time4Initial Time4Initial `(v  1 e 1 0 ]
+{
+"561
+} 0
+"475
+[v _Time2Initial Time2Initial `(v  1 e 1 0 ]
+{
+"487
+} 0
+"84
+[v _Sys_init Sys_init `(v  1 e 1 0 ]
+{
+"137
+} 0
+"14 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+[v _Rx_Drive Rx_Drive `(v  1 e 1 0 ]
+{
+"52
+} 0
+"59
+[v _RxData_Drive RxData_Drive `(v  1 e 1 0 ]
+{
+"85
+} 0
+"675 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+[v _Display_init Display_init `(v  1 e 1 0 ]
+{
+"693
+} 0
+"51
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"82
+} 0
+"14 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+[v i1_Rx_Drive Rx_Drive `(v  1 e 1 0 ]
+{
+"52
+} 0
+"27 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+[v _send_uart_data send_uart_data `(v  1 e 1 0 ]
+{
+"28
+[v send_uart_data@ByteNum ByteNum `uc  1 s 1 ByteNum ]
+"42
+} 0
+"44
+[v _UartSetEmptyInt UartSetEmptyInt `(v  1 e 1 0 ]
+{
+[v UartSetEmptyInt@value value `uc  1 a 1 wreg ]
+[v UartSetEmptyInt@value value `uc  1 a 1 wreg ]
+"46
+[v UartSetEmptyInt@value value `uc  1 a 1 0 ]
+"47
+} 0
+"5 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+[v _exact_event_process exact_event_process `(v  1 e 1 0 ]
+{
+"41
+} 0
+"243 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+[v _DisplayHandler DisplayHandler `(v  1 e 1 0 ]
+{
+"245
+[v DisplayHandler@LedMenuIndex LedMenuIndex `uc  1 s 1 LedMenuIndex ]
+"246
+[v DisplayHandler@DspBuf DspBuf `uc  1 s 1 DspBuf ]
+[v DisplayHandler@DspCnt DspCnt `uc  1 s 1 DspCnt ]
+"322
+} 0
+"224
+[v _SpecialDisplay2 SpecialDisplay2 `(uc  1 e 1 0 ]
+{
+"226
+[v SpecialDisplay2@DspBuf DspBuf `uc  1 a 1 5 ]
+"240
+} 0
+"4 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+{
+[v ___lbmod@dividend dividend `uc  1 a 1 wreg ]
+"6
+[v ___lbmod@rem rem `uc  1 a 1 4 ]
+"7
+[v ___lbmod@counter counter `uc  1 a 1 3 ]
+"4
+[v ___lbmod@dividend dividend `uc  1 a 1 wreg ]
+[v ___lbmod@divisor divisor `uc  1 p 1 0 ]
+"9
+[v ___lbmod@dividend dividend `uc  1 a 1 2 ]
+"18
+} 0
+"208 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+[v _SpecialDisplay1 SpecialDisplay1 `(uc  1 e 1 0 ]
+{
+"210
+[v SpecialDisplay1@DspBuf DspBuf `uc  1 a 1 4 ]
+"222
+} 0
+"4 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+{
+[v ___lbdiv@dividend dividend `uc  1 a 1 wreg ]
+"6
+[v ___lbdiv@quotient quotient `uc  1 a 1 3 ]
+"7
+[v ___lbdiv@counter counter `uc  1 a 1 2 ]
+"4
+[v ___lbdiv@dividend dividend `uc  1 a 1 wreg ]
+[v ___lbdiv@divisor divisor `uc  1 p 1 0 ]
+"9
+[v ___lbdiv@dividend dividend `uc  1 a 1 1 ]
+"26
+} 0
+"184 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+[v _ShowLedData ShowLedData `(v  1 e 1 0 ]
+{
+[v ShowLedData@DspBuf DspBuf `uc  1 a 1 wreg ]
+[v ShowLedData@DspBuf DspBuf `uc  1 a 1 wreg ]
+[v ShowLedData@DspBuf DspBuf `uc  1 a 1 0 ]
+"206
+} 0
