@@ -154,7 +154,7 @@ void dokey()
 	}
 	else
 	{
-		// SetBuzzer();
+		SetBuzzer();
 		refresh_data();	
 	}
 	

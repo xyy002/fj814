@@ -4129,7 +4129,7 @@ void RGBSwitchStautus(unsigned char onoff);
 void RGBbreathing(void);
 
 # 8 "rx.c"
-unsigned char RxData;
+unsigned char RxData,bRxData;
 
 RFSTATE RFs;
 volatile unsigned char buf_rec[5];
@@ -4303,7 +4303,7 @@ if(!CheckRfCmd(buf_rec[2]))return;
 
 RxData=buf_rec[2];
 
-
+RemOutTime=200;
 }
 
 
@@ -4322,19 +4322,78 @@ RxData= 0;
 void RxData_Drive(void)
 {
 KeepRfData();
-if(RxData==0)return;
-switch(RxData)
+if(RxData==0x01)
 {
-case 0x01:KeyType=PowerKey;break;
-case 0x08:KeyType=ModeKey;break;
-case 0x0E:KeyType=StrongKey;break;
-case 0x0A:KeyType=ManualKey;break;
-case 0x0C:KeyType=HeatKey;break;
-default:RxData=0;break;
+if(keybit5)return;
+keybit5=1;
+
+tRFtemp=PowerKey;
+}else keybit5=0;
+
+if(RxData==0x0E)
+{
+if(keybit1)return;
+keybit1=1;
+
+if(PwrType)tRFtemp=ModeKey;
+}else keybit1=0;
+
+if(RxData==0x0A)
+{
+if(keybit2)return;
+keybit2=1;
+
+if(PwrType)tRFtemp=StrongKey;
+}else keybit2=0;
+
+if(RxData==0x08)
+{
+if(keybit3)return;
+keybit3=1;
+
+if(PwrType)tRFtemp=ManualKey;
+}else keybit3=0;
+
+if(RxData==0x0C)
+{
+if(keybit4)return;
+keybit4=1;
+
+if(PwrType)tRFtemp=HeatKey;
+}else keybit4=0;
+
+if(tRFtemp)
+{
+
+
+switch (tRFtemp)
+{
+case PowerKey:
+KeyType=PowerKey;
+
+break;
+case ModeKey:
+KeyType=ModeKey;
+
+break;
+case StrongKey:
+KeyType=StrongKey;
+
+break;
+case HeatKey:
+KeyType=HeatKey;
+
+break;
+case ManualKey:
+KeyType=ManualKey;
+
+break;
+default:
+break;
+}
+refresh_display(tRFtemp);
+tRFtemp=NullKey;
+
 
 }
-RxData=0;
-
-
-
 }

@@ -4267,7 +4267,7 @@ return;
 }
 else
 {
-
+{BuzzerCnt=400;};
 refresh_data();
 }
 

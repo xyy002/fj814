@@ -7304,18 +7304,18 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [; ;main.c: 180: RxData_Drive();
 "180
 [e ( _RxData_Drive ..  ]
-"181
+"182
 }
 [e :U 388 ]
-[; ;main.c: 181: }
-[; ;main.c: 182: if(SysFunFlg0.OneBits.b0)
-"182
-[e $ ! != -> . . _SysFunFlg0 0 0 `i -> -> -> 0 `i `Vuc `i 389  ]
-[; ;main.c: 183: {
+[; ;main.c: 182: }
+[; ;main.c: 183: if(SysFunFlg0.OneBits.b0)
 "183
-{
-[; ;main.c: 184: SysFunFlg0.OneBits.b0=0;
+[e $ ! != -> . . _SysFunFlg0 0 0 `i -> -> -> 0 `i `Vuc `i 389  ]
+[; ;main.c: 184: {
 "184
+{
+[; ;main.c: 185: SysFunFlg0.OneBits.b0=0;
+"185
 [e = . . _SysFunFlg0 0 0 -> -> 0 `i `uc ]
 [; ;main.c: 187: KeyScanHandler();
 "187
@@ -7323,8 +7323,8 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [; ;main.c: 188: dokey();
 "188
 [e ( _dokey ..  ]
-[; ;main.c: 189: SysPowerHandler();
-"189
+[; ;main.c: 190: SysPowerHandler();
+"190
 [e ( _SysPowerHandler ..  ]
 [; ;main.c: 191: ChkTimeEventStatus();
 "191

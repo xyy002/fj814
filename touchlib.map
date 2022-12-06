@@ -5,7 +5,7 @@ Linker command line:
 \
   --edf=D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\dat\en_msgs.txt \
   -cs -h+touchlib.sym --cmf=touchlib.cmf -z -QFT62F08X \
-  -oC:\Users\ADMINI~1\AppData\Local\Temp\s5po.2 -Mtouchlib.map -E1 -ver=XC8 \
+  -oC:\Users\ADMINI~1\AppData\Local\Temp\s4hk.2 -Mtouchlib.map -E1 -ver=XC8 \
   -ASTACK=0210Eh-022ffh -pstack=STACK -p_ad3nop_text=3h -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
   -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
@@ -31,7 +31,7 @@ Linker command line:
   -pconfig=CONFIG -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\ADMINI~1\AppData\Local\Temp\s5po.obj touchlib.obj 
+  C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj touchlib.obj 
 
 Object code version is 3.11
 
@@ -40,28 +40,28 @@ Machine type is FT62F08X
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\ADMINI~1\AppData\Local\Temp\s5po.obj
+C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj
                 end_init                             37       37        2        8       0
                 reset_vec                             0        0        2        0       0
-touchlib.obj    cinit                                39       39      787        8       0
+touchlib.obj    cinit                               807      807      7F9     100E       0
                 intentry                              4        4       33        8       0
-                swtext4                             800      800       20     1000       0
-                swtext3                             838      838        C     1000       0
-                swtext2                             82C      82C        C     1000       0
-                text40                             1531     1531      2CF     2A62       0
-                swtext1                             820      820        C     1000       0
-                text39                              A13      A13       7E     1426       0
-                text38                              7C0      7C0       2D        8       0
-                text36                              9F2      9F2       21     13E4       0
-                text27                              A91      A91      56F     1522       0
-                text26                              7ED      7ED       12        8       0
+                swtext4                             678      678       20      CF0       0
+                swtext3                             6CE      6CE        C      D6C       0
+                swtext2                             6C2      6C2        C      D6C       0
+                text41                             1531     1531      2CF     2A62       0
+                swtext1                             6B6      6B6        C      D6C       0
+                text40                              5AC      5AC       7E        8       0
+                text39                              62A      62A       2D        8       0
+                text37                              657      657       21        8       0
+                text28                               39       39      573        8       0
+                text27                              698      698       12      D30       0
                 cstackBANK0hh                        4C       4C       21       2B       1
                 cstackCOMMON                         70       70        6       70       1
-                clrtext                             9E6      9E6        C     13CC       0
+                clrtext                             6AA      6AA        C      D30       0
                 bssBANK3                            1A0      1A0       1E      1A0       1
-                bssBANK2                            120      120       3C      120       1
-                dataBANK1                            E3       E3        8       A0       1
-                bssBANK1                             A0       A0       43       A0       1
+                bssBANK2                            120      120       40      120       1
+                dataBANK1                            E5       E5        8       A0       1
+                bssBANK1                             A0       A0       45       A0       1
                 bssBANK0hh                           2B       2B       21       2B       1
                 bssCOMMON                            77       77        5       70       1
                 bitbssCOMMON                        3B0       76        5       70       1     8
@@ -80,16 +80,16 @@ TOTAL           Name                               Link     Load   Length     Sp
 
         CLASS   CODE           
                 end_init                             37       37        2         0
-                cinit                                39       39      787         0
+                cinit                               807      807      7F9         0
                 intentry                              4        4       33         0
                 reset_vec                             0        0        2         0
-                text40                             1531     1531      2CF         0
-                text39                              A13      A13       7E         0
-                text38                              7C0      7C0       2D         0
-                text36                              9F2      9F2       21         0
-                text27                              A91      A91      56F         0
-                text26                              7ED      7ED       12         0
-                clrtext                             9E6      9E6        C         0
+                text41                             1531     1531      2CF         0
+                text40                              5AC      5AC       7E         0
+                text39                              62A      62A       2D         0
+                text37                              657      657       21         0
+                text28                               39       39      573         0
+                text27                              698      698       12         0
+                clrtext                             6AA      6AA        C         0
                 _ad3nop_text                          3        3        1         0
 
         CLASS   STRCODE        
@@ -105,10 +105,10 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   STRING         
 
         CLASS   CONST          
-                swtext4                             800      800       20         0
-                swtext3                             838      838        C         0
-                swtext2                             82C      82C        C         0
-                swtext1                             820      820        C         0
+                swtext4                             678      678       20         0
+                swtext3                             6CE      6CE        C         0
+                swtext2                             6C2      6C2        C         0
+                swtext1                             6B6      6B6        C         0
 
         CLASS   ENTRY          
 
@@ -122,11 +122,11 @@ TOTAL           Name                               Link     Load   Length     Sp
                 bssBANK0hh                           2B       2B       21         1
 
         CLASS   BANK1          
-                dataBANK1                            E3       E3        8         1
-                bssBANK1                             A0       A0       43         1
+                dataBANK1                            E5       E5        8         1
+                bssBANK1                             A0       A0       45         1
 
         CLASS   BANK2          
-                bssBANK2                            120      120       3C         1
+                bssBANK2                            120      120       40         1
 
         CLASS   BANK3          
                 bssBANK3                            1A0      1A0       1E         1
@@ -277,18 +277,17 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
                 _ad3nop_text                   000003  000001  000004         6       0  CODE        2
-                intentry                       000004  0007FB  0007FF         8       0  CODE        2
+                intentry                       000004  000674  000678         8       0  CODE        2
                 bssBANK0hh                     00002B  000042  00006D        2B       1  BANK0       1
                 cstackCOMMON                   000070  00000C  00007C        70       1  COMMON      1
-                bssBANK1                       0000A0  00004B  0000EB        A0       1  BANK1       1
-                bssBANK2                       000120  00003C  00015C       120       1  BANK2       1
+                bssBANK1                       0000A0  00004D  0000ED        A0       1  BANK1       1
+                bssBANK2                       000120  000040  000160       120       1  BANK2       1
                 bssBANK3                       0001A0  00001E  0001BE       1A0       1  BANK3       1
-                swtext4                        000800  000044  000844      1000       0  CONST       2
-                clrtext                        0009E6  00000C  0009F2      13CC       0  CODE        2
-                text36                         0009F2  000021  000A13      13E4       0  CODE        2
-                text39                         000A13  00007E  000A91      1426       0  CODE        2
-                text27                         000A91  00056F  001000      1522       0  CODE        2
-                text40                         001531  0002CF  001800      2A62       0  CODE        2
+                swtext4                        000678  000020  000698       CF0       0  CONST       2
+                text27                         000698  00001E  0006B6       D30       0  CODE        2
+                swtext1                        0006B6  000024  0006DA       D6C       0  CONST       2
+                cinit                          000807  0007F9  001000      100E       0  CODE        2
+                text41                         001531  0002CF  001800      2A62       0  CODE        2
                 stringtext1                    001800  0000C1  0018C1      3000       0  STRCODE     2
 
 
@@ -296,8 +295,8 @@ UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
         BANK0            006D-006F              3           1
-        BANK1            00EB-00EF              5           1
-        BANK2            015C-016F             14           1
+        BANK1            00ED-00EF              3           1
+        BANK2            0160-016F             10           1
         BANK3            01BE-01EF             32           1
         BANK4            0220-026F             50           1
         BANK5            02A0-02EF             50           1
@@ -307,27 +306,24 @@ UNUSED ADDRESS RANGES
         BANK9            04A0-04CF             30           1
         BIGRAM           2000-23EF            3F0           1
         CODE             0002-0002              1           2
-                         07FF-07FF              1
-                         0844-09E5            1A2
+                         06DA-0806            126
                          1000-1530            531
                          18C1-1FFF            73F
         COMMON           007C-007D              2           1
         CONFIG           8007-8008              2           2
         CONST            0002-0002              1           2
-                         07FF-07FF              1
-                         0844-09E5             BC
+                         06DA-0806            100
                          1000-1530            100
                          18C1-1FFF            100
         EEDATA           F000-F0FF            100           2
         ENTRY            0002-0002              1           2
-                         07FF-07FF              1
-                         0844-09E5             BC
+                         06DA-0806            100
                          1000-1530            100
                          18C1-1FFF            100
         IDLOC            8000-8003              4           2
         RAM              006D-006F              3           1
-                         00EB-00EF              5
-                         015C-016F             14
+                         00ED-00EF              3
+                         0160-016F             10
                          01BE-01EF             32
                          0220-026F             50
                          02A0-02EF             50
@@ -369,13 +365,11 @@ UNUSED ADDRESS RANGES
         SFR9             0480-049F             20           1
         STACK            210E-22FF            1F2           1
         STRCODE          0002-0002              1           2
-                         07FF-07FF              1
-                         0844-09E5            1A2
+                         06DA-0806            12D
                          1000-1530            531
                          18C1-1FFF            73F
         STRING           0002-0002              1           2
-                         07FF-07FF              1
-                         0844-09E5             BC
+                         06DA-0806            100
                          1000-1530            100
                          18C1-1FFF            100
 
@@ -385,63 +379,65 @@ UNUSED ADDRESS RANGES
 ?___awdiv                         cstackBANK0hh 004C
 ?___wmul                          cstackBANK0hh 004C
 CheckRfCmd@rfcmd                  cstackBANK0hh 004C
-DisplayHandler@DspBuf             bssBANK1      00D4
-DisplayHandler@DspCnt             bssBANK1      00D3
-DisplayHandler@LedMenuIndex       bssBANK1      00D5
+DisplayHandler@DspBuf             bssBANK1      00D0
+DisplayHandler@DspCnt             bssBANK1      00CF
+DisplayHandler@LedMenuIndex       bssBANK1      00D1
 HighFreqCo@a                      cstackBANK0hh 0052
 MxSet013@a                        cstackBANK0hh 004C
-PL10                              cinit         0453
-PL100                             cinit         05C3
-PL102                             text39        0A89
-PL104                             text39        0A8D
-PL12                              cinit         0470
-PL14                              cinit         048D
-PL16                              cinit         04A9
-PL18                              cinit         04D5
-PL2                               cinit         0445
-PL20                              text27        0F02
-PL22                              cinit         04FF
-PL24                              text27        0F1F
-PL26                              text27        0F25
-PL28                              text27        0F32
-PL30                              text27        0F58
-PL32                              text27        0F61
-PL34                              text27        0F67
-PL36                              cinit         0527
-PL38                              cinit         052F
-PL4                               text27        0ECC
-PL40                              cinit         0537
-PL42                              cinit         054F
-PL44                              text27        0F85
-PL46                              cinit         055E
-PL48                              cinit         0571
-PL50                              cinit         0582
-PL52                              text27        0F8C
-PL54                              cinit         0593
-PL56                              text27        0F93
-PL58                              text27        0FA3
-PL6                               text27        0EE6
-PL60                              text40        17ED
-PL62                              cinit         05A2
-PL64                              cinit         05A8
-PL66                              text27        0FB1
-PL68                              text27        0FB6
-PL70                              text27        0FC0
-PL72                              text27        0FC6
-PL74                              text27        0FCF
-PL76                              text27        0FD5
-PL78                              text27        0FDB
-PL8                               text27        0EFC
-PL80                              text27        0FE1
-PL82                              text27        0FE8
-PL84                              text27        0FEF
-PL86                              text40        17FA
-PL88                              cinit         05AD
-PL90                              cinit         05B3
-PL92                              cinit         05B9
-PL94                              cinit         05BE
-PL96                              text27        0FF5
-PL98                              text27        0FFB
+PL10                              cinit         0C22
+PL100                             text28        05A7
+PL102                             cinit         0D92
+PL104                             text40        0622
+PL106                             text40        0626
+PL108                             cinit         0F1E
+PL12                              cinit         0C3F
+PL14                              cinit         0C5C
+PL16                              cinit         0C78
+PL18                              cinit         0CA4
+PL2                               cinit         0C14
+PL20                              text28        04AF
+PL22                              cinit         0CCE
+PL24                              text28        04CC
+PL26                              text28        04D2
+PL28                              text28        04DF
+PL30                              text28        0505
+PL32                              text28        050E
+PL34                              text28        0514
+PL36                              cinit         0CF6
+PL38                              cinit         0CFE
+PL4                               text28        0479
+PL40                              cinit         0D16
+PL42                              cinit         0D1E
+PL44                              text28        0532
+PL46                              cinit         0D2D
+PL48                              cinit         0D3E
+PL50                              cinit         0D4F
+PL52                              text28        0539
+PL54                              cinit         0D62
+PL56                              text28        0540
+PL58                              text28        0550
+PL6                               text28        0493
+PL60                              text41        17ED
+PL62                              cinit         0D71
+PL64                              cinit         0D77
+PL66                              text28        055E
+PL68                              text28        0563
+PL70                              text28        056D
+PL72                              text28        0576
+PL74                              text28        057C
+PL76                              text28        0582
+PL78                              text28        0588
+PL8                               text28        04A9
+PL80                              text28        058E
+PL82                              text41        17FA
+PL84                              cinit         0D7C
+PL86                              cinit         0E7A
+PL88                              cinit         0D82
+PL90                              cinit         0D88
+PL92                              cinit         0D8D
+PL94                              text28        0595
+PL96                              text28        059B
+PL98                              text28        05A1
 ShowLedData@DspBuf                cstackCOMMON  0070
 SpecialDisplay1@DspBuf            cstackCOMMON  0074
 SpecialDisplay2@DspBuf            cstackCOMMON  0075
@@ -450,31 +446,31 @@ TouchInit@Time                    cstackBANK0hh 004C
 UartSetEmptyInt@value             cstackBANK0hh 004C
 _ACTIVE_SENSOR_DELTA              stringtext2   185A
 _ANSELA                           (abs)         0197
-_BuzzerCnt                        bssBANK1      00C9
+_BuzzerCnt                        bssBANK1      00C5
 _CKOCON                           (abs)         0095
-_CheckRfCmd                       cinit         07A9
-_ChkTimeEventStatus               cinit         00CF
-_DIV                              cinit         034D
-_DataProcessing                   text27        0A91
-_DisplayHandler                   text40        1531
-_Display_init                     cinit         00DE
-_DspIndex                         bssBANK1      00DE
+_CheckRfCmd                       cinit         0FE9
+_ChkTimeEventStatus               cinit         089A
+_DIV                              cinit         0B18
+_DataProcessing                   text28        0039
+_DisplayHandler                   text41        1531
+_Display_init                     cinit         08A9
+_DspIndex                         bssBANK1      00E0
 _EPIE0                            (abs)         0094
 _EPIF0                            (abs)         0014
 _EPS0                             (abs)         0118
 _EPS1                             (abs)         0119
 _FWHEELSILERB                     stringtext4   18B8
-_HeatKeyExec                      cinit         0600
-_HeatType                         bssBANK1      00E2
-_HighFreqCo                       text27        0E6B
+_HeatKeyExec                      cinit         0DD1
+_HeatType                         bssBANK1      00E4
+_HighFreqCo                       text28        0418
 _INACTIVE_SENSOR_DELTA            stringtext1   1800
 _INTCON                           (abs)         000B
 _ISR                              intentry      0004
 _ITYPE0                           (abs)         011E
 _ITYPE1                           (abs)         011F
-_KeepRfData                       cinit         0411
-_KeyCnt                           bssBANK1      00C3
-_KeyScanHandler                   cinit         038E
+_KeepRfData                       cinit         0EF6
+_KeyCnt                           bssBANK1      00BF
+_KeyScanHandler                   cinit         0B59
 _KeyType                          bssBANK0hh    0045
 _LATA0                            (abs)         0860
 _LATA1                            (abs)         0861
@@ -487,17 +483,17 @@ _LATC1                            (abs)         0871
 _LATD1                            (abs)         0879
 _LATD2                            (abs)         087A
 _LATD3                            (abs)         087B
-_LastManual                       bssBANK1      00E0
-_LastMode                         bssBANK1      00E1
+_LastManual                       bssBANK1      00E2
+_LastMode                         bssBANK1      00E3
 _M0ANALOG                         (abs)         0392
 _M1ANALOG                         (abs)         0393
 _M2ANALOG                         (abs)         0394
 _M3ANALOG                         (abs)         0395
-_ManualKeyExec                    cinit         0611
+_ManualKeyExec                    cinit         0DE2
 _ManualType                       bssCOMMON     0078
-_ModeKeyExec                      cinit         0635
+_ModeKeyExec                      cinit         0E06
 _ModeType                         bssCOMMON     007A
-_MxSet013                         text26        07ED
+_MxSet013                         text27        0698
 _NumD                             bssBANK0hh    0044
 _OSCCON                           (abs)         0099
 _PB4                              (abs)         006C
@@ -513,28 +509,28 @@ _PSINK2                           (abs)         019C
 _PSINK3                           (abs)         019D
 _PSRC0                            (abs)         011A
 _PSRC1                            (abs)         011B
-_PowerKeyExec                     cinit         0654
+_PowerKeyExec                     cinit         0E22
 _PwrType                          bssCOMMON     007B
-_Px_Level_Change_INITIAL          cinit         03DA
+_Px_Level_Change_INITIAL          cinit         0BA5
 _RFs                              bssBANK1      00A6
-_ReadRf433                        text39        0A13
-_ReadTouchData                    cinit         0129
-_RemOutTime                       bssBANK1      00D7
-_RxData                           bssBANK1      00D8
-_RxData_Drive                     cinit         03E7
+_ReadRf433                        text40        05AC
+_ReadTouchData                    cinit         08F4
+_RemOutTime                       bssBANK1      00D9
+_RxData                           bssBANK1      00DA
+_RxData_Drive                     cinit         0E80
 _STATUS                           (abs)         0003
 _SWHEELSILERB                     stringtext3   18B4
-_ShowLedData                      text40        15BC
-_SpecialDisplay1                  text40        1781
-_SpecialDisplay2                  text40        17B5
-_StartHigeFreq                    cinit         020E
-_StrongKeyExec                    cinit         0683
+_ShowLedData                      text41        15BC
+_SpecialDisplay1                  text41        1781
+_SpecialDisplay2                  text41        17B5
+_StartHigeFreq                    cinit         09D9
+_StrongKeyExec                    cinit         0E51
 _StrongType                       bssCOMMON     0079
 _SysFunFlg0                       bssBANK0hh    0049
 _SysFunFlg1                       bssBANK0hh    0048
 _SysFunFlg2                       bssBANK0hh    0046
-_SysPowerHandler                  cinit         0424
-_Sys_init                         cinit         06AD
+_SysPowerHandler                  cinit         0BBC
+_Sys_init                         cinit         0BCF
 _T2UIE                            (abs)         1868
 _T2UIF                            (abs)         1870
 _T4UIE                            (abs)         0890
@@ -552,7 +548,7 @@ _TIM4EGR                          (abs)         0114
 _TIM4IER                          (abs)         0112
 _TIM4PSCR                         (abs)         0116
 _TIM4SR                           (abs)         0113
-_TIME_INIT                        cinit         068F
+_TIME_INIT                        cinit         0E5D
 _TKC0                             (abs)         038D
 _TKC1                             (abs)         038E
 _TKM016DH                         (abs)         0F95
@@ -595,23 +591,23 @@ _TRISC7                           (abs)         0477
 _TRISD                            (abs)         008F
 _TRISD5                           (abs)         047D
 _TXEF                             (abs)         2495
-_Time100Ms                        bssBANK1      00DA
-_Time10Ms                         bssBANK1      00DB
-_Time2Initial                     cinit         0437
-_Time2Ms                          bssBANK1      00DC
-_Time4Initial                     cinit         06D7
+_Time100Ms                        bssBANK1      00DC
+_Time10Ms                         bssBANK1      00DD
+_Time2Initial                     cinit         0BF9
+_Time2Ms                          bssBANK1      00DE
+_Time4Initial                     cinit         0F22
 _TimeMin                          bssCOMMON     0077
-_TimeSec                          bssBANK1      00D9
-_TimeType                         bssBANK1      00DF
-_TimeUs                           bssBANK1      00DD
-_TmpCnt                           bssBANK1      00C5
-_TouchInit                        cinit         0334
-_TouchInital                      cinit         06E8
-_TouchKeyScan                     cinit         00E3
-_TouchTimeCount                   bssBANK1      00C7
+_TimeSec                          bssBANK1      00DB
+_TimeType                         bssBANK1      00E1
+_TimeUs                           bssBANK1      00DF
+_TmpCnt                           bssBANK1      00C1
+_TouchInit                        cinit         0AFF
+_TouchInital                      cinit         0F33
+_TouchKeyScan                     cinit         08AE
+_TouchTimeCount                   bssBANK1      00C3
 _TouchcapBuff1                    bssBANK2      0120
 _TouchcapBuff2                    bssBANK3      01A0
-_UART_INITIAL                     cinit         0749
+_UART_INITIAL                     cinit         0C07
 _URDATAL                          (abs)         048C
 _URDLH                            (abs)         0495
 _URDLL                            (abs)         0494
@@ -619,8 +615,8 @@ _URIER                            (abs)         048E
 _URLCR                            (abs)         048F
 _URMCR                            (abs)         0491
 _URTE                             (abs)         2471
-_UartSetEmptyInt                  cinit         06A4
-_User_init                        cinit         041A
+_UartSetEmptyInt                  cinit         0E71
+_User_init                        cinit         0BB2
 _WPDA                             (abs)         020C
 _WPDB                             (abs)         020D
 _WPDC                             (abs)         020E
@@ -673,7 +669,7 @@ __HbssBANK1                       bssBANK1      0000
 __HbssBANK2                       bssBANK2      0000
 __HbssBANK3                       bssBANK3      0000
 __HbssCOMMON                      bssCOMMON     0000
-__Hcinit                          cinit         07C0
+__Hcinit                          cinit         1000
 __Hclrtext                        clrtext       0000
 __Hcode                           code          0000
 __Hcommon                         common        0000
@@ -781,7 +777,7 @@ __LbssBANK1                       bssBANK1      0000
 __LbssBANK2                       bssBANK2      0000
 __LbssBANK3                       bssBANK3      0000
 __LbssCOMMON                      bssCOMMON     0000
-__Lcinit                          cinit         0039
+__Lcinit                          cinit         0807
 __Lclrtext                        clrtext       0000
 __Lcode                           code          0000
 __Lcommon                         common        0000
@@ -852,7 +848,7 @@ __S0                              (abs)         18C1
 __S1                              (abs)         01BE
 __S2                              (abs)         0000
 __S3                              (abs)         0000
-___awdiv                          cinit         0756
+___awdiv                          cinit         0F94
 ___awdiv@counter                  cstackBANK0hh 0050
 ___awdiv@dividend                 cstackBANK0hh 004E
 ___awdiv@divisor                  cstackBANK0hh 004C
@@ -860,130 +856,133 @@ ___awdiv@quotient                 cstackBANK0hh 0052
 ___awdiv@sign                     cstackBANK0hh 0051
 ___int_sp                         stack         0000
 ___latbits                        (abs)         0002
-___lbdiv                          text40        179D
+___lbdiv                          text41        179D
 ___lbdiv@counter                  cstackCOMMON  0072
 ___lbdiv@dividend                 cstackCOMMON  0071
 ___lbdiv@divisor                  cstackCOMMON  0070
 ___lbdiv@quotient                 cstackCOMMON  0073
-___lbmod                          text40        17D5
+___lbmod                          text41        17D5
 ___lbmod@counter                  cstackCOMMON  0073
 ___lbmod@dividend                 cstackCOMMON  0072
 ___lbmod@divisor                  cstackCOMMON  0070
 ___lbmod@rem                      cstackCOMMON  0074
 ___sp                             stack         0000
-___wmul                           text27        0E56
+___wmul                           text28        0403
 ___wmul@multiplicand              cstackBANK0hh 004E
 ___wmul@multiplier                cstackBANK0hh 004C
 ___wmul@product                   cstackBANK0hh 0050
-__end_ofPL10                      cinit         0470
-__end_ofPL100                     cinit         05C8
-__end_ofPL102                     text39        0A8D
-__end_ofPL104                     text39        0A91
-__end_ofPL12                      cinit         048D
-__end_ofPL14                      cinit         04A9
-__end_ofPL16                      cinit         04D5
-__end_ofPL18                      cinit         04FF
-__end_ofPL2                       cinit         0453
-__end_ofPL20                      text27        0F1F
-__end_ofPL22                      cinit         0527
-__end_ofPL24                      text27        0F25
-__end_ofPL26                      text27        0F32
-__end_ofPL28                      text27        0F58
-__end_ofPL30                      text27        0F61
-__end_ofPL32                      text27        0F67
-__end_ofPL34                      text27        0F85
-__end_ofPL36                      cinit         052F
-__end_ofPL38                      cinit         0537
-__end_ofPL4                       text27        0EE6
-__end_ofPL40                      cinit         054F
-__end_ofPL42                      cinit         055E
-__end_ofPL44                      text27        0F8C
-__end_ofPL46                      cinit         0571
-__end_ofPL48                      cinit         0582
-__end_ofPL50                      cinit         0593
-__end_ofPL52                      text27        0F93
-__end_ofPL54                      cinit         05A2
-__end_ofPL56                      text27        0FA3
-__end_ofPL58                      text27        0FB1
-__end_ofPL6                       text27        0EFC
-__end_ofPL60                      text40        17FA
-__end_ofPL62                      cinit         05A8
-__end_ofPL64                      cinit         05AD
-__end_ofPL66                      text27        0FB6
-__end_ofPL68                      text27        0FC0
-__end_ofPL70                      text27        0FC6
-__end_ofPL72                      text27        0FCF
-__end_ofPL74                      text27        0FD5
-__end_ofPL76                      text27        0FDB
-__end_ofPL78                      text27        0FE1
-__end_ofPL8                       text27        0F02
-__end_ofPL80                      text27        0FE8
-__end_ofPL82                      text27        0FEF
-__end_ofPL84                      text27        0FF5
-__end_ofPL86                      text40        1800
-__end_ofPL88                      cinit         05B3
-__end_ofPL90                      cinit         05B9
-__end_ofPL92                      cinit         05BE
-__end_ofPL94                      cinit         05C3
-__end_ofPL96                      text27        0FFB
-__end_ofPL98                      text27        1000
+__end_ofPL10                      cinit         0C3F
+__end_ofPL100                     text28        05AC
+__end_ofPL102                     cinit         0D97
+__end_ofPL104                     text40        0626
+__end_ofPL106                     text40        062A
+__end_ofPL108                     cinit         0F22
+__end_ofPL12                      cinit         0C5C
+__end_ofPL14                      cinit         0C78
+__end_ofPL16                      cinit         0CA4
+__end_ofPL18                      cinit         0CCE
+__end_ofPL2                       cinit         0C22
+__end_ofPL20                      text28        04CC
+__end_ofPL22                      cinit         0CF6
+__end_ofPL24                      text28        04D2
+__end_ofPL26                      text28        04DF
+__end_ofPL28                      text28        0505
+__end_ofPL30                      text28        050E
+__end_ofPL32                      text28        0514
+__end_ofPL34                      text28        0532
+__end_ofPL36                      cinit         0CFE
+__end_ofPL38                      cinit         0D16
+__end_ofPL4                       text28        0493
+__end_ofPL40                      cinit         0D1E
+__end_ofPL42                      cinit         0D2D
+__end_ofPL44                      text28        0539
+__end_ofPL46                      cinit         0D3E
+__end_ofPL48                      cinit         0D4F
+__end_ofPL50                      cinit         0D62
+__end_ofPL52                      text28        0540
+__end_ofPL54                      cinit         0D71
+__end_ofPL56                      text28        0550
+__end_ofPL58                      text28        055E
+__end_ofPL6                       text28        04A9
+__end_ofPL60                      text41        17FA
+__end_ofPL62                      cinit         0D77
+__end_ofPL64                      cinit         0D7C
+__end_ofPL66                      text28        0563
+__end_ofPL68                      text28        056D
+__end_ofPL70                      text28        0576
+__end_ofPL72                      text28        057C
+__end_ofPL74                      text28        0582
+__end_ofPL76                      text28        0588
+__end_ofPL78                      text28        058E
+__end_ofPL8                       text28        04AF
+__end_ofPL80                      text28        0595
+__end_ofPL82                      text41        1800
+__end_ofPL84                      cinit         0D82
+__end_ofPL86                      cinit         0E80
+__end_ofPL88                      cinit         0D88
+__end_ofPL90                      cinit         0D8D
+__end_ofPL92                      cinit         0D92
+__end_ofPL94                      text28        059B
+__end_ofPL96                      text28        05A1
+__end_ofPL98                      text28        05A7
 __end_of_ACTIVE_SENSOR_DELTA      stringtext2   18B4
-__end_of_CheckRfCmd               cinit         07C0
-__end_of_ChkTimeEventStatus       cinit         00DE
-__end_of_DIV                      cinit         038E
-__end_of_DataProcessing           text27        0E56
-__end_of_DisplayHandler           text40        15BC
-__end_of_Display_init             cinit         00E3
+__end_of_CheckRfCmd               cinit         1000
+__end_of_ChkTimeEventStatus       cinit         08A9
+__end_of_DIV                      cinit         0B59
+__end_of_DataProcessing           text28        0403
+__end_of_DisplayHandler           text41        15BC
+__end_of_Display_init             cinit         08AE
 __end_of_FWHEELSILERB             stringtext4   18BC
-__end_of_HeatKeyExec              cinit         0611
-__end_of_HighFreqCo               text27        0ECC
+__end_of_HeatKeyExec              cinit         0DE2
+__end_of_HighFreqCo               text28        0479
 __end_of_INACTIVE_SENSOR_DELTA    stringtext1   185A
 __end_of_IO_TOUCH_ATTR1           stringtext5   18BE
 __end_of_ISR                      intentry      0037
-__end_of_KeepRfData               cinit         041A
-__end_of_KeyScanHandler           cinit         03DA
+__end_of_KeepRfData               cinit         0EFF
+__end_of_KeyScanHandler           cinit         0BA5
 __end_of_LONGKEYPROTECT1          stringtext8   18C1
-__end_of_ManualKeyExec            cinit         0635
-__end_of_ModeKeyExec              cinit         0654
-__end_of_MxSet013                 text26        07FF
+__end_of_ManualKeyExec            cinit         0E06
+__end_of_ModeKeyExec              cinit         0E22
+__end_of_MxSet013                 text27        06AA
 __end_of_PRIMARYKEY11             stringtext7   18C0
-__end_of_PowerKeyExec             cinit         0683
-__end_of_Px_Level_Change_INITIAL  cinit         03E7
-__end_of_ReadRf433                text39        0A89
-__end_of_ReadTouchData            cinit         020E
-__end_of_RxData_Drive             cinit         0411
+__end_of_PowerKeyExec             cinit         0E51
+__end_of_Px_Level_Change_INITIAL  cinit         0BB2
+__end_of_ReadRf433                text40        0622
+__end_of_ReadTouchData            cinit         09D9
+__end_of_RxData_Drive             cinit         0EF6
 __end_of_SCANNINGTIME1            stringtext6   18BF
 __end_of_SWHEELSILERB             stringtext3   18B8
-__end_of_ShowLedData              text40        1781
-__end_of_SpecialDisplay1          text40        179D
-__end_of_SpecialDisplay2          text40        17D5
-__end_of_StartHigeFreq            cinit         0334
-__end_of_StrongKeyExec            cinit         068F
-__end_of_SysPowerHandler          cinit         0437
-__end_of_Sys_init                 cinit         06D7
-__end_of_TIME_INIT                cinit         0693
-__end_of_Time2Initial             cinit         0445
-__end_of_Time4Initial             cinit         06E8
-__end_of_TouchInit                cinit         034D
-__end_of_TouchInital              cinit         0749
-__end_of_TouchKeyScan             cinit         0129
-__end_of_UART_INITIAL             cinit         0756
-__end_of_UartSetEmptyInt          cinit         06AD
-__end_of_User_init                cinit         0424
-__end_of___awdiv                  cinit         0796
-__end_of___lbdiv                  text40        17B5
-__end_of___lbmod                  text40        17ED
-__end_of___wmul                   text27        0E6B
-__end_of__initialization          cinit         0085
+__end_of_ShowLedData              text41        1781
+__end_of_SpecialDisplay1          text41        179D
+__end_of_SpecialDisplay2          text41        17D5
+__end_of_StartHigeFreq            cinit         0AFF
+__end_of_StrongKeyExec            cinit         0E5D
+__end_of_SysPowerHandler          cinit         0BCF
+__end_of_Sys_init                 cinit         0BF9
+__end_of_TIME_INIT                cinit         0E61
+__end_of_Time2Initial             cinit         0C07
+__end_of_Time4Initial             cinit         0F33
+__end_of_TouchInit                cinit         0B18
+__end_of_TouchInital              cinit         0F94
+__end_of_TouchKeyScan             cinit         08F4
+__end_of_UART_INITIAL             cinit         0C14
+__end_of_UartSetEmptyInt          cinit         0E7A
+__end_of_User_init                cinit         0BBC
+__end_of___awdiv                  cinit         0FD4
+__end_of___lbdiv                  text41        17B5
+__end_of___lbmod                  text41        17ED
+__end_of___wmul                   text28        0418
+__end_of__initialization          cinit         0853
 __end_of_ad3nop                   _ad3nop_text  0004
-__end_of_dokey                    cinit         0600
-__end_of_exact_event_process      text38        07ED
-__end_of_main                     cinit         00CF
-__end_of_readrf                   cinit         07A9
-__end_of_refresh_data             cinit         06A4
-__end_of_send_uart_data           text36        0A0A
-__end_ofi1_UartSetEmptyInt        text36        0A13
-__initialization                  cinit         0039
+__end_of_dokey                    cinit         0DD1
+__end_of_exact_event_process      text39        0657
+__end_of_main                     cinit         089A
+__end_of_readrf                   cinit         0FE9
+__end_of_refresh_data             cinit         0E71
+__end_of_refresh_display          cinit         0F1E
+__end_of_send_uart_data           text37        066F
+__end_ofi1_UartSetEmptyInt        text37        0678
+__initialization                  cinit         0807
 __p_ad3nop_text                   _ad3nop_text  0003
 __pbitbssCOMMON                   bitbssCOMMON  03B0
 __pbssBANK0hh                     bssBANK0hh    002B
@@ -994,10 +993,10 @@ __pbssBIGRAM                      (abs)         2300
 __pbssCOMMON                      bssCOMMON     0077
 __pcstackBANK0hh                  cstackBANK0hh 004C
 __pcstackCOMMON                   cstackCOMMON  0070
-__pdataBANK1                      dataBANK1     00E3
+__pdataBANK1                      dataBANK1     00E5
 __pidataBANK1                     idataBANK1    0000
 __pintentry                       intentry      0004
-__pmaintext                       cinit         0088
+__pmaintext                       cinit         0856
 __pstringtext1                    stringtext1   1800
 __pstringtext2                    stringtext2   185A
 __pstringtext3                    stringtext3   18B4
@@ -1006,54 +1005,55 @@ __pstringtext5                    stringtext5   18BC
 __pstringtext6                    stringtext6   18BE
 __pstringtext7                    stringtext7   18BF
 __pstringtext8                    stringtext8   18C0
-__pswtext1                        swtext1       0820
-__pswtext2                        swtext2       082C
-__pswtext3                        swtext3       0838
-__pswtext4                        swtext4       0800
-__ptext1                          cinit         0796
-__ptext10                         cinit         0600
-__ptext11                         cinit         0756
-__ptext12                         cinit         0749
-__ptext13                         cinit         06E8
-__ptext14                         cinit         06D7
-__ptext15                         cinit         0437
-__ptext16                         cinit         06AD
-__ptext17                         cinit         0424
-__ptext18                         cinit         041A
-__ptext19                         cinit         068F
-__ptext2                          cinit         07A9
-__ptext20                         cinit         03E7
-__ptext21                         cinit         0411
-__ptext22                         cinit         03DA
-__ptext23                         cinit         038E
-__ptext24                         cinit         00E3
-__ptext25                         cinit         0129
-__ptext26                         text26        07ED
-__ptext27                         text27        0A91
-__ptext28                         text27        0E56
-__ptext29                         cinit         020E
-__ptext3                          cinit         05C8
-__ptext30                         cinit         0334
-__ptext31                         cinit         034D
-__ptext32                         text27        0E6B
-__ptext33                         cinit         00DE
-__ptext34                         cinit         00CF
-__ptext36                         text36        09F2
-__ptext37                         text36        0A0A
-__ptext38                         text38        07C0
-__ptext39                         text39        0A13
-__ptext4                          cinit         0693
-__ptext40                         text40        1531
-__ptext41                         text40        17B5
-__ptext42                         text40        17D5
-__ptext43                         text40        1781
-__ptext44                         text40        179D
-__ptext45                         text40        15BC
-__ptext5                          cinit         06A4
-__ptext6                          cinit         0683
-__ptext7                          cinit         0654
-__ptext8                          cinit         0635
-__ptext9                          cinit         0611
+__pswtext1                        swtext1       06B6
+__pswtext2                        swtext2       06C2
+__pswtext3                        swtext3       06CE
+__pswtext4                        swtext4       0678
+__ptext1                          cinit         0FD4
+__ptext10                         cinit         0DD1
+__ptext11                         cinit         0F94
+__ptext12                         cinit         0C07
+__ptext13                         cinit         0F33
+__ptext14                         cinit         0F22
+__ptext15                         cinit         0BF9
+__ptext16                         cinit         0BCF
+__ptext17                         cinit         0BBC
+__ptext18                         cinit         0BB2
+__ptext19                         cinit         0E5D
+__ptext2                          cinit         0FE9
+__ptext20                         cinit         0E80
+__ptext21                         cinit         0EFF
+__ptext22                         cinit         0EF6
+__ptext23                         cinit         0BA5
+__ptext24                         cinit         0B59
+__ptext25                         cinit         08AE
+__ptext26                         cinit         08F4
+__ptext27                         text27        0698
+__ptext28                         text28        0039
+__ptext29                         text28        0403
+__ptext3                          cinit         0D97
+__ptext30                         cinit         09D9
+__ptext31                         cinit         0AFF
+__ptext32                         cinit         0B18
+__ptext33                         text28        0418
+__ptext34                         cinit         08A9
+__ptext35                         cinit         089A
+__ptext37                         text37        0657
+__ptext38                         text37        066F
+__ptext39                         text39        062A
+__ptext4                          cinit         0E61
+__ptext40                         text40        05AC
+__ptext41                         text41        1531
+__ptext42                         text41        17B5
+__ptext43                         text41        17D5
+__ptext44                         text41        1781
+__ptext45                         text41        179D
+__ptext46                         text41        15BC
+__ptext5                          cinit         0E71
+__ptext6                          cinit         0E51
+__ptext7                          cinit         0E22
+__ptext8                          cinit         0E06
+__ptext9                          cinit         0DE2
 __size_of_CheckRfCmd              (abs)         0000
 __size_of_ChkTimeEventStatus      (abs)         0000
 __size_of_DIV                     (abs)         0000
@@ -1098,23 +1098,24 @@ __size_of_exact_event_process     (abs)         0000
 __size_of_main                    (abs)         0000
 __size_of_readrf                  (abs)         0000
 __size_of_refresh_data            (abs)         0000
+__size_of_refresh_display         (abs)         0000
 __size_of_send_uart_data          (abs)         0000
 __size_ofi1_UartSetEmptyInt       (abs)         0000
 _ad3nop                           _ad3nop_text  0003
 _ad3nop_absaddr                   (abs)         0003
 _buf_rec                          bssBANK1      00AC
-_dokey                            cinit         05C8
-_dsp_100ms                        bssBANK1      00D6
-_exact_event_process              text38        07C0
+_dokey                            cinit         0D97
+_dsp_100ms                        bssBANK1      00D2
+_exact_event_process              text39        062A
 _fmd_AntiWaterBit                 bssBANK0hh    004A
-_fmd_DownDataTime                 dataBANK1     00E3
-_fmd_DownTouchCount               dataBANK1     00E7
+_fmd_DownDataTime                 dataBANK1     00E5
+_fmd_DownTouchCount               dataBANK1     00E9
 _fmd_HfreqOn                      bssBANK0hh    003C
 _fmd_KeyBuffPress                 bssBANK0hh    0042
 _fmd_KeyBuffUnPress               bssBANK0hh    0041
-_fmd_KeyDValue_Key                bssBANK1      00B9
-_fmd_KeyDValue_Key_base           bssBANK1      00B5
-_fmd_KeyDValue_Key_baseBuff       bssBANK1      00B1
+_fmd_KeyDValue_Key                bssBANK1      00B5
+_fmd_KeyDValue_Key_base           bssBANK1      00B1
+_fmd_KeyDValue_Key_baseBuff       bssBANK2      015C
 _fmd_Keystatus                    bssBANK0hh    0037
 _fmd_Keystatus1                   bssBANK0hh    0035
 _fmd_Keystatus2                   bssBANK0hh    0033
@@ -1123,24 +1124,24 @@ _fmd_Null1                        (abs)         0023
 _fmd_Null2                        (abs)         0024
 _fmd_Null3                        (abs)         002A
 _fmd_OriginalData                 (abs)         0021
-_fmd_PressOff                     bssBANK1      00CD
-_fmd_PressOffCount                bssBANK1      00CC
+_fmd_PressOff                     bssBANK1      00C9
+_fmd_PressOffCount                bssBANK1      00C8
 _fmd_ReferenceData                (abs)         0025
 _fmd_ResultData                   (abs)         0027
 _fmd_ResultDataH                  (abs)         0029
-_fmd_Startgx                      bssBANK1      00CB
-_fmd_TestCount                    bssBANK1      00CE
+_fmd_Startgx                      bssBANK1      00C7
+_fmd_TestCount                    bssBANK1      00CA
 _fmd_TouchDataBuff_Key            bssBANK0hh    002B
-_fmd_UpDataTime                   dataBANK1     00E5
-_fmd_UpTouchCount                 dataBANK1     00E9
+_fmd_UpDataTime                   dataBANK1     00E7
+_fmd_UpTouchCount                 dataBANK1     00EB
 _fmd_a                            bssBANK0hh    004B
 _fmd_a1                           bssBANK0hh    0040
 _fmd_a2                           bssBANK0hh    003F
-_fmd_a3                           bssBANK1      00D0
+_fmd_a3                           bssBANK1      00CC
 _fmd_antishaketimecount           bssBANK0hh    0043
-_fmd_antishaketimecount1          bssBANK1      00D1
+_fmd_antishaketimecount1          bssBANK1      00CD
 _fmd_channels                     bssBANK0hh    0047
-_fmd_currentCount                 bssBANK1      00CF
+_fmd_currentCount                 bssBANK1      00CB
 _fmd_f_firstdown                  bitbssCOMMON  03B3
 _fmd_f_firstloop                  bitbssCOMMON  03B2
 _fmd_f_forbidden                  bitbssCOMMON  03B0
@@ -1149,24 +1150,31 @@ _fmd_f_main_key                   bitbssCOMMON  03B1
 _fmd_nodownavrdata_Key            (abs)         2378
 _fmd_nodownsum_Key                (abs)         2300
 _fmd_theUsedChannel               bssBANK2      013E
-_fmd_thedeathcount                bssBANK1      00C1
-_fmd_thedeathcount1               bssBANK1      00BF
-_fmd_thedeathcount2               bssBANK1      00BD
+_fmd_thedeathcount                bssBANK1      00BD
+_fmd_thedeathcount1               bssBANK1      00BB
+_fmd_thedeathcount2               bssBANK1      00B9
 _fmd_u                            bssBANK0hh    003E
 _fmd_updataChannel                bssBANK2      014D
 _fmd_updataFlag                   bssBANK0hh    003D
 _fmd_x                            bssBANK0hh    003B
-_main                             cinit         0088
+_keybit1                          bssBANK1      00D7
+_keybit2                          bssBANK1      00D6
+_keybit3                          bssBANK1      00D5
+_keybit4                          bssBANK1      00D4
+_keybit5                          bssBANK1      00D3
+_main                             cinit         0856
 _readKeyNum                       bssBANK0hh    0039
-_readrf                           cinit         0796
-_refresh_data                     cinit         0693
+_readrf                           cinit         0FD4
+_refresh_data                     cinit         0E61
+_refresh_display                  cinit         0EFF
 _send_buf                         bssBANK1      00A0
-_send_uart_data                   text36        09F2
+_send_uart_data                   text37        0657
+_tRFtemp                          bssBANK1      00D8
 btemp                             (abs)         007E
-clear_ram0                        clrtext       09E6
-end_of_initialization             cinit         0085
+clear_ram0                        clrtext       06AA
+end_of_initialization             cinit         0853
 i1UartSetEmptyInt@value           cstackCOMMON  0070
-i1_UartSetEmptyInt                text36        0A0A
+i1_UartSetEmptyInt                text37        066F
 int$flags                         (abs)         007E
 intlevel0                         functab       0000
 intlevel1                         functab       0000
@@ -1174,12 +1182,13 @@ intlevel2                         functab       0000
 intlevel3                         functab       0000
 intlevel4                         functab       0000
 intlevel5                         functab       0000
+refresh_display@keybuf            cstackBANK0hh 004C
 reset_vec                         reset_vec     0000
-send_uart_data@ByteNum            bssBANK1      00D2
+send_uart_data@ByteNum            bssBANK1      00CE
 stackhi                           (abs)         22FF
 stacklo                           (abs)         210E
 start                             init          0037
-start_initialization              cinit         0039
+start_initialization              cinit         0807
 wtemp0                            (abs)         007E
 
 
@@ -1834,8 +1843,39 @@ Total ram usage:        0 bytes
  Hardware stack levels required when called:    5
  This function calls:
 		_KeepRfData
+		_refresh_display
  This function is called by:
 		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _refresh_display *****************
+ Defined at:
+		line 50 in file "sub.c"
+ Parameters:    Size  Location     Type
+  keybuf          1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  keybuf          1    0[BANK0h] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON BANK0hh   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       1       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       1       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		Nothing
+ This function is called by:
+		_RxData_Drive
  This function uses a non-reentrant model
 
 
@@ -2613,40 +2653,41 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 CHIPINIT.C
-		_Time2Initial  		CODE           	0437	0000	15
+		_Time2Initial  		CODE           	0BF9	0000	15
 		_ISR           		CODE           	0004	0000	52
-		_exact_event_process		CODE           	07C0	0000	46
-		_UART_INITIAL  		CODE           	0749	0000	14
-		_Time4Initial  		CODE           	06D7	0000	18
-		_Px_Level_Change_INITIAL		CODE           	03DA	0000	14
-		_User_init     		CODE           	041A	0000	11
-		_Sys_init      		CODE           	06AD	0000	43
-		_Display_init  		CODE           	00DE	0000	6
-		_TIME_INIT     		CODE           	068F	0000	5
+		_exact_event_process		CODE           	062A	0000	46
+		_UART_INITIAL  		CODE           	0C07	0000	14
+		_Time4Initial  		CODE           	0F22	0000	18
+		_Px_Level_Change_INITIAL		CODE           	0BA5	0000	14
+		_User_init     		CODE           	0BB2	0000	11
+		_Sys_init      		CODE           	0BCF	0000	43
+		_Display_init  		CODE           	08A9	0000	6
+		_TIME_INIT     		CODE           	0E5D	0000	5
 
 CHIPINIT.C estimated size: 224
 
 uart.c
-		_UartSetEmptyInt		CODE           	06A4	0000	10
-		_send_uart_data		CODE           	09F2	0000	25
+		_UartSetEmptyInt		CODE           	0E71	0000	10
+		_send_uart_data		CODE           	0657	0000	25
 
 uart.c estimated size: 35
 
 sub.c
 		_DisplayHandler		CODE           	1531	0000	140
-		_refresh_data  		CODE           	0693	0000	18
+		_refresh_data  		CODE           	0E61	0000	17
 		_SpecialDisplay1		CODE           	1781	0000	29
 		_SpecialDisplay2		CODE           	17B5	0000	33
-		_SysPowerHandler		CODE           	0424	0000	20
-		_dokey         		CODE           	05C8	0000	57
-		_KeyScanHandler		CODE           	038E	0000	77
-		_ChkTimeEventStatus		CODE           	00CF	0000	16
+		_SysPowerHandler		CODE           	0BBC	0000	20
+		_dokey         		CODE           	0D97	0000	59
+		_refresh_display		CODE           	0EFF	0000	32
+		_KeyScanHandler		CODE           	0B59	0000	77
+		_ChkTimeEventStatus		CODE           	089A	0000	16
 		_ShowLedData   		CODE           	15BC	0000	454
 
-sub.c estimated size: 844
+sub.c estimated size: 877
 
 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
-		___awdiv       		CODE           	0756	0000	65
+		___awdiv       		CODE           	0F94	0000	65
 
 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c estimated size: 65
 
@@ -2656,89 +2697,91 @@ D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\
 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c estimated size: 25
 
 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\Umul16.c
-		___wmul        		CODE           	0E56	0000	22
+		___wmul        		CODE           	0403	0000	22
 
 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\Umul16.c estimated size: 22
 
 TOUCH.C
-		_DIV           		CODE           	034D	0000	66
-		_TouchKeyScan  		CODE           	00E3	0000	71
-		_ReadTouchData 		CODE           	0129	0000	230
-		_HighFreqCo    		CODE           	0E6B	0000	98
-		_StartHigeFreq 		CODE           	020E	0000	295
-		_TouchInit     		CODE           	0334	0000	26
-		_TouchInital   		CODE           	06E8	0000	98
-		_DataProcessing		CODE           	0A91	0000	966
-		_MxSet013      		CODE           	07ED	0000	19
+		_DIV           		CODE           	0B18	0000	66
+		_TouchKeyScan  		CODE           	08AE	0000	71
+		_ReadTouchData 		CODE           	08F4	0000	230
+		_HighFreqCo    		CODE           	0418	0000	98
+		_StartHigeFreq 		CODE           	09D9	0000	295
+		_TouchInit     		CODE           	0AFF	0000	26
+		_TouchInital   		CODE           	0F33	0000	98
+		_DataProcessing		CODE           	0039	0000	971
+		_MxSet013      		CODE           	0698	0000	19
 
-TOUCH.C estimated size: 1869
+TOUCH.C estimated size: 1874
 
 shared
-		PL12           		CODE           	0470	0000	30
-		PL50           		CODE           	0582	0000	18
-		PL8            		CODE           	0EFC	0000	7
+		PL12           		CODE           	0C3F	0000	30
+		PL50           		CODE           	0D4F	0000	20
+		PL8            		CODE           	04A9	0000	7
 		_SWHEELSILERB  		STRCODE        	18B4	0000	5
-		PL22           		CODE           	04FF	0000	41
+		PL22           		CODE           	0CCE	0000	41
 		PL60           		CODE           	17ED	0000	14
-		PL100          		CODE           	05C3	0000	6
-		PL32           		CODE           	0F61	0000	7
-		PL70           		CODE           	0FC0	0000	7
-		PL42           		CODE           	054F	0000	16
-		PL80           		CODE           	0FE1	0000	8
-		PL14           		CODE           	048D	0000	29
-		PL52           		CODE           	0F8C	0000	8
-		PL90           		CODE           	05B3	0000	7
+		PL100          		CODE           	05A7	0000	6
+		PL32           		CODE           	050E	0000	7
+		PL70           		CODE           	056D	0000	10
+		PL42           		CODE           	0D1E	0000	16
+		PL80           		CODE           	058E	0000	8
+		PL14           		CODE           	0C5C	0000	29
+		PL52           		CODE           	0539	0000	8
+		PL90           		CODE           	0D88	0000	6
 		_PRIMARYKEY11  		STRCODE        	0000	0000	0
-		PL24           		CODE           	0F1F	0000	7
-		PL62           		CODE           	05A2	0000	7
-		PL34           		CODE           	0F67	0000	31
-		PL72           		CODE           	0FC6	0000	10
-		PL44           		CODE           	0F85	0000	8
-		PL82           		CODE           	0FE8	0000	8
+		PL24           		CODE           	04CC	0000	7
+		PL62           		CODE           	0D71	0000	7
+		PL34           		CODE           	0514	0000	31
+		PL72           		CODE           	0576	0000	7
+		PL44           		CODE           	0532	0000	8
+		PL82           		CODE           	17FA	0000	7
 		_SCANNINGTIME1 		STRCODE        	0000	0000	0
-		PL16           		CODE           	04A9	0000	45
-		PL54           		CODE           	0593	0000	16
-		PL92           		CODE           	05B9	0000	6
+		PL16           		CODE           	0C78	0000	45
+		PL54           		CODE           	0D62	0000	16
+		PL92           		CODE           	0D8D	0000	6
 		_ACTIVE_SENSOR_DELTA		STRCODE        	185A	0000	91
-		PL26           		CODE           	0F25	0000	14
-		PL64           		CODE           	05A8	0000	6
-		PL102          		CODE           	0A89	0000	5
-		PL36           		CODE           	0527	0000	9
-		PL74           		CODE           	0FCF	0000	7
-		PL46           		CODE           	055E	0000	20
-		PL84           		CODE           	0FEF	0000	7
+		PL26           		CODE           	04D2	0000	14
+		PL64           		CODE           	0D77	0000	6
+		PL102          		CODE           	0D92	0000	6
+		PL36           		CODE           	0CF6	0000	9
+		PL74           		CODE           	057C	0000	7
+		PL46           		CODE           	0D2D	0000	18
+		PL84           		CODE           	0D7C	0000	7
 		_LONGKEYPROTECT1		STRCODE        	0000	0000	0
-		PL18           		CODE           	04D5	0000	43
-		PL56           		CODE           	0F93	0000	17
-		PL94           		CODE           	05BE	0000	6
-		PL28           		CODE           	0F32	0000	39
-		PL66           		CODE           	0FB1	0000	6
-		PL38           		CODE           	052F	0000	9
-		PL76           		CODE           	0FD5	0000	7
-		PL48           		CODE           	0571	0000	18
-		PL86           		CODE           	17FA	0000	7
-		PL58           		CODE           	0FA3	0000	15
-		PL96           		CODE           	0FF5	0000	7
-		PL68           		CODE           	0FB6	0000	11
-		PL104          		CODE           	0A8D	0000	5
-		PL78           		CODE           	0FDB	0000	7
-		PL88           		CODE           	05AD	0000	7
-		PL98           		CODE           	0FFB	0000	6
-		__initialization		CODE           	0039	0000	77
+		PL18           		CODE           	0CA4	0000	43
+		PL56           		CODE           	0540	0000	17
+		PL94           		CODE           	0595	0000	7
+		PL28           		CODE           	04DF	0000	39
+		PL66           		CODE           	055E	0000	6
+		PL38           		CODE           	0CFE	0000	25
+		PL76           		CODE           	0582	0000	7
+		PL48           		CODE           	0D3E	0000	18
+		PL86           		CODE           	0E7A	0000	7
+		PL58           		CODE           	0550	0000	15
+		PL96           		CODE           	059B	0000	7
+		PL68           		CODE           	0563	0000	11
+		PL104          		CODE           	0622	0000	5
+		PL78           		CODE           	0588	0000	7
+		PL88           		CODE           	0D82	0000	7
+		PL98           		CODE           	05A1	0000	7
+		__initialization		CODE           	0807	0000	77
 		_ad3nop        		CODE           	0003	0000	2
+		PL106          		CODE           	0626	0000	5
 		_INACTIVE_SENSOR_DELTA		STRCODE        	1800	0000	91
-		i1_UartSetEmptyInt		CODE           	0A0A	0000	10
-		PL2            		CODE           	0445	0000	15
+		i1_UartSetEmptyInt		CODE           	066F	0000	10
+		PL108          		CODE           	0F1E	0000	5
+		PL2            		CODE           	0C14	0000	15
 		_FWHEELSILERB  		STRCODE        	18B8	0000	5
-		PL10           		CODE           	0453	0000	30
-		PL4            		CODE           	0ECC	0000	27
-		PL20           		CODE           	0F02	0000	30
+		PL10           		CODE           	0C22	0000	30
+		PL4            		CODE           	0479	0000	27
+		PL20           		CODE           	04AF	0000	30
 		_IO_TOUCH_ATTR1		STRCODE        	0000	0000	0
-		PL30           		CODE           	0F58	0000	10
-		PL6            		CODE           	0EE6	0000	23
-		PL40           		CODE           	0537	0000	25
+		PL30           		CODE           	0505	0000	10
+		PL6            		CODE           	0493	0000	23
+		PL40           		CODE           	0D16	0000	9
 
-shared estimated size: 1055
+shared estimated size: 1066
 
 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
 		___lbdiv       		CODE           	179D	0000	25
@@ -2746,21 +2789,21 @@ D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\
 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c estimated size: 25
 
 rx.c
-		_KeepRfData    		CODE           	0411	0000	10
-		_RxData_Drive  		CODE           	03E7	0000	43
-		_CheckRfCmd    		CODE           	07A9	0000	24
-		_ReadRf433     		CODE           	0A13	0000	119
-		_readrf        		CODE           	0796	0000	20
+		_KeepRfData    		CODE           	0EF6	0000	10
+		_RxData_Drive  		CODE           	0E80	0000	119
+		_CheckRfCmd    		CODE           	0FE9	0000	24
+		_ReadRf433     		CODE           	05AC	0000	119
+		_readrf        		CODE           	0FD4	0000	22
 
-rx.c estimated size: 216
+rx.c estimated size: 294
 
 main.c
-		_PowerKeyExec  		CODE           	0654	0000	48
-		_HeatKeyExec   		CODE           	0600	0000	18
-		_ModeKeyExec   		CODE           	0635	0000	32
-		_main          		CODE           	0088	0000	72
-		_ManualKeyExec 		CODE           	0611	0000	37
-		_StrongKeyExec 		CODE           	0683	0000	13
+		_PowerKeyExec  		CODE           	0E22	0000	48
+		_HeatKeyExec   		CODE           	0DD1	0000	18
+		_ModeKeyExec   		CODE           	0E06	0000	29
+		_main          		CODE           	0856	0000	69
+		_ManualKeyExec 		CODE           	0DE2	0000	37
+		_StrongKeyExec 		CODE           	0E51	0000	13
 
-main.c estimated size: 220
+main.c estimated size: 214
 

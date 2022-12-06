@@ -5,7 +5,7 @@
 // uchar RxBit;
 // uchar TmsRxH;
 // uchar TmsRxL;
- uchar RxData;
+ uchar RxData,bRxData;
 
 RFSTATE RFs;
 volatile unsigned char buf_rec[5];
@@ -179,7 +179,7 @@ void readrf()
 
     RxData=buf_rec[2];
 
-	// RemOutTime=T_REMOUT;
+	RemOutTime=200;
 }
 
 //每10ms调用一次
@@ -198,19 +198,78 @@ void KeepRfData(void)
 void RxData_Drive(void)
 {
 	KeepRfData();
-    if(RxData==0)return;
-		switch(RxData)
-	{
-		case 0x01:KeyType=PowerKey;break;
-		case 0x08:KeyType=ModeKey;break;
-		case 0x0E:KeyType=StrongKey;break;
-		case 0x0A:KeyType=ManualKey;break;
-		case 0x0C:KeyType=HeatKey;break;
-		default:RxData=0;break;
+    if(RxData==0x01) // POWER 0x46
+    {
+		if(keybit5)return;
+		keybit5=on;
 
-	}
-	RxData=0;
-	// dokey();
-    // if(RxData==0)return;
-	
+        tRFtemp=PowerKey; 
+    }else keybit5=off;
+    
+    if(RxData==0x0E) //
+    {
+		if(keybit1)return;
+		keybit1=on;
+		// if(PwrType)tRFtemp=ManualKey;  // TimeKey;
+        if(PwrType)tRFtemp=ModeKey;
+    }else keybit1=off;
+
+    if(RxData==0x0A) //
+    {
+		if(keybit2)return;
+		keybit2=on;		
+		// if(PwrType)tRFtemp=HeatKey;
+        if(PwrType)tRFtemp=StrongKey;
+    }else keybit2=off;
+
+    if(RxData==0x08) // TIME 0x19
+    {
+		if(keybit3)return;
+		keybit3=on;		
+		// if(PwrType)tRFtemp=StrongKey ;
+        if(PwrType)tRFtemp=ManualKey;  // TimeKey;
+    }else keybit3=off;	
+
+    if(RxData==0x0C) // HEAT 0x18
+    {
+		if(keybit4)return;
+		keybit4=on;		
+		// if(PwrType)tRFtemp=ModeKey;
+        if(PwrType)tRFtemp=HeatKey;
+    }else keybit4=off;		
+
+    if(tRFtemp)	
+    {
+    	// SwStatus=SwFwd;
+
+        switch (tRFtemp)
+        {
+        case PowerKey:
+            KeyType=PowerKey;
+            // PowerKeyExec();
+            break;
+        case ModeKey:
+            KeyType=ModeKey;
+            // ModeKeyExec();
+            break;
+        case StrongKey:
+            KeyType=StrongKey;
+            // StrongKeyExec();
+            break;
+        case HeatKey:
+            KeyType=HeatKey;
+            // HeatKeyExec();
+            break;
+        case ManualKey:
+            KeyType=ManualKey;
+            // ManualKeyExec();
+            break; 
+        default:
+            break;
+        }
+        refresh_display(tRFtemp);
+        tRFtemp=NullKey;
+        // RxData=0;
+    	// SwStatus=SwSty;
+    }
 }

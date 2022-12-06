@@ -51,7 +51,7 @@ synL 3
 rfH 4
 rfL 5
 ]
-"204
+"206
 [e E3610 . `uc
 NullKey 0
 PowerKey 1
@@ -153,6 +153,8 @@ TestKey 8
 [v _RxData_Drive RxData_Drive `(v  1 e 1 0 ]
 "37 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 [v _refresh_data refresh_data `(v  1 e 1 0 ]
+"50
+[v _refresh_display refresh_display `(v  1 e 1 0 ]
 "70
 [v _KeyScanHandler KeyScanHandler `(v  1 e 1 0 ]
 "120
@@ -435,6 +437,14 @@ TestKey 8
 [v _buf_rec buf_rec `VE[5]uc  1 e 5 0 ]
 "15
 [v _RemOutTime RemOutTime `uc  1 e 1 0 ]
+"19
+[v _tRFtemp tRFtemp `uc  1 e 1 0 ]
+"22
+[v _keybit1 keybit1 `uc  1 e 1 0 ]
+[v _keybit2 keybit2 `uc  1 e 1 0 ]
+[v _keybit3 keybit3 `uc  1 e 1 0 ]
+[v _keybit4 keybit4 `uc  1 e 1 0 ]
+[v _keybit5 keybit5 `uc  1 e 1 0 ]
 [s S1584 . 1 `VEuc 1 b0 1 0 :1:0 
 `VEuc 1 b1 1 0 :1:1 
 `VEuc 1 b2 1 0 :1:2 
@@ -705,9 +715,17 @@ TestKey 8
 "198 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
 [v _RxData_Drive RxData_Drive `(v  1 e 1 0 ]
 {
-"216
+"275
 } 0
-"186
+"50 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+[v _refresh_display refresh_display `(v  1 e 1 0 ]
+{
+[v refresh_display@keybuf keybuf `uc  1 a 1 wreg ]
+[v refresh_display@keybuf keybuf `uc  1 a 1 wreg ]
+[v refresh_display@keybuf keybuf `uc  1 a 1 0 ]
+"68
+} 0
+"186 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
 [v _KeepRfData KeepRfData `(v  1 e 1 0 ]
 {
 "196

@@ -4289,16 +4289,16 @@ if(SysFunFlg0.OneBits.b1)
 {
 SysFunFlg0.OneBits.b1=0;
 RxData_Drive();
+
 }
 if(SysFunFlg0.OneBits.b0)
 {
 SysFunFlg0.OneBits.b0=0;
 
-
 KeyScanHandler();
 dokey();
-SysPowerHandler();
 
+SysPowerHandler();
 ChkTimeEventStatus();
 }
 }

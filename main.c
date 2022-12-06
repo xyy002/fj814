@@ -178,16 +178,16 @@ void main(void)
 		{
 			t2msFlag=0;
 			RxData_Drive();	
+			
 		}
 		if(t10msFlag)
 		{
 			t10msFlag=0;
 			//PA7=~PA7;
-			
-			KeyScanHandler(); 
+			KeyScanHandler();
 			dokey();
+			// RxData_Drive();	
 			SysPowerHandler(); 
-
 			ChkTimeEventStatus();
 		}		
 	}
