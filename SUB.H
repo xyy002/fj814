@@ -89,7 +89,7 @@
 #define fsize44  44 
 #define fsize45  45
 
-enum  //°´¼üÏÔÊ¾ÐòÁÐ
+enum  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½
 { 
 	DsSty,  //0
 	DsMode,
@@ -99,7 +99,7 @@ enum  //°´¼üÏÔÊ¾ÐòÁÐ
 	DsTime
 };
 
-enum  //°´¼üÐòÁÐ
+enum  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 { 
 	NullKey,  //0
 	PowerKey,	
@@ -112,7 +112,7 @@ enum  //°´¼üÐòÁÐ
 	TestKey
 };
 
-enum  //Ä£Ê½ÐòÁÐ
+enum  //Ä£Ê½ï¿½ï¿½ï¿½ï¿½
 {
 	Mode0,	//off
 	Mode1,	//1
@@ -138,14 +138,14 @@ typedef union
 	unsigned char AllBits;
 }FunctionFlag;
 
-#define bSysRunFlg        SysFunFlg0.OneBits.b7  //µçÔ´¿ª¹Ø±êÖ¾
-#define bUartTxFlg       SysFunFlg0.OneBits.b6  //°´¼ü°´ÏÂ±êÖ¾
-#define bHeatFlg        SysFunFlg0.OneBits.b5  //¼ÓÈÈ±êÊ¶  
-#define bModeChgFlg     SysFunFlg0.OneBits.b4  //Ä£Ê½¸üÐÂ±êÖ¾
-#define bKneadFlg      SysFunFlg0.OneBits.b3  //ÈàÄó¿ª¹Ø±êÊ¶
-#define bAirPumpFlg      SysFunFlg0.OneBits.b2  //Æø±Ã¿ª¹Ø±êÖ¾
-#define t2msFlag     SysFunFlg0.OneBits.b1  //¹Ø»ú±êÊ¶
-#define t10msFlag       SysFunFlg0.OneBits.b0  //³õ´ÎÔËÐÐ±êÖ¾
+#define bSysRunFlg        SysFunFlg0.OneBits.b7  //ï¿½ï¿½Ô´ï¿½ï¿½ï¿½Ø±ï¿½Ö¾
+#define bUartTxFlg       SysFunFlg0.OneBits.b6  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½Ö¾
+#define bHeatFlg        SysFunFlg0.OneBits.b5  //ï¿½ï¿½ï¿½È±ï¿½Ê¶  
+#define bModeChgFlg     SysFunFlg0.OneBits.b4  //Ä£Ê½ï¿½ï¿½ï¿½Â±ï¿½Ö¾
+#define bKneadFlg      SysFunFlg0.OneBits.b3  //ï¿½ï¿½ï¿½ó¿ª¹Ø±ï¿½Ê¶
+#define bAirPumpFlg      SysFunFlg0.OneBits.b2  //ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Ø±ï¿½Ö¾
+#define t2msFlag     SysFunFlg0.OneBits.b1  //ï¿½Ø»ï¿½ï¿½ï¿½Ê¶
+#define t10msFlag       SysFunFlg0.OneBits.b0  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½Ö¾
 
 #define uSysFunFlg0 SysFunFlg0.AllBits
 
@@ -161,11 +161,11 @@ typedef union
 #define uSysFunFlg1 SysFunFlg1.AllBits
 
 #define bKeyPresFlg    SysFunFlg2.OneBits.b7  //
-#define bCushionFstFlg    SysFunFlg2.OneBits.b6  //Ê×´ÎÍ¨µç¼ÓÈÈ¿ª¹Ø±êÖ¾  
-#define bCushionRunFlg   SysFunFlg2.OneBits.b5  //¼ÓÈÈ¿ª¹Ø±êÖ¾
+#define bCushionFstFlg    SysFunFlg2.OneBits.b6  //ï¿½×´ï¿½Í¨ï¿½ï¿½ï¿½ï¿½È¿ï¿½ï¿½Ø±ï¿½Ö¾  
+#define bCushionRunFlg   SysFunFlg2.OneBits.b5  //ï¿½ï¿½ï¿½È¿ï¿½ï¿½Ø±ï¿½Ö¾
 #define bJumpFlg    SysFunFlg2.OneBits.b4  //
 #define bSendCmdFlg     SysFunFlg2.OneBits.b3  //
-#define xxxxxxl   SysFunFlg2.OneBits.b2  //
+#define bRxdataFlg   SysFunFlg2.OneBits.b2  //
 #define xxxxxl    SysFunFlg2.OneBits.b1  //
 #define xxxxl     SysFunFlg2.OneBits.b0  //
 
@@ -177,7 +177,7 @@ extern unsigned char ModeType,HeatType,StrongType,KeyType,SizeType,TimeType,PwrT
 extern uchar LastMode,LastManual;
 unsigned char last_HeatType,last_StrongType;
 unsigned int last_time;
-extern unsigned uint TmpCnt,TmpCnt1,KeyCnt,BuzzerCnt;  //
+extern unsigned uint TmpCnt,TmpCnt1,KeyCnt,BuzzerCnt,RxdataCnt;  //
 extern uchar DspIndex,dsp_100ms,fmd_channels;
 extern volatile unsigned int readKeyNum,TouchTimeCount;
 
@@ -219,7 +219,8 @@ void SendMsgHandler();
 
 void send_uart_data(void);
 void LedBreathing();
-
+void refresh_data();
+void refresh_display(unsigned char keybuf);
 void dokey();
 void DisplayHandler();
 void ChkTimeEventStatus();

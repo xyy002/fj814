@@ -47,6 +47,26 @@ void refresh_data()
 	UartSetEmptyInt(on);	
 }
 
+void refresh_display(unsigned char keybuf)
+{
+	switch (keybuf)
+	{
+	case ModeKey:
+		DspIndex=DsMode;
+		break;
+	case StrongKey:
+		DspIndex =DsStrong; 
+		break;
+	case HeatKey:
+		DspIndex =DsHeat;
+		break;
+	case ManualKey:
+		DspIndex =DsManual; //DsManual; TIME
+	default:
+		break;
+	}
+}
+
  void KeyScanHandler()
   {
 	 //readKeyNum = NullKey;	
@@ -134,7 +154,7 @@ void dokey()
 	}
 	else
 	{
-		SetBuzzer();
+		// SetBuzzer();
 		refresh_data();	
 	}
 	

@@ -6611,7 +6611,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 "179
 [v _last_time `ui ~T0 @X0 1 e ]
 [; ;sub.h: 179: unsigned int last_time;
-[; ;sub.h: 180: extern unsigned unsigned int TmpCnt,TmpCnt1,KeyCnt,BuzzerCnt;
+[; ;sub.h: 180: extern unsigned unsigned int TmpCnt,TmpCnt1,KeyCnt,BuzzerCnt,RxdataCnt;
 [; ;sub.h: 181: extern unsigned char DspIndex,dsp_100ms,fmd_channels;
 [; ;sub.h: 182: extern volatile unsigned int readKeyNum,TouchTimeCount;
 [; ;sub.h: 184: extern unsigned char TxCnt,TxBuf,BitStp,ByteNum;
@@ -6649,9 +6649,11 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [; ;sub.h: 218: void SendMsgHandler();
 [; ;sub.h: 220: void send_uart_data(void);
 [; ;sub.h: 221: void LedBreathing();
-[; ;sub.h: 223: void dokey();
-[; ;sub.h: 224: void DisplayHandler();
-[; ;sub.h: 225: void ChkTimeEventStatus();
+[; ;sub.h: 222: void refresh_data();
+[; ;sub.h: 223: void refresh_display(unsigned char keybuf);
+[; ;sub.h: 224: void dokey();
+[; ;sub.h: 225: void DisplayHandler();
+[; ;sub.h: 226: void ChkTimeEventStatus();
 [; ;ChipInit.h: 14: void Ram_init();
 [; ;ChipInit.h: 15: void Sys_init();
 [; ;ChipInit.h: 16: void IO_init();
@@ -6686,9 +6688,28 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [; ;uart.h: 18: };
 [; ;uart.h: 20: void send_uart_data(void);
 [; ;uart.h: 21: void UartSetEmptyInt(unsigned char value);
-[; ;rx.h: 21: extern unsigned char RxData;
-[; ;rx.h: 24: extern void Rx_Drive(void);
-[; ;rx.h: 25: extern void RxData_Drive(void);
+[; ;rx.h: 38: typedef enum
+[; ;rx.h: 39: {
+[; ;rx.h: 40: rfReset=0,
+[; ;rx.h: 41: rffall,
+[; ;rx.h: 42: synH,
+[; ;rx.h: 43: synL,
+[; ;rx.h: 44: rfH,
+[; ;rx.h: 45: rfL
+[; ;rx.h: 46: }RFSTEP;
+[; ;rx.h: 48: typedef struct
+[; ;rx.h: 49: {
+[; ;rx.h: 50: RFSTEP RFsp;
+[; ;rx.h: 51: volatile unsigned char tRFH;
+[; ;rx.h: 52: volatile unsigned char tRFL;
+[; ;rx.h: 53: volatile unsigned char BitCount;
+[; ;rx.h: 54: volatile unsigned char Bptr;
+[; ;rx.h: 55: volatile unsigned char RecBufFull;
+[; ;rx.h: 56: }RFSTATE;
+[; ;rx.h: 58: extern unsigned char RxData,bRxData;
+[; ;rx.h: 63: extern void ReadRf433();
+[; ;rx.h: 64: extern void RxData_Drive(void);
+[; ;rx.h: 65: extern void readrf();
 "18 breathingLight.h
 [v _s_u8TimeCounter `uc ~T0 @X0 1 e ]
 [i _s_u8TimeCounter
@@ -6753,23 +6774,23 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [; ;uart.c: 28: {
 [e :U _send_uart_data ]
 [f ]
-[v F3771 `uc ~T0 @X0 1 s ByteNum ]
+[v F3792 `uc ~T0 @X0 1 s ByteNum ]
 [; ;uart.c: 29: static unsigned char ByteNum;
 [; ;uart.c: 31: if(ByteNum<6)
 "31
-[e $ ! < -> F3771 `i -> 6 `i 347  ]
+[e $ ! < -> F3792 `i -> 6 `i 348  ]
 [; ;uart.c: 32: {
 "32
 {
 [; ;uart.c: 33: URDATAL =send_buf[ByteNum++];
 "33
-[e = _URDATAL *U + &U _send_buf * -> ++ F3771 -> -> 1 `i `uc `ux -> -> # *U &U _send_buf `ui `ux ]
+[e = _URDATAL *U + &U _send_buf * -> ++ F3792 -> -> 1 `i `uc `ux -> -> # *U &U _send_buf `ui `ux ]
 "34
 }
 [; ;uart.c: 34: }
-[e $U 348  ]
+[e $U 349  ]
 "35
-[e :U 347 ]
+[e :U 348 ]
 [; ;uart.c: 35: else
 [; ;uart.c: 36: {
 "36
@@ -6782,17 +6803,17 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e ( _UartSetEmptyInt (1 -> -> 0 `i `uc ]
 [; ;uart.c: 39: ByteNum = 0;
 "39
-[e = F3771 -> -> 0 `i `uc ]
+[e = F3792 -> -> 0 `i `uc ]
 [; ;uart.c: 40: SysFunFlg0.OneBits.b6 = 0;
 "40
 [e = . . _SysFunFlg0 0 6 -> -> 0 `i `uc ]
 "41
 }
-[e :U 348 ]
+[e :U 349 ]
 [; ;uart.c: 41: }
 [; ;uart.c: 42: }
 "42
-[e :UE 346 ]
+[e :UE 347 ]
 }
 "44
 [v _UartSetEmptyInt `(v ~T0 @X0 1 ef1`uc ]
@@ -6810,5 +6831,5 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _URTE -> _value `b ]
 [; ;uart.c: 47: }
 "47
-[e :UE 349 ]
+[e :UE 350 ]
 }

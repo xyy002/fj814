@@ -11,50 +11,61 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\ADMINI~1\AppData\Local\Temp\s588.obj
+$C:\Users\ADMINI~1\AppData\Local\Temp\s474.obj
 reset_vec CODE 0 0 0 2 2
-end_init CODE 0 34 34 2 2
+end_init CODE 0 37 37 2 2
 $touchlib.obj
-cinit CODE 0 36 36 1A4 2
-text14 CODE 0 4D3 4D3 20 2
-text16 CODE 0 4AB 4AB 28 2
-text17 CODE 0 1DA 1DA 2D1 2
-cstackCOMMON COMMON 1 76 76 6 1
-cstackBANK0hh BANK0 1 2B 2B 4 1
-stringtext1 STRCODE 0 538 538 4 2
-stringtext2 STRCODE 0 53C 53C 4 2
-stringtext3 STRCODE 0 540 540 2 2
-stringtext4 STRCODE 0 542 542 1 2
-stringtext5 STRCODE 0 543 543 1 2
-stringtext6 STRCODE 0 544 544 1 2
-intentry CODE 0 4 4 30 2
-bssBANK1 BANK1 1 A0 A0 40 1
-swtext1 CONST 0 4F3 4F3 C 2
-swtext2 CONST 0 52C 52C C 2
-swtext3 CONST 0 500 500 20 2
+cinit CODE 0 39 39 77A 2
+text25 CODE 0 9E0 9E0 12 2
+text26 CODE 0 A91 A91 56F 2
+text35 CODE 0 9F2 9F2 21 2
+text37 CODE 0 7B3 7B3 2D 2
+text38 CODE 0 A13 A13 7E 2
+text39 CODE 0 1531 1531 2CF 2
+cstackCOMMON COMMON 1 70 70 6 1
+cstackBANK0hh BANK0 1 4C 4C 21 1
+stringtext1 STRCODE 0 1800 1800 5A 2
+stringtext2 STRCODE 0 185A 185A 5A 2
+stringtext3 STRCODE 0 18B4 18B4 4 2
+stringtext4 STRCODE 0 18B8 18B8 4 2
+stringtext5 STRCODE 0 18BC 18BC 2 2
+stringtext6 STRCODE 0 18BE 18BE 1 2
+stringtext7 STRCODE 0 18BF 18BF 1 2
+stringtext8 STRCODE 0 18C0 18C0 1 2
+intentry CODE 0 4 4 33 2
+bitbssCOMMON COMMON 1 3B0 76 5 1
+bssBANK1 BANK1 1 A0 A0 42 1
+bssBANK2 BANK2 1 120 120 3C 1
+bssBANK3 BANK3 1 1A0 1A0 1E 1
+bssBANK0hh BANK0 1 2B 2B 21 1
+swtext1 CONST 0 800 800 C 2
+swtext2 CONST 0 80C 80C C 2
+swtext3 CONST 0 818 818 C 2
+swtext4 CONST 0 7E0 7E0 20 2
+dataBANK1 BANK1 1 E2 E2 8 1
 _ad3nop_text CODE 0 3 3 1 2
-clrtext CODE 0 520 520 C 2
-bssCOMMON COMMON 1 70 70 6 1
+clrtext CODE 0 9D4 9D4 C 2
+bssCOMMON COMMON 1 77 77 5 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 2F-6F 1
-RAM E0-EF 1
-RAM 120-16F 1
-RAM 1A0-1EF 1
+RAM 6D-6F 1
+RAM EA-EF 1
+RAM 15C-16F 1
+RAM 1BE-1EF 1
 RAM 220-26F 1
 RAM 2A0-2EF 1
 RAM 320-36F 1
 RAM 3A0-3EF 1
 RAM 420-46F 1
 RAM 4A0-4CF 1
-BANK0 2F-6F 1
-BANK1 E0-EF 1
-BANK2 120-16F 1
-BANK3 1A0-1EF 1
+BANK0 6D-6F 1
+BANK1 EA-EF 1
+BANK2 15C-16F 1
+BANK3 1BE-1EF 1
 BANK4 220-26F 1
 BANK5 2A0-2EF 1
 BANK6 320-36F 1
@@ -62,11 +73,13 @@ BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4CF 1
 CONST 2-2 2
-CONST 4FF-4FF 2
-CONST 545-1FFF 2
+CONST 824-9D3 2
+CONST 1000-1530 2
+CONST 18C1-1FFF 2
 ENTRY 2-2 2
-ENTRY 4FF-4FF 2
-ENTRY 545-1FFF 2
+ENTRY 824-9D3 2
+ENTRY 1000-1530 2
+ENTRY 18C1-1FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -90,10 +103,11 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-STACK 2090-22FF 1
+STACK 210E-22FF 1
 CODE 2-2 2
-CODE 4FF-4FF 2
-CODE 545-1FFF 2
+CODE 824-9D3 2
+CODE 1000-1530 2
+CODE 18C1-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -109,11 +123,13 @@ COMMON 7C-7D 1
 CONFIG 8007-8008 2
 EEDATA F000-F0FF 2
 STRCODE 2-2 2
-STRCODE 4FF-4FF 2
-STRCODE 545-1FFF 2
+STRCODE 824-9D3 2
+STRCODE 1000-1530 2
+STRCODE 18C1-1FFF 2
 STRING 2-2 2
-STRING 4FF-4FF 2
-STRING 545-1FFF 2
+STRING 824-9D3 2
+STRING 1000-1530 2
+STRING 18C1-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -128,187 +144,687 @@ STRING 545-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $touchlib.obj
-36 cinit CODE >396:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-36 cinit CODE >399:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-36 cinit CODE >547:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-37 cinit CODE >546:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-38 cinit CODE >548:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-39 cinit CODE >549:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-3A cinit CODE >550:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-3B cinit CODE >552:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-3C cinit CODE >553:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-3F cinit CODE >566:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-40 cinit CODE >557:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-41 cinit CODE >558:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-42 cinit CODE >559:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-43 cinit CODE >560:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-44 cinit CODE >561:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-45 cinit CODE >562:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-46 cinit CODE >567:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-47 cinit CODE >568:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-48 cinit CODE >569:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-49 cinit CODE >570:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-4A cinit CODE >571:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-4B cinit CODE >572:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-4C cinit CODE >573:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-4D cinit CODE >574:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-50 cinit CODE >580:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-50 cinit CODE >582:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-51 cinit CODE >583:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-52 cinit CODE >584:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-53 cinit CODE >152:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-53 cinit CODE >154:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-55 cinit CODE >155:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-57 cinit CODE >157:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-59 cinit CODE >158:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-5B cinit CODE >159:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-5D cinit CODE >160:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-5F cinit CODE >162:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-61 cinit CODE >163:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-63 cinit CODE >164:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-68 cinit CODE >166:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-68 cinit CODE >168:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-69 cinit CODE >169:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-6B cinit CODE >180:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-6E cinit CODE >675:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-6E cinit CODE >691:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-70 cinit CODE >692:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-72 cinit CODE >693:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-73 cinit CODE >59:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-73 cinit CODE >61:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-76 cinit CODE >63:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-79 cinit CODE >67:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-7D cinit CODE >71:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-7F cinit CODE >84:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-80 cinit CODE >85:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-81 cinit CODE >14:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-81 cinit CODE >16:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-84 cinit CODE >18:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-88 cinit CODE >19:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-8A cinit CODE >21:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-8C cinit CODE >25:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-90 cinit CODE >27:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-92 cinit CODE >34:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-93 cinit CODE >35:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-96 cinit CODE >37:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-9F cinit CODE >38:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-B7 cinit CODE >39:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-B9 cinit CODE >41:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-BB cinit CODE >43:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-BC cinit CODE >45:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-CD cinit CODE >46:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-D0 cinit CODE >49:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-D1 cinit CODE >84:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-D1 cinit CODE >87:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-D4 cinit CODE >98:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-D5 cinit CODE >100:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-D7 cinit CODE >101:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-D9 cinit CODE >102:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-DB cinit CODE >103:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-DE cinit CODE >104:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-E0 cinit CODE >105:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-E2 cinit CODE >106:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-E4 cinit CODE >107:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-E6 cinit CODE >109:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-E8 cinit CODE >110:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-E9 cinit CODE >111:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-EA cinit CODE >112:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-EB cinit CODE >114:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-ED cinit CODE >115:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-EE cinit CODE >116:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-EF cinit CODE >117:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F0 cinit CODE >119:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F3 cinit CODE >123:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F4 cinit CODE >127:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F6 cinit CODE >128:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F7 cinit CODE >129:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F8 cinit CODE >130:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F9 cinit CODE >132:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-FA cinit CODE >137:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-FB cinit CODE >475:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-FB cinit CODE >477:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-FC cinit CODE >478:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-FE cinit CODE >479:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-100 cinit CODE >480:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-102 cinit CODE >481:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-104 cinit CODE >484:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-106 cinit CODE >485:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-108 cinit CODE >487:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-109 cinit CODE >495:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-109 cinit CODE >497:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-10B cinit CODE >501:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-10E cinit CODE >532:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-110 cinit CODE >535:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-111 cinit CODE >544:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-112 cinit CODE >549:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-113 cinit CODE >551:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-115 cinit CODE >555:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-117 cinit CODE >556:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-119 cinit CODE >561:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-11A cinit CODE >229:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-11A cinit CODE >246:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-11C cinit CODE >254:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-11D cinit CODE >256:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-11E cinit CODE >258:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-11F cinit CODE >260:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-120 cinit CODE >261:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-121 cinit CODE >307:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\touch.h
-123 cinit CODE >270:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-129 cinit CODE >271:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-12F cinit CODE >312:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\touch.h
-130 cinit CODE >274:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-131 cinit CODE >275:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-132 cinit CODE >279:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-133 cinit CODE >280:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-134 cinit CODE >282:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-139 cinit CODE >284:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-146 cinit CODE >287:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-14E cinit CODE >282:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-153 cinit CODE >291:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-156 cinit CODE >295:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-157 cinit CODE >588:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-157 cinit CODE >590:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-158 cinit CODE >592:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-15A cinit CODE >593:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-15C cinit CODE >594:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-15E cinit CODE >597:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-160 cinit CODE >598:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-161 cinit CODE >599:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-162 cinit CODE >604:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-163 cinit CODE >664:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-163 cinit CODE >666:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-165 cinit CODE >667:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-166 cinit CODE >668:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-167 cinit CODE >669:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-168 cinit CODE >672:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-169 cinit CODE >673:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-16A cinit CODE >43:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-16A cinit CODE >45:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-16B cinit CODE >46:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-16D cinit CODE >47:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-170 cinit CODE >49:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-171 cinit CODE >656:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-171 cinit CODE >658:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-172 cinit CODE >659:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-173 cinit CODE >661:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-174 cinit CODE >14:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-174 cinit CODE >16:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-177 cinit CODE >18:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-17B cinit CODE >19:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-17D cinit CODE >21:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-17F cinit CODE >25:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-185 cinit CODE >34:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-186 cinit CODE >35:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-189 cinit CODE >37:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-192 cinit CODE >38:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-1A8 cinit CODE >39:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-1AA cinit CODE >41:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-1AC cinit CODE >43:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-1AD cinit CODE >45:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-1BB cinit CODE >46:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-1BD cinit CODE >49:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+39 cinit CODE >757:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+39 cinit CODE >760:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+39 cinit CODE >1028:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+3A cinit CODE >86:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+3B cinit CODE >1030:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+3C cinit CODE >86:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+3D cinit CODE >1032:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+3E cinit CODE >85:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+3F cinit CODE >1034:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+40 cinit CODE >85:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+41 cinit CODE >1036:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+42 cinit CODE >80:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+43 cinit CODE >1038:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+44 cinit CODE >80:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+45 cinit CODE >1040:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+46 cinit CODE >79:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+47 cinit CODE >1042:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+48 cinit CODE >79:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+49 cinit CODE >1044:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+4A cinit CODE >1069:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+4B cinit CODE >1068:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+4C cinit CODE >1070:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+4D cinit CODE >1071:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+4E cinit CODE >1072:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+4F cinit CODE >1074:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+50 cinit CODE >1075:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+53 cinit CODE >1091:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+54 cinit CODE >1079:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+55 cinit CODE >1083:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+56 cinit CODE >1084:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+57 cinit CODE >1085:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+58 cinit CODE >1086:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+59 cinit CODE >1087:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+5A cinit CODE >1092:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+5B cinit CODE >1093:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+5C cinit CODE >1094:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+5D cinit CODE >1095:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+5E cinit CODE >1096:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+5F cinit CODE >1097:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+60 cinit CODE >1098:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+61 cinit CODE >1099:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+64 cinit CODE >1103:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+65 cinit CODE >1104:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+66 cinit CODE >1105:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+67 cinit CODE >1106:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+68 cinit CODE >1107:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+69 cinit CODE >1108:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+6A cinit CODE >1109:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+6B cinit CODE >1110:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+6C cinit CODE >1111:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+6F cinit CODE >1115:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+70 cinit CODE >1116:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+71 cinit CODE >1117:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+72 cinit CODE >1118:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+73 cinit CODE >1119:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+74 cinit CODE >1120:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+75 cinit CODE >1121:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+76 cinit CODE >1122:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+77 cinit CODE >1123:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+7A cinit CODE >1127:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+7B cinit CODE >1128:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+7C cinit CODE >1129:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+7D cinit CODE >1130:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+7E cinit CODE >1131:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+7F cinit CODE >1132:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+80 cinit CODE >1133:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+81 cinit CODE >1134:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+82 cinit CODE >1135:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+85 cinit CODE >1141:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+85 cinit CODE >1143:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+86 cinit CODE >1144:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+87 cinit CODE >1145:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+88 cinit CODE >152:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+88 cinit CODE >154:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+8A cinit CODE >155:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+8C cinit CODE >157:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+8E cinit CODE >158:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+90 cinit CODE >160:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+92 cinit CODE >161:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+94 cinit CODE >162:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+96 cinit CODE >163:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+98 cinit CODE >164:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+9D cinit CODE >169:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+9F cinit CODE >171:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+B6 cinit CODE >173:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+B8 cinit CODE >175:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+BC cinit CODE >177:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+BF cinit CODE >179:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+C0 cinit CODE >180:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+C2 cinit CODE >182:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+C5 cinit CODE >184:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+C6 cinit CODE >187:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+C8 cinit CODE >188:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+CA cinit CODE >189:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+CC cinit CODE >191:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+CF cinit CODE >345:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+CF cinit CODE >347:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+D2 cinit CODE >349:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+D4 cinit CODE >351:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+D7 cinit CODE >352:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+DB cinit CODE >355:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+DD cinit CODE >358:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+DE cinit CODE >679:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+DE cinit CODE >695:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+E0 cinit CODE >696:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+E2 cinit CODE >697:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+E3 cinit CODE >1406:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E3 cinit CODE >1409:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E5 cinit CODE >1411:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+EC cinit CODE >1413:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+F0 cinit CODE >1415:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+F1 cinit CODE >1417:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+FC cinit CODE >1419:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+FE cinit CODE >1421:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+109 cinit CODE >1427:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+10A cinit CODE >1423:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+10C cinit CODE >1427:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+10E cinit CODE >1432:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+111 cinit CODE >1433:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+113 cinit CODE >1434:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+114 cinit CODE >1437:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+118 cinit CODE >1438:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+11B cinit CODE >1439:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+11E cinit CODE >1441:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+121 cinit CODE >1442:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+123 cinit CODE >1446:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+128 cinit CODE >1447:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+129 cinit CODE >495:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+129 cinit CODE >497:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+12E cinit CODE >516:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+130 cinit CODE >532:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+132 cinit CODE >533:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+134 cinit CODE >543:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+136 cinit CODE >544:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+138 cinit CODE >545:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+13A cinit CODE >546:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+13C cinit CODE >562:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+142 cinit CODE >592:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+148 cinit CODE >627:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+14A cinit CODE >628:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+14E cinit CODE >639:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+150 cinit CODE >640:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+154 cinit CODE >655:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+15A cinit CODE >682:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+15E cinit CODE >694:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+160 cinit CODE >712:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+162 cinit CODE >713:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+165 cinit CODE >714:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+167 cinit CODE >716:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+169 cinit CODE >717:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+16D cinit CODE >724:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+16F cinit CODE >725:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+173 cinit CODE >743:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+176 cinit CODE >744:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+17B cinit CODE >747:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+180 cinit CODE >782:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+182 cinit CODE >800:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+184 cinit CODE >801:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+189 cinit CODE >813:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+18B cinit CODE >814:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+18F cinit CODE >831:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+192 cinit CODE >832:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+197 cinit CODE >843:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+199 cinit CODE >844:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+19D cinit CODE >850:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1AB cinit CODE >852:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1AE cinit CODE >854:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1B0 cinit CODE >587:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1B2 cinit CODE >590:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1B5 cinit CODE >861:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1BB cinit CODE >863:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1BD cinit CODE >865:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1BE cinit CODE >866:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1BF cinit CODE >869:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1C0 cinit CODE >870:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1C5 cinit CODE >872:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1CD cinit CODE >874:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1CE cinit CODE >870:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1D3 cinit CODE >309:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\touch.h
+1D4 cinit CODE >878:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1D5 cinit CODE >884:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1D6 cinit CODE >309:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\touch.h
+1D9 cinit CODE >888:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1DF cinit CODE >890:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1E0 cinit CODE >895:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1EA cinit CODE >897:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1EF cinit CODE >899:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1F1 cinit CODE >903:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1F3 cinit CODE >907:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1F4 cinit CODE >910:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1F5 cinit CODE >914:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1F7 cinit CODE >905:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1FC cinit CODE >990:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+1FF cinit CODE >991:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+200 cinit CODE >992:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+201 cinit CODE >1001:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+201 cinit CODE >1004:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+206 cinit CODE >1006:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+207 cinit CODE >1007:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+208 cinit CODE >1017:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+209 cinit CODE >1020:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+20D cinit CODE >1021:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+20E cinit CODE >308:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+20F cinit CODE >310:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+211 cinit CODE >311:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+212 cinit CODE >312:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+213 cinit CODE >313:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+218 cinit CODE >315:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+21B cinit CODE >316:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+21E cinit CODE >317:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+223 cinit CODE >319:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+225 cinit CODE >322:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+227 cinit CODE >324:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+229 cinit CODE >325:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+22B cinit CODE >326:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+234 cinit CODE >327:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+236 cinit CODE >328:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+238 cinit CODE >329:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+23A cinit CODE >334:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+23D cinit CODE >335:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+244 cinit CODE >338:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+245 cinit CODE >339:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+248 cinit CODE >341:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+24A cinit CODE >343:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+24C cinit CODE >344:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+24E cinit CODE >345:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+257 cinit CODE >346:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+259 cinit CODE >347:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+25A cinit CODE >348:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+25F cinit CODE >349:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+276 cinit CODE >350:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+277 cinit CODE >353:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+279 cinit CODE >356:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+27D cinit CODE >359:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+280 cinit CODE >360:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+285 cinit CODE >361:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+28A cinit CODE >366:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+28C cinit CODE >369:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+28E cinit CODE >370:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+290 cinit CODE >371:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+299 cinit CODE >372:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+29B cinit CODE >373:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+29F cinit CODE >379:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2A2 cinit CODE >380:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2A9 cinit CODE >383:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2AA cinit CODE >384:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2AD cinit CODE >386:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2AF cinit CODE >389:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2B1 cinit CODE >390:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2B3 cinit CODE >391:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2BB cinit CODE >400:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2BD cinit CODE >403:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2BF cinit CODE >405:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2C0 cinit CODE >403:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2C2 cinit CODE >405:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2C4 cinit CODE >406:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2C9 cinit CODE >407:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2CE cinit CODE >413:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2D0 cinit CODE >415:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2D2 cinit CODE >416:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2D4 cinit CODE >417:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2DD cinit CODE >418:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2DF cinit CODE >419:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2E3 cinit CODE >425:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2E6 cinit CODE >426:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2ED cinit CODE >429:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2EE cinit CODE >430:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2F1 cinit CODE >432:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2F3 cinit CODE >434:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2F5 cinit CODE >435:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2F7 cinit CODE >436:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2FC cinit CODE >445:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+2FE cinit CODE >450:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+300 cinit CODE >451:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+303 cinit CODE >452:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+305 cinit CODE >453:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+309 cinit CODE >455:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+30C cinit CODE >457:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+30E cinit CODE >459:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+310 cinit CODE >460:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+312 cinit CODE >461:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+318 cinit CODE >462:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+31A cinit CODE >463:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+31E cinit CODE >469:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+321 cinit CODE >470:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+324 cinit CODE >471:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+32B cinit CODE >476:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+32D cinit CODE >478:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+32F cinit CODE >479:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+332 cinit CODE >488:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+334 cinit CODE >202:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+336 cinit CODE >204:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+339 cinit CODE >207:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+33A cinit CODE >212:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+33C cinit CODE >214:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+33D cinit CODE >215:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+33E cinit CODE >216:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+33F cinit CODE >217:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+340 cinit CODE >218:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+341 cinit CODE >219:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+342 cinit CODE >220:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+343 cinit CODE >221:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+344 cinit CODE >222:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+345 cinit CODE >223:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+346 cinit CODE >224:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+347 cinit CODE >225:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+348 cinit CODE >226:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+34C cinit CODE >227:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+34D cinit CODE >113:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+34D cinit CODE >118:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+34E cinit CODE >119:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+34F cinit CODE >120:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+350 cinit CODE >121:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+351 cinit CODE >122:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+352 cinit CODE >123:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+353 cinit CODE >124:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+354 cinit CODE >125:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+355 cinit CODE >126:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+356 cinit CODE >128:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+357 cinit CODE >129:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+358 cinit CODE >130:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+359 cinit CODE >131:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+35A cinit CODE >133:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+35B cinit CODE >134:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+35C cinit CODE >135:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+35D cinit CODE >136:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+35E cinit CODE >138:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+35F cinit CODE >139:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+360 cinit CODE >140:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+361 cinit CODE >141:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+362 cinit CODE >142:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+363 cinit CODE >143:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+364 cinit CODE >145:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+364 cinit CODE >146:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+365 cinit CODE >147:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+366 cinit CODE >148:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+367 cinit CODE >149:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+368 cinit CODE >150:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+369 cinit CODE >151:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+36A cinit CODE >152:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+36B cinit CODE >153:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+36C cinit CODE >155:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+36C cinit CODE >156:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+36D cinit CODE >157:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+36E cinit CODE >158:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+36F cinit CODE >159:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+370 cinit CODE >161:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+371 cinit CODE >162:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+372 cinit CODE >163:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+373 cinit CODE >164:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+374 cinit CODE >165:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+375 cinit CODE >166:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+376 cinit CODE >167:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+377 cinit CODE >168:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+378 cinit CODE >169:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+379 cinit CODE >170:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+37A cinit CODE >172:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+37A cinit CODE >173:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+37B cinit CODE >174:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+37C cinit CODE >176:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+37D cinit CODE >177:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+37E cinit CODE >178:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+37F cinit CODE >179:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+380 cinit CODE >180:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+381 cinit CODE >181:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+382 cinit CODE >182:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+383 cinit CODE >183:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+384 cinit CODE >184:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+385 cinit CODE >185:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+386 cinit CODE >187:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+387 cinit CODE >189:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+387 cinit CODE >190:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+388 cinit CODE >192:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+389 cinit CODE >193:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+38A cinit CODE >194:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+38B cinit CODE >195:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+38C cinit CODE >196:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+38D cinit CODE >198:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+38D cinit CODE >200:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+38E cinit CODE >70:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+38E cinit CODE >73:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+392 cinit CODE >75:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+398 cinit CODE >81:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+39A cinit CODE >83:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+39C cinit CODE >85:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+39E cinit CODE >87:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3A0 cinit CODE >88:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3A1 cinit CODE >89:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3A3 cinit CODE >91:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3A5 cinit CODE >93:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3A7 cinit CODE >95:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3A9 cinit CODE >97:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3AB cinit CODE >99:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3AD cinit CODE >102:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3B0 cinit CODE >104:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3BB cinit CODE >106:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3BD cinit CODE >107:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3BF cinit CODE >111:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3C4 cinit CODE >112:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3CA cinit CODE >115:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3D4 cinit CODE >116:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3D4 cinit CODE >117:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3D9 cinit CODE >119:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3DA cinit CODE >574:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+3DA cinit CODE >576:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+3DC cinit CODE >578:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+3DE cinit CODE >580:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+3DF cinit CODE >581:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+3E1 cinit CODE >582:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+3E4 cinit CODE >583:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+3E6 cinit CODE >584:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+3E7 cinit CODE >120:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3E7 cinit CODE >122:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3EC cinit CODE >127:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3EE cinit CODE >128:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3EF cinit CODE >130:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3F1 cinit CODE >131:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3F2 cinit CODE >136:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3F4 cinit CODE >137:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3F5 cinit CODE >139:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3F7 cinit CODE >140:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3F8 cinit CODE >142:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3FA cinit CODE >143:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+3FB cinit CODE >124:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+412 cinit CODE >151:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+418 cinit CODE >158:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+419 cinit CODE >161:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+41A cinit CODE >163:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+41B cinit CODE >161:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+41C cinit CODE >163:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+41E cinit CODE >164:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+41F cinit CODE >100:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+41F cinit CODE >102:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+422 cinit CODE >104:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+426 cinit CODE >106:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+427 cinit CODE >107:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+428 cinit CODE >108:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+429 cinit CODE >110:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+42D cinit CODE >112:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+42F cinit CODE >114:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+430 cinit CODE >115:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+430 cinit CODE >117:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+433 cinit CODE >121:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+436 cinit CODE >123:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+437 cinit CODE >127:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+438 cinit CODE >125:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+439 cinit CODE >127:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+43B cinit CODE >129:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5BF cinit CODE >167:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+5BF cinit CODE >169:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+5C1 cinit CODE >171:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+5C3 cinit CODE >173:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+5C5 cinit CODE >176:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+5CB cinit CODE >178:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+5CD cinit CODE >180:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+5CF cinit CODE >182:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+5D1 cinit CODE >184:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+5D2 cinit CODE >668:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+5D2 cinit CODE >670:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+5D4 cinit CODE >671:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+5D5 cinit CODE >672:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+5D6 cinit CODE >673:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+5D7 cinit CODE >675:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+5D9 cinit CODE >676:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+5DB cinit CODE >677:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+5DC cinit CODE >12:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5DC cinit CODE >14:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5DF cinit CODE >16:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5E1 cinit CODE >18:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5E3 cinit CODE >19:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5E4 cinit CODE >20:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5E5 cinit CODE >21:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5E6 cinit CODE >20:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5E8 cinit CODE >21:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5E9 cinit CODE >22:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5EA cinit CODE >24:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5EC cinit CODE >25:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5EE cinit CODE >26:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5F1 cinit CODE >28:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5F4 cinit CODE >29:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5F6 cinit CODE >30:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5F7 cinit CODE >33:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5FA cinit CODE >34:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5FD cinit CODE >40:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5FE cinit CODE >41:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+5FF cinit CODE >42:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+601 cinit CODE >43:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+602 cinit CODE >44:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+603 cinit CODE >45:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+604 cinit CODE >46:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+605 cinit CODE >47:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+607 cinit CODE >50:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+60A cinit CODE >51:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+60B cinit CODE >660:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+60B cinit CODE >662:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+60D cinit CODE >663:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+60E cinit CODE >665:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+60F cinit CODE >77:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+60F cinit CODE >79:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+612 cinit CODE >81:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+615 cinit CODE >83:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+61D cinit CODE >84:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+61F cinit CODE >86:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+621 cinit CODE >87:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+622 cinit CODE >88:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+623 cinit CODE >89:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+627 cinit CODE >91:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+62C cinit CODE >92:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+62D cinit CODE >93:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+62E cinit CODE >95:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+62E cinit CODE >97:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+62F cinit CODE >95:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+630 cinit CODE >97:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+632 cinit CODE >99:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+633 cinit CODE >54:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+633 cinit CODE >56:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+636 cinit CODE >58:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+63A cinit CODE >60:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+63D cinit CODE >62:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+643 cinit CODE >63:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+645 cinit CODE >65:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+647 cinit CODE >66:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+648 cinit CODE >67:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+649 cinit CODE >68:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+64C cinit CODE >70:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+64D cinit CODE >72:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+64E cinit CODE >74:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+651 cinit CODE >76:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+652 cinit CODE >198:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+652 cinit CODE >201:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+653 cinit CODE >203:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+657 cinit CODE >204:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+659 cinit CODE >205:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+65B cinit CODE >206:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+65D cinit CODE >207:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+661 cinit CODE >208:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+663 cinit CODE >201:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+675 cinit CODE >211:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+677 cinit CODE >212:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+678 cinit CODE >88:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+678 cinit CODE >91:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+67B cinit CODE >102:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+67C cinit CODE >104:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+67E cinit CODE >105:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+680 cinit CODE >106:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+682 cinit CODE >107:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+685 cinit CODE >108:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+687 cinit CODE >109:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+689 cinit CODE >110:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+68B cinit CODE >111:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+68D cinit CODE >113:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+68F cinit CODE >114:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+690 cinit CODE >115:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+691 cinit CODE >116:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+692 cinit CODE >118:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+694 cinit CODE >119:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+695 cinit CODE >120:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+696 cinit CODE >121:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+697 cinit CODE >123:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+69A cinit CODE >127:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+69B cinit CODE >131:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+69D cinit CODE >132:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+69E cinit CODE >133:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+69F cinit CODE >134:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6A0 cinit CODE >136:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6A1 cinit CODE >141:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6A2 cinit CODE >479:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6A2 cinit CODE >481:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6A3 cinit CODE >482:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6A5 cinit CODE >483:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6A7 cinit CODE >484:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6A9 cinit CODE >485:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6AB cinit CODE >488:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6AD cinit CODE >489:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6AF cinit CODE >491:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6B0 cinit CODE >499:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6B0 cinit CODE >501:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6B2 cinit CODE >505:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6B5 cinit CODE >536:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6B7 cinit CODE >539:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6B8 cinit CODE >548:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6B9 cinit CODE >553:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6BA cinit CODE >555:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6BC cinit CODE >559:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6BE cinit CODE >560:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6C0 cinit CODE >565:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+6C1 cinit CODE >229:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6C1 cinit CODE >246:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6C3 cinit CODE >254:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6C4 cinit CODE >256:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6C5 cinit CODE >258:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6C6 cinit CODE >260:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6C7 cinit CODE >261:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6C8 cinit CODE >264:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6C9 cinit CODE >263:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6CA cinit CODE >264:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6CC cinit CODE >265:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6D1 cinit CODE >266:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6D5 cinit CODE >307:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\touch.h
+6D6 cinit CODE >267:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6D7 cinit CODE >307:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\touch.h
+6D9 cinit CODE >270:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6DF cinit CODE >271:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6E5 cinit CODE >312:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\touch.h
+6E6 cinit CODE >274:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6EA cinit CODE >275:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6EE cinit CODE >303:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\touch.h
+6F2 cinit CODE >279:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6F4 cinit CODE >280:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6F5 cinit CODE >282:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+6FA cinit CODE >284:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+706 cinit CODE >286:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+708 cinit CODE >287:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+710 cinit CODE >282:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+715 cinit CODE >291:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+719 cinit CODE >293:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+71D cinit CODE >294:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+721 cinit CODE >295:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+722 cinit CODE >592:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+722 cinit CODE >594:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+724 cinit CODE >596:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+726 cinit CODE >597:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+728 cinit CODE >598:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+72A cinit CODE >601:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+72C cinit CODE >602:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+72D cinit CODE >603:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+72E cinit CODE >608:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+72F cinit CODE >6:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+72F cinit CODE >14:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+730 cinit CODE >15:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+732 cinit CODE >16:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+737 cinit CODE >17:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+739 cinit CODE >19:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+73B cinit CODE >20:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+740 cinit CODE >21:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+742 cinit CODE >23:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+744 cinit CODE >24:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+748 cinit CODE >25:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+749 cinit CODE >27:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+749 cinit CODE >28:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+74A cinit CODE >26:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+74C cinit CODE >27:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+74E cinit CODE >26:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+74F cinit CODE >31:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+751 cinit CODE >32:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+759 cinit CODE >33:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+75D cinit CODE >34:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+75E cinit CODE >36:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+760 cinit CODE >37:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+762 cinit CODE >39:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+765 cinit CODE >40:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+76A cinit CODE >41:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+76E cinit CODE >42:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
+76F cinit CODE >171:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+76F cinit CODE >173:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+773 cinit CODE >174:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+774 cinit CODE >176:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+778 cinit CODE >178:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+77E cinit CODE >180:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+781 cinit CODE >183:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+782 cinit CODE >27:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+784 cinit CODE >29:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+785 cinit CODE >34:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+785 cinit CODE >36:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+786 cinit CODE >38:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+787 cinit CODE >29:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+798 cinit CODE >40:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+799 cinit CODE >37:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+799 cinit CODE >40:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+79C cinit CODE >41:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+79E cinit CODE >42:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+7A0 cinit CODE >43:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+7A2 cinit CODE >44:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+7A4 cinit CODE >45:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+7A6 cinit CODE >46:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+7A8 cinit CODE >47:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+7AA cinit CODE >44:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+7AB cinit CODE >46:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+7B2 cinit CODE >47:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
 4 intentry CODE >51:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4 intentry CODE >693:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+4 intentry CODE >358:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 6 intentry CODE >54:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 A intentry CODE >56:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 B intentry CODE >57:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
@@ -325,170 +841,404 @@ E intentry CODE >58:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 2C intentry CODE >78:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 30 intentry CODE >80:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 32 intentry CODE >82:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-500 swtext3 CONST >186:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-52C swtext2 CONST >211:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-4F3 swtext1 CONST >227:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-1DA text17 CODE >243:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-1DA text17 CODE >248:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-1E0 text17 CODE >249:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-1E3 text17 CODE >255:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-1E4 text17 CODE >256:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-1E5 text17 CODE >255:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-1E6 text17 CODE >256:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-1E9 text17 CODE >257:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-1EB text17 CODE >262:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-1EE text17 CODE >264:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-1F3 text17 CODE >266:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-1F8 text17 CODE >268:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-1FE text17 CODE >282:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-200 text17 CODE >283:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-202 text17 CODE >284:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-203 text17 CODE >285:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-207 text17 CODE >286:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-209 text17 CODE >287:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-20A text17 CODE >288:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-20E text17 CODE >289:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-210 text17 CODE >292:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-210 text17 CODE >293:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-215 text17 CODE >294:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-216 text17 CODE >296:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-219 text17 CODE >298:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-21E text17 CODE >299:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-225 text17 CODE >300:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-22B text17 CODE >302:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-231 text17 CODE >303:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-238 text17 CODE >304:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-23E text17 CODE >305:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-23E text17 CODE >306:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-243 text17 CODE >307:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-244 text17 CODE >310:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-247 text17 CODE >311:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-248 text17 CODE >312:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-24D text17 CODE >313:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-24E text17 CODE >316:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-251 text17 CODE >317:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-252 text17 CODE >318:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-257 text17 CODE >319:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-258 text17 CODE >259:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-266 text17 CODE >322:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-267 text17 CODE >184:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-268 text17 CODE >186:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-269 text17 CODE >188:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-272 text17 CODE >189:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-291 text17 CODE >190:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-2B0 text17 CODE >191:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-2C8 text17 CODE >192:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-2E7 text17 CODE >193:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-30D text17 CODE >194:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-31E text17 CODE >195:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-34B text17 CODE >196:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-371 text17 CODE >197:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-397 text17 CODE >198:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-39A text17 CODE >200:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-3B9 text17 CODE >201:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-3D8 text17 CODE >202:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-3F7 text17 CODE >203:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-408 text17 CODE >204:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-420 text17 CODE >205:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-421 text17 CODE >186:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-42B text17 CODE >206:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-42C text17 CODE >208:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-42C text17 CODE >211:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-42D text17 CODE >213:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-42E text17 CODE >214:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-431 text17 CODE >215:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-433 text17 CODE >216:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-435 text17 CODE >217:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-437 text17 CODE >218:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-43D text17 CODE >219:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-43E text17 CODE >211:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-446 text17 CODE >221:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-447 text17 CODE >222:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-448 text17 CODE >4:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-449 text17 CODE >9:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-44A text17 CODE >10:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-44D text17 CODE >11:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-44E text17 CODE >14:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-44F text17 CODE >12:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-451 text17 CODE >13:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-452 text17 CODE >12:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-453 text17 CODE >16:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-453 text17 CODE >17:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-454 text17 CODE >18:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-458 text17 CODE >19:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-45A text17 CODE >20:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-45B text17 CODE >22:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-45C text17 CODE >23:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-45E text17 CODE >25:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-45F text17 CODE >26:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
-460 text17 CODE >224:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-460 text17 CODE >227:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-461 text17 CODE >229:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-463 text17 CODE >230:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-465 text17 CODE >231:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-467 text17 CODE >232:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-469 text17 CODE >233:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-46B text17 CODE >234:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-46D text17 CODE >235:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-46E text17 CODE >227:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-476 text17 CODE >237:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-479 text17 CODE >238:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-47E text17 CODE >239:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-47F text17 CODE >240:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-480 text17 CODE >4:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
-481 text17 CODE >9:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
-483 text17 CODE >10:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
-484 text17 CODE >12:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
-48D text17 CODE >13:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
-48E text17 CODE >14:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
-492 text17 CODE >15:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
-494 text17 CODE >16:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
-496 text17 CODE >17:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
-497 text17 CODE >18:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
-4AB text16 CODE >5:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4AB text16 CODE >8:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4AD text16 CODE >11:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4B1 text16 CODE >12:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4B3 text16 CODE >13:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4B4 text16 CODE >16:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4B8 text16 CODE >17:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4BA text16 CODE >19:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4BB text16 CODE >22:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4BF text16 CODE >23:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4C1 text16 CODE >28:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4C5 text16 CODE >29:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4C7 text16 CODE >34:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4CB text16 CODE >35:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4CC text16 CODE >37:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4CF text16 CODE >39:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4D2 text16 CODE >41:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-4D3 text14 CODE >27:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
-4D3 text14 CODE >31:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
-4D8 text14 CODE >33:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
-4E1 text14 CODE >34:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
-4E2 text14 CODE >35:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
-4E2 text14 CODE >37:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
-4E4 text14 CODE >38:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
-4E6 text14 CODE >39:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
-4E8 text14 CODE >40:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
-4E9 text14 CODE >42:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
-4EA text14 CODE >44:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
-4EB text14 CODE >46:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
-4F2 text14 CODE >47:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
-520 clrtext CODE >528:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-520 clrtext CODE >529:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-521 clrtext CODE >530:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-521 clrtext CODE >533:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-522 clrtext CODE >531:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-523 clrtext CODE >532:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-524 clrtext CODE >534:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-525 clrtext CODE >535:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-526 clrtext CODE >536:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-527 clrtext CODE >537:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-528 clrtext CODE >538:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-529 clrtext CODE >539:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-52A clrtext CODE >541:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
-52B clrtext CODE >540:C:\Users\ADMINI~1\AppData\Local\Temp\s588.
+34 intentry CODE >84:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+35 intentry CODE >86:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7E0 swtext4 CONST >206:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+818 swtext3 CONST >231:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+80C swtext2 CONST >247:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1531 text39 CODE >263:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1531 text39 CODE >268:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1537 text39 CODE >269:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+153A text39 CODE >275:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+153B text39 CODE >276:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+153C text39 CODE >275:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+153D text39 CODE >276:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1540 text39 CODE >277:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1542 text39 CODE >282:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1545 text39 CODE >284:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+154A text39 CODE >286:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+154F text39 CODE >288:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1554 text39 CODE >302:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1556 text39 CODE >303:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1558 text39 CODE >304:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1559 text39 CODE >305:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+155D text39 CODE >306:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+155F text39 CODE >307:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1560 text39 CODE >308:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1564 text39 CODE >309:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1566 text39 CODE >312:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1566 text39 CODE >313:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+156B text39 CODE >314:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+156C text39 CODE >316:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+156F text39 CODE >318:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1574 text39 CODE >319:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+157B text39 CODE >320:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1581 text39 CODE >322:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1586 text39 CODE >323:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+158D text39 CODE >324:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1593 text39 CODE >325:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1593 text39 CODE >326:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1598 text39 CODE >327:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1599 text39 CODE >330:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+159C text39 CODE >331:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+159D text39 CODE >332:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+15A2 text39 CODE >333:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+15A3 text39 CODE >336:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+15A6 text39 CODE >337:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+15A7 text39 CODE >338:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+15AC text39 CODE >339:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+15AD text39 CODE >279:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+15BB text39 CODE >342:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+15BC text39 CODE >204:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+15BD text39 CODE >206:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+15BE text39 CODE >208:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+15C7 text39 CODE >209:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+15E6 text39 CODE >210:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1605 text39 CODE >211:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+161D text39 CODE >212:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+163C text39 CODE >213:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1662 text39 CODE >214:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1673 text39 CODE >215:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+16A0 text39 CODE >216:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+16C6 text39 CODE >217:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+16EC text39 CODE >218:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+16EF text39 CODE >220:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+170E text39 CODE >221:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+172D text39 CODE >222:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+174C text39 CODE >223:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+175D text39 CODE >224:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1775 text39 CODE >225:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1776 text39 CODE >206:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1780 text39 CODE >226:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1781 text39 CODE >228:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1781 text39 CODE >231:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1782 text39 CODE >233:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1783 text39 CODE >234:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1786 text39 CODE >235:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1788 text39 CODE >236:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+178A text39 CODE >237:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+178C text39 CODE >238:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1792 text39 CODE >239:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+1793 text39 CODE >231:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+179B text39 CODE >241:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+179C text39 CODE >242:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+179D text39 CODE >4:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+179E text39 CODE >9:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+179F text39 CODE >10:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+17A2 text39 CODE >11:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+17A3 text39 CODE >14:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+17A4 text39 CODE >12:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+17A6 text39 CODE >13:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+17A7 text39 CODE >12:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+17A8 text39 CODE >16:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+17A8 text39 CODE >17:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+17A9 text39 CODE >18:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+17AD text39 CODE >19:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+17AF text39 CODE >20:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+17B0 text39 CODE >22:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+17B1 text39 CODE >23:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+17B3 text39 CODE >25:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+17B4 text39 CODE >26:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c
+17B5 text39 CODE >244:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+17B5 text39 CODE >247:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+17B6 text39 CODE >249:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+17B8 text39 CODE >250:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+17BA text39 CODE >251:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+17BC text39 CODE >252:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+17BE text39 CODE >253:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+17C0 text39 CODE >254:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+17C2 text39 CODE >255:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+17C3 text39 CODE >247:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+17CB text39 CODE >257:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+17CE text39 CODE >258:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+17D3 text39 CODE >259:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+17D4 text39 CODE >260:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+17D5 text39 CODE >4:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
+17D6 text39 CODE >9:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
+17D8 text39 CODE >10:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
+17D9 text39 CODE >12:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
+17E2 text39 CODE >13:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
+17E3 text39 CODE >14:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
+17E7 text39 CODE >15:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
+17E9 text39 CODE >16:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
+17EB text39 CODE >17:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
+17EC text39 CODE >18:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbmod.c
+800 swtext1 CONST >56:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A13 text38 CODE >54:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A13 text38 CODE >56:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A14 text38 CODE >58:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A14 text38 CODE >59:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A17 text38 CODE >61:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A19 text38 CODE >62:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A1B text38 CODE >71:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A20 text38 CODE >73:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A21 text38 CODE >74:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A22 text38 CODE >76:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A23 text38 CODE >77:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A25 text38 CODE >78:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A26 text38 CODE >80:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A26 text38 CODE >81:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A29 text38 CODE >83:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A2B text38 CODE >84:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A2D text38 CODE >93:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A32 text38 CODE >95:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A33 text38 CODE >96:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A34 text38 CODE >98:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A35 text38 CODE >99:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A37 text38 CODE >100:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A38 text38 CODE >102:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A38 text38 CODE >103:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A3B text38 CODE >105:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A3D text38 CODE >106:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A3F text38 CODE >115:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A41 text38 CODE >116:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A43 text38 CODE >117:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A44 text38 CODE >119:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A44 text38 CODE >120:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A47 text38 CODE >122:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A49 text38 CODE >123:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A4B text38 CODE >132:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A51 text38 CODE >133:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A55 text38 CODE >135:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A59 text38 CODE >137:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A5A text38 CODE >138:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A5B text38 CODE >139:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A63 text38 CODE >141:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A64 text38 CODE >143:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A68 text38 CODE >145:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A69 text38 CODE >146:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A6B text38 CODE >147:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A6C text38 CODE >149:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A6E text38 CODE >150:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A6F text38 CODE >152:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A6F text38 CODE >153:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A72 text38 CODE >157:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A75 text38 CODE >158:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A76 text38 CODE >162:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A77 text38 CODE >163:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A78 text38 CODE >164:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A79 text38 CODE >165:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A7A text38 CODE >166:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A7C text38 CODE >167:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A7D text38 CODE >56:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+A88 text38 CODE >168:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+7B3 text37 CODE >5:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7B3 text37 CODE >8:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7B5 text37 CODE >11:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7B9 text37 CODE >12:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7BB text37 CODE >13:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7BD text37 CODE >16:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7C2 text37 CODE >17:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7C4 text37 CODE >19:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7C6 text37 CODE >22:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7CB text37 CODE >23:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7CD text37 CODE >28:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7D1 text37 CODE >29:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7D3 text37 CODE >34:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7D7 text37 CODE >35:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7D8 text37 CODE >37:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7DC text37 CODE >39:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+7DF text37 CODE >41:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+9F2 text35 CODE >27:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+9F2 text35 CODE >31:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+9F7 text35 CODE >33:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+A00 text35 CODE >34:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+A01 text35 CODE >35:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+A01 text35 CODE >37:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+A03 text35 CODE >38:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+A05 text35 CODE >39:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+A07 text35 CODE >40:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+A09 text35 CODE >42:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+A0A text35 CODE >44:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+A0B text35 CODE >46:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+A12 text35 CODE >47:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+A91 text26 CODE >1059:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+A91 text26 CODE >1063:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+A92 text26 CODE >1064:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+A93 text26 CODE >1065:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+A98 text26 CODE >1067:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+ACA text26 CODE >1069:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+AF5 text26 CODE >1071:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+AF6 text26 CODE >1069:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+AF8 text26 CODE >1071:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B24 text26 CODE >1075:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B2A text26 CODE >1080:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B2F text26 CODE >1083:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B3F text26 CODE >1085:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B48 text26 CODE >1087:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B56 text26 CODE >1089:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B5F text26 CODE >1065:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B64 text26 CODE >1093:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B6D text26 CODE >1095:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B6E text26 CODE >1096:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B6F text26 CODE >1095:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B70 text26 CODE >1096:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B76 text26 CODE >1098:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B81 text26 CODE >1099:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B83 text26 CODE >1100:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B84 text26 CODE >1101:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B85 text26 CODE >1102:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B89 text26 CODE >1109:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B8B text26 CODE >1110:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B8F text26 CODE >1111:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B93 text26 CODE >1112:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+B97 text26 CODE >1113:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BBD text26 CODE >1121:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BCC text26 CODE >1123:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BD3 text26 CODE >1125:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BD5 text26 CODE >1126:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BD6 text26 CODE >1129:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BDA text26 CODE >1131:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BDC text26 CODE >1132:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BDD text26 CODE >1135:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BDF text26 CODE >1138:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BE1 text26 CODE >1139:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BE3 text26 CODE >1142:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BE5 text26 CODE >1148:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BEB text26 CODE >1151:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BFB text26 CODE >1153:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BFC text26 CODE >1154:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BFD text26 CODE >1155:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+BFE text26 CODE >1156:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C02 text26 CODE >1162:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C04 text26 CODE >1163:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C08 text26 CODE >1164:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C0C text26 CODE >1165:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C10 text26 CODE >1166:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C31 text26 CODE >1168:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C46 text26 CODE >1177:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C5B text26 CODE >1189:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C5D text26 CODE >1191:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C5E text26 CODE >1193:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C60 text26 CODE >1195:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C61 text26 CODE >1196:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C62 text26 CODE >1198:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C68 text26 CODE >1208:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C6E text26 CODE >1210:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C72 text26 CODE >1211:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C76 text26 CODE >1212:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C79 text26 CODE >1213:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C7E text26 CODE >1208:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C80 text26 CODE >1218:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C82 text26 CODE >1219:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C86 text26 CODE >1221:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C8B text26 CODE >1222:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C8E text26 CODE >1223:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C91 text26 CODE >1224:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+C96 text26 CODE >1226:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CAC text26 CODE >1228:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CAE text26 CODE >1219:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CAE text26 CODE >1229:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CB4 text26 CODE >1232:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CB7 text26 CODE >1234:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CB8 text26 CODE >1232:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CBA text26 CODE >1234:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CC7 text26 CODE >1236:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CCC text26 CODE >1238:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CD8 text26 CODE >1236:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CDA text26 CODE >1243:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CE5 text26 CODE >1246:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CE5 text26 CODE >1255:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CEA text26 CODE >1257:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CEF text26 CODE >1258:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CF1 text26 CODE >1260:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CF8 text26 CODE >1258:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+CFD text26 CODE >1263:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D06 text26 CODE >1265:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D15 text26 CODE >1267:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D18 text26 CODE >1271:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D1D text26 CODE >1273:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D21 text26 CODE >1275:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D30 text26 CODE >1277:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D33 text26 CODE >1281:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D38 text26 CODE >1283:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D3A text26 CODE >1286:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D3B text26 CODE >1283:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D3D text26 CODE >1286:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D42 text26 CODE >1287:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D53 text26 CODE >1290:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D54 text26 CODE >1291:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D57 text26 CODE >1294:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D59 text26 CODE >1296:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D68 text26 CODE >1294:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D6D text26 CODE >1298:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D70 text26 CODE >1315:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D70 text26 CODE >1316:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D77 text26 CODE >1317:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D7E text26 CODE >1318:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D7F text26 CODE >1321:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D84 text26 CODE >1323:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D87 text26 CODE >1321:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D8C text26 CODE >1326:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D8F text26 CODE >1331:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D95 text26 CODE >1333:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+D9E text26 CODE >1335:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+DA0 text26 CODE >1336:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+DA2 text26 CODE >1338:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+DA8 text26 CODE >1340:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+DAD text26 CODE >1342:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+DBF text26 CODE >1344:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+DCF text26 CODE >1345:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+DF5 text26 CODE >1350:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E0B text26 CODE >1351:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E14 text26 CODE >1346:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E20 text26 CODE >1340:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E25 text26 CODE >1338:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E2A text26 CODE >1384:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E2F text26 CODE >1386:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E33 text26 CODE >1388:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E35 text26 CODE >1389:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E36 text26 CODE >1390:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E36 text26 CODE >1392:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E39 text26 CODE >1393:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E3E text26 CODE >1395:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E43 text26 CODE >1397:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E4F text26 CODE >1395:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E54 text26 CODE >1393:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E56 text26 CODE >15:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\Umul16.c
+E56 text26 CODE >43:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\Umul16.c
+E58 text26 CODE >45:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\Umul16.c
+E5A text26 CODE >46:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\Umul16.c
+E5E text26 CODE >47:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\Umul16.c
+E60 text26 CODE >48:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\Umul16.c
+E62 text26 CODE >49:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\Umul16.c
+E66 text26 CODE >52:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\Umul16.c
+E6A text26 CODE >53:D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\Umul16.c
+E6B text26 CODE >1023:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E6C text26 CODE >1025:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E7A text26 CODE >1027:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E88 text26 CODE >1029:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E94 text26 CODE >1033:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E98 text26 CODE >1038:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+E9A text26 CODE >1041:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+EAA text26 CODE >1043:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+EB8 text26 CODE >1045:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+EC4 text26 CODE >1046:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+EC5 text26 CODE >1049:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+EC9 text26 CODE >1054:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+ECB text26 CODE >1056:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+9E0 text25 CODE >296:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+9E2 text25 CODE >298:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+9E4 text25 CODE >299:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+9E8 text25 CODE >300:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+9EC text25 CODE >301:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+9EE text25 CODE >302:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+9F0 text25 CODE >303:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+9F1 text25 CODE >304:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
+9D4 clrtext CODE >1050:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+9D4 clrtext CODE >1051:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+9D5 clrtext CODE >1052:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+9D5 clrtext CODE >1055:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+9D6 clrtext CODE >1053:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+9D7 clrtext CODE >1054:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+9D8 clrtext CODE >1056:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+9D9 clrtext CODE >1057:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+9DA clrtext CODE >1058:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+9DB clrtext CODE >1059:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+9DC clrtext CODE >1060:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+9DD clrtext CODE >1061:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+9DE clrtext CODE >1063:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
+9DF clrtext CODE >1062:C:\Users\ADMINI~1\AppData\Local\Temp\s474.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -502,25 +1252,47 @@ E intentry CODE >58:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - touchlib.obj
-__Hspace_0 545 0 ABS 0 - -
-__Hspace_1 E0 0 ABS 0 - -
+___awdiv@counter 50 0 BANK0 1 cstackBANK0hh touchlib.obj
+__LdataBANK1 0 0 ABS 0 dataBANK1 -
+__Hspace_0 18C1 0 ABS 0 - -
+__Hspace_1 3B5 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
-__end_of_DisplayHandler 4CE 0 CODE 0 text17 touchlib.obj
-__end_of_UART_INITIAL 2C6 0 CODE 0 cinit touchlib.obj
+__end_of_DisplayHandler 2B78 0 CODE 0 text39 touchlib.obj
+_DataProcessing 1522 0 CODE 0 text26 touchlib.obj
+_fmd_KeyDValue_Key_base B5 0 BANK1 1 bssBANK1 touchlib.obj
+__HidataBANK1 0 0 ABS 0 idataBANK1 -
+__HbssBANK0hh 0 0 ABS 0 bssBANK0hh -
+_KeyScanHandler 71C 0 CODE 0 cinit touchlib.obj
+__end_of_UART_INITIAL E5E 0 CODE 0 cinit touchlib.obj
+__end_of_ACTIVE_SENSOR_DELTA 3168 0 STRCODE 0 stringtext2 touchlib.obj
+_fmd_antishaketimecount 43 0 BANK0 1 bssBANK0hh touchlib.obj
+_fmd_PressOff CD 0 BANK1 1 bssBANK1 touchlib.obj
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_SpecialDisplay1 890 0 CODE 0 text17 touchlib.obj
-__end_of_SpecialDisplay2 900 0 CODE 0 text17 touchlib.obj
-SpecialDisplay1@DspBuf 7A 0 COMMON 1 cstackCOMMON touchlib.obj
-PL2 930 0 CODE 0 text17 touchlib.obj
-PL4 37C 0 CODE 0 cinit touchlib.obj
-PL6 38E 0 CODE 0 cinit touchlib.obj
-PL8 39C 0 CODE 0 cinit touchlib.obj
+_fmd_f_firstdown 3B3 -33A COMMON 1 bitbssCOMMON touchlib.obj
+_fmd_f_firstloop 3B2 -33A COMMON 1 bitbssCOMMON touchlib.obj
+__end_of_SpecialDisplay1 2F3A 0 CODE 0 text39 touchlib.obj
+__end_of_SpecialDisplay2 2FAA 0 CODE 0 text39 touchlib.obj
+SpecialDisplay1@DspBuf 74 0 COMMON 1 cstackCOMMON touchlib.obj
+PL2 878 0 CODE 0 cinit touchlib.obj
+PL4 1D98 0 CODE 0 text26 touchlib.obj
+PL6 1DCC 0 CODE 0 text26 touchlib.obj
+PL8 1DF8 0 CODE 0 text26 touchlib.obj
+_StartHigeFreq 41C 0 CODE 0 cinit touchlib.obj
 __Hstrings 0 0 ABS 0 strings -
-__end_of_TIME_INIT 2E8 0 CODE 0 cinit touchlib.obj
-_SysFunFlg0 DD 0 BANK1 1 bssBANK1 touchlib.obj
-_SysFunFlg1 D8 0 BANK1 1 bssBANK1 touchlib.obj
-_SysFunFlg2 D1 0 BANK1 1 bssBANK1 touchlib.obj
+PL100 1512 0 CODE 0 text38 touchlib.obj
+PL102 151A 0 CODE 0 text38 touchlib.obj
+PL104 B74 0 CODE 0 cinit touchlib.obj
+__end_of_TIME_INIT C1E 0 CODE 0 cinit touchlib.obj
+_SysFunFlg0 49 0 BANK0 1 bssBANK0hh touchlib.obj
+_SysFunFlg1 48 0 BANK0 1 bssBANK0hh touchlib.obj
+_SysFunFlg2 46 0 BANK0 1 bssBANK0hh touchlib.obj
+_EPS0 118 0 ABS 0 - touchlib.obj
+_EPS1 119 0 ABS 0 - touchlib.obj
+_NumD 44 0 BANK0 1 bssBANK0hh touchlib.obj
+_TKC0 38D 0 ABS 0 - touchlib.obj
+_TKC1 38E 0 ABS 0 - touchlib.obj
+_TKST 1C6D 0 ABS 0 - touchlib.obj
 _TXEF 2495 0 ABS 0 - touchlib.obj
 _URTE 2471 0 ABS 0 - touchlib.obj
 _WPDA 20C 0 ABS 0 - touchlib.obj
@@ -531,85 +1303,145 @@ _WPUA 18C 0 ABS 0 - touchlib.obj
 _WPUB 18D 0 ABS 0 - touchlib.obj
 _WPUC 18E 0 ABS 0 - touchlib.obj
 _WPUD 18F 0 ABS 0 - touchlib.obj
-___sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\s588.obj
-_main A6 0 CODE 0 cinit touchlib.obj
+___sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\s474.obj
+_main 110 0 CODE 0 cinit touchlib.obj
 btemp 7E 0 ABS 0 - touchlib.obj
 __size_of_TIME_INIT 0 0 ABS 0 - touchlib.obj
-start 68 0 CODE 0 init C:\Users\ADMINI~1\AppData\Local\Temp\s588.obj
+start 6E 0 CODE 0 init C:\Users\ADMINI~1\AppData\Local\Temp\s474.obj
+__size_of___awdiv 0 0 ABS 0 - touchlib.obj
+MxSet013@a 4C 0 BANK0 1 cstackBANK0hh touchlib.obj
+_WPROOF1 38F 0 ABS 0 - touchlib.obj
+_WPROOF2 390 0 ABS 0 - touchlib.obj
+_WPROOF3 391 0 ABS 0 - touchlib.obj
 __size_of_main 0 0 ABS 0 - touchlib.obj
 __size_of___lbdiv 0 0 ABS 0 - touchlib.obj
 __size_of___lbmod 0 0 ABS 0 - touchlib.obj
+_fmd_thedeathcount1 BF 0 BANK1 1 bssBANK1 touchlib.obj
+_fmd_thedeathcount2 BD 0 BANK1 1 bssBANK1 touchlib.obj
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
-__end_of_SWHEELSILERB A78 0 STRCODE 0 stringtext1 touchlib.obj
+__end_of_SWHEELSILERB 3170 0 STRCODE 0 stringtext3 touchlib.obj
+?___wmul 4C 0 BANK0 1 cstackBANK0hh touchlib.obj
+_fmd_PressOffCount CC 0 BANK1 1 bssBANK1 touchlib.obj
+_fmd_UpTouchCount E8 0 BANK1 1 dataBANK1 touchlib.obj
+_fmd_KeyDValue_Key B9 0 BANK1 1 bssBANK1 touchlib.obj
+_fmd_antishaketimecount1 D1 0 BANK1 1 bssBANK1 touchlib.obj
+__LidataBANK1 0 0 ABS 0 idataBANK1 -
 _TIM2CR1 30C 0 ABS 0 - touchlib.obj
 _TIM2IER 30D 0 ABS 0 - touchlib.obj
 _TIM4ARR 117 0 ABS 0 - touchlib.obj
 _TIM4CR1 111 0 ABS 0 - touchlib.obj
 _TIM4EGR 114 0 ABS 0 - touchlib.obj
 _TIM4IER 112 0 ABS 0 - touchlib.obj
+_MxSet013 13C0 0 CODE 0 text25 touchlib.obj
+__LbssBANK0hh 0 0 ABS 0 bssBANK0hh -
 __Hpowerup 0 0 CODE 0 powerup -
+__pbitbssCOMMON 3B0 -33A COMMON 1 bitbssCOMMON touchlib.obj
 __size_of_Sys_init 0 0 ABS 0 - touchlib.obj
-_TIME_INIT 2E2 0 CODE 0 cinit touchlib.obj
+_TIME_INIT C16 0 CODE 0 cinit touchlib.obj
 _fmd_nodownavrdata_Key 2378 0 ABS 1 - touchlib.obj
-_StrongType DA 0 BANK1 1 bssBANK1 touchlib.obj
-intlevel0 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s588.obj
-intlevel1 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s588.obj
-intlevel2 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s588.obj
-intlevel3 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s588.obj
-intlevel4 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s588.obj
-intlevel5 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s588.obj
+_StrongType 79 0 COMMON 1 bssCOMMON touchlib.obj
+__size_of_ManualKeyExec 0 0 ABS 0 - touchlib.obj
+__end_of_DataProcessing 1CAC 0 CODE 0 text26 touchlib.obj
+__end_of_MxSet013 13E4 0 CODE 0 text25 touchlib.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s474.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s474.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s474.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s474.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s474.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s474.obj
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__end_of_KeyScanHandler 7B4 0 CODE 0 cinit touchlib.obj
+_TouchKeyScan 1C6 0 CODE 0 cinit touchlib.obj
 wtemp0 7E 0 ABS 0 - touchlib.obj
 __Hfunctab 0 0 ENTRY 0 functab -
-__size_of_WDT_INITIAL 0 0 ABS 0 - touchlib.obj
-_SpecialDisplay1 858 0 CODE 0 text17 touchlib.obj
-_SpecialDisplay2 8C0 0 CODE 0 text17 touchlib.obj
+_fmd_HfreqOn 3C 0 BANK0 1 bssBANK0hh touchlib.obj
+_SpecialDisplay1 2F02 0 CODE 0 text39 touchlib.obj
+_SpecialDisplay2 2F6A 0 CODE 0 text39 touchlib.obj
 __L_ad3nop_text 6 0 CODE 0 _ad3nop_text -
+___awdiv@sign 51 0 BANK0 1 cstackBANK0hh touchlib.obj
 __Hclrtext 0 0 ABS 0 clrtext -
 _ad3nop_absaddr 3 0 ABS 0 - touchlib.obj
+_M3ANALOG 395 0 ABS 0 - touchlib.obj
+_fmd_TestCount CE 0 BANK1 1 bssBANK1 touchlib.obj
+___wmul@multiplicand 4E 0 BANK0 1 cstackBANK0hh touchlib.obj
 __size_of_ShowLedData 0 0 ABS 0 - touchlib.obj
 _ANSELA 197 0 ABS 0 - touchlib.obj
+__end_of_ManualKeyExec C66 0 CODE 0 cinit touchlib.obj
+___awdiv@dividend 4E 0 BANK0 1 cstackBANK0hh touchlib.obj
+__size_of_ChkTimeEventStatus 0 0 ABS 0 - touchlib.obj
+__size_of_CheckRfCmd 0 0 ABS 0 - touchlib.obj
 _CKOCON 95 0 ABS 0 - touchlib.obj
 __Hpa_nodes0 0 0 ABS 0 pa_nodes0 -
-_Sys_init 1A2 0 CODE 0 cinit touchlib.obj
-___lbdiv@dividend 77 0 COMMON 1 cstackCOMMON touchlib.obj
-___lbmod@divisor 76 0 COMMON 1 cstackCOMMON touchlib.obj
+__end_of___wmul 1CD6 0 CODE 0 text26 touchlib.obj
+_Sys_init CF0 0 CODE 0 cinit touchlib.obj
+___lbdiv@dividend 71 0 COMMON 1 cstackCOMMON touchlib.obj
+___lbmod@divisor 70 0 COMMON 1 cstackCOMMON touchlib.obj
 __end_of_ad3nop 8 0 CODE 0 _ad3nop_text touchlib.obj
 __Lmaintext 0 0 ABS 0 maintext -
-__end_of___lbdiv 8C0 0 CODE 0 text17 touchlib.obj
-__end_of___lbmod 930 0 CODE 0 text17 touchlib.obj
-__end_of_Sys_init 1F6 0 CODE 0 cinit touchlib.obj
+__size_of_TouchKeyScan 0 0 ABS 0 - touchlib.obj
+___awdiv@divisor 4C 0 BANK0 1 cstackBANK0hh touchlib.obj
+__size_of_StartHigeFreq 0 0 ABS 0 - touchlib.obj
+__end_of___awdiv EDE 0 CODE 0 cinit touchlib.obj
+__end_of___lbdiv 2F6A 0 CODE 0 text39 touchlib.obj
+__end_of___lbmod 2FDA 0 CODE 0 text39 touchlib.obj
+__end_of_Sys_init D44 0 CODE 0 cinit touchlib.obj
 __size_of_TouchInital 0 0 ABS 0 - touchlib.obj
-i1_Rx_Drive 2E8 0 CODE 0 cinit touchlib.obj
+__size_of_ModeKeyExec 0 0 ABS 0 - touchlib.obj
 _INTCON B 0 ABS 0 - touchlib.obj
+_ITYPE0 11E 0 ABS 0 - touchlib.obj
+_ITYPE1 11F 0 ABS 0 - touchlib.obj
+__end_of_ReadRf433 1512 0 CODE 0 text38 touchlib.obj
+_M0ANALOG 392 0 ABS 0 - touchlib.obj
 __Lpa_nodes0 0 0 ABS 0 pa_nodes0 -
-_Time10Ms D4 0 BANK1 1 bssBANK1 touchlib.obj
-_Time4Initial 212 0 CODE 0 cinit touchlib.obj
-start_initialization 6C 0 CODE 0 cinit touchlib.obj
+__size_of_ReadRf433 0 0 ABS 0 - touchlib.obj
+_Time10Ms DA 0 BANK1 1 bssBANK1 touchlib.obj
+_TimeType DE 0 BANK1 1 bssBANK1 touchlib.obj
+__size_of_dokey 0 0 ABS 0 - touchlib.obj
+_Time4Initial D60 0 CODE 0 cinit touchlib.obj
+_KeyCnt C3 0 BANK1 1 bssBANK1 touchlib.obj
+__end_of_TouchKeyScan 252 0 CODE 0 cinit touchlib.obj
+_HeatKeyExec 83E 0 CODE 0 cinit touchlib.obj
+start_initialization 72 0 CODE 0 cinit touchlib.obj
+_HighFreqCo 1CD6 0 CODE 0 text26 touchlib.obj
 _OSCCON 99 0 ABS 0 - touchlib.obj
 __p_ad3nop_text 6 0 CODE 0 _ad3nop_text touchlib.obj
-_Display_init DC 0 CODE 0 cinit touchlib.obj
-_PwrType DC 0 BANK1 1 bssBANK1 touchlib.obj
+_Display_init 1BC 0 CODE 0 cinit touchlib.obj
+i1UartSetEmptyInt@value 70 0 COMMON 1 cstackCOMMON touchlib.obj
+__end_of_StartHigeFreq 668 0 CODE 0 cinit touchlib.obj
+_PwrType 7B 0 COMMON 1 bssCOMMON touchlib.obj
+_fmd_TouchDataBuff_Key 2B 0 BANK0 1 bssBANK0hh touchlib.obj
 _PSINK0 19A 0 ABS 0 - touchlib.obj
 _PSINK1 19B 0 ABS 0 - touchlib.obj
 _PSINK2 19C 0 ABS 0 - touchlib.obj
 _PSINK3 19D 0 ABS 0 - touchlib.obj
+_ReadRf433 1426 0 CODE 0 text38 touchlib.obj
+_fmd_DownTouchCount E6 0 BANK1 1 dataBANK1 touchlib.obj
 __size_of_SpecialDisplay1 0 0 ABS 0 - touchlib.obj
 __size_of_SpecialDisplay2 0 0 ABS 0 - touchlib.obj
-__end_ofPL2 94A 0 CODE 0 text17 touchlib.obj
-__end_ofPL4 38E 0 CODE 0 cinit touchlib.obj
-__end_ofPL6 39C 0 CODE 0 cinit touchlib.obj
-__end_ofPL8 3A8 0 CODE 0 cinit touchlib.obj
+__end_ofPL2 894 0 CODE 0 cinit touchlib.obj
+__end_ofPL4 1DCC 0 CODE 0 text26 touchlib.obj
+__end_ofPL6 1DF8 0 CODE 0 text26 touchlib.obj
+__end_ofPL8 1E04 0 CODE 0 text26 touchlib.obj
+?_TouchKeyScan 6B 0 BANK0 1 cstackBANK0hh touchlib.obj
 __LcstackBANK0hh 0 0 ABS 0 cstackBANK0hh -
-clear_ram0 A40 0 CODE 0 clrtext touchlib.obj
+clear_ram0 13A8 0 CODE 0 clrtext touchlib.obj
 _STATUS 3 0 ABS 0 - touchlib.obj
-_RxData 71 0 COMMON 1 bssCOMMON touchlib.obj
+_RxData D7 0 BANK1 1 bssBANK1 touchlib.obj
 _TIM2ARRH 319 0 ABS 0 - touchlib.obj
 _TIM2ARRL 31A 0 ABS 0 - touchlib.obj
 _TIM4CNTR 115 0 ABS 0 - touchlib.obj
 _TIM4PSCR 116 0 ABS 0 - touchlib.obj
 _TCKSRC 31F 0 ABS 0 - touchlib.obj
 _TIM4SR 113 0 ABS 0 - touchlib.obj
+_TKM0C0 396 0 ABS 0 - touchlib.obj
+_TKM0C1 397 0 ABS 0 - touchlib.obj
+_TKM1C0 398 0 ABS 0 - touchlib.obj
+_TKM1C1 399 0 ABS 0 - touchlib.obj
+_TKM2C0 39A 0 ABS 0 - touchlib.obj
+_TKM2C1 39B 0 ABS 0 - touchlib.obj
+_TKM3C0 39C 0 ABS 0 - touchlib.obj
+_TKM3C1 39D 0 ABS 0 - touchlib.obj
+_TKRCOV 1C6E 0 ABS 0 - touchlib.obj
 _TRISA4 464 0 ABS 0 - touchlib.obj
 _TRISA5 465 0 ABS 0 - touchlib.obj
 _TRISA6 466 0 ABS 0 - touchlib.obj
@@ -626,20 +1458,20 @@ _TRISC5 475 0 ABS 0 - touchlib.obj
 _TRISC6 476 0 ABS 0 - touchlib.obj
 _TRISC7 477 0 ABS 0 - touchlib.obj
 _TRISD5 47D 0 ABS 0 - touchlib.obj
-_ManualType D9 0 BANK1 1 bssBANK1 touchlib.obj
-_TimeUs D6 0 BANK1 1 bssBANK1 touchlib.obj
-_TmsRxH 72 0 COMMON 1 bssCOMMON touchlib.obj
-_TmsRxL D0 0 BANK1 1 bssBANK1 touchlib.obj
-send_uart_data@ByteNum CC 0 BANK1 1 bssBANK1 touchlib.obj
+_ManualType 78 0 COMMON 1 bssCOMMON touchlib.obj
+__size_of_Px_Level_Change_INITIAL 0 0 ABS 0 - touchlib.obj
+_TimeUs DC 0 BANK1 1 bssBANK1 touchlib.obj
+_TmpCnt C5 0 BANK1 1 bssBANK1 touchlib.obj
+send_uart_data@ByteNum D2 0 BANK1 1 bssBANK1 touchlib.obj
+_fmd_f_keydown_flag 3B4 -33A COMMON 1 bitbssCOMMON touchlib.obj
 __size_of_Time4Initial 0 0 ABS 0 - touchlib.obj
-_RxData_Drive E6 0 CODE 0 cinit touchlib.obj
-_WDTCON 97 0 ABS 0 - touchlib.obj
-___lbdiv@counter 78 0 COMMON 1 cstackCOMMON touchlib.obj
-__end_ofi1_Rx_Drive 37C 0 CODE 0 cinit touchlib.obj
-___int_sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\s588.obj
-_Time2Ms D5 0 BANK1 1 bssBANK1 touchlib.obj
-_TimeMin 74 0 COMMON 1 bssCOMMON touchlib.obj
-_TimeSec D2 0 BANK1 1 bssBANK1 touchlib.obj
+_RxData_Drive CA4 0 CODE 0 cinit touchlib.obj
+__end_of_readrf F04 0 CODE 0 cinit touchlib.obj
+___lbdiv@counter 72 0 COMMON 1 cstackCOMMON touchlib.obj
+___int_sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\s474.obj
+_Time2Ms DB 0 BANK1 1 bssBANK1 touchlib.obj
+_TimeMin 77 0 COMMON 1 bssCOMMON touchlib.obj
+_TimeSec D8 0 BANK1 1 bssBANK1 touchlib.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -650,7 +1482,7 @@ __Hbank6 0 0 ABS 0 bank6 -
 __Hbank7 0 0 ABS 0 bank7 -
 __Hbank8 0 0 ABS 0 bank8 -
 __Hbank9 0 0 ABS 0 bank9 -
-__Hcinit 3B4 0 CODE 0 cinit -
+__Hcinit F66 0 CODE 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
 __Hsfr10 0 0 ABS 0 sfr10 -
 __Hsfr11 0 0 ABS 0 sfr11 -
@@ -675,6 +1507,7 @@ __Hsfr29 0 0 ABS 0 sfr29 -
 __Hsfr30 0 0 ABS 0 sfr30 -
 __Hsfr31 0 0 ABS 0 sfr31 -
 __Hstack 0 0 STACK 2 stack -
+_fmd_f_forbidden 3B0 -33A COMMON 1 bitbssCOMMON touchlib.obj
 __Hbank10 0 0 ABS 0 bank10 -
 __Hbank11 0 0 ABS 0 bank11 -
 __Hbank12 0 0 ABS 0 bank12 -
@@ -701,11 +1534,13 @@ __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
 __size_of_send_uart_data 0 0 ABS 0 - touchlib.obj
 __size_of_Display_init 0 0 ABS 0 - touchlib.obj
+__end_of_TouchInit 69A 0 CODE 0 cinit touchlib.obj
 __HcstackBANK0hh 0 0 ABS 0 cstackBANK0hh -
-_FWHEELSILERB A78 0 STRCODE 0 stringtext2 touchlib.obj
+_FWHEELSILERB 3170 0 STRCODE 0 stringtext4 touchlib.obj
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 0 0 CONFIG 0 config -
-UartSetEmptyInt@value 76 0 COMMON 1 cstackCOMMON touchlib.obj
+__size_of_TouchInit 0 0 ABS 0 - touchlib.obj
+UartSetEmptyInt@value 4C 0 BANK0 1 cstackBANK0hh touchlib.obj
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
@@ -716,10 +1551,11 @@ __Lbank6 0 0 ABS 0 bank6 -
 __Lbank7 0 0 ABS 0 bank7 -
 __Lbank8 0 0 ABS 0 bank8 -
 __Lbank9 0 0 ABS 0 bank9 -
-__Lcinit 6C 0 CODE 0 cinit -
+__Lcinit 72 0 CODE 0 cinit -
+_fmd_KeyBuffPress 42 0 BANK0 1 bssBANK0hh touchlib.obj
 __Lidloc 0 0 IDLOC 0 idloc -
 __size_of_DisplayHandler 0 0 ABS 0 - touchlib.obj
-_Time2Initial 1F6 0 CODE 0 cinit touchlib.obj
+_Time2Initial D44 0 CODE 0 cinit touchlib.obj
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
 __Lsfr12 0 0 ABS 0 sfr12 -
@@ -743,12 +1579,13 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-_fmd_theUsedChannel A0 0 BANK1 1 bssBANK1 touchlib.obj
+_fmd_theUsedChannel 13E 0 BANK2 1 bssBANK2 touchlib.obj
 __size_of_exact_event_process 0 0 ABS 0 - touchlib.obj
-__end_of_Time4Initial 234 0 CODE 0 cinit touchlib.obj
+__end_of_Time4Initial D82 0 CODE 0 cinit touchlib.obj
+__end_of_HighFreqCo 1D98 0 CODE 0 text26 touchlib.obj
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
-__Hinit 68 0 CODE 0 init -
+__Hinit 6E 0 CODE 0 init -
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Hsfr1 0 0 ABS 0 sfr1 -
 __Hsfr2 0 0 ABS 0 sfr2 -
@@ -760,10 +1597,10 @@ __Hsfr7 0 0 ABS 0 sfr7 -
 __Hsfr8 0 0 ABS 0 sfr8 -
 __Hsfr9 0 0 ABS 0 sfr9 -
 __Htext 0 0 ABS 0 text -
-_readKeyNum C5 0 BANK1 1 bssBANK1 touchlib.obj
+_readKeyNum 39 0 BANK0 1 bssBANK0hh touchlib.obj
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
-__Linit 68 0 CODE 0 init -
+__Linit 6E 0 CODE 0 init -
 __Lsfr0 0 0 ABS 0 sfr0 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
@@ -775,74 +1612,214 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
-__pstringtext1 A70 0 STRCODE 0 stringtext1 touchlib.obj
-__pstringtext2 A78 0 STRCODE 0 stringtext2 touchlib.obj
-__pstringtext3 A80 0 STRCODE 0 stringtext3 touchlib.obj
-__pstringtext4 A84 0 STRCODE 0 stringtext4 touchlib.obj
-__pstringtext5 A86 0 STRCODE 0 stringtext5 touchlib.obj
-__pstringtext6 A88 0 STRCODE 0 stringtext6 touchlib.obj
-__end_of_UartSetEmptyInt 9E6 0 CODE 0 text14 touchlib.obj
-_TouchTimeCount C3 0 BANK1 1 bssBANK1 touchlib.obj
+__pstringtext1 3000 0 STRCODE 0 stringtext1 touchlib.obj
+__pstringtext2 30B4 0 STRCODE 0 stringtext2 touchlib.obj
+__pstringtext3 3168 0 STRCODE 0 stringtext3 touchlib.obj
+__pstringtext4 3170 0 STRCODE 0 stringtext4 touchlib.obj
+__pstringtext5 3178 0 STRCODE 0 stringtext5 touchlib.obj
+__pstringtext6 317C 0 STRCODE 0 stringtext6 touchlib.obj
+__pstringtext7 317E 0 STRCODE 0 stringtext7 touchlib.obj
+__pstringtext8 3180 0 STRCODE 0 stringtext8 touchlib.obj
+__end_of_UartSetEmptyInt F66 0 CODE 0 cinit touchlib.obj
+___wmul 1CAC 0 CODE 0 text26 touchlib.obj
+_TouchTimeCount C7 0 BANK1 1 bssBANK1 touchlib.obj
 int$flags 7E 0 ABS 0 - touchlib.obj
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _URDATAL 48C 0 ABS 0 - touchlib.obj
-_WDT_INITIAL 2D4 0 CODE 0 cinit touchlib.obj
-PL10 94A 0 CODE 0 text17 touchlib.obj
-PL12 3A8 0 CODE 0 cinit touchlib.obj
+_TouchInit 668 0 CODE 0 cinit touchlib.obj
+__end_of_SysPowerHandler BA4 0 CODE 0 cinit touchlib.obj
+PL10 894 0 CODE 0 cinit touchlib.obj
+PL12 8CE 0 CODE 0 cinit touchlib.obj
+PL14 908 0 CODE 0 cinit touchlib.obj
+PL16 940 0 CODE 0 cinit touchlib.obj
+PL18 998 0 CODE 0 cinit touchlib.obj
+PL20 1E04 0 CODE 0 text26 touchlib.obj
+PL22 9EC 0 CODE 0 cinit touchlib.obj
+PL24 1E3E 0 CODE 0 text26 touchlib.obj
+PL26 1E4A 0 CODE 0 text26 touchlib.obj
+PL28 1E64 0 CODE 0 text26 touchlib.obj
+PL30 1EB0 0 CODE 0 text26 touchlib.obj
+PL32 1EC2 0 CODE 0 text26 touchlib.obj
+PL34 1ECE 0 CODE 0 text26 touchlib.obj
+PL36 A3C 0 CODE 0 cinit touchlib.obj
+PL38 A4C 0 CODE 0 cinit touchlib.obj
+PL40 A7C 0 CODE 0 cinit touchlib.obj
+PL42 A8C 0 CODE 0 cinit touchlib.obj
+PL44 1F0A 0 CODE 0 text26 touchlib.obj
+PL46 AAA 0 CODE 0 cinit touchlib.obj
+PL48 ACC 0 CODE 0 cinit touchlib.obj
+PL50 AF2 0 CODE 0 cinit touchlib.obj
+PL52 1F18 0 CODE 0 text26 touchlib.obj
+PL54 B14 0 CODE 0 cinit touchlib.obj
+PL56 1F26 0 CODE 0 text26 touchlib.obj
+PL58 1F46 0 CODE 0 text26 touchlib.obj
+PL60 2FDA 0 CODE 0 text39 touchlib.obj
+PL62 B32 0 CODE 0 cinit touchlib.obj
+PL64 B3C 0 CODE 0 cinit touchlib.obj
+PL66 1F62 0 CODE 0 text26 touchlib.obj
+PL68 1F6C 0 CODE 0 text26 touchlib.obj
+PL70 1F80 0 CODE 0 text26 touchlib.obj
+PL72 1F92 0 CODE 0 text26 touchlib.obj
+PL74 1F9E 0 CODE 0 text26 touchlib.obj
+PL76 1FAA 0 CODE 0 text26 touchlib.obj
+PL78 1FB6 0 CODE 0 text26 touchlib.obj
+PL80 1FC2 0 CODE 0 text26 touchlib.obj
+PL82 1FD0 0 CODE 0 text26 touchlib.obj
+PL84 B48 0 CODE 0 cinit touchlib.obj
+PL86 B54 0 CODE 0 cinit touchlib.obj
+PL88 B5E 0 CODE 0 cinit touchlib.obj
+PL90 1FDE 0 CODE 0 text26 touchlib.obj
+PL92 1FEA 0 CODE 0 text26 touchlib.obj
+PL94 2FF4 0 CODE 0 text39 touchlib.obj
+PL96 B68 0 CODE 0 cinit touchlib.obj
+PL98 1FF6 0 CODE 0 text26 touchlib.obj
+_DIV 69A 0 CODE 0 cinit touchlib.obj
 _ISR 8 0 CODE 0 intentry touchlib.obj
 _PB4 6C 0 ABS 0 - touchlib.obj
 _PB5 6D 0 ABS 0 - touchlib.obj
+_RFs A6 0 BANK1 1 bssBANK1 touchlib.obj
 _TCF 24E0 0 ABS 0 - touchlib.obj
-__S0 545 0 ABS 0 - -
-__S1 E0 0 ABS 0 - -
+__S0 18C1 0 ABS 0 - -
+__S1 1BE 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __size_of_RxData_Drive 0 0 ABS 0 - touchlib.obj
-__end_of_Display_init E6 0 CODE 0 cinit touchlib.obj
+_LastManual DF 0 BANK1 1 bssBANK1 touchlib.obj
+__end_of_Display_init 1C6 0 CODE 0 cinit touchlib.obj
 _ad3nop 6 0 CODE 0 _ad3nop_text touchlib.obj
-_ShowLedData 4CE 0 CODE 0 text17 touchlib.obj
-_fmd_a1 CB 0 BANK1 1 bssBANK1 touchlib.obj
-_fmd_a2 CA 0 BANK1 1 bssBANK1 touchlib.obj
-_fmd_a3 C9 0 BANK1 1 bssBANK1 touchlib.obj
-__end_ofPL10 956 0 CODE 0 text17 touchlib.obj
-__end_ofPL12 3B4 0 CODE 0 cinit touchlib.obj
-__end_of_ISR 68 0 CODE 0 intentry touchlib.obj
-_BuzzerCnt C7 0 BANK1 1 bssBANK1 touchlib.obj
+_fmd_UpDataTime E4 0 BANK1 1 dataBANK1 touchlib.obj
+_ShowLedData 2B78 0 CODE 0 text39 touchlib.obj
+_fmd_channels 47 0 BANK0 1 bssBANK0hh touchlib.obj
+_fmd_a1 40 0 BANK0 1 bssBANK0hh touchlib.obj
+_fmd_a2 3F 0 BANK0 1 bssBANK0hh touchlib.obj
+_fmd_a3 D0 0 BANK1 1 bssBANK1 touchlib.obj
+_refresh_data F32 0 CODE 0 cinit touchlib.obj
+__end_ofPL10 8CE 0 CODE 0 cinit touchlib.obj
+__end_ofPL12 908 0 CODE 0 cinit touchlib.obj
+__end_ofPL14 940 0 CODE 0 cinit touchlib.obj
+__end_ofPL16 998 0 CODE 0 cinit touchlib.obj
+__end_ofPL18 9EC 0 CODE 0 cinit touchlib.obj
+__end_ofPL20 1E3E 0 CODE 0 text26 touchlib.obj
+__end_ofPL22 A3C 0 CODE 0 cinit touchlib.obj
+__end_ofPL24 1E4A 0 CODE 0 text26 touchlib.obj
+__end_ofPL26 1E64 0 CODE 0 text26 touchlib.obj
+__end_ofPL28 1EB0 0 CODE 0 text26 touchlib.obj
+__end_ofPL30 1EC2 0 CODE 0 text26 touchlib.obj
+__end_ofPL32 1ECE 0 CODE 0 text26 touchlib.obj
+__end_ofPL34 1F0A 0 CODE 0 text26 touchlib.obj
+__end_ofPL36 A4C 0 CODE 0 cinit touchlib.obj
+__end_ofPL38 A7C 0 CODE 0 cinit touchlib.obj
+__end_ofPL40 A8C 0 CODE 0 cinit touchlib.obj
+__end_ofPL42 AAA 0 CODE 0 cinit touchlib.obj
+__end_ofPL44 1F18 0 CODE 0 text26 touchlib.obj
+__end_ofPL46 ACC 0 CODE 0 cinit touchlib.obj
+__end_ofPL48 AF2 0 CODE 0 cinit touchlib.obj
+__end_ofPL50 B14 0 CODE 0 cinit touchlib.obj
+__end_ofPL52 1F26 0 CODE 0 text26 touchlib.obj
+__end_ofPL54 B32 0 CODE 0 cinit touchlib.obj
+__end_ofPL56 1F46 0 CODE 0 text26 touchlib.obj
+__end_ofPL58 1F62 0 CODE 0 text26 touchlib.obj
+__end_ofPL60 2FF4 0 CODE 0 text39 touchlib.obj
+__end_ofPL62 B3C 0 CODE 0 cinit touchlib.obj
+__end_ofPL64 B48 0 CODE 0 cinit touchlib.obj
+__end_ofPL66 1F6C 0 CODE 0 text26 touchlib.obj
+__end_ofPL68 1F80 0 CODE 0 text26 touchlib.obj
+__end_ofPL70 1F92 0 CODE 0 text26 touchlib.obj
+__end_ofPL72 1F9E 0 CODE 0 text26 touchlib.obj
+__end_ofPL74 1FAA 0 CODE 0 text26 touchlib.obj
+__end_ofPL76 1FB6 0 CODE 0 text26 touchlib.obj
+__end_ofPL78 1FC2 0 CODE 0 text26 touchlib.obj
+__end_ofPL80 1FD0 0 CODE 0 text26 touchlib.obj
+__end_ofPL82 1FDE 0 CODE 0 text26 touchlib.obj
+__end_ofPL84 B54 0 CODE 0 cinit touchlib.obj
+__end_ofPL86 B5E 0 CODE 0 cinit touchlib.obj
+__end_ofPL88 B68 0 CODE 0 cinit touchlib.obj
+__end_ofPL90 1FEA 0 CODE 0 text26 touchlib.obj
+__end_ofPL92 1FF6 0 CODE 0 text26 touchlib.obj
+__end_ofPL94 3000 0 CODE 0 text39 touchlib.obj
+__end_ofPL96 B74 0 CODE 0 cinit touchlib.obj
+__end_ofPL98 2000 0 CODE 0 text26 touchlib.obj
+__end_of_DIV 71C 0 CODE 0 cinit touchlib.obj
+__end_of_ISR 6E 0 CODE 0 intentry touchlib.obj
+_BuzzerCnt C9 0 BANK1 1 bssBANK1 touchlib.obj
 __size_of_Time2Initial 0 0 ABS 0 - touchlib.obj
-_Time100Ms D3 0 BANK1 1 bssBANK1 touchlib.obj
-_DspIndex D7 0 BANK1 1 bssBANK1 touchlib.obj
-__end_of_RxData_Drive 102 0 CODE 0 cinit touchlib.obj
-_ModeType 75 0 COMMON 1 bssCOMMON touchlib.obj
+_Time100Ms D9 0 BANK1 1 bssBANK1 touchlib.obj
+__end_of_INACTIVE_SENSOR_DELTA 30B4 0 STRCODE 0 stringtext1 touchlib.obj
+_DspIndex DD 0 BANK1 1 bssBANK1 touchlib.obj
+__end_of_RxData_Drive CF0 0 CODE 0 cinit touchlib.obj
+_ModeType 7A 0 COMMON 1 bssCOMMON touchlib.obj
+_PowerKeyExec BB8 0 CODE 0 cinit touchlib.obj
+_fmd_updataFlag 3D 0 BANK0 1 bssBANK0hh touchlib.obj
 __Lintentry 8 0 CODE 0 intentry -
-_exact_event_process 956 0 CODE 0 text16 touchlib.obj
-__end_of_LONGKEYPROTECT1 A8A 0 STRCODE 0 stringtext6 touchlib.obj
-reset_vec 0 0 CODE 0 reset_vec C:\Users\ADMINI~1\AppData\Local\Temp\s588.obj
+_exact_event_process F66 0 CODE 0 text37 touchlib.obj
+_LastMode E0 0 BANK1 1 bssBANK1 touchlib.obj
+__size_ofi1_UartSetEmptyInt 0 0 ABS 0 - touchlib.obj
+__end_of_LONGKEYPROTECT1 3182 0 STRCODE 0 stringtext8 touchlib.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\ADMINI~1\AppData\Local\Temp\s474.obj
+__size_of_DataProcessing 0 0 ABS 0 - touchlib.obj
+__size_of_KeyScanHandler 0 0 ABS 0 - touchlib.obj
+__pdataBANK1 E2 0 BANK1 1 dataBANK1 touchlib.obj
+_fmd_thedeathcount C1 0 BANK1 1 bssBANK1 touchlib.obj
+__size_of___wmul 0 0 ABS 0 - touchlib.obj
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
-_UartSetEmptyInt 9D4 0 CODE 0 text14 touchlib.obj
+__LbssBANK2 0 0 ABS 0 bssBANK2 -
+__LbssBANK3 0 0 ABS 0 bssBANK3 -
+_M1ANALOG 393 0 ABS 0 - touchlib.obj
+_UartSetEmptyInt F54 0 CODE 0 cinit touchlib.obj
 __Lstringtext1 0 0 ABS 0 stringtext1 -
 __Lstringtext2 0 0 ABS 0 stringtext2 -
 __Lstringtext3 0 0 ABS 0 stringtext3 -
 __Lstringtext4 0 0 ABS 0 stringtext4 -
 __Lstringtext5 0 0 ABS 0 stringtext5 -
 __Lstringtext6 0 0 ABS 0 stringtext6 -
-__end_of_FWHEELSILERB A80 0 STRCODE 0 stringtext2 touchlib.obj
-ShowLedData@DspBuf 76 0 COMMON 1 cstackCOMMON touchlib.obj
-_TouchInital 234 0 CODE 0 cinit touchlib.obj
-__end_of_Time2Initial 212 0 CODE 0 cinit touchlib.obj
-__ptext10 E6 0 CODE 0 cinit touchlib.obj
-__ptext11 DC 0 CODE 0 cinit touchlib.obj
-__ptext13 2E8 0 CODE 0 cinit touchlib.obj
-__ptext14 9A6 0 CODE 0 text14 touchlib.obj
-__ptext15 9D4 0 CODE 0 text14 touchlib.obj
-__ptext16 956 0 CODE 0 text16 touchlib.obj
-__ptext17 3B4 0 CODE 0 text17 touchlib.obj
-__ptext18 8C0 0 CODE 0 text17 touchlib.obj
-__ptext19 900 0 CODE 0 text17 touchlib.obj
-__ptext20 858 0 CODE 0 text17 touchlib.obj
-__ptext21 890 0 CODE 0 text17 touchlib.obj
-__ptext22 4CE 0 CODE 0 text17 touchlib.obj
-___lbdiv 890 0 CODE 0 text17 touchlib.obj
-___lbmod 900 0 CODE 0 text17 touchlib.obj
+__Lstringtext7 0 0 ABS 0 stringtext7 -
+__Lstringtext8 0 0 ABS 0 stringtext8 -
+_fmd_Startgx CB 0 BANK1 1 bssBANK1 touchlib.obj
+__end_of_FWHEELSILERB 3178 0 STRCODE 0 stringtext4 touchlib.obj
+ShowLedData@DspBuf 70 0 COMMON 1 cstackCOMMON touchlib.obj
+HighFreqCo@a 52 0 BANK0 1 cstackBANK0hh touchlib.obj
+_TouchInital D82 0 CODE 0 cinit touchlib.obj
+_ModeKeyExec C66 0 CODE 0 cinit touchlib.obj
+_INACTIVE_SENSOR_DELTA 3000 0 STRCODE 0 stringtext1 touchlib.obj
+_SysPowerHandler B7E 0 CODE 0 cinit touchlib.obj
+__end_of_Time2Initial D60 0 CODE 0 cinit touchlib.obj
+__ptext10 BA4 0 CODE 0 cinit touchlib.obj
+__ptext11 CA4 0 CODE 0 cinit touchlib.obj
+__ptext12 7CE 0 CODE 0 cinit touchlib.obj
+__ptext13 F32 0 CODE 0 cinit touchlib.obj
+__ptext14 F54 0 CODE 0 cinit touchlib.obj
+__ptext15 860 0 CODE 0 cinit touchlib.obj
+__ptext16 BB8 0 CODE 0 cinit touchlib.obj
+__ptext17 C16 0 CODE 0 cinit touchlib.obj
+__ptext18 C66 0 CODE 0 cinit touchlib.obj
+__ptext19 C1E 0 CODE 0 cinit touchlib.obj
+__ptext20 83E 0 CODE 0 cinit touchlib.obj
+__ptext21 7B4 0 CODE 0 cinit touchlib.obj
+__ptext22 71C 0 CODE 0 cinit touchlib.obj
+__ptext23 1C6 0 CODE 0 cinit touchlib.obj
+__ptext24 252 0 CODE 0 cinit touchlib.obj
+__ptext25 13C0 0 CODE 0 text25 touchlib.obj
+__ptext26 1522 0 CODE 0 text26 touchlib.obj
+__ptext27 1CAC 0 CODE 0 text26 touchlib.obj
+__ptext28 41C 0 CODE 0 cinit touchlib.obj
+__ptext29 668 0 CODE 0 cinit touchlib.obj
+__ptext30 69A 0 CODE 0 cinit touchlib.obj
+__ptext31 1CD6 0 CODE 0 text26 touchlib.obj
+__ptext32 1BC 0 CODE 0 cinit touchlib.obj
+__ptext33 19E 0 CODE 0 cinit touchlib.obj
+__ptext35 13E4 0 CODE 0 text35 touchlib.obj
+__ptext36 1414 0 CODE 0 text35 touchlib.obj
+__ptext37 F66 0 CODE 0 text37 touchlib.obj
+__ptext38 1426 0 CODE 0 text38 touchlib.obj
+__ptext39 2A62 0 CODE 0 text39 touchlib.obj
+__ptext40 2F6A 0 CODE 0 text39 touchlib.obj
+__ptext41 2FAA 0 CODE 0 text39 touchlib.obj
+__ptext42 2F02 0 CODE 0 text39 touchlib.obj
+__ptext43 2F3A 0 CODE 0 text39 touchlib.obj
+__ptext44 2B78 0 CODE 0 text39 touchlib.obj
+___awdiv E5E 0 CODE 0 cinit touchlib.obj
+___lbdiv 2F3A 0 CODE 0 text39 touchlib.obj
+___lbmod 2FAA 0 CODE 0 text39 touchlib.obj
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -865,85 +1842,132 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext A6 0 CODE 0 cinit touchlib.obj
+__pmaintext 110 0 CODE 0 cinit touchlib.obj
 __Lbigram 0 0 ABS 0 bigram -
-DisplayHandler@DspBuf CE 0 BANK1 1 bssBANK1 touchlib.obj
-DisplayHandler@DspCnt CD 0 BANK1 1 bssBANK1 touchlib.obj
+DisplayHandler@DspBuf D4 0 BANK1 1 bssBANK1 touchlib.obj
+DisplayHandler@DspCnt D3 0 BANK1 1 bssBANK1 touchlib.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 0 config -
-___lbdiv@divisor 76 0 COMMON 1 cstackCOMMON touchlib.obj
+__size_of_refresh_data 0 0 ABS 0 - touchlib.obj
+___wmul@multiplier 4C 0 BANK0 1 cstackBANK0hh touchlib.obj
+___lbdiv@divisor 70 0 COMMON 1 cstackCOMMON touchlib.obj
+_readrf EDE 0 CODE 0 cinit touchlib.obj
+__size_of_PowerKeyExec 0 0 ABS 0 - touchlib.obj
+_ReadTouchData 252 0 CODE 0 cinit touchlib.obj
+_KeyType 45 0 BANK0 1 bssBANK0hh touchlib.obj
 _fmd_Null0 20 0 ABS 1 - touchlib.obj
 _fmd_Null1 23 0 ABS 1 - touchlib.obj
 _fmd_Null2 24 0 ABS 1 - touchlib.obj
 _fmd_Null3 2A 0 ABS 1 - touchlib.obj
-_fmd_Keystatus1 BF 0 BANK1 1 bssBANK1 touchlib.obj
-_fmd_Keystatus2 BD 0 BANK1 1 bssBANK1 touchlib.obj
-stackhi 22FF 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\s588.obj
-stacklo 2090 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\s588.obj
-__pcstackBANK0hh 2B 0 BANK0 1 cstackBANK0hh touchlib.obj
+_fmd_Keystatus1 35 0 BANK0 1 bssBANK0hh touchlib.obj
+_fmd_Keystatus2 33 0 BANK0 1 bssBANK0hh touchlib.obj
+stackhi 22FF 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\s474.obj
+stacklo 210E 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\s474.obj
+__pcstackBANK0hh 4C 0 BANK0 1 cstackBANK0hh touchlib.obj
 __pbssBIGRAM 2300 0 ABS 0 - touchlib.obj
-__size_of_Rx_Drive 0 0 ABS 0 - touchlib.obj
+StartHigeFreq@a 51 0 BANK0 1 cstackBANK0hh touchlib.obj
+__end_of_refresh_data F54 0 CODE 0 cinit touchlib.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
-_send_buf B7 0 BANK1 1 bssBANK1 touchlib.obj
-__pbssCOMMON 70 0 COMMON 1 bssCOMMON touchlib.obj
-__size_ofi1_Rx_Drive 0 0 ABS 0 - touchlib.obj
-__Lend_init 68 0 CODE 0 end_init -
+_send_buf A0 0 BANK1 1 bssBANK1 touchlib.obj
+__pbssCOMMON 77 0 COMMON 1 bssCOMMON touchlib.obj
+_StrongKeyExec 860 0 CODE 0 cinit touchlib.obj
+__HbitbssCOMMON 0 0 ABS 0 bitbssCOMMON -
+__end_of_HeatKeyExec 860 0 CODE 0 cinit touchlib.obj
+_fmd_DownDataTime E2 0 BANK1 1 dataBANK1 touchlib.obj
+__end_of_PowerKeyExec C16 0 CODE 0 cinit touchlib.obj
+_TouchcapBuff1 120 0 BANK2 1 bssBANK2 touchlib.obj
+_TouchcapBuff2 1A0 0 BANK3 1 bssBANK3 touchlib.obj
+__Lend_init 6E 0 CODE 0 end_init -
 _fmd_nodownsum_Key 2300 0 ABS 1 - touchlib.obj
-__end_of_PRIMARYKEY11 A88 0 STRCODE 0 stringtext5 touchlib.obj
+_buf_rec AC 0 BANK1 1 bssBANK1 touchlib.obj
+__end_of_PRIMARYKEY11 3180 0 STRCODE 0 stringtext7 touchlib.obj
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization A0 0 CODE 0 cinit touchlib.obj
-__Hintentry 68 0 CODE 0 intentry -
+end_of_initialization 10A 0 CODE 0 cinit touchlib.obj
+__Hintentry 6E 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
+___awdiv@quotient 52 0 BANK0 1 cstackBANK0hh touchlib.obj
+?___awdiv 4C 0 BANK0 1 cstackBANK0hh touchlib.obj
+_fmd_KeyBuffUnPress 41 0 BANK0 1 bssBANK0hh touchlib.obj
+__size_of_readrf 0 0 ABS 0 - touchlib.obj
 __Hreset_vec 4 0 CODE 0 reset_vec -
-__end_of_exact_event_process 9A6 0 CODE 0 text16 touchlib.obj
+__end_of_exact_event_process FC0 0 CODE 0 text37 touchlib.obj
+__end_of_ChkTimeEventStatus 1BC 0 CODE 0 cinit touchlib.obj
 _fmd_ReferenceData 25 0 ABS 1 - touchlib.obj
 __HbssBANK1 0 0 ABS 0 bssBANK1 -
+__HbssBANK2 0 0 ABS 0 bssBANK2 -
+__HbssBANK3 0 0 ABS 0 bssBANK3 -
+__size_of_HighFreqCo 0 0 ABS 0 - touchlib.obj
+_CheckRfCmd F04 0 CODE 0 cinit touchlib.obj
 __size_of_UartSetEmptyInt 0 0 ABS 0 - touchlib.obj
-__ptext1 2D4 0 CODE 0 cinit touchlib.obj
-__ptext2 2C6 0 CODE 0 cinit touchlib.obj
-__ptext3 2E2 0 CODE 0 cinit touchlib.obj
-__ptext4 2AE 0 CODE 0 cinit touchlib.obj
-__ptext5 234 0 CODE 0 cinit touchlib.obj
-__ptext6 212 0 CODE 0 cinit touchlib.obj
-__ptext7 1F6 0 CODE 0 cinit touchlib.obj
-__ptext8 1A2 0 CODE 0 cinit touchlib.obj
-__ptext9 102 0 CODE 0 cinit touchlib.obj
-___lbdiv@quotient 79 0 COMMON 1 cstackCOMMON touchlib.obj
+__ptext1 EDE 0 CODE 0 cinit touchlib.obj
+__ptext2 F04 0 CODE 0 cinit touchlib.obj
+__ptext3 E5E 0 CODE 0 cinit touchlib.obj
+__ptext4 E44 0 CODE 0 cinit touchlib.obj
+__ptext5 D82 0 CODE 0 cinit touchlib.obj
+__ptext6 D60 0 CODE 0 cinit touchlib.obj
+__ptext7 D44 0 CODE 0 cinit touchlib.obj
+__ptext8 CF0 0 CODE 0 cinit touchlib.obj
+__ptext9 B7E 0 CODE 0 cinit touchlib.obj
+___lbdiv@quotient 73 0 COMMON 1 cstackCOMMON touchlib.obj
 _fmd_ResultData 27 0 ABS 1 - touchlib.obj
-___lbmod@dividend 78 0 COMMON 1 cstackCOMMON touchlib.obj
+__size_of_SysPowerHandler 0 0 ABS 0 - touchlib.obj
+__end_ofi1_UartSetEmptyInt 1426 0 CODE 0 text35 touchlib.obj
+_fmd_f_main_key 3B1 -33A COMMON 1 bitbssCOMMON touchlib.obj
+___lbmod@dividend 72 0 COMMON 1 cstackCOMMON touchlib.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
+_fmd_KeyDValue_Key_baseBuff B1 0 BANK1 1 bssBANK1 touchlib.obj
 __Lreset_vec 0 0 CODE 0 reset_vec -
-_Rx_Drive 102 0 CODE 0 cinit touchlib.obj
 __Hstringtext1 0 0 ABS 0 stringtext1 -
 __Hstringtext2 0 0 ABS 0 stringtext2 -
 __Hstringtext3 0 0 ABS 0 stringtext3 -
 __Hstringtext4 0 0 ABS 0 stringtext4 -
 __Hstringtext5 0 0 ABS 0 stringtext5 -
 __Hstringtext6 0 0 ABS 0 stringtext6 -
-__end_of__initialization A0 0 CODE 0 cinit touchlib.obj
+__Hstringtext7 0 0 ABS 0 stringtext7 -
+__Hstringtext8 0 0 ABS 0 stringtext8 -
+_ACTIVE_SENSOR_DELTA 30B4 0 STRCODE 0 stringtext2 touchlib.obj
+_fmd_AntiWaterBit 4A 0 BANK0 1 bssBANK0hh touchlib.obj
+__end_of__initialization 10A 0 CODE 0 cinit touchlib.obj
+_ChkTimeEventStatus 19E 0 CODE 0 cinit touchlib.obj
 __Lfunctab 0 0 ENTRY 0 functab -
-__end_of_Rx_Drive 1A2 0 CODE 0 cinit touchlib.obj
+__pidataBANK1 0 0 CODE 0 idataBANK1 touchlib.obj
+__size_of_ReadTouchData 0 0 ABS 0 - touchlib.obj
 _fmd_OriginalData 21 0 ABS 1 - touchlib.obj
+__pbssBANK0hh 2B 0 BANK0 1 bssBANK0hh touchlib.obj
 __Lclrtext 0 0 ABS 0 clrtext -
-_UART_INITIAL 2AE 0 CODE 0 cinit touchlib.obj
-_send_uart_data 9A6 0 CODE 0 text14 touchlib.obj
-__pcstackCOMMON 76 0 COMMON 1 cstackCOMMON touchlib.obj
-__end_of_WDT_INITIAL 2E2 0 CODE 0 cinit touchlib.obj
+_fmd_currentCount CF 0 BANK1 1 bssBANK1 touchlib.obj
+_UART_INITIAL E44 0 CODE 0 cinit touchlib.obj
+_send_uart_data 13E4 0 CODE 0 text35 touchlib.obj
+TouchInit@Time 4C 0 BANK0 1 cstackBANK0hh touchlib.obj
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON touchlib.obj
+_Px_Level_Change_INITIAL 7B4 0 CODE 0 cinit touchlib.obj
+_M2ANALOG 394 0 ABS 0 - touchlib.obj
+CheckRfCmd@rfcmd 4C 0 BANK0 1 cstackBANK0hh touchlib.obj
 _fmd_ResultDataH 29 0 ABS 1 - touchlib.obj
-_DisplayHandler 3B4 0 CODE 0 text17 touchlib.obj
-__Hend_init 6C 0 CODE 0 end_init -
-__end_of_User_init 2D4 0 CODE 0 cinit touchlib.obj
-_fmd_Keystatus C1 0 BANK1 1 bssBANK1 touchlib.obj
-___lbmod@rem 7A 0 COMMON 1 cstackCOMMON touchlib.obj
+_DisplayHandler 2A62 0 CODE 0 text39 touchlib.obj
+__end_of_Px_Level_Change_INITIAL 7CE 0 CODE 0 cinit touchlib.obj
+__Hend_init 72 0 CODE 0 end_init -
+__end_of_User_init BB8 0 CODE 0 cinit touchlib.obj
+_fmd_Keystatus 37 0 BANK0 1 bssBANK0hh touchlib.obj
+_dsp_100ms D6 0 BANK1 1 bssBANK1 touchlib.obj
+__end_of_CheckRfCmd F32 0 CODE 0 cinit touchlib.obj
+___lbmod@rem 74 0 COMMON 1 cstackCOMMON touchlib.obj
+__end_ofPL100 151A 0 CODE 0 text38 touchlib.obj
+__end_ofPL102 1522 0 CODE 0 text38 touchlib.obj
+__end_ofPL104 B7E 0 CODE 0 cinit touchlib.obj
+__size_of_StrongKeyExec 0 0 ABS 0 - touchlib.obj
 __size_of_User_init 0 0 ABS 0 - touchlib.obj
-__end_of_main DC 0 CODE 0 cinit touchlib.obj
-_HeatType DB 0 BANK1 1 bssBANK1 touchlib.obj
-__end_of_IO_TOUCH_ATTR1 A84 0 STRCODE 0 stringtext3 touchlib.obj
-_SWHEELSILERB A70 0 STRCODE 0 stringtext1 touchlib.obj
+__end_of_main 19E 0 CODE 0 cinit touchlib.obj
+_HeatType E1 0 BANK1 1 bssBANK1 touchlib.obj
+__end_of_IO_TOUCH_ATTR1 317C 0 STRCODE 0 stringtext5 touchlib.obj
+_SWHEELSILERB 3168 0 STRCODE 0 stringtext3 touchlib.obj
+_EPIE0 94 0 ABS 0 - touchlib.obj
+_EPIF0 14 0 ABS 0 - touchlib.obj
+__end_of_dokey 83E 0 CODE 0 cinit touchlib.obj
 _LATA0 860 0 ABS 0 - touchlib.obj
 _LATA1 861 0 ABS 0 - touchlib.obj
 _LATA4 864 0 ABS 0 - touchlib.obj
@@ -955,7 +1979,6 @@ _LATC1 871 0 ABS 0 - touchlib.obj
 _LATD1 879 0 ABS 0 - touchlib.obj
 _LATD2 87A 0 ABS 0 - touchlib.obj
 _LATD3 87B 0 ABS 0 - touchlib.obj
-_MISC0 11C 0 ABS 0 - touchlib.obj
 _PCKEN 9A 0 ABS 0 - touchlib.obj
 _PORTA C 0 ABS 0 - touchlib.obj
 _PORTB D 0 ABS 0 - touchlib.obj
@@ -967,8 +1990,7 @@ _T2UIE 1868 0 ABS 0 - touchlib.obj
 _T2UIF 1870 0 ABS 0 - touchlib.obj
 _T4UIE 890 0 ABS 0 - touchlib.obj
 _T4UIF 898 0 ABS 0 - touchlib.obj
-_RxBit 73 0 COMMON 1 bssCOMMON touchlib.obj
-_RxBuf AF 0 BANK1 1 bssBANK1 touchlib.obj
+_TKTMR 38C 0 ABS 0 - touchlib.obj
 _TRISA 8C 0 ABS 0 - touchlib.obj
 _TRISB 8D 0 ABS 0 - touchlib.obj
 _TRISC 8E 0 ABS 0 - touchlib.obj
@@ -978,27 +2000,52 @@ _URDLL 494 0 ABS 0 - touchlib.obj
 _URIER 48E 0 ABS 0 - touchlib.obj
 _URLCR 48F 0 ABS 0 - touchlib.obj
 _URMCR 491 0 ABS 0 - touchlib.obj
-__end_of_ShowLedData 858 0 CODE 0 text17 touchlib.obj
+__end_of_ShowLedData 2F02 0 CODE 0 text39 touchlib.obj
+_ManualKeyExec C1E 0 CODE 0 cinit touchlib.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __H_ad3nop_text 8 0 CODE 0 _ad3nop_text -
-_fmd_a DF 0 BANK1 1 bssBANK1 touchlib.obj
-_fmd_u 70 0 COMMON 1 bssCOMMON touchlib.obj
+_dokey 7CE 0 CODE 0 cinit touchlib.obj
+_fmd_a 4B 0 BANK0 1 bssBANK0hh touchlib.obj
+_fmd_u 3E 0 BANK0 1 bssBANK0hh touchlib.obj
+_fmd_x 3B 0 BANK0 1 bssBANK0hh touchlib.obj
+__end_of_ReadTouchData 41C 0 CODE 0 cinit touchlib.obj
 __pintentry 8 0 CODE 0 intentry touchlib.obj
-__end_of_SCANNINGTIME1 A86 0 STRCODE 0 stringtext4 touchlib.obj
-DisplayHandler@LedMenuIndex CF 0 BANK1 1 bssBANK1 touchlib.obj
+__end_of_SCANNINGTIME1 317E 0 STRCODE 0 stringtext6 touchlib.obj
+DisplayHandler@LedMenuIndex D5 0 BANK1 1 bssBANK1 touchlib.obj
+_fmd_updataChannel 14D 0 BANK2 1 bssBANK2 touchlib.obj
+__size_of_DIV 0 0 ABS 0 - touchlib.obj
 __size_of_ISR 0 0 ABS 0 - touchlib.obj
-_User_init 2C6 0 CODE 0 cinit touchlib.obj
-__initialization 6C 0 CODE 0 cinit touchlib.obj
+__HdataBANK1 0 0 ABS 0 dataBANK1 -
+__LbitbssCOMMON 0 0 ABS 0 bitbssCOMMON -
+_User_init BA4 0 CODE 0 cinit touchlib.obj
+__initialization 72 0 CODE 0 cinit touchlib.obj
 __pbssBANK1 A0 0 BANK1 1 bssBANK1 touchlib.obj
+__pbssBANK2 120 0 BANK2 1 bssBANK2 touchlib.obj
+__pbssBANK3 1A0 0 BANK3 1 bssBANK3 touchlib.obj
+_TKM016DH F95 0 ABS 0 - touchlib.obj
+_TKM016DL F94 0 ABS 0 - touchlib.obj
+_TKM116DH F9D 0 ABS 0 - touchlib.obj
+_TKM116DL F9C 0 ABS 0 - touchlib.obj
+_TKM216DH FA5 0 ABS 0 - touchlib.obj
+_TKM216DL FA4 0 ABS 0 - touchlib.obj
+_TKM316DH FAD 0 ABS 0 - touchlib.obj
+_TKM316DL FAC 0 ABS 0 - touchlib.obj
 __size_of_UART_INITIAL 0 0 ABS 0 - touchlib.obj
-SpecialDisplay2@DspBuf 7B 0 COMMON 1 cstackCOMMON touchlib.obj
-__end_of_send_uart_data 9D4 0 CODE 0 text14 touchlib.obj
-___lbmod@counter 79 0 COMMON 1 cstackCOMMON touchlib.obj
-__end_of_TouchInital 2AE 0 CODE 0 cinit touchlib.obj
-__pswtext1 9E6 0 CONST 0 swtext1 touchlib.obj
-__pswtext2 A58 0 CONST 0 swtext2 touchlib.obj
-__pswtext3 A00 0 CONST 0 swtext3 touchlib.obj
+SpecialDisplay2@DspBuf 75 0 COMMON 1 cstackCOMMON touchlib.obj
+___wmul@product 50 0 BANK0 1 cstackBANK0hh touchlib.obj
+i1_UartSetEmptyInt 1414 0 CODE 0 text35 touchlib.obj
+__size_of_MxSet013 0 0 ABS 0 - touchlib.obj
+__size_of_HeatKeyExec 0 0 ABS 0 - touchlib.obj
+__end_of_StrongKeyExec 878 0 CODE 0 cinit touchlib.obj
+__end_of_send_uart_data 1414 0 CODE 0 text35 touchlib.obj
+___lbmod@counter 73 0 COMMON 1 cstackCOMMON touchlib.obj
+__end_of_TouchInital E44 0 CODE 0 cinit touchlib.obj
+__end_of_ModeKeyExec CA4 0 CODE 0 cinit touchlib.obj
+__pswtext1 1000 0 CONST 0 swtext1 touchlib.obj
+__pswtext2 1018 0 CONST 0 swtext2 touchlib.obj
+__pswtext3 1030 0 CONST 0 swtext3 touchlib.obj
+__pswtext4 FC0 0 CONST 0 swtext4 touchlib.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -1039,14 +2086,19 @@ _fmd_ResultDataH 1 29 1
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cstackBANK0hh 1 2B 2B 4 1
-stringtext1 0 538 A70 D 2
-intentry 0 4 8 4EF 2
+text25 0 9E0 13C0 12 2
+text26 0 A91 1522 56F 2
+text35 0 9F2 13E4 21 2
+text38 0 A13 1426 7E 2
+text39 0 1531 2A62 2CF 2
+cstackCOMMON 1 70 70 C 1
+stringtext1 0 1800 3000 C1 2
+intentry 0 4 8 7DC 2
 reset_vec 0 0 0 2 2
-bssBANK1 1 A0 A0 40 1
-swtext1 0 4F3 9E6 C 2
-swtext2 0 52C A58 C 2
-swtext3 0 500 A00 20 2
+bssBANK1 1 A0 A0 4A 1
+bssBANK2 1 120 120 3C 1
+bssBANK3 1 1A0 1A0 1E 1
+bssBANK0hh 1 2B 2B 42 1
+swtext4 0 7E0 FC0 44 2
 _ad3nop_text 0 3 6 1 2
-clrtext 0 520 A40 C 2
-bssCOMMON 1 70 70 C 1
+clrtext 0 9D4 13A8 C 2

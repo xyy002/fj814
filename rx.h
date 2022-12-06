@@ -15,14 +15,54 @@ WARM KEY          0x08 0xe7 0x70 0x8f          MODE KEY          0x08 0xe7 0x28 
 */
 //*********************************************************
 
-#define P_RX PB4 
+#define P_RX PB4    
 
+#define CMD_PWR 0X01
+#define CMD_MODE 0X08
+#define CMD_SPD 0X0E
+#define CMD_HEAT 0X0C
+#define CMD_AIR 0X0A
+
+#define NBIT		24
+#define RFHEADH_MAX	6		// 0.4ms L    1.2ms H
+#define RFHEADH_MIN	2		// 
+#define RFHEADL_MAX	135		// 12.3ms
+#define RFHEADL_MIN	105		// 
+#define RFH_MAX		16		// 
+#define RFL_MAX		16		// 
+#define RFH_MIN     2
+#define T_REMOUT	40		//400ms
+
+#define T_KeyStopHold	200	//200x10ms--2s  stop key
+
+typedef enum
+{
+		rfReset=0,
+		rffall,
+		synH,
+		synL,
+		rfH,
+		rfL
+}RFSTEP;
+
+typedef struct
+{
+	RFSTEP RFsp;
+	volatile unsigned char tRFH;
+	volatile unsigned char tRFL;
+	volatile unsigned char BitCount;
+	volatile unsigned char Bptr;
+	volatile unsigned char RecBufFull;
+}RFSTATE;
 //*********************************************************
-extern uchar RxData;
+extern uchar RxData,bRxData;
 //*********************************************************
 
-extern void Rx_Drive(void);
+// extern void Rx_Drive(void);
+// extern void RxData_Drive(void);
+extern void ReadRf433();
 extern void RxData_Drive(void);
+extern void readrf();
 //*********************************************************
 
 #endif

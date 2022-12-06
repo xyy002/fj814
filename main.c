@@ -156,7 +156,7 @@ void main(void)
 	//Time1Initial();
 	Time2Initial();
 	Time4Initial();
-	WDT_INITIAL ();
+	// WDT_INITIAL ();
     UART_INITIAL();	
     Px_Level_Change_INITIAL();	
 	User_init(); 
@@ -164,10 +164,10 @@ void main(void)
 	SetBuzzer();
 	//RGBSwitchStautus(off);
 	while(1)
-	{  
-		CLRWDT();
-		Rx_Drive();	
-		send_uart_data();	
+	{ 
+		// CLRWDT();
+		readrf();
+		// send_uart_data();	
 		  if(TouchTimeCount>=(1000/SCANNINGTIME/(fmd_channels+1)))  	//°´¼üÉ¨ÃèÆµÂÊ
         {
             TouchTimeCount=0;
@@ -183,6 +183,7 @@ void main(void)
 		{
 			t10msFlag=0;
 			//PA7=~PA7;
+			
 			KeyScanHandler(); 
 			dokey();
 			SysPowerHandler(); 

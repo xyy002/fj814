@@ -1,110 +1,215 @@
 //*********************************************************
 #include "includes.h"
 //*********************************************************
-uchar RxBuf[8];
-uchar RxBit;
-uchar TmsRxH;
-uchar TmsRxL;
-uchar RxData;
+// uchar RxBuf[8];
+// uchar RxBit;
+// uchar TmsRxH;
+// uchar TmsRxL;
+ uchar RxData;
+
+RFSTATE RFs;
+volatile unsigned char buf_rec[5];
+unsigned char rf_data[5];
+
+unsigned char RemNum=0,RemNumTemp=0;
+unsigned char RemOutTime;
+unsigned char remcmd;  //,remempt
+unsigned char rf_learn = 1;
+unsigned int tRfKeyHold;
+unsigned char tRFtemp;
+
+
+unsigned char keybit1,keybit2,keybit3,keybit4,keybit5;
+
 
 //*********************************************************
 
-//*********************************************************
-
-void Rx_Drive(void) //100us
+unsigned char CheckRfCmd(unsigned char rfcmd)
 {
-    if (P_RX == 1)
-    {
-        if (TmsRxH < 250)
-            TmsRxH++;
-        else
-            RxBit = 0;
-    }
-    else
-    {  //捕捉6次
-        if (TmsRxH >= 20)
-        {
-            TmsRxH = 0;
-            TmsRxL = 0;
-            RxBit = 0;
-            RxBuf[0] = 0;
-            RxBuf[1] = 0;
-            RxBuf[2] = 0;
-            RxBuf[3] = 0;            
-        }
-        else if (TmsRxH)
-        {
-            if ((TmsRxH > TmsRxL)&&(TmsRxH>8))
-                RxBuf[RxBit / 8] |= 0x80 >> (RxBit % 8);
-            TmsRxH = 0;
-            TmsRxL = 0;
-            if (++RxBit >= 32)
-            {
-                RxBit = 0;
-                //  oxff      0x00
-                if(RxBuf[1]-RxBuf[0]==0XDF)
-                RxData = RxBuf[3];
-            }
-        }
-        if (TmsRxL < 250)
-            TmsRxL++;
-    }
+	switch( rfcmd)
+	{
+		case CMD_PWR:
+		case CMD_MODE:
+		case CMD_SPD:
+		case CMD_HEAT:
+		case CMD_AIR:
+		    return 1;	
+		default:
+			return 0;
+	}
 }
-	// PowerKey,	
-	// ModeKey,
-	// AirKey,
-	// MotorKey,	
-	// HeatKey,
-	// TestKey
+
+
+void Rf433IoInit(void)
+{
+	RFs.RecBufFull=0;
+
+    RFs.tRFL= 0;
+    RFs.tRFH= 0;
+    RFs.BitCount=0;
+    RFs.Bptr=0;
+    RFs.RFsp= rffall;
+}
+
+void ReadRf433(void)
+{
+	switch(RFs.RFsp)
+	{
+		case synH:
+			if(P_RX)
+			{
+				RFs.tRFH++;
+				if(RFs.tRFH>RFHEADH_MAX)
+				{
+					RFs.RFsp=rfReset;
+					break;
+				}
+				break;
+			}
+			else
+			{
+				if(RFs.tRFH<RFHEADH_MIN)
+				{
+					RFs.RFsp=rfReset;
+					break;
+				}
+				RFs.tRFL=0;
+				RFs.RFsp=synL;
+				break;
+			}
+		case synL:
+			if(P_RX==0)
+			{
+				RFs.tRFL++;
+				if(RFs.tRFL>RFHEADL_MAX)
+				{
+					RFs.RFsp=rfReset;
+					break;
+				}
+				break;
+			}
+			else
+			{
+				if(RFs.tRFL<RFHEADL_MIN)
+				{
+					RFs.RFsp=rfReset;
+					break;
+				}
+				RFs.tRFH=0;
+				RFs.RFsp=rfH;
+				break;
+			}
+		case rfH:
+			if(P_RX)
+			{
+				RFs.tRFH++;
+				if(RFs.tRFH>RFH_MAX)
+				{
+					RFs.RFsp=rfReset;
+					break;
+				}
+				break;
+			}
+			else
+			{
+				RFs.tRFL=0;
+				RFs.RFsp=rfL;
+				break;
+			}
+		case rfL:
+			if(P_RX==0)
+			{
+				RFs.tRFL++;
+				if(RFs.tRFL>RFL_MAX)
+				{
+					RFs.RFsp=rfReset;			
+					break;
+				}
+				break;
+			}
+			else
+			{
+				buf_rec[RFs.Bptr]<<=1;
+				if(RFs.tRFH>=RFs.tRFL)
+				{
+					buf_rec[RFs.Bptr]|=1;
+				}
+				RFs.tRFH=0;
+				RFs.tRFL=0;
+				if (( ++RFs.BitCount & 7) == 0)
+				{
+					RFs.Bptr++;	// advance one unsigned	char
+				}
+				if(RFs.BitCount==NBIT)
+				{
+					RFs.RFsp=rfReset;
+					RFs.RecBufFull=1;
+					break;
+				}
+				RFs.RFsp=rfH;
+				break;
+			}
+		case rffall:
+			if(P_RX==0)
+				break;
+			else
+			{
+				RFs.RFsp=synH;
+				break;
+			}
+		case rfReset:
+		default:
+			RFs.tRFL= 0;
+			RFs.tRFH= 0;
+			RFs.BitCount=0;
+			RFs.Bptr=0;
+			RFs.RFsp= rffall;
+	}	
+}
+
+//*********************************************************
+void readrf()
+{
+    if(RFs.RecBufFull==0)return;
+    RFs.RecBufFull=0;
+
+    if(buf_rec[0]!=buf_rec[1])return;
+
+    if(!CheckRfCmd(buf_rec[2]))return;
+
+    RxData=buf_rec[2];
+
+	// RemOutTime=T_REMOUT;
+}
+
+//每10ms调用一次
+void KeepRfData(void)
+{
+	if (RemOutTime > 0)		// Remote output time
+	{
+		RemOutTime--;
+		if (RemOutTime == 0)
+		{
+			RxData= 0;
+		}
+	}
+}
+
 void RxData_Drive(void)
 {
-    if(RxData==0)return;
-
-    if(RxData==0x7f) // POWER 0x46
-    {
-        KeyType=PowerKey; 
-    }
-    else if(RxData==0xd7) // MODE 0x40
-    {
-        KeyType=ModeKey;
-    }
-    else if(RxData==0x57) // STRONG 0x15
-    {
-        KeyType=StrongKey;
-    }
-    else if(RxData==0xaf) // TIME 0x19
-    {
-        KeyType=ManualKey;  // TimeKey;
-    }	 
-    else if(RxData==0x8f) // HEAT 0x18
-    {
-        KeyType=HeatKey;
-    }	
 	
-    RxData=0;
-}
+		switch(RxData)
+	{
+		case 0x01:KeyType=PowerKey;break;
+		case 0x08:KeyType=ModeKey;break;
+		case 0x0E:KeyType=StrongKey;break;
+		case 0x0A:KeyType=ManualKey;break;
+		case 0x0C:KeyType=HeatKey;break;
+		default:RxData=0;break;
 
-    // if(RxData==0x7f) // POWER 
-    // {
-    //     KeyType=PowerKey; 
-    // }
-    // else if(RxData==0xff) // MODE 
-    // {
-    //     KeyType=ModeKey;
-    // }
-    // else if(RxData==0xaf) // TIME 
-    // {
-    //     KeyType=SizeKey;
-    // }	    
-    // else if(RxData==0x57) // STRONG 
-    // {
-    //     KeyType=StrongKey;
-    // } 
-    // else if(RxData==0x8f) // HEAT 
-    // {
-    //     KeyType=HeatKey;
-    // }
-    // else if(RxData==0xd7) // MODE 
-    // {
-    //     KeyType=TimeKey;
-    // }
+	}
+	RxData=0;
+	dokey();
+    // if(RxData==0)return;
+	
+}

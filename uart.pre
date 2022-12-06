@@ -3985,7 +3985,7 @@ extern unsigned char ModeType,HeatType,StrongType,KeyType,SizeType,TimeType,PwrT
 extern unsigned char LastMode,LastManual;
 unsigned char last_HeatType,last_StrongType;
 unsigned int last_time;
-extern unsigned unsigned int TmpCnt,TmpCnt1,KeyCnt,BuzzerCnt;
+extern unsigned unsigned int TmpCnt,TmpCnt1,KeyCnt,BuzzerCnt,RxdataCnt;
 extern unsigned char DspIndex,dsp_100ms,fmd_channels;
 extern volatile unsigned int readKeyNum,TouchTimeCount;
 
@@ -4027,7 +4027,8 @@ void SendMsgHandler();
 
 void send_uart_data(void);
 void LedBreathing();
-
+void refresh_data();
+void refresh_display(unsigned char keybuf);
 void dokey();
 void DisplayHandler();
 void ChkTimeEventStatus();
@@ -4075,12 +4076,35 @@ cmd_Time
 void send_uart_data(void);
 void UartSetEmptyInt(unsigned char value);
 
-# 21 "rx.h"
-extern unsigned char RxData;
+# 38 "rx.h"
+typedef enum
+{
+rfReset=0,
+rffall,
+synH,
+synL,
+rfH,
+rfL
+}RFSTEP;
+
+typedef struct
+{
+RFSTEP RFsp;
+volatile unsigned char tRFH;
+volatile unsigned char tRFL;
+volatile unsigned char BitCount;
+volatile unsigned char Bptr;
+volatile unsigned char RecBufFull;
+}RFSTATE;
+
+extern unsigned char RxData,bRxData;
 
 
-extern void Rx_Drive(void);
+
+
+extern void ReadRf433();
 extern void RxData_Drive(void);
+extern void readrf();
 
 # 18 "breathingLight.h"
 unsigned char s_u8TimeCounter = 0;

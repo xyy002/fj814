@@ -1028,11 +1028,19 @@ Version 3.2   GCC8 Compiled Intermediate Code
 "3698
 [u S342 `S343 1 ]
 [n S342 . . ]
+"10 rx.c
+[c E3752 0 1 2 3 4 5 .. ]
+[n E3752 . rfReset rffall synH synL rfH rfL  ]
+"49 rx.h
+[s S346 `E3752 1 `Vuc 1 `Vuc 1 `Vuc 1 `Vuc 1 `Vuc 1 ]
+[n S346 . RFsp tRFH tRFL BitCount Bptr RecBufFull ]
 "176 sub.h
 [v _KeyType `uc ~T0 @X0 0 e ]
-"65 rx.c
+"203 rx.c
 [c E3610 0 1 2 3 4 5 6 7 8 .. ]
 [n E3610 . NullKey PowerKey ModeKey SizeKey HeatKey StrongKey ManualKey TimeKey TestKey  ]
+"224 sub.h
+[v _dokey `(v ~T0 @X0 0 ef ]
 [; ;common.h: 13: void DisplayInitial(void);
 [; ;fmd.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;fmd.h: 28: extern double __fpnormalize(double);
@@ -6606,7 +6614,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 "179
 [v _last_time `ui ~T0 @X0 1 e ]
 [; ;sub.h: 179: unsigned int last_time;
-[; ;sub.h: 180: extern unsigned unsigned int TmpCnt,TmpCnt1,KeyCnt,BuzzerCnt;
+[; ;sub.h: 180: extern unsigned unsigned int TmpCnt,TmpCnt1,KeyCnt,BuzzerCnt,RxdataCnt;
 [; ;sub.h: 181: extern unsigned char DspIndex,dsp_100ms,fmd_channels;
 [; ;sub.h: 182: extern volatile unsigned int readKeyNum,TouchTimeCount;
 [; ;sub.h: 184: extern unsigned char TxCnt,TxBuf,BitStp,ByteNum;
@@ -6644,9 +6652,11 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [; ;sub.h: 218: void SendMsgHandler();
 [; ;sub.h: 220: void send_uart_data(void);
 [; ;sub.h: 221: void LedBreathing();
-[; ;sub.h: 223: void dokey();
-[; ;sub.h: 224: void DisplayHandler();
-[; ;sub.h: 225: void ChkTimeEventStatus();
+[; ;sub.h: 222: void refresh_data();
+[; ;sub.h: 223: void refresh_display(unsigned char keybuf);
+[; ;sub.h: 224: void dokey();
+[; ;sub.h: 225: void DisplayHandler();
+[; ;sub.h: 226: void ChkTimeEventStatus();
 [; ;ChipInit.h: 14: void Ram_init();
 [; ;ChipInit.h: 15: void Sys_init();
 [; ;ChipInit.h: 16: void IO_init();
@@ -6681,9 +6691,28 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [; ;uart.h: 18: };
 [; ;uart.h: 20: void send_uart_data(void);
 [; ;uart.h: 21: void UartSetEmptyInt(unsigned char value);
-[; ;rx.h: 21: extern unsigned char RxData;
-[; ;rx.h: 24: extern void Rx_Drive(void);
-[; ;rx.h: 25: extern void RxData_Drive(void);
+[; ;rx.h: 38: typedef enum
+[; ;rx.h: 39: {
+[; ;rx.h: 40: rfReset=0,
+[; ;rx.h: 41: rffall,
+[; ;rx.h: 42: synH,
+[; ;rx.h: 43: synL,
+[; ;rx.h: 44: rfH,
+[; ;rx.h: 45: rfL
+[; ;rx.h: 46: }RFSTEP;
+[; ;rx.h: 48: typedef struct
+[; ;rx.h: 49: {
+[; ;rx.h: 50: RFSTEP RFsp;
+[; ;rx.h: 51: volatile unsigned char tRFH;
+[; ;rx.h: 52: volatile unsigned char tRFL;
+[; ;rx.h: 53: volatile unsigned char BitCount;
+[; ;rx.h: 54: volatile unsigned char Bptr;
+[; ;rx.h: 55: volatile unsigned char RecBufFull;
+[; ;rx.h: 56: }RFSTATE;
+[; ;rx.h: 58: extern unsigned char RxData,bRxData;
+[; ;rx.h: 63: extern void ReadRf433();
+[; ;rx.h: 64: extern void RxData_Drive(void);
+[; ;rx.h: 65: extern void readrf();
 "18 breathingLight.h
 [v _s_u8TimeCounter `uc ~T0 @X0 1 e ]
 [i _s_u8TimeCounter
@@ -6737,240 +6766,659 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [; ;breathingLight.h: 33: unsigned char s_u8PWM3Counter;
 [; ;breathingLight.h: 36: void RGBSwitchStautus(unsigned char onoff);
 [; ;breathingLight.h: 37: void RGBbreathing(void);
-"4 rx.c
-[v _RxBuf `uc ~T0 @X0 -> 8 `i e ]
-[; ;rx.c: 4: unsigned char RxBuf[8];
-"5
-[v _RxBit `uc ~T0 @X0 1 e ]
-[; ;rx.c: 5: unsigned char RxBit;
-"6
-[v _TmsRxH `uc ~T0 @X0 1 e ]
-[; ;rx.c: 6: unsigned char TmsRxH;
-"7
-[v _TmsRxL `uc ~T0 @X0 1 e ]
-[; ;rx.c: 7: unsigned char TmsRxL;
-"8
+"8 rx.c
 [v _RxData `uc ~T0 @X0 1 e ]
 [; ;rx.c: 8: unsigned char RxData;
+"10
+[v _RFs `S346 ~T0 @X0 1 e ]
+[; ;rx.c: 10: RFSTATE RFs;
+"11
+[v _buf_rec `Vuc ~T0 @X0 -> 5 `i e ]
+[; ;rx.c: 11: volatile unsigned char buf_rec[5];
+"12
+[v _rf_data `uc ~T0 @X0 -> 5 `i e ]
+[; ;rx.c: 12: unsigned char rf_data[5];
 "14
-[v _Rx_Drive `(v ~T0 @X0 1 ef ]
+[v _RemNum `uc ~T0 @X0 1 e ]
+[i _RemNum
+-> -> 0 `i `uc
+]
+[v _RemNumTemp `uc ~T0 @X0 1 e ]
+[i _RemNumTemp
+-> -> 0 `i `uc
+]
+[; ;rx.c: 14: unsigned char RemNum=0,RemNumTemp=0;
 "15
-{
-[; ;rx.c: 14: void Rx_Drive(void)
-[; ;rx.c: 15: {
-[e :U _Rx_Drive ]
-[f ]
-[; ;rx.c: 16: if (PB4 == 1)
+[v _RemOutTime `uc ~T0 @X0 1 e ]
+[; ;rx.c: 15: unsigned char RemOutTime;
 "16
-[e $ ! == -> _PB4 `i -> 1 `i 347  ]
-[; ;rx.c: 17: {
+[v _remcmd `uc ~T0 @X0 1 e ]
+[; ;rx.c: 16: unsigned char remcmd;
 "17
-{
-[; ;rx.c: 18: if (TmsRxH < 250)
+[v _rf_learn `uc ~T0 @X0 1 e ]
+[i _rf_learn
+-> -> 1 `i `uc
+]
+[; ;rx.c: 17: unsigned char rf_learn = 1;
 "18
-[e $ ! < -> _TmsRxH `i -> 250 `i 348  ]
-[; ;rx.c: 19: TmsRxH++;
+[v _tRfKeyHold `ui ~T0 @X0 1 e ]
+[; ;rx.c: 18: unsigned int tRfKeyHold;
 "19
-[e ++ _TmsRxH -> -> 1 `i `uc ]
-[e $U 349  ]
-"20
-[e :U 348 ]
-[; ;rx.c: 20: else
-[; ;rx.c: 21: RxBit = 0;
-"21
-[e = _RxBit -> -> 0 `i `uc ]
-[e :U 349 ]
+[v _tRFtemp `uc ~T0 @X0 1 e ]
+[; ;rx.c: 19: unsigned char tRFtemp;
 "22
-}
-[; ;rx.c: 22: }
-[e $U 350  ]
-"23
-[e :U 347 ]
-[; ;rx.c: 23: else
-[; ;rx.c: 24: {
-"24
-{
-[; ;rx.c: 25: if (TmsRxH >= 20)
-"25
-[e $ ! >= -> _TmsRxH `i -> 20 `i 351  ]
-[; ;rx.c: 26: {
-"26
-{
-[; ;rx.c: 27: TmsRxH = 0;
+[v _keybit1 `uc ~T0 @X0 1 e ]
+[v _keybit2 `uc ~T0 @X0 1 e ]
+[v _keybit3 `uc ~T0 @X0 1 e ]
+[v _keybit4 `uc ~T0 @X0 1 e ]
+[v _keybit5 `uc ~T0 @X0 1 e ]
+[; ;rx.c: 22: unsigned char keybit1,keybit2,keybit3,keybit4,keybit5;
 "27
-[e = _TmsRxH -> -> 0 `i `uc ]
-[; ;rx.c: 28: TmsRxL = 0;
+[v _CheckRfCmd `(uc ~T0 @X0 1 ef1`uc ]
 "28
-[e = _TmsRxL -> -> 0 `i `uc ]
-[; ;rx.c: 29: RxBit = 0;
+{
+[; ;rx.c: 27: unsigned char CheckRfCmd(unsigned char rfcmd)
+[; ;rx.c: 28: {
+[e :U _CheckRfCmd ]
+"27
+[v _rfcmd `uc ~T0 @X0 1 r1 ]
+"28
+[f ]
+[; ;rx.c: 29: switch( rfcmd)
 "29
-[e = _RxBit -> -> 0 `i `uc ]
-[; ;rx.c: 30: RxBuf[0] = 0;
+[e $U 349  ]
+[; ;rx.c: 30: {
 "30
-[e = *U + &U _RxBuf * -> -> -> 0 `i `ui `ux -> -> # *U &U _RxBuf `ui `ux -> -> 0 `i `uc ]
-[; ;rx.c: 31: RxBuf[1] = 0;
+{
+[; ;rx.c: 31: case 0X01:
 "31
-[e = *U + &U _RxBuf * -> -> -> 1 `i `ui `ux -> -> # *U &U _RxBuf `ui `ux -> -> 0 `i `uc ]
-[; ;rx.c: 32: RxBuf[2] = 0;
-"32
-[e = *U + &U _RxBuf * -> -> -> 2 `i `ui `ux -> -> # *U &U _RxBuf `ui `ux -> -> 0 `i `uc ]
-[; ;rx.c: 33: RxBuf[3] = 0;
-"33
-[e = *U + &U _RxBuf * -> -> -> 3 `i `ui `ux -> -> # *U &U _RxBuf `ui `ux -> -> 0 `i `uc ]
-"34
-}
-[; ;rx.c: 34: }
-[e $U 352  ]
-"35
-[e :U 351 ]
-[; ;rx.c: 35: else if (TmsRxH)
-[e $ ! != -> _TmsRxH `i -> -> -> 0 `i `uc `i 353  ]
-[; ;rx.c: 36: {
-"36
-{
-[; ;rx.c: 37: if ((TmsRxH > TmsRxL)&&(TmsRxH>8))
-"37
-[e $ ! && > -> _TmsRxH `i -> _TmsRxL `i > -> _TmsRxH `i -> 8 `i 354  ]
-[; ;rx.c: 38: RxBuf[RxBit / 8] |= 0x80 >> (RxBit % 8);
-"38
-[e =| *U + &U _RxBuf * -> -> / -> _RxBit `i -> 8 `i `ui `ux -> -> # *U &U _RxBuf `ui `ux -> >> -> 128 `i % -> _RxBit `i -> 8 `i `uc ]
-[e :U 354 ]
-[; ;rx.c: 39: TmsRxH = 0;
-"39
-[e = _TmsRxH -> -> 0 `i `uc ]
-[; ;rx.c: 40: TmsRxL = 0;
-"40
-[e = _TmsRxL -> -> 0 `i `uc ]
-[; ;rx.c: 41: if (++RxBit >= 32)
-"41
-[e $ ! >= -> =+ _RxBit -> -> 1 `i `uc `i -> 32 `i 355  ]
-[; ;rx.c: 42: {
-"42
-{
-[; ;rx.c: 43: RxBit = 0;
-"43
-[e = _RxBit -> -> 0 `i `uc ]
-[; ;rx.c: 45: if(RxBuf[1]-RxBuf[0]==0XDF)
-"45
-[e $ ! == - -> *U + &U _RxBuf * -> -> -> 1 `i `ui `ux -> -> # *U &U _RxBuf `ui `ux `i -> *U + &U _RxBuf * -> -> -> 0 `i `ui `ux -> -> # *U &U _RxBuf `ui `ux `i -> 223 `i 356  ]
-[; ;rx.c: 46: RxData = RxBuf[3];
-"46
-[e = _RxData *U + &U _RxBuf * -> -> -> 3 `i `ui `ux -> -> # *U &U _RxBuf `ui `ux ]
-[e :U 356 ]
-"47
-}
-[e :U 355 ]
-"48
-}
-[e :U 353 ]
-"49
-[e :U 352 ]
-[; ;rx.c: 47: }
-[; ;rx.c: 48: }
-[; ;rx.c: 49: if (TmsRxL < 250)
-[e $ ! < -> _TmsRxL `i -> 250 `i 357  ]
-[; ;rx.c: 50: TmsRxL++;
-"50
-[e ++ _TmsRxL -> -> 1 `i `uc ]
-[e :U 357 ]
-"51
-}
 [e :U 350 ]
-[; ;rx.c: 51: }
+"32
+[e :U 351 ]
+"33
+[e :U 352 ]
+"34
+[e :U 353 ]
+"35
+[e :U 354 ]
+[; ;rx.c: 32: case 0X08:
+[; ;rx.c: 33: case 0X0E:
+[; ;rx.c: 34: case 0X0C:
+[; ;rx.c: 35: case 0X0A:
+[; ;rx.c: 36: return 1;
+"36
+[e ) -> -> 1 `i `uc ]
+[e $UE 347  ]
+[; ;rx.c: 37: default:
+"37
+[e :U 355 ]
+[; ;rx.c: 38: return 0;
+"38
+[e ) -> -> 0 `i `uc ]
+[e $UE 347  ]
+"39
+}
+[; ;rx.c: 39: }
+[e $U 348  ]
+"29
+[e :U 349 ]
+[e [\ _rfcmd , $ -> -> 1 `i `uc 350
+ , $ -> -> 8 `i `uc 351
+ , $ -> -> 14 `i `uc 352
+ , $ -> -> 12 `i `uc 353
+ , $ -> -> 10 `i `uc 354
+ 355 ]
+"39
+[e :U 348 ]
+[; ;rx.c: 40: }
+"40
+[e :UE 347 ]
+}
+"43
+[v _Rf433IoInit `(v ~T0 @X0 1 ef ]
+"44
+{
+[; ;rx.c: 43: void Rf433IoInit(void)
+[; ;rx.c: 44: {
+[e :U _Rf433IoInit ]
+[f ]
+[; ;rx.c: 45: RFs.RecBufFull=0;
+"45
+[e = . _RFs 5 -> -> 0 `i `uc ]
+[; ;rx.c: 47: RFs.tRFL= 0;
+"47
+[e = . _RFs 2 -> -> 0 `i `uc ]
+[; ;rx.c: 48: RFs.tRFH= 0;
+"48
+[e = . _RFs 1 -> -> 0 `i `uc ]
+[; ;rx.c: 49: RFs.BitCount=0;
+"49
+[e = . _RFs 3 -> -> 0 `i `uc ]
+[; ;rx.c: 50: RFs.Bptr=0;
+"50
+[e = . _RFs 4 -> -> 0 `i `uc ]
+[; ;rx.c: 51: RFs.RFsp= rffall;
+"51
+[e = . _RFs 0 . `E3752 1 ]
 [; ;rx.c: 52: }
 "52
-[e :UE 346 ]
+[e :UE 356 ]
 }
+"54
+[v _ReadRf433 `(v ~T0 @X0 1 ef ]
+"55
+{
+[; ;rx.c: 54: void ReadRf433(void)
+[; ;rx.c: 55: {
+[e :U _ReadRf433 ]
+[f ]
+[; ;rx.c: 56: switch(RFs.RFsp)
+"56
+[e $U 359  ]
+[; ;rx.c: 57: {
+"57
+{
+[; ;rx.c: 58: case synH:
+"58
+[e :U 360 ]
+[; ;rx.c: 59: if(PB4)
 "59
-[v _RxData_Drive `(v ~T0 @X0 1 ef ]
+[e $ ! _PB4 361  ]
+[; ;rx.c: 60: {
 "60
 {
-[; ;rx.c: 59: void RxData_Drive(void)
-[; ;rx.c: 60: {
-[e :U _RxData_Drive ]
-[f ]
-[; ;rx.c: 61: if(RxData==0)return;
+[; ;rx.c: 61: RFs.tRFH++;
 "61
-[e $ ! == -> _RxData `i -> 0 `i 359  ]
-[e $UE 358  ]
-[e :U 359 ]
-[; ;rx.c: 63: if(RxData==0x01)
+[e ++ . _RFs 1 -> -> 1 `i `uc ]
+[; ;rx.c: 62: if(RFs.tRFH>6)
+"62
+[e $ ! > -> . _RFs 1 `i -> 6 `i 362  ]
+[; ;rx.c: 63: {
 "63
-[e $ ! == -> _RxData `i -> 1 `i 360  ]
-[; ;rx.c: 64: {
-"64
 {
-[; ;rx.c: 65: KeyType=PowerKey;
+[; ;rx.c: 64: RFs.RFsp=rfReset;
+"64
+[e = . _RFs 0 . `E3752 0 ]
+[; ;rx.c: 65: break;
 "65
-[e = _KeyType -> . `E3610 1 `uc ]
+[e $U 358  ]
 "66
 }
-[; ;rx.c: 66: }
-[e $U 361  ]
-"67
-[e :U 360 ]
-[; ;rx.c: 67: else if(RxData==0xd7)
-[e $ ! == -> _RxData `i -> 215 `i 362  ]
-[; ;rx.c: 68: {
-"68
-{
-[; ;rx.c: 69: KeyType=ModeKey;
-"69
-[e = _KeyType -> . `E3610 2 `uc ]
-"70
-}
-[; ;rx.c: 70: }
-[e $U 363  ]
-"71
 [e :U 362 ]
-[; ;rx.c: 71: else if(RxData==0x57)
-[e $ ! == -> _RxData `i -> 87 `i 364  ]
+[; ;rx.c: 66: }
+[; ;rx.c: 67: break;
+"67
+[e $U 358  ]
+"68
+}
+[; ;rx.c: 68: }
+[e $U 363  ]
+"69
+[e :U 361 ]
+[; ;rx.c: 69: else
+[; ;rx.c: 70: {
+"70
+{
+[; ;rx.c: 71: if(RFs.tRFH<2)
+"71
+[e $ ! < -> . _RFs 1 `i -> 2 `i 364  ]
 [; ;rx.c: 72: {
 "72
 {
-[; ;rx.c: 73: KeyType=StrongKey;
+[; ;rx.c: 73: RFs.RFsp=rfReset;
 "73
-[e = _KeyType -> . `E3610 5 `uc ]
+[e = . _RFs 0 . `E3752 0 ]
+[; ;rx.c: 74: break;
 "74
-}
-[; ;rx.c: 74: }
-[e $U 365  ]
+[e $U 358  ]
 "75
-[e :U 364 ]
-[; ;rx.c: 75: else if(RxData==0xaf)
-[e $ ! == -> _RxData `i -> 175 `i 366  ]
-[; ;rx.c: 76: {
-"76
-{
-[; ;rx.c: 77: KeyType=ManualKey;
-"77
-[e = _KeyType -> . `E3610 6 `uc ]
-"78
 }
-[; ;rx.c: 78: }
-[e $U 367  ]
+[e :U 364 ]
+[; ;rx.c: 75: }
+[; ;rx.c: 76: RFs.tRFL=0;
+"76
+[e = . _RFs 2 -> -> 0 `i `uc ]
+[; ;rx.c: 77: RFs.RFsp=synL;
+"77
+[e = . _RFs 0 . `E3752 3 ]
+[; ;rx.c: 78: break;
+"78
+[e $U 358  ]
 "79
-[e :U 366 ]
-[; ;rx.c: 79: else if(RxData==0x8f)
-[e $ ! == -> _RxData `i -> 143 `i 368  ]
-[; ;rx.c: 80: {
+}
+[e :U 363 ]
+[; ;rx.c: 79: }
+[; ;rx.c: 80: case synL:
 "80
-{
-[; ;rx.c: 81: KeyType=HeatKey;
+[e :U 365 ]
+[; ;rx.c: 81: if(PB4==0)
 "81
-[e = _KeyType -> . `E3610 4 `uc ]
+[e $ ! == -> _PB4 `i -> 0 `i 366  ]
+[; ;rx.c: 82: {
 "82
+{
+[; ;rx.c: 83: RFs.tRFL++;
+"83
+[e ++ . _RFs 2 -> -> 1 `i `uc ]
+[; ;rx.c: 84: if(RFs.tRFL>135)
+"84
+[e $ ! > -> . _RFs 2 `i -> 135 `i 367  ]
+[; ;rx.c: 85: {
+"85
+{
+[; ;rx.c: 86: RFs.RFsp=rfReset;
+"86
+[e = . _RFs 0 . `E3752 0 ]
+[; ;rx.c: 87: break;
+"87
+[e $U 358  ]
+"88
+}
+[e :U 367 ]
+[; ;rx.c: 88: }
+[; ;rx.c: 89: break;
+"89
+[e $U 358  ]
+"90
+}
+[; ;rx.c: 90: }
+[e $U 368  ]
+"91
+[e :U 366 ]
+[; ;rx.c: 91: else
+[; ;rx.c: 92: {
+"92
+{
+[; ;rx.c: 93: if(RFs.tRFL<105)
+"93
+[e $ ! < -> . _RFs 2 `i -> 105 `i 369  ]
+[; ;rx.c: 94: {
+"94
+{
+[; ;rx.c: 95: RFs.RFsp=rfReset;
+"95
+[e = . _RFs 0 . `E3752 0 ]
+[; ;rx.c: 96: break;
+"96
+[e $U 358  ]
+"97
+}
+[e :U 369 ]
+[; ;rx.c: 97: }
+[; ;rx.c: 98: RFs.tRFH=0;
+"98
+[e = . _RFs 1 -> -> 0 `i `uc ]
+[; ;rx.c: 99: RFs.RFsp=rfH;
+"99
+[e = . _RFs 0 . `E3752 4 ]
+[; ;rx.c: 100: break;
+"100
+[e $U 358  ]
+"101
 }
 [e :U 368 ]
-"84
-[e :U 367 ]
-[e :U 365 ]
-[e :U 363 ]
-[e :U 361 ]
-[; ;rx.c: 82: }
-[; ;rx.c: 84: RxData=0;
+[; ;rx.c: 101: }
+[; ;rx.c: 102: case rfH:
+"102
+[e :U 370 ]
+[; ;rx.c: 103: if(PB4)
+"103
+[e $ ! _PB4 371  ]
+[; ;rx.c: 104: {
+"104
+{
+[; ;rx.c: 105: RFs.tRFH++;
+"105
+[e ++ . _RFs 1 -> -> 1 `i `uc ]
+[; ;rx.c: 106: if(RFs.tRFH>16)
+"106
+[e $ ! > -> . _RFs 1 `i -> 16 `i 372  ]
+[; ;rx.c: 107: {
+"107
+{
+[; ;rx.c: 108: RFs.RFsp=rfReset;
+"108
+[e = . _RFs 0 . `E3752 0 ]
+[; ;rx.c: 109: break;
+"109
+[e $U 358  ]
+"110
+}
+[e :U 372 ]
+[; ;rx.c: 110: }
+[; ;rx.c: 111: break;
+"111
+[e $U 358  ]
+"112
+}
+[; ;rx.c: 112: }
+[e $U 373  ]
+"113
+[e :U 371 ]
+[; ;rx.c: 113: else
+[; ;rx.c: 114: {
+"114
+{
+[; ;rx.c: 115: RFs.tRFL=0;
+"115
+[e = . _RFs 2 -> -> 0 `i `uc ]
+[; ;rx.c: 116: RFs.RFsp=rfL;
+"116
+[e = . _RFs 0 . `E3752 5 ]
+[; ;rx.c: 117: break;
+"117
+[e $U 358  ]
+"118
+}
+[e :U 373 ]
+[; ;rx.c: 118: }
+[; ;rx.c: 119: case rfL:
+"119
+[e :U 374 ]
+[; ;rx.c: 120: if(PB4==0)
+"120
+[e $ ! == -> _PB4 `i -> 0 `i 375  ]
+[; ;rx.c: 121: {
+"121
+{
+[; ;rx.c: 122: RFs.tRFL++;
+"122
+[e ++ . _RFs 2 -> -> 1 `i `uc ]
+[; ;rx.c: 123: if(RFs.tRFL>16)
+"123
+[e $ ! > -> . _RFs 2 `i -> 16 `i 376  ]
+[; ;rx.c: 124: {
+"124
+{
+[; ;rx.c: 125: RFs.RFsp=rfReset;
+"125
+[e = . _RFs 0 . `E3752 0 ]
+[; ;rx.c: 126: break;
+"126
+[e $U 358  ]
+"127
+}
+[e :U 376 ]
+[; ;rx.c: 127: }
+[; ;rx.c: 128: break;
+"128
+[e $U 358  ]
+"129
+}
+[; ;rx.c: 129: }
+[e $U 377  ]
+"130
+[e :U 375 ]
+[; ;rx.c: 130: else
+[; ;rx.c: 131: {
+"131
+{
+[; ;rx.c: 132: buf_rec[RFs.Bptr]<<=1;
+"132
+[e =<< *U + &U _buf_rec * -> . _RFs 4 `ux -> -> # *U &U _buf_rec `ui `ux -> 1 `i ]
+[; ;rx.c: 133: if(RFs.tRFH>=RFs.tRFL)
+"133
+[e $ ! >= -> . _RFs 1 `i -> . _RFs 2 `i 378  ]
+[; ;rx.c: 134: {
+"134
+{
+[; ;rx.c: 135: buf_rec[RFs.Bptr]|=1;
+"135
+[e =| *U + &U _buf_rec * -> . _RFs 4 `ux -> -> # *U &U _buf_rec `ui `ux -> -> 1 `i `uc ]
+"136
+}
+[e :U 378 ]
+[; ;rx.c: 136: }
+[; ;rx.c: 137: RFs.tRFH=0;
+"137
+[e = . _RFs 1 -> -> 0 `i `uc ]
+[; ;rx.c: 138: RFs.tRFL=0;
+"138
+[e = . _RFs 2 -> -> 0 `i `uc ]
+[; ;rx.c: 139: if (( ++RFs.BitCount & 7) == 0)
+"139
+[e $ ! == & -> =+ . _RFs 3 -> -> 1 `i `uc `i -> 7 `i -> 0 `i 379  ]
+[; ;rx.c: 140: {
+"140
+{
+[; ;rx.c: 141: RFs.Bptr++;
+"141
+[e ++ . _RFs 4 -> -> 1 `i `uc ]
+"142
+}
+[e :U 379 ]
+[; ;rx.c: 142: }
+[; ;rx.c: 143: if(RFs.BitCount==24)
+"143
+[e $ ! == -> . _RFs 3 `i -> 24 `i 380  ]
+[; ;rx.c: 144: {
+"144
+{
+[; ;rx.c: 145: RFs.RFsp=rfReset;
+"145
+[e = . _RFs 0 . `E3752 0 ]
+[; ;rx.c: 146: RFs.RecBufFull=1;
+"146
+[e = . _RFs 5 -> -> 1 `i `uc ]
+[; ;rx.c: 147: break;
+"147
+[e $U 358  ]
+"148
+}
+[e :U 380 ]
+[; ;rx.c: 148: }
+[; ;rx.c: 149: RFs.RFsp=rfH;
+"149
+[e = . _RFs 0 . `E3752 4 ]
+[; ;rx.c: 150: break;
+"150
+[e $U 358  ]
+"151
+}
+[e :U 377 ]
+[; ;rx.c: 151: }
+[; ;rx.c: 152: case rffall:
+"152
+[e :U 381 ]
+[; ;rx.c: 153: if(PB4==0)
+"153
+[e $ ! == -> _PB4 `i -> 0 `i 382  ]
+[; ;rx.c: 154: break;
+"154
+[e $U 358  ]
+[e $U 383  ]
+"155
+[e :U 382 ]
+[; ;rx.c: 155: else
+[; ;rx.c: 156: {
+"156
+{
+[; ;rx.c: 157: RFs.RFsp=synH;
+"157
+[e = . _RFs 0 . `E3752 2 ]
+[; ;rx.c: 158: break;
+"158
+[e $U 358  ]
+"159
+}
+[e :U 383 ]
+[; ;rx.c: 159: }
+[; ;rx.c: 160: case rfReset:
+"160
+[e :U 384 ]
+[; ;rx.c: 161: default:
+"161
+[e :U 385 ]
+[; ;rx.c: 162: RFs.tRFL= 0;
+"162
+[e = . _RFs 2 -> -> 0 `i `uc ]
+[; ;rx.c: 163: RFs.tRFH= 0;
+"163
+[e = . _RFs 1 -> -> 0 `i `uc ]
+[; ;rx.c: 164: RFs.BitCount=0;
+"164
+[e = . _RFs 3 -> -> 0 `i `uc ]
+[; ;rx.c: 165: RFs.Bptr=0;
+"165
+[e = . _RFs 4 -> -> 0 `i `uc ]
+[; ;rx.c: 166: RFs.RFsp= rffall;
+"166
+[e = . _RFs 0 . `E3752 1 ]
+"167
+}
+[; ;rx.c: 167: }
+[e $U 358  ]
+"56
+[e :U 359 ]
+[e [\ . _RFs 0 , $ . `E3752 2 360
+ , $ . `E3752 3 365
+ , $ . `E3752 4 370
+ , $ . `E3752 5 374
+ , $ . `E3752 1 381
+ , $ . `E3752 0 384
+ 385 ]
+"167
+[e :U 358 ]
+[; ;rx.c: 168: }
+"168
+[e :UE 357 ]
+}
+"171
+[v _readrf `(v ~T0 @X0 1 ef ]
+"172
+{
+[; ;rx.c: 171: void readrf()
+[; ;rx.c: 172: {
+[e :U _readrf ]
+[f ]
+[; ;rx.c: 173: if(RFs.RecBufFull==0)return;
+"173
+[e $ ! == -> . _RFs 5 `i -> 0 `i 387  ]
+[e $UE 386  ]
+[e :U 387 ]
+[; ;rx.c: 174: RFs.RecBufFull=0;
+"174
+[e = . _RFs 5 -> -> 0 `i `uc ]
+[; ;rx.c: 176: if(buf_rec[0]!=buf_rec[1])return;
+"176
+[e $ ! != -> *U + &U _buf_rec * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf_rec `ui `ux `i -> *U + &U _buf_rec * -> -> -> 1 `i `ui `ux -> -> # *U &U _buf_rec `ui `ux `i 388  ]
+[e $UE 386  ]
+[e :U 388 ]
+[; ;rx.c: 178: if(!CheckRfCmd(buf_rec[2]))return;
+"178
+[e $ ! ! != -> ( _CheckRfCmd (1 *U + &U _buf_rec * -> -> -> 2 `i `ui `ux -> -> # *U &U _buf_rec `ui `ux `i -> -> -> 0 `i `uc `i 389  ]
+[e $UE 386  ]
+[e :U 389 ]
+[; ;rx.c: 180: RxData=buf_rec[2];
+"180
+[e = _RxData *U + &U _buf_rec * -> -> -> 2 `i `ui `ux -> -> # *U &U _buf_rec `ui `ux ]
+[; ;rx.c: 183: }
+"183
+[e :UE 386 ]
+}
+"186
+[v _KeepRfData `(v ~T0 @X0 1 ef ]
+"187
+{
+[; ;rx.c: 186: void KeepRfData(void)
+[; ;rx.c: 187: {
+[e :U _KeepRfData ]
+[f ]
+[; ;rx.c: 188: if (RemOutTime > 0)
+"188
+[e $ ! > -> _RemOutTime `i -> 0 `i 391  ]
+[; ;rx.c: 189: {
+"189
+{
+[; ;rx.c: 190: RemOutTime--;
+"190
+[e -- _RemOutTime -> -> 1 `i `uc ]
+[; ;rx.c: 191: if (RemOutTime == 0)
+"191
+[e $ ! == -> _RemOutTime `i -> 0 `i 392  ]
+[; ;rx.c: 192: {
+"192
+{
+[; ;rx.c: 193: RxData= 0;
+"193
 [e = _RxData -> -> 0 `i `uc ]
-[; ;rx.c: 85: }
-"85
-[e :UE 358 ]
+"194
+}
+[e :U 392 ]
+"195
+}
+[e :U 391 ]
+[; ;rx.c: 194: }
+[; ;rx.c: 195: }
+[; ;rx.c: 196: }
+"196
+[e :UE 390 ]
+}
+"198
+[v _RxData_Drive `(v ~T0 @X0 1 ef ]
+"199
+{
+[; ;rx.c: 198: void RxData_Drive(void)
+[; ;rx.c: 199: {
+[e :U _RxData_Drive ]
+[f ]
+[; ;rx.c: 201: switch(RxData)
+"201
+[e $U 395  ]
+[; ;rx.c: 202: {
+"202
+{
+[; ;rx.c: 203: case 0x01:KeyType=PowerKey;break;
+"203
+[e :U 396 ]
+[e = _KeyType -> . `E3610 1 `uc ]
+[e $U 394  ]
+[; ;rx.c: 204: case 0x08:KeyType=ModeKey;break;
+"204
+[e :U 397 ]
+[e = _KeyType -> . `E3610 2 `uc ]
+[e $U 394  ]
+[; ;rx.c: 205: case 0x0E:KeyType=StrongKey;break;
+"205
+[e :U 398 ]
+[e = _KeyType -> . `E3610 5 `uc ]
+[e $U 394  ]
+[; ;rx.c: 206: case 0x0A:KeyType=ManualKey;break;
+"206
+[e :U 399 ]
+[e = _KeyType -> . `E3610 6 `uc ]
+[e $U 394  ]
+[; ;rx.c: 207: case 0x0C:KeyType=HeatKey;break;
+"207
+[e :U 400 ]
+[e = _KeyType -> . `E3610 4 `uc ]
+[e $U 394  ]
+[; ;rx.c: 208: default:RxData=0;break;
+"208
+[e :U 401 ]
+[e = _RxData -> -> 0 `i `uc ]
+[e $U 394  ]
+"210
+}
+[; ;rx.c: 210: }
+[e $U 394  ]
+"201
+[e :U 395 ]
+[e [\ _RxData , $ -> -> 1 `i `uc 396
+ , $ -> -> 8 `i `uc 397
+ , $ -> -> 14 `i `uc 398
+ , $ -> -> 10 `i `uc 399
+ , $ -> -> 12 `i `uc 400
+ 401 ]
+"210
+[e :U 394 ]
+[; ;rx.c: 211: RxData=0;
+"211
+[e = _RxData -> -> 0 `i `uc ]
+[; ;rx.c: 212: dokey();
+"212
+[e ( _dokey ..  ]
+[; ;rx.c: 215: }
+"215
+[e :UE 393 ]
 }

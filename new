@@ -1,110 +1,195 @@
-//*********************************************************
+
 #include "includes.h"
-//*********************************************************
-uchar RxBuf[8];
-uchar RxBit;
-uchar TmsRxH;
-uchar TmsRxL;
-uchar RxData;
+// volatile uint16_t 	readKeyNum;    	//·µ»ØµÄ¼üÖµ  bit0~bit14¶ÔÓ¦key1~key15  0Ã»ÓÐ°´ÏÂ£¬1°´ÏÂ
+// extern uint8_t      fmd_channels;
 
-//*********************************************************
+// uint16_t   TouchTimeCount;
 
-//*********************************************************
+/*****************************************************
+     KEY OPERATE
+******************************************************/
 
-void Rx_Drive(void) //100us
+void PowerKeyExec()
 {
-    if (P_RX == 1)
-    {
-        if (TmsRxH < 250)
-            TmsRxH++;
-        else
-            RxBit = 0;
-    }
-    else
-    {  //æ•æ‰6æ¬¡
-        if (TmsRxH >= 20)
-        {
-            TmsRxH = 0;
-            TmsRxL = 0;
-            RxBit = 0;
-            RxBuf[0] = 0;
-            RxBuf[1] = 0;
-            RxBuf[2] = 0;
-            RxBuf[3] = 0;            
-        }
-        else if (TmsRxH)
-        {
-            if ((TmsRxH > TmsRxL)&&(TmsRxH>8))
-                RxBuf[RxBit / 8] |= 0x80 >> (RxBit % 8);
-            TmsRxH = 0;
-            TmsRxL = 0;
-            if (++RxBit >= 32)
-            {
-                RxBit = 0;
-                //  oxff      0x00
-                if(RxBuf[1]-RxBuf[0]==0XDF)
-                RxData = RxBuf[3];
-            }
-        }
-        if (TmsRxL < 250)
-            TmsRxL++;
-    }
-}
-	// PowerKey,	
-	// ModeKey,
-	// AirKey,
-	// MotorKey,	
-	// HeatKey,
-	// TestKey
-void RxData_Drive(void)
-{
-    if(RxData==0)return;
+	bSysRunFlg = ~bSysRunFlg;
 
-    if(RxData==0x01) // POWER 0x46
-    {
-        KeyType=PowerKey; 
-    }
-    else if(RxData==0xd7) // MODE 0x40
-    {
-        KeyType=ModeKey;
-    }
-    else if(RxData==0x57) // STRONG 0x15
-    {
-        KeyType=StrongKey;
-    }
-    else if(RxData==0xaf) // TIME 0x19
-    {
-        KeyType=ManualKey;  // TimeKey;
-    }	 
-    else if(RxData==0x8f) // HEAT 0x18
-    {
-        KeyType=HeatKey;
-    }	
-	
-    RxData=0;
+	if(bSysRunFlg)
+	{
+		PwrType=PwrOn;
+		ModeType=2;
+		HeatType=1;		
+		StrongType=2;
+		ManualType=0;
+
+		LastMode=ModeType;
+		LastManual=ManualType;
+		if(bTestModeFlg)
+		{
+			TimeType=88;
+			DspIndex =DsTime;
+		}
+		else 
+		{
+			TimeType=15;
+			DspIndex =DsMode;
+		}		
+
+	}
+	else
+	{
+		PwrType=PwrOff;
+		ModeType=0;
+		HeatType=0;		
+		StrongType=0;
+		TimeType=0;
+		ManualType=0;
+		DspIndex =DsSty; 
+		bTestModeFlg=off;
+	}
+	//RGBSwitchStautus(bSysRunFlg);
+	TimeMin=TimeType;
+	TIME_INIT();
 }
 
-    // if(RxData==0x7f) // POWER 
-    // {
-    //     KeyType=PowerKey; 
-    // }
-    // else if(RxData==0xff) // MODE 
-    // {
-    //     KeyType=ModeKey;
-    // }
-    // else if(RxData==0xaf) // TIME 
-    // {
-    //     KeyType=SizeKey;
-    // }	    
-    // else if(RxData==0x57) // STRONG 
-    // {
-    //     KeyType=StrongKey;
-    // } 
-    // else if(RxData==0x8f) // HEAT 
-    // {
-    //     KeyType=HeatKey;
-    // }
-    // else if(RxData==0xd7) // MODE 
-    // {
-    //     KeyType=TimeKey;
-    // }
+void ModeKeyExec(void)
+{	
+	if(bSysRunFlg)
+	{
+		if(PwrType==PwrSty)PwrType=PwrOn;
+
+		if(ModeType==0)
+		{
+			if(LastMode==0)LastMode=1;
+			ModeType=LastMode;
+
+			LastManual=ManualType;
+			ManualType=0;
+		}
+		else if(ModeType >= Mode3)
+		{
+			ModeType = Mode1; 
+		}
+	    else ModeType+=1;
+
+		DspIndex =DsMode;
+	}
+}
+void ManualKeyExec(void)
+{
+	if(bSysRunFlg)
+	{	
+		if(ManualType==0)
+		{
+			if(LastManual==0){LastManual=1;  HeatType=1;}
+			ManualType=LastManual;
+
+			LastMode=ModeType;
+			ModeType=0;			
+		}
+		else if(ManualType >= 3)
+		{
+			ManualType = 1; HeatType=1;
+		}
+	    else ManualType+=1;
+
+		ModeType=0;
+
+		DspIndex =DsManual;
+	}	
+}
+void HeatKeyExec()
+{
+	if(bSysRunFlg)
+	{
+        if(HeatType >= Mode1)//Ò»¸ö¼ÓÈÈµÆ
+		{
+			HeatType = Mode0; 		
+		}
+	    else HeatType+=1;
+
+        if(PwrType==PwrSty)PwrType=PwrOn;
+
+		DspIndex =DsHeat;
+	}
+}
+void StrongKeyExec()
+{
+	if(bSysRunFlg)
+	{		
+		//if(ModeType==0)	return;
+
+		if(StrongType >= Mode3)
+		{
+			StrongType = Mode1; 		
+		}
+	    else StrongType+=1;
+
+		DspIndex =DsStrong;
+	}		
+}
+void TimeKeyExec(void)
+{
+	if(bSysRunFlg)
+	{	
+    	if(TimeType==15)TimeType=20;
+		else if(TimeType==20)TimeType=30;
+		else if(TimeType==30)TimeType=15;
+		TimeMin=TimeType;
+		DspIndex =DsTime;
+	}	
+} 
+
+/*
+   1¡¢touch¿âÎÄ¼þÊ¹ÓÃRAM¾ø¶ÔµØÖ·0x50~0x5a,ÓÃ»§ÔÚ¶¨Òå¾ø¶ÔµØÖ·µÄÊ±ºò²»Òª¶¨Òåµ½Õâ¸öÇøÓò
+   2¡¢¿âÎÄ¼þÊ¹ÓÃ8M1TÆµÂÊ£¬ÓÃ»§×îºÃ²»Òª¸ü¸Ä.
+*/
+// FJ814ÊÖ¿Ø°å
+//===========================================================
+//Funtion name£ºmain
+//parameters£º    ÎÞ
+//returned value£ºÎÞ
+//===========================================================
+void main(void)
+{   
+ 	Sys_init();
+    TouchInital();
+	//Time1Initial();
+	Time2Initial();
+	Time4Initial();
+	// WDT_INITIAL ();
+    UART_INITIAL();	
+    Px_Level_Change_INITIAL();	
+	User_init(); 
+	Display_init();
+	SetBuzzer();
+	//RGBSwitchStautus(off);
+	while(1)
+	{ 
+		// CLRWDT();
+		// readrf();
+		// send_uart_data();	
+		  if(TouchTimeCount>=(1000/SCANNINGTIME/(fmd_channels+1)))  	//°´¼üÉ¨ÃèÆµÂÊ
+        {
+            TouchTimeCount=0;
+            
+			readKeyNum = TouchKeyScan();  					//°´¼üÉ¨Ãè²¢»ñÈ¡°´¼üÖµ
+        }
+		if(t2msFlag)
+		{
+			t2msFlag=0;
+			RxData_Drive();	
+		}
+		if(t10msFlag)
+		{
+			t10msFlag=0;
+			//PA7=~PA7;
+			KeyScanHandler(); 
+			dokey();
+			SysPowerHandler(); 
+
+			ChkTimeEventStatus();
+		}		
+	}
+}
+
+

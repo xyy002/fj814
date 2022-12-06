@@ -1068,20 +1068,36 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [v _Time2Initial `(v ~T0 @X0 0 ef ]
 "32
 [v _Time4Initial `(v ~T0 @X0 0 ef ]
-"29
-[v _WDT_INITIAL `(v ~T0 @X0 0 ef ]
 "27
 [v _UART_INITIAL `(v ~T0 @X0 0 ef ]
+"33
+[v _Px_Level_Change_INITIAL `(v ~T0 @X0 0 ef ]
 "28
 [v _User_init `(v ~T0 @X0 0 ef ]
 "19
 [v _Display_init `(v ~T0 @X0 0 ef ]
 "180 sub.h
 [v _BuzzerCnt `ui ~T0 @X0 0 e ]
-"24 rx.h
-[v _Rx_Drive `(v ~T0 @X0 0 ef ]
-"25
+"65 rx.h
+[v _readrf `(v ~T0 @X0 0 ef ]
+"182 sub.h
+[v _TouchTimeCount `Vui ~T0 @X0 0 e ]
+"181
+[v _fmd_channels `uc ~T0 @X0 0 e ]
+"182
+[v _readKeyNum `Vui ~T0 @X0 0 e ]
+"314 touch.h
+[v _TouchKeyScan `(ui ~T0 @X0 0 ef ]
+"64 rx.h
 [v _RxData_Drive `(v ~T0 @X0 0 ef ]
+"194 sub.h
+[v _KeyScanHandler `(v ~T0 @X0 0 ef ]
+"224
+[v _dokey `(v ~T0 @X0 0 ef ]
+"197
+[v _SysPowerHandler `(v ~T0 @X0 0 ef ]
+"226
+[v _ChkTimeEventStatus `(v ~T0 @X0 0 ef ]
 [; ;common.h: 13: void DisplayInitial(void);
 [; ;fmd.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;fmd.h: 28: extern double __fpnormalize(double);
@@ -6655,7 +6671,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 "179
 [v _last_time `ui ~T0 @X0 1 e ]
 [; ;sub.h: 179: unsigned int last_time;
-[; ;sub.h: 180: extern unsigned unsigned int TmpCnt,TmpCnt1,KeyCnt,BuzzerCnt;
+[; ;sub.h: 180: extern unsigned unsigned int TmpCnt,TmpCnt1,KeyCnt,BuzzerCnt,RxdataCnt;
 [; ;sub.h: 181: extern unsigned char DspIndex,dsp_100ms,fmd_channels;
 [; ;sub.h: 182: extern volatile unsigned int readKeyNum,TouchTimeCount;
 [; ;sub.h: 184: extern unsigned char TxCnt,TxBuf,BitStp,ByteNum;
@@ -6693,9 +6709,11 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [; ;sub.h: 218: void SendMsgHandler();
 [; ;sub.h: 220: void send_uart_data(void);
 [; ;sub.h: 221: void LedBreathing();
-[; ;sub.h: 223: void dokey();
-[; ;sub.h: 224: void DisplayHandler();
-[; ;sub.h: 225: void ChkTimeEventStatus();
+[; ;sub.h: 222: void refresh_data();
+[; ;sub.h: 223: void refresh_display(unsigned char keybuf);
+[; ;sub.h: 224: void dokey();
+[; ;sub.h: 225: void DisplayHandler();
+[; ;sub.h: 226: void ChkTimeEventStatus();
 [; ;ChipInit.h: 14: void Ram_init();
 [; ;ChipInit.h: 15: void Sys_init();
 [; ;ChipInit.h: 16: void IO_init();
@@ -6730,9 +6748,28 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [; ;uart.h: 18: };
 [; ;uart.h: 20: void send_uart_data(void);
 [; ;uart.h: 21: void UartSetEmptyInt(unsigned char value);
-[; ;rx.h: 21: extern unsigned char RxData;
-[; ;rx.h: 24: extern void Rx_Drive(void);
-[; ;rx.h: 25: extern void RxData_Drive(void);
+[; ;rx.h: 38: typedef enum
+[; ;rx.h: 39: {
+[; ;rx.h: 40: rfReset=0,
+[; ;rx.h: 41: rffall,
+[; ;rx.h: 42: synH,
+[; ;rx.h: 43: synL,
+[; ;rx.h: 44: rfH,
+[; ;rx.h: 45: rfL
+[; ;rx.h: 46: }RFSTEP;
+[; ;rx.h: 48: typedef struct
+[; ;rx.h: 49: {
+[; ;rx.h: 50: RFSTEP RFsp;
+[; ;rx.h: 51: volatile unsigned char tRFH;
+[; ;rx.h: 52: volatile unsigned char tRFL;
+[; ;rx.h: 53: volatile unsigned char BitCount;
+[; ;rx.h: 54: volatile unsigned char Bptr;
+[; ;rx.h: 55: volatile unsigned char RecBufFull;
+[; ;rx.h: 56: }RFSTATE;
+[; ;rx.h: 58: extern unsigned char RxData,bRxData;
+[; ;rx.h: 63: extern void ReadRf433();
+[; ;rx.h: 64: extern void RxData_Drive(void);
+[; ;rx.h: 65: extern void readrf();
 "18 breathingLight.h
 [v _s_u8TimeCounter `uc ~T0 @X0 1 e ]
 [i _s_u8TimeCounter
@@ -6799,7 +6836,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = . . _SysFunFlg0 0 7 -> ~ -> . . _SysFunFlg0 0 7 `i `uc ]
 [; ;main.c: 16: if(SysFunFlg0.OneBits.b7)
 "16
-[e $ ! != -> . . _SysFunFlg0 0 7 `i -> -> -> 0 `i `Vuc `i 347  ]
+[e $ ! != -> . . _SysFunFlg0 0 7 `i -> -> -> 0 `i `Vuc `i 348  ]
 [; ;main.c: 17: {
 "17
 {
@@ -6826,7 +6863,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _LastManual _ManualType ]
 [; ;main.c: 26: if(SysFunFlg1.OneBits.b2)
 "26
-[e $ ! != -> . . _SysFunFlg1 0 2 `i -> -> -> 0 `i `Vuc `i 348  ]
+[e $ ! != -> . . _SysFunFlg1 0 2 `i -> -> -> 0 `i `Vuc `i 349  ]
 [; ;main.c: 27: {
 "27
 {
@@ -6839,9 +6876,9 @@ Version 3.2   GCC8 Compiled Intermediate Code
 "30
 }
 [; ;main.c: 30: }
-[e $U 349  ]
+[e $U 350  ]
 "31
-[e :U 348 ]
+[e :U 349 ]
 [; ;main.c: 31: else
 [; ;main.c: 32: {
 "32
@@ -6854,14 +6891,14 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _DspIndex -> . `E3603 1 `uc ]
 "35
 }
-[e :U 349 ]
+[e :U 350 ]
 "37
 }
 [; ;main.c: 35: }
 [; ;main.c: 37: }
-[e $U 350  ]
+[e $U 351  ]
 "38
-[e :U 347 ]
+[e :U 348 ]
 [; ;main.c: 38: else
 [; ;main.c: 39: {
 "39
@@ -6892,7 +6929,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = . . _SysFunFlg1 0 2 -> -> 0 `i `uc ]
 "48
 }
-[e :U 350 ]
+[e :U 351 ]
 [; ;main.c: 48: }
 [; ;main.c: 50: TimeMin=TimeType;
 "50
@@ -6902,7 +6939,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e ( _TIME_INIT ..  ]
 [; ;main.c: 52: }
 "52
-[e :UE 346 ]
+[e :UE 347 ]
 }
 "54
 [v _ModeKeyExec `(v ~T0 @X0 1 ef ]
@@ -6914,26 +6951,26 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [f ]
 [; ;main.c: 56: if(SysFunFlg0.OneBits.b7)
 "56
-[e $ ! != -> . . _SysFunFlg0 0 7 `i -> -> -> 0 `i `Vuc `i 352  ]
+[e $ ! != -> . . _SysFunFlg0 0 7 `i -> -> -> 0 `i `Vuc `i 353  ]
 [; ;main.c: 57: {
 "57
 {
 [; ;main.c: 58: if(PwrType==1)PwrType=2;
 "58
-[e $ ! == -> _PwrType `i -> 1 `i 353  ]
+[e $ ! == -> _PwrType `i -> 1 `i 354  ]
 [e = _PwrType -> -> 2 `i `uc ]
-[e :U 353 ]
+[e :U 354 ]
 [; ;main.c: 60: if(ModeType==0)
 "60
-[e $ ! == -> _ModeType `i -> 0 `i 354  ]
+[e $ ! == -> _ModeType `i -> 0 `i 355  ]
 [; ;main.c: 61: {
 "61
 {
 [; ;main.c: 62: if(LastMode==0)LastMode=1;
 "62
-[e $ ! == -> _LastMode `i -> 0 `i 355  ]
+[e $ ! == -> _LastMode `i -> 0 `i 356  ]
 [e = _LastMode -> -> 1 `i `uc ]
-[e :U 355 ]
+[e :U 356 ]
 [; ;main.c: 63: ModeType=LastMode;
 "63
 [e = _ModeType _LastMode ]
@@ -6946,11 +6983,11 @@ Version 3.2   GCC8 Compiled Intermediate Code
 "67
 }
 [; ;main.c: 67: }
-[e $U 356  ]
+[e $U 357  ]
 "68
-[e :U 354 ]
+[e :U 355 ]
 [; ;main.c: 68: else if(ModeType >= Mode3)
-[e $ ! >= -> _ModeType `i -> . `E3620 3 `i 357  ]
+[e $ ! >= -> _ModeType `i -> . `E3620 3 `i 358  ]
 [; ;main.c: 69: {
 "69
 {
@@ -6960,23 +6997,23 @@ Version 3.2   GCC8 Compiled Intermediate Code
 "71
 }
 [; ;main.c: 71: }
-[e $U 358  ]
+[e $U 359  ]
 "72
-[e :U 357 ]
+[e :U 358 ]
 [; ;main.c: 72: else ModeType+=1;
 [e =+ _ModeType -> -> 1 `i `uc ]
-[e :U 358 ]
-[e :U 356 ]
+[e :U 359 ]
+[e :U 357 ]
 [; ;main.c: 74: DspIndex =DsMode;
 "74
 [e = _DspIndex -> . `E3603 1 `uc ]
 "75
 }
-[e :U 352 ]
+[e :U 353 ]
 [; ;main.c: 75: }
 [; ;main.c: 76: }
 "76
-[e :UE 351 ]
+[e :UE 352 ]
 }
 "77
 [v _ManualKeyExec `(v ~T0 @X0 1 ef ]
@@ -6988,24 +7025,24 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [f ]
 [; ;main.c: 79: if(SysFunFlg0.OneBits.b7)
 "79
-[e $ ! != -> . . _SysFunFlg0 0 7 `i -> -> -> 0 `i `Vuc `i 360  ]
+[e $ ! != -> . . _SysFunFlg0 0 7 `i -> -> -> 0 `i `Vuc `i 361  ]
 [; ;main.c: 80: {
 "80
 {
 [; ;main.c: 81: if(ManualType==0)
 "81
-[e $ ! == -> _ManualType `i -> 0 `i 361  ]
+[e $ ! == -> _ManualType `i -> 0 `i 362  ]
 [; ;main.c: 82: {
 "82
 {
 [; ;main.c: 83: if(LastManual==0){LastManual=1; HeatType=1;}
 "83
-[e $ ! == -> _LastManual `i -> 0 `i 362  ]
+[e $ ! == -> _LastManual `i -> 0 `i 363  ]
 {
 [e = _LastManual -> -> 1 `i `uc ]
 [e = _HeatType -> -> 1 `i `uc ]
 }
-[e :U 362 ]
+[e :U 363 ]
 [; ;main.c: 84: ManualType=LastManual;
 "84
 [e = _ManualType _LastManual ]
@@ -7018,11 +7055,11 @@ Version 3.2   GCC8 Compiled Intermediate Code
 "88
 }
 [; ;main.c: 88: }
-[e $U 363  ]
+[e $U 364  ]
 "89
-[e :U 361 ]
+[e :U 362 ]
 [; ;main.c: 89: else if(ManualType >= 3)
-[e $ ! >= -> _ManualType `i -> 3 `i 364  ]
+[e $ ! >= -> _ManualType `i -> 3 `i 365  ]
 [; ;main.c: 90: {
 "90
 {
@@ -7033,13 +7070,13 @@ Version 3.2   GCC8 Compiled Intermediate Code
 "92
 }
 [; ;main.c: 92: }
-[e $U 365  ]
+[e $U 366  ]
 "93
-[e :U 364 ]
+[e :U 365 ]
 [; ;main.c: 93: else ManualType+=1;
 [e =+ _ManualType -> -> 1 `i `uc ]
-[e :U 365 ]
-[e :U 363 ]
+[e :U 366 ]
+[e :U 364 ]
 [; ;main.c: 95: ModeType=0;
 "95
 [e = _ModeType -> -> 0 `i `uc ]
@@ -7048,11 +7085,11 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _DspIndex -> . `E3603 4 `uc ]
 "98
 }
-[e :U 360 ]
+[e :U 361 ]
 [; ;main.c: 98: }
 [; ;main.c: 99: }
 "99
-[e :UE 359 ]
+[e :UE 360 ]
 }
 "100
 [v _HeatKeyExec `(v ~T0 @X0 1 ef ]
@@ -7064,13 +7101,13 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [f ]
 [; ;main.c: 102: if(SysFunFlg0.OneBits.b7)
 "102
-[e $ ! != -> . . _SysFunFlg0 0 7 `i -> -> -> 0 `i `Vuc `i 367  ]
+[e $ ! != -> . . _SysFunFlg0 0 7 `i -> -> -> 0 `i `Vuc `i 368  ]
 [; ;main.c: 103: {
 "103
 {
 [; ;main.c: 104: if(HeatType >= Mode1)
 "104
-[e $ ! >= -> _HeatType `i -> . `E3620 1 `i 368  ]
+[e $ ! >= -> _HeatType `i -> . `E3620 1 `i 369  ]
 [; ;main.c: 105: {
 "105
 {
@@ -7080,27 +7117,27 @@ Version 3.2   GCC8 Compiled Intermediate Code
 "107
 }
 [; ;main.c: 107: }
-[e $U 369  ]
+[e $U 370  ]
 "108
-[e :U 368 ]
+[e :U 369 ]
 [; ;main.c: 108: else HeatType+=1;
 [e =+ _HeatType -> -> 1 `i `uc ]
-[e :U 369 ]
+[e :U 370 ]
 [; ;main.c: 110: if(PwrType==1)PwrType=2;
 "110
-[e $ ! == -> _PwrType `i -> 1 `i 370  ]
+[e $ ! == -> _PwrType `i -> 1 `i 371  ]
 [e = _PwrType -> -> 2 `i `uc ]
-[e :U 370 ]
+[e :U 371 ]
 [; ;main.c: 112: DspIndex =DsHeat;
 "112
 [e = _DspIndex -> . `E3603 3 `uc ]
 "113
 }
-[e :U 367 ]
+[e :U 368 ]
 [; ;main.c: 113: }
 [; ;main.c: 114: }
 "114
-[e :UE 366 ]
+[e :UE 367 ]
 }
 "115
 [v _StrongKeyExec `(v ~T0 @X0 1 ef ]
@@ -7112,13 +7149,13 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [f ]
 [; ;main.c: 117: if(SysFunFlg0.OneBits.b7)
 "117
-[e $ ! != -> . . _SysFunFlg0 0 7 `i -> -> -> 0 `i `Vuc `i 372  ]
+[e $ ! != -> . . _SysFunFlg0 0 7 `i -> -> -> 0 `i `Vuc `i 373  ]
 [; ;main.c: 118: {
 "118
 {
 [; ;main.c: 121: if(StrongType >= Mode3)
 "121
-[e $ ! >= -> _StrongType `i -> . `E3620 3 `i 373  ]
+[e $ ! >= -> _StrongType `i -> . `E3620 3 `i 374  ]
 [; ;main.c: 122: {
 "122
 {
@@ -7128,22 +7165,22 @@ Version 3.2   GCC8 Compiled Intermediate Code
 "124
 }
 [; ;main.c: 124: }
-[e $U 374  ]
+[e $U 375  ]
 "125
-[e :U 373 ]
+[e :U 374 ]
 [; ;main.c: 125: else StrongType+=1;
 [e =+ _StrongType -> -> 1 `i `uc ]
-[e :U 374 ]
+[e :U 375 ]
 [; ;main.c: 127: DspIndex =DsStrong;
 "127
 [e = _DspIndex -> . `E3603 2 `uc ]
 "128
 }
-[e :U 372 ]
+[e :U 373 ]
 [; ;main.c: 128: }
 [; ;main.c: 129: }
 "129
-[e :UE 371 ]
+[e :UE 372 ]
 }
 "130
 [v _TimeKeyExec `(v ~T0 @X0 1 ef ]
@@ -7155,30 +7192,30 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [f ]
 [; ;main.c: 132: if(SysFunFlg0.OneBits.b7)
 "132
-[e $ ! != -> . . _SysFunFlg0 0 7 `i -> -> -> 0 `i `Vuc `i 376  ]
+[e $ ! != -> . . _SysFunFlg0 0 7 `i -> -> -> 0 `i `Vuc `i 377  ]
 [; ;main.c: 133: {
 "133
 {
 [; ;main.c: 134: if(TimeType==15)TimeType=20;
 "134
-[e $ ! == -> _TimeType `i -> 15 `i 377  ]
+[e $ ! == -> _TimeType `i -> 15 `i 378  ]
 [e = _TimeType -> -> 20 `i `uc ]
-[e $U 378  ]
+[e $U 379  ]
 "135
-[e :U 377 ]
-[; ;main.c: 135: else if(TimeType==20)TimeType=30;
-[e $ ! == -> _TimeType `i -> 20 `i 379  ]
-[e = _TimeType -> -> 30 `i `uc ]
-[e $U 380  ]
-"136
-[e :U 379 ]
-[; ;main.c: 136: else if(TimeType==30)TimeType=15;
-[e $ ! == -> _TimeType `i -> 30 `i 381  ]
-[e = _TimeType -> -> 15 `i `uc ]
-[e :U 381 ]
-"137
-[e :U 380 ]
 [e :U 378 ]
+[; ;main.c: 135: else if(TimeType==20)TimeType=30;
+[e $ ! == -> _TimeType `i -> 20 `i 380  ]
+[e = _TimeType -> -> 30 `i `uc ]
+[e $U 381  ]
+"136
+[e :U 380 ]
+[; ;main.c: 136: else if(TimeType==30)TimeType=15;
+[e $ ! == -> _TimeType `i -> 30 `i 382  ]
+[e = _TimeType -> -> 15 `i `uc ]
+[e :U 382 ]
+"137
+[e :U 381 ]
+[e :U 379 ]
 [; ;main.c: 137: TimeMin=TimeType;
 [e = _TimeMin _TimeType ]
 [; ;main.c: 138: DspIndex =DsTime;
@@ -7186,11 +7223,11 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _DspIndex -> . `E3603 5 `uc ]
 "139
 }
-[e :U 376 ]
+[e :U 377 ]
 [; ;main.c: 139: }
 [; ;main.c: 140: }
 "140
-[e :UE 375 ]
+[e :UE 376 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
 "152
@@ -7213,12 +7250,12 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [; ;main.c: 158: Time4Initial();
 "158
 [e ( _Time4Initial ..  ]
-[; ;main.c: 159: WDT_INITIAL ();
-"159
-[e ( _WDT_INITIAL ..  ]
 [; ;main.c: 160: UART_INITIAL();
 "160
 [e ( _UART_INITIAL ..  ]
+[; ;main.c: 161: Px_Level_Change_INITIAL();
+"161
+[e ( _Px_Level_Change_INITIAL ..  ]
 [; ;main.c: 162: User_init();
 "162
 [e ( _User_init ..  ]
@@ -7232,27 +7269,78 @@ Version 3.2   GCC8 Compiled Intermediate Code
 }
 [; ;main.c: 166: while(1)
 "166
-[e :U 384 ]
+[e :U 385 ]
 [; ;main.c: 167: {
 "167
 {
-[; ;main.c: 168: asm("clrwdt");
-"168
-[; <" clrwdt ;# ">
-[; ;main.c: 169: Rx_Drive();
+[; ;main.c: 169: readrf();
 "169
-[e ( _Rx_Drive ..  ]
+[e ( _readrf ..  ]
+[; ;main.c: 171: if(TouchTimeCount>=(1000/12/(fmd_channels+1)))
+"171
+[e $ ! >= _TouchTimeCount -> / / -> 1000 `i -> 12 `i + -> _fmd_channels `i -> 1 `i `ui 387  ]
+[; ;main.c: 172: {
+"172
+{
+[; ;main.c: 173: TouchTimeCount=0;
+"173
+[e = _TouchTimeCount -> -> 0 `i `ui ]
+[; ;main.c: 175: readKeyNum = TouchKeyScan();
+"175
+[e = _readKeyNum ( _TouchKeyScan ..  ]
+"176
+}
+[e :U 387 ]
+[; ;main.c: 176: }
+[; ;main.c: 177: if(SysFunFlg0.OneBits.b1)
+"177
+[e $ ! != -> . . _SysFunFlg0 0 1 `i -> -> -> 0 `i `Vuc `i 388  ]
+[; ;main.c: 178: {
+"178
+{
+[; ;main.c: 179: SysFunFlg0.OneBits.b1=0;
+"179
+[e = . . _SysFunFlg0 0 1 -> -> 0 `i `uc ]
 [; ;main.c: 180: RxData_Drive();
 "180
 [e ( _RxData_Drive ..  ]
+"181
+}
+[e :U 388 ]
+[; ;main.c: 181: }
+[; ;main.c: 182: if(SysFunFlg0.OneBits.b0)
+"182
+[e $ ! != -> . . _SysFunFlg0 0 0 `i -> -> -> 0 `i `Vuc `i 389  ]
+[; ;main.c: 183: {
+"183
+{
+[; ;main.c: 184: SysFunFlg0.OneBits.b0=0;
+"184
+[e = . . _SysFunFlg0 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 187: KeyScanHandler();
+"187
+[e ( _KeyScanHandler ..  ]
+[; ;main.c: 188: dokey();
+"188
+[e ( _dokey ..  ]
+[; ;main.c: 189: SysPowerHandler();
+"189
+[e ( _SysPowerHandler ..  ]
+[; ;main.c: 191: ChkTimeEventStatus();
+"191
+[e ( _ChkTimeEventStatus ..  ]
 "192
 }
-[e :U 383 ]
+[e :U 389 ]
+"193
+}
+[e :U 384 ]
 "166
-[e $U 384  ]
-[e :U 385 ]
+[e $U 385  ]
+[e :U 386 ]
 [; ;main.c: 192: }
 [; ;main.c: 193: }
-"193
-[e :UE 382 ]
+[; ;main.c: 194: }
+"194
+[e :UE 383 ]
 }

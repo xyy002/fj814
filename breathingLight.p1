@@ -6601,7 +6601,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 "179
 [v _last_time `ui ~T0 @X0 1 e ]
 [; ;sub.h: 179: unsigned int last_time;
-[; ;sub.h: 180: extern unsigned unsigned int TmpCnt,TmpCnt1,KeyCnt,BuzzerCnt;
+[; ;sub.h: 180: extern unsigned unsigned int TmpCnt,TmpCnt1,KeyCnt,BuzzerCnt,RxdataCnt;
 [; ;sub.h: 181: extern unsigned char DspIndex,dsp_100ms,fmd_channels;
 [; ;sub.h: 182: extern volatile unsigned int readKeyNum,TouchTimeCount;
 [; ;sub.h: 184: extern unsigned char TxCnt,TxBuf,BitStp,ByteNum;
@@ -6639,9 +6639,11 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [; ;sub.h: 218: void SendMsgHandler();
 [; ;sub.h: 220: void send_uart_data(void);
 [; ;sub.h: 221: void LedBreathing();
-[; ;sub.h: 223: void dokey();
-[; ;sub.h: 224: void DisplayHandler();
-[; ;sub.h: 225: void ChkTimeEventStatus();
+[; ;sub.h: 222: void refresh_data();
+[; ;sub.h: 223: void refresh_display(unsigned char keybuf);
+[; ;sub.h: 224: void dokey();
+[; ;sub.h: 225: void DisplayHandler();
+[; ;sub.h: 226: void ChkTimeEventStatus();
 [; ;ChipInit.h: 14: void Ram_init();
 [; ;ChipInit.h: 15: void Sys_init();
 [; ;ChipInit.h: 16: void IO_init();
@@ -6676,9 +6678,28 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [; ;uart.h: 18: };
 [; ;uart.h: 20: void send_uart_data(void);
 [; ;uart.h: 21: void UartSetEmptyInt(unsigned char value);
-[; ;rx.h: 21: extern unsigned char RxData;
-[; ;rx.h: 24: extern void Rx_Drive(void);
-[; ;rx.h: 25: extern void RxData_Drive(void);
+[; ;rx.h: 38: typedef enum
+[; ;rx.h: 39: {
+[; ;rx.h: 40: rfReset=0,
+[; ;rx.h: 41: rffall,
+[; ;rx.h: 42: synH,
+[; ;rx.h: 43: synL,
+[; ;rx.h: 44: rfH,
+[; ;rx.h: 45: rfL
+[; ;rx.h: 46: }RFSTEP;
+[; ;rx.h: 48: typedef struct
+[; ;rx.h: 49: {
+[; ;rx.h: 50: RFSTEP RFsp;
+[; ;rx.h: 51: volatile unsigned char tRFH;
+[; ;rx.h: 52: volatile unsigned char tRFL;
+[; ;rx.h: 53: volatile unsigned char BitCount;
+[; ;rx.h: 54: volatile unsigned char Bptr;
+[; ;rx.h: 55: volatile unsigned char RecBufFull;
+[; ;rx.h: 56: }RFSTATE;
+[; ;rx.h: 58: extern unsigned char RxData,bRxData;
+[; ;rx.h: 63: extern void ReadRf433();
+[; ;rx.h: 64: extern void RxData_Drive(void);
+[; ;rx.h: 65: extern void readrf();
 "18 breathingLight.h
 [v _s_u8TimeCounter `uc ~T0 @X0 1 e ]
 [i _s_u8TimeCounter
@@ -6745,7 +6766,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [f ]
 [; ;breathingLight.c: 7: if(onoff)
 "7
-[e $ ! != -> _onoff `i -> -> -> 0 `i `uc `i 347  ]
+[e $ ! != -> _onoff `i -> -> -> 0 `i `uc `i 348  ]
 [; ;breathingLight.c: 8: {
 "8
 {
@@ -6766,9 +6787,9 @@ Version 3.2   GCC8 Compiled Intermediate Code
 "13
 }
 [; ;breathingLight.c: 13: }
-[e $U 348  ]
+[e $U 349  ]
 "14
-[e :U 347 ]
+[e :U 348 ]
 [; ;breathingLight.c: 14: else
 [; ;breathingLight.c: 15: {
 "15
@@ -6789,11 +6810,11 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _LATC1 -> -> 1 `i `b ]
 "20
 }
-[e :U 348 ]
+[e :U 349 ]
 [; ;breathingLight.c: 20: }
 [; ;breathingLight.c: 21: }
 "21
-[e :UE 346 ]
+[e :UE 347 ]
 }
 "24
 [v _RGBbreathing `(v ~T0 @X0 1 ef ]
@@ -6805,7 +6826,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [f ]
 [; ;breathingLight.c: 26: if(++s_u8TimeCounter >= 50)
 "26
-[e $ ! >= -> =+ _s_u8TimeCounter -> -> 1 `i `uc `i -> 50 `i 350  ]
+[e $ ! >= -> =+ _s_u8TimeCounter -> -> 1 `i `uc `i -> 50 `i 351  ]
 [; ;breathingLight.c: 27: {
 "27
 {
@@ -6814,13 +6835,13 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _s_u8TimeCounter -> -> 0 `i `uc ]
 [; ;breathingLight.c: 30: if(LED1_PMW_EN_Flag)
 "30
-[e $ ! != -> _LED1_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 351  ]
+[e $ ! != -> _LED1_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 352  ]
 [; ;breathingLight.c: 31: {
 "31
 {
 [; ;breathingLight.c: 33: if((s_u8Led1PWMCounter <= 150)&&(s_u8Led1Direction == 0))
 "33
-[e $ ! && <= -> _s_u8Led1PWMCounter `i -> 150 `i == -> _s_u8Led1Direction `i -> 0 `i 352  ]
+[e $ ! && <= -> _s_u8Led1PWMCounter `i -> 150 `i == -> _s_u8Led1Direction `i -> 0 `i 353  ]
 [; ;breathingLight.c: 34: {
 "34
 {
@@ -6829,7 +6850,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e ++ _s_u8Led1PWMCounter -> -> 1 `i `uc ]
 [; ;breathingLight.c: 36: if(s_u8Led1PWMCounter >= 150)
 "36
-[e $ ! >= -> _s_u8Led1PWMCounter `i -> 150 `i 353  ]
+[e $ ! >= -> _s_u8Led1PWMCounter `i -> 150 `i 354  ]
 [; ;breathingLight.c: 37: {
 "37
 {
@@ -6847,15 +6868,15 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _s_u8Led2PWMCounter -> -> 0 `i `uc ]
 "42
 }
-[e :U 353 ]
+[e :U 354 ]
 "43
 }
-[e :U 352 ]
+[e :U 353 ]
 [; ;breathingLight.c: 42: }
 [; ;breathingLight.c: 43: }
 [; ;breathingLight.c: 45: if((s_u8Led1PWMCounter > 0)&&(s_u8Led1Direction == 1))
 "45
-[e $ ! && > -> _s_u8Led1PWMCounter `i -> 0 `i == -> _s_u8Led1Direction `i -> 1 `i 354  ]
+[e $ ! && > -> _s_u8Led1PWMCounter `i -> 0 `i == -> _s_u8Led1Direction `i -> 1 `i 355  ]
 [; ;breathingLight.c: 47: {
 "47
 {
@@ -6864,7 +6885,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e -- _s_u8Led1PWMCounter -> -> 1 `i `uc ]
 [; ;breathingLight.c: 49: if(s_u8Led1PWMCounter <= 0)
 "49
-[e $ ! <= -> _s_u8Led1PWMCounter `i -> 0 `i 355  ]
+[e $ ! <= -> _s_u8Led1PWMCounter `i -> 0 `i 356  ]
 [; ;breathingLight.c: 50: {
 "50
 {
@@ -6876,10 +6897,10 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _LED1_PMW_EN_Flag -> -> 0 `i `uc ]
 "54
 }
-[e :U 355 ]
+[e :U 356 ]
 "55
 }
-[e :U 354 ]
+[e :U 355 ]
 [; ;breathingLight.c: 54: }
 [; ;breathingLight.c: 55: }
 [; ;breathingLight.c: 56: s_u8PWM1Counter = s_u8Led1PWMCounter;
@@ -6887,17 +6908,17 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _s_u8PWM1Counter _s_u8Led1PWMCounter ]
 "57
 }
-[e :U 351 ]
+[e :U 352 ]
 [; ;breathingLight.c: 57: }
 [; ;breathingLight.c: 59: if(LED2_PMW_EN_Flag)
 "59
-[e $ ! != -> _LED2_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 356  ]
+[e $ ! != -> _LED2_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 357  ]
 [; ;breathingLight.c: 60: {
 "60
 {
 [; ;breathingLight.c: 62: if((s_u8Led2PWMCounter <= 150)&&(s_u8Led2Direction == 0))
 "62
-[e $ ! && <= -> _s_u8Led2PWMCounter `i -> 150 `i == -> _s_u8Led2Direction `i -> 0 `i 357  ]
+[e $ ! && <= -> _s_u8Led2PWMCounter `i -> 150 `i == -> _s_u8Led2Direction `i -> 0 `i 358  ]
 [; ;breathingLight.c: 63: {
 "63
 {
@@ -6906,7 +6927,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e ++ _s_u8Led2PWMCounter -> -> 1 `i `uc ]
 [; ;breathingLight.c: 65: if(s_u8Led2PWMCounter >= 150)
 "65
-[e $ ! >= -> _s_u8Led2PWMCounter `i -> 150 `i 358  ]
+[e $ ! >= -> _s_u8Led2PWMCounter `i -> 150 `i 359  ]
 [; ;breathingLight.c: 66: {
 "66
 {
@@ -6924,15 +6945,15 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _s_u8Led3PWMCounter -> -> 0 `i `uc ]
 "71
 }
-[e :U 358 ]
+[e :U 359 ]
 "72
 }
-[e :U 357 ]
+[e :U 358 ]
 [; ;breathingLight.c: 71: }
 [; ;breathingLight.c: 72: }
 [; ;breathingLight.c: 74: if((s_u8Led2PWMCounter > 0)&&(s_u8Led2Direction == 1))
 "74
-[e $ ! && > -> _s_u8Led2PWMCounter `i -> 0 `i == -> _s_u8Led2Direction `i -> 1 `i 359  ]
+[e $ ! && > -> _s_u8Led2PWMCounter `i -> 0 `i == -> _s_u8Led2Direction `i -> 1 `i 360  ]
 [; ;breathingLight.c: 76: {
 "76
 {
@@ -6941,7 +6962,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e -- _s_u8Led2PWMCounter -> -> 1 `i `uc ]
 [; ;breathingLight.c: 78: if(s_u8Led2PWMCounter <= 0)
 "78
-[e $ ! <= -> _s_u8Led2PWMCounter `i -> 0 `i 360  ]
+[e $ ! <= -> _s_u8Led2PWMCounter `i -> 0 `i 361  ]
 [; ;breathingLight.c: 79: {
 "79
 {
@@ -6953,10 +6974,10 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _LED2_PMW_EN_Flag -> -> 0 `i `uc ]
 "83
 }
-[e :U 360 ]
+[e :U 361 ]
 "84
 }
-[e :U 359 ]
+[e :U 360 ]
 [; ;breathingLight.c: 83: }
 [; ;breathingLight.c: 84: }
 [; ;breathingLight.c: 85: s_u8PWM2Counter = s_u8Led2PWMCounter;
@@ -6964,17 +6985,17 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _s_u8PWM2Counter _s_u8Led2PWMCounter ]
 "86
 }
-[e :U 356 ]
+[e :U 357 ]
 [; ;breathingLight.c: 86: }
 [; ;breathingLight.c: 89: if(LED3_PMW_EN_Flag)
 "89
-[e $ ! != -> _LED3_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 361  ]
+[e $ ! != -> _LED3_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 362  ]
 [; ;breathingLight.c: 90: {
 "90
 {
 [; ;breathingLight.c: 92: if((s_u8Led3PWMCounter <= 150)&&(s_u8Led3Direction == 0))
 "92
-[e $ ! && <= -> _s_u8Led3PWMCounter `i -> 150 `i == -> _s_u8Led3Direction `i -> 0 `i 362  ]
+[e $ ! && <= -> _s_u8Led3PWMCounter `i -> 150 `i == -> _s_u8Led3Direction `i -> 0 `i 363  ]
 [; ;breathingLight.c: 93: {
 "93
 {
@@ -6983,7 +7004,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e ++ _s_u8Led3PWMCounter -> -> 1 `i `uc ]
 [; ;breathingLight.c: 95: if(s_u8Led3PWMCounter >= 150)
 "95
-[e $ ! >= -> _s_u8Led3PWMCounter `i -> 150 `i 363  ]
+[e $ ! >= -> _s_u8Led3PWMCounter `i -> 150 `i 364  ]
 [; ;breathingLight.c: 96: {
 "96
 {
@@ -7001,15 +7022,15 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _s_u8Led1PWMCounter -> -> 0 `i `uc ]
 "102
 }
-[e :U 363 ]
+[e :U 364 ]
 "103
 }
-[e :U 362 ]
+[e :U 363 ]
 [; ;breathingLight.c: 102: }
 [; ;breathingLight.c: 103: }
 [; ;breathingLight.c: 105: if((s_u8Led3PWMCounter > 0)&&(s_u8Led3Direction == 1))
 "105
-[e $ ! && > -> _s_u8Led3PWMCounter `i -> 0 `i == -> _s_u8Led3Direction `i -> 1 `i 364  ]
+[e $ ! && > -> _s_u8Led3PWMCounter `i -> 0 `i == -> _s_u8Led3Direction `i -> 1 `i 365  ]
 [; ;breathingLight.c: 107: {
 "107
 {
@@ -7018,7 +7039,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e -- _s_u8Led3PWMCounter -> -> 1 `i `uc ]
 [; ;breathingLight.c: 109: if(s_u8Led3PWMCounter <= 0)
 "109
-[e $ ! <= -> _s_u8Led3PWMCounter `i -> 0 `i 365  ]
+[e $ ! <= -> _s_u8Led3PWMCounter `i -> 0 `i 366  ]
 [; ;breathingLight.c: 110: {
 "110
 {
@@ -7030,10 +7051,10 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _LED3_PMW_EN_Flag -> -> 0 `i `uc ]
 "114
 }
-[e :U 365 ]
+[e :U 366 ]
 "115
 }
-[e :U 364 ]
+[e :U 365 ]
 [; ;breathingLight.c: 114: }
 [; ;breathingLight.c: 115: }
 [; ;breathingLight.c: 116: s_u8PWM3Counter = s_u8Led3PWMCounter;
@@ -7041,21 +7062,21 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _s_u8PWM3Counter _s_u8Led3PWMCounter ]
 "117
 }
-[e :U 361 ]
+[e :U 362 ]
 "118
 }
-[e :U 350 ]
+[e :U 351 ]
 [; ;breathingLight.c: 117: }
 [; ;breathingLight.c: 118: }
 [; ;breathingLight.c: 120: if(s_u8PWM1Counter > 10)
 "120
-[e $ ! > -> _s_u8PWM1Counter `i -> 10 `i 366  ]
+[e $ ! > -> _s_u8PWM1Counter `i -> 10 `i 367  ]
 [; ;breathingLight.c: 121: {
 "121
 {
 [; ;breathingLight.c: 122: if(LED1_PMW_EN_Flag)
 "122
-[e $ ! != -> _LED1_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 367  ]
+[e $ ! != -> _LED1_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 368  ]
 [; ;breathingLight.c: 123: {
 "123
 {
@@ -7064,7 +7085,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _LATC5 -> -> 1 `i `b ]
 "125
 }
-[e :U 367 ]
+[e :U 368 ]
 [; ;breathingLight.c: 125: }
 [; ;breathingLight.c: 126: s_u8PWM1Counter--;
 "126
@@ -7072,16 +7093,16 @@ Version 3.2   GCC8 Compiled Intermediate Code
 "127
 }
 [; ;breathingLight.c: 127: }
-[e $U 368  ]
+[e $U 369  ]
 "128
-[e :U 366 ]
+[e :U 367 ]
 [; ;breathingLight.c: 128: else
 [; ;breathingLight.c: 129: {
 "129
 {
 [; ;breathingLight.c: 130: if(LED1_PMW_EN_Flag)
 "130
-[e $ ! != -> _LED1_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 369  ]
+[e $ ! != -> _LED1_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 370  ]
 [; ;breathingLight.c: 131: {
 "131
 {
@@ -7090,21 +7111,21 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _LATC5 -> -> 0 `i `b ]
 "133
 }
-[e :U 369 ]
+[e :U 370 ]
 "134
 }
-[e :U 368 ]
+[e :U 369 ]
 [; ;breathingLight.c: 133: }
 [; ;breathingLight.c: 134: }
 [; ;breathingLight.c: 136: if(s_u8PWM2Counter > 10)
 "136
-[e $ ! > -> _s_u8PWM2Counter `i -> 10 `i 370  ]
+[e $ ! > -> _s_u8PWM2Counter `i -> 10 `i 371  ]
 [; ;breathingLight.c: 137: {
 "137
 {
 [; ;breathingLight.c: 138: if(LED2_PMW_EN_Flag)
 "138
-[e $ ! != -> _LED2_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 371  ]
+[e $ ! != -> _LED2_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 372  ]
 [; ;breathingLight.c: 139: {
 "139
 {
@@ -7113,7 +7134,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _LATB7 -> -> 1 `i `b ]
 "141
 }
-[e :U 371 ]
+[e :U 372 ]
 [; ;breathingLight.c: 141: }
 [; ;breathingLight.c: 142: s_u8PWM2Counter--;
 "142
@@ -7121,16 +7142,16 @@ Version 3.2   GCC8 Compiled Intermediate Code
 "143
 }
 [; ;breathingLight.c: 143: }
-[e $U 372  ]
+[e $U 373  ]
 "144
-[e :U 370 ]
+[e :U 371 ]
 [; ;breathingLight.c: 144: else
 [; ;breathingLight.c: 145: {
 "145
 {
 [; ;breathingLight.c: 146: if(LED2_PMW_EN_Flag)
 "146
-[e $ ! != -> _LED2_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 373  ]
+[e $ ! != -> _LED2_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 374  ]
 [; ;breathingLight.c: 147: {
 "147
 {
@@ -7139,21 +7160,21 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _LATB7 -> -> 0 `i `b ]
 "149
 }
-[e :U 373 ]
+[e :U 374 ]
 "150
 }
-[e :U 372 ]
+[e :U 373 ]
 [; ;breathingLight.c: 149: }
 [; ;breathingLight.c: 150: }
 [; ;breathingLight.c: 152: if(s_u8PWM3Counter > 10)
 "152
-[e $ ! > -> _s_u8PWM3Counter `i -> 10 `i 374  ]
+[e $ ! > -> _s_u8PWM3Counter `i -> 10 `i 375  ]
 [; ;breathingLight.c: 153: {
 "153
 {
 [; ;breathingLight.c: 154: if(LED3_PMW_EN_Flag)
 "154
-[e $ ! != -> _LED3_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 375  ]
+[e $ ! != -> _LED3_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 376  ]
 [; ;breathingLight.c: 155: {
 "155
 {
@@ -7162,7 +7183,7 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _LATC1 -> -> 1 `i `b ]
 "157
 }
-[e :U 375 ]
+[e :U 376 ]
 [; ;breathingLight.c: 157: }
 [; ;breathingLight.c: 158: s_u8PWM3Counter--;
 "158
@@ -7170,16 +7191,16 @@ Version 3.2   GCC8 Compiled Intermediate Code
 "159
 }
 [; ;breathingLight.c: 159: }
-[e $U 376  ]
+[e $U 377  ]
 "160
-[e :U 374 ]
+[e :U 375 ]
 [; ;breathingLight.c: 160: else
 [; ;breathingLight.c: 161: {
 "161
 {
 [; ;breathingLight.c: 162: if(LED3_PMW_EN_Flag)
 "162
-[e $ ! != -> _LED3_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 377  ]
+[e $ ! != -> _LED3_PMW_EN_Flag `i -> -> -> 0 `i `uc `i 378  ]
 [; ;breathingLight.c: 163: {
 "163
 {
@@ -7188,13 +7209,13 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _LATC1 -> -> 0 `i `b ]
 "165
 }
-[e :U 377 ]
+[e :U 378 ]
 "166
 }
-[e :U 376 ]
+[e :U 377 ]
 [; ;breathingLight.c: 165: }
 [; ;breathingLight.c: 166: }
 [; ;breathingLight.c: 167: }
 "167
-[e :UE 349 ]
+[e :UE 350 ]
 }

@@ -3985,7 +3985,7 @@ extern unsigned char ModeType,HeatType,StrongType,KeyType,SizeType,TimeType,PwrT
 extern unsigned char LastMode,LastManual;
 unsigned char last_HeatType,last_StrongType;
 unsigned int last_time;
-extern unsigned unsigned int TmpCnt,TmpCnt1,KeyCnt,BuzzerCnt;
+extern unsigned unsigned int TmpCnt,TmpCnt1,KeyCnt,BuzzerCnt,RxdataCnt;
 extern unsigned char DspIndex,dsp_100ms,fmd_channels;
 extern volatile unsigned int readKeyNum,TouchTimeCount;
 
@@ -4027,7 +4027,8 @@ void SendMsgHandler();
 
 void send_uart_data(void);
 void LedBreathing();
-
+void refresh_data();
+void refresh_display(unsigned char keybuf);
 void dokey();
 void DisplayHandler();
 void ChkTimeEventStatus();
@@ -4075,12 +4076,35 @@ cmd_Time
 void send_uart_data(void);
 void UartSetEmptyInt(unsigned char value);
 
-# 21 "rx.h"
-extern unsigned char RxData;
+# 38 "rx.h"
+typedef enum
+{
+rfReset=0,
+rffall,
+synH,
+synL,
+rfH,
+rfL
+}RFSTEP;
+
+typedef struct
+{
+RFSTEP RFsp;
+volatile unsigned char tRFH;
+volatile unsigned char tRFL;
+volatile unsigned char BitCount;
+volatile unsigned char Bptr;
+volatile unsigned char RecBufFull;
+}RFSTATE;
+
+extern unsigned char RxData,bRxData;
 
 
-extern void Rx_Drive(void);
+
+
+extern void ReadRf433();
 extern void RxData_Drive(void);
+extern void readrf();
 
 # 18 "breathingLight.h"
 unsigned char s_u8TimeCounter = 0;
@@ -4104,80 +4128,212 @@ unsigned char s_u8PWM3Counter;
 void RGBSwitchStautus(unsigned char onoff);
 void RGBbreathing(void);
 
-# 4 "rx.c"
-unsigned char RxBuf[8];
-unsigned char RxBit;
-unsigned char TmsRxH;
-unsigned char TmsRxL;
+# 8 "rx.c"
 unsigned char RxData;
 
-# 14
-void Rx_Drive(void)
-{
-if (PB4 == 1)
-{
-if (TmsRxH < 250)
-TmsRxH++;
-else
-RxBit = 0;
-}
-else
-{
-if (TmsRxH >= 20)
-{
-TmsRxH = 0;
-TmsRxL = 0;
-RxBit = 0;
-RxBuf[0] = 0;
-RxBuf[1] = 0;
-RxBuf[2] = 0;
-RxBuf[3] = 0;
-}
-else if (TmsRxH)
-{
-if ((TmsRxH > TmsRxL)&&(TmsRxH>8))
-RxBuf[RxBit / 8] |= 0x80 >> (RxBit % 8);
-TmsRxH = 0;
-TmsRxL = 0;
-if (++RxBit >= 32)
-{
-RxBit = 0;
+RFSTATE RFs;
+volatile unsigned char buf_rec[5];
+unsigned char rf_data[5];
 
-if(RxBuf[1]-RxBuf[0]==0XDF)
-RxData = RxBuf[3];
-}
-}
-if (TmsRxL < 250)
-TmsRxL++;
+unsigned char RemNum=0,RemNumTemp=0;
+unsigned char RemOutTime;
+unsigned char remcmd;
+unsigned char rf_learn = 1;
+unsigned int tRfKeyHold;
+unsigned char tRFtemp;
+
+
+unsigned char keybit1,keybit2,keybit3,keybit4,keybit5;
+
+
+
+
+unsigned char CheckRfCmd(unsigned char rfcmd)
+{
+switch( rfcmd)
+{
+case 0X01:
+case 0X08:
+case 0X0E:
+case 0X0C:
+case 0X0A:
+return 1;
+default:
+return 0;
 }
 }
 
-# 59
+
+void Rf433IoInit(void)
+{
+RFs.RecBufFull=0;
+
+RFs.tRFL= 0;
+RFs.tRFH= 0;
+RFs.BitCount=0;
+RFs.Bptr=0;
+RFs.RFsp= rffall;
+}
+
+void ReadRf433(void)
+{
+switch(RFs.RFsp)
+{
+case synH:
+if(PB4)
+{
+RFs.tRFH++;
+if(RFs.tRFH>6)
+{
+RFs.RFsp=rfReset;
+break;
+}
+break;
+}
+else
+{
+if(RFs.tRFH<2)
+{
+RFs.RFsp=rfReset;
+break;
+}
+RFs.tRFL=0;
+RFs.RFsp=synL;
+break;
+}
+case synL:
+if(PB4==0)
+{
+RFs.tRFL++;
+if(RFs.tRFL>135)
+{
+RFs.RFsp=rfReset;
+break;
+}
+break;
+}
+else
+{
+if(RFs.tRFL<105)
+{
+RFs.RFsp=rfReset;
+break;
+}
+RFs.tRFH=0;
+RFs.RFsp=rfH;
+break;
+}
+case rfH:
+if(PB4)
+{
+RFs.tRFH++;
+if(RFs.tRFH>16)
+{
+RFs.RFsp=rfReset;
+break;
+}
+break;
+}
+else
+{
+RFs.tRFL=0;
+RFs.RFsp=rfL;
+break;
+}
+case rfL:
+if(PB4==0)
+{
+RFs.tRFL++;
+if(RFs.tRFL>16)
+{
+RFs.RFsp=rfReset;
+break;
+}
+break;
+}
+else
+{
+buf_rec[RFs.Bptr]<<=1;
+if(RFs.tRFH>=RFs.tRFL)
+{
+buf_rec[RFs.Bptr]|=1;
+}
+RFs.tRFH=0;
+RFs.tRFL=0;
+if (( ++RFs.BitCount & 7) == 0)
+{
+RFs.Bptr++;
+}
+if(RFs.BitCount==24)
+{
+RFs.RFsp=rfReset;
+RFs.RecBufFull=1;
+break;
+}
+RFs.RFsp=rfH;
+break;
+}
+case rffall:
+if(PB4==0)
+break;
+else
+{
+RFs.RFsp=synH;
+break;
+}
+case rfReset:
+default:
+RFs.tRFL= 0;
+RFs.tRFH= 0;
+RFs.BitCount=0;
+RFs.Bptr=0;
+RFs.RFsp= rffall;
+}
+}
+
+
+void readrf()
+{
+if(RFs.RecBufFull==0)return;
+RFs.RecBufFull=0;
+
+if(buf_rec[0]!=buf_rec[1])return;
+
+if(!CheckRfCmd(buf_rec[2]))return;
+
+RxData=buf_rec[2];
+
+
+}
+
+
+void KeepRfData(void)
+{
+if (RemOutTime > 0)
+{
+RemOutTime--;
+if (RemOutTime == 0)
+{
+RxData= 0;
+}
+}
+}
+
 void RxData_Drive(void)
 {
-if(RxData==0)return;
 
-if(RxData==0x01)
+switch(RxData)
 {
-KeyType=PowerKey;
-}
-else if(RxData==0xd7)
-{
-KeyType=ModeKey;
-}
-else if(RxData==0x57)
-{
-KeyType=StrongKey;
-}
-else if(RxData==0xaf)
-{
-KeyType=ManualKey;
-}
-else if(RxData==0x8f)
-{
-KeyType=HeatKey;
-}
+case 0x01:KeyType=PowerKey;break;
+case 0x08:KeyType=ModeKey;break;
+case 0x0E:KeyType=StrongKey;break;
+case 0x0A:KeyType=ManualKey;break;
+case 0x0C:KeyType=HeatKey;break;
+default:RxData=0;break;
 
+}
 RxData=0;
-}
+dokey();
 
+
+}
