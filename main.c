@@ -158,7 +158,7 @@ void main(void)
 	Time4Initial();
 	WDT_INITIAL ();
     UART_INITIAL();	
-    //Px_Level_Change_INITIAL();	
+    Px_Level_Change_INITIAL();	
 	User_init(); 
 	Display_init();
 	SetBuzzer();
@@ -167,28 +167,28 @@ void main(void)
 	{  
 		CLRWDT();
 		Rx_Drive();	
-		//send_uart_data();	
-		//   if(TouchTimeCount>=(1000/SCANNINGTIME/(fmd_channels+1)))  	//按键扫描频率
-        // {
-        //     TouchTimeCount=0;
+		send_uart_data();	
+		  if(TouchTimeCount>=(1000/SCANNINGTIME/(fmd_channels+1)))  	//按键扫描频率
+        {
+            TouchTimeCount=0;
             
-		// 	readKeyNum = TouchKeyScan();  					//按键扫描并获取按键值
-        // }
-		// if(t2msFlag)
-		// {
-		// 	t2msFlag=0;
+			readKeyNum = TouchKeyScan();  					//按键扫描并获取按键值
+        }
+		if(t2msFlag)
+		{
+			t2msFlag=0;
 			RxData_Drive();	
-		// }
-		// if(t10msFlag)
-		// {
-		// 	t10msFlag=0;
-		// 	//PA7=~PA7;
-		// 	KeyScanHandler(); 
-		// 	dokey();
-		// 	SysPowerHandler(); 
+		}
+		if(t10msFlag)
+		{
+			t10msFlag=0;
+			//PA7=~PA7;
+			KeyScanHandler(); 
+			dokey();
+			SysPowerHandler(); 
 
-		// 	ChkTimeEventStatus();
-		// }		
+			ChkTimeEventStatus();
+		}		
 	}
 }
 
