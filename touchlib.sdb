@@ -51,7 +51,7 @@ synL 3
 rfH 4
 rfL 5
 ]
-"203
+"204
 [e E3610 . `uc
 NullKey 0
 PowerKey 1
@@ -147,6 +147,8 @@ TestKey 8
 [v _ReadRf433 ReadRf433 `(v  1 e 1 0 ]
 "171
 [v _readrf readrf `(v  1 e 1 0 ]
+"186
+[v _KeepRfData KeepRfData `(v  1 e 1 0 ]
 "198
 [v _RxData_Drive RxData_Drive `(v  1 e 1 0 ]
 "37 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
@@ -431,6 +433,8 @@ TestKey 8
 [v _RFs RFs `VES11397  1 e 6 0 ]
 "11
 [v _buf_rec buf_rec `VE[5]uc  1 e 5 0 ]
+"15
+[v _RemOutTime RemOutTime `uc  1 e 1 0 ]
 [s S1584 . 1 `VEuc 1 b0 1 0 :1:0 
 `VEuc 1 b1 1 0 :1:1 
 `VEuc 1 b2 1 0 :1:2 
@@ -601,6 +605,50 @@ TestKey 8
 [v CheckRfCmd@rfcmd rfcmd `uc  1 a 1 0 ]
 "40
 } 0
+"120 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
+[v _dokey dokey `(v  1 e 1 0 ]
+{
+"164
+} 0
+"37
+[v _refresh_data refresh_data `(v  1 e 1 0 ]
+{
+"48
+} 0
+"44 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
+[v _UartSetEmptyInt UartSetEmptyInt `(v  1 e 1 0 ]
+{
+[v UartSetEmptyInt@value value `uc  1 a 1 wreg ]
+[v UartSetEmptyInt@value value `uc  1 a 1 wreg ]
+"46
+[v UartSetEmptyInt@value value `uc  1 a 1 0 ]
+"47
+} 0
+"115 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
+[v _StrongKeyExec StrongKeyExec `(v  1 e 1 0 ]
+{
+"129
+} 0
+"12
+[v _PowerKeyExec PowerKeyExec `(v  1 e 1 0 ]
+{
+"52
+} 0
+"54
+[v _ModeKeyExec ModeKeyExec `(v  1 e 1 0 ]
+{
+"76
+} 0
+"77
+[v _ManualKeyExec ManualKeyExec `(v  1 e 1 0 ]
+{
+"99
+} 0
+"100
+[v _HeatKeyExec HeatKeyExec `(v  1 e 1 0 ]
+{
+"114
+} 0
 "6 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
@@ -649,59 +697,20 @@ TestKey 8
 {
 "677
 } 0
-"198 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
-[v _RxData_Drive RxData_Drive `(v  1 e 1 0 ]
-{
-"215
-} 0
-"120 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-[v _dokey dokey `(v  1 e 1 0 ]
-{
-"164
-} 0
-"37
-[v _refresh_data refresh_data `(v  1 e 1 0 ]
-{
-"48
-} 0
-"44 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
-[v _UartSetEmptyInt UartSetEmptyInt `(v  1 e 1 0 ]
-{
-[v UartSetEmptyInt@value value `uc  1 a 1 wreg ]
-[v UartSetEmptyInt@value value `uc  1 a 1 wreg ]
-"46
-[v UartSetEmptyInt@value value `uc  1 a 1 0 ]
-"47
-} 0
-"115 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-[v _StrongKeyExec StrongKeyExec `(v  1 e 1 0 ]
-{
-"129
-} 0
-"12
-[v _PowerKeyExec PowerKeyExec `(v  1 e 1 0 ]
-{
-"52
-} 0
-"660 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+"660
 [v _TIME_INIT TIME_INIT `(v  1 e 1 0 ]
 {
 "665
 } 0
-"54 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-[v _ModeKeyExec ModeKeyExec `(v  1 e 1 0 ]
+"198 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
+[v _RxData_Drive RxData_Drive `(v  1 e 1 0 ]
 {
-"76
+"216
 } 0
-"77
-[v _ManualKeyExec ManualKeyExec `(v  1 e 1 0 ]
+"186
+[v _KeepRfData KeepRfData `(v  1 e 1 0 ]
 {
-"99
-} 0
-"100
-[v _HeatKeyExec HeatKeyExec `(v  1 e 1 0 ]
-{
-"114
+"196
 } 0
 "574 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 [v _Px_Level_Change_INITIAL Px_Level_Change_INITIAL `(v  1 e 1 0 ]

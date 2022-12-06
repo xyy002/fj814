@@ -1036,11 +1036,9 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [n S346 . RFsp tRFH tRFL BitCount Bptr RecBufFull ]
 "176 sub.h
 [v _KeyType `uc ~T0 @X0 0 e ]
-"203 rx.c
+"204 rx.c
 [c E3610 0 1 2 3 4 5 6 7 8 .. ]
 [n E3610 . NullKey PowerKey ModeKey SizeKey HeatKey StrongKey ManualKey TimeKey TestKey  ]
-"224 sub.h
-[v _dokey `(v ~T0 @X0 0 ef ]
 [; ;common.h: 13: void DisplayInitial(void);
 [; ;fmd.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;fmd.h: 28: extern double __fpnormalize(double);
@@ -7362,63 +7360,68 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [; ;rx.c: 199: {
 [e :U _RxData_Drive ]
 [f ]
-[; ;rx.c: 201: switch(RxData)
+[; ;rx.c: 200: KeepRfData();
+"200
+[e ( _KeepRfData ..  ]
+[; ;rx.c: 201: if(RxData==0)return;
 "201
-[e $U 395  ]
-[; ;rx.c: 202: {
+[e $ ! == -> _RxData `i -> 0 `i 394  ]
+[e $UE 393  ]
+[e :U 394 ]
+[; ;rx.c: 202: switch(RxData)
 "202
-{
-[; ;rx.c: 203: case 0x01:KeyType=PowerKey;break;
+[e $U 396  ]
+[; ;rx.c: 203: {
 "203
-[e :U 396 ]
-[e = _KeyType -> . `E3610 1 `uc ]
-[e $U 394  ]
-[; ;rx.c: 204: case 0x08:KeyType=ModeKey;break;
+{
+[; ;rx.c: 204: case 0x01:KeyType=PowerKey;break;
 "204
 [e :U 397 ]
-[e = _KeyType -> . `E3610 2 `uc ]
-[e $U 394  ]
-[; ;rx.c: 205: case 0x0E:KeyType=StrongKey;break;
+[e = _KeyType -> . `E3610 1 `uc ]
+[e $U 395  ]
+[; ;rx.c: 205: case 0x08:KeyType=ModeKey;break;
 "205
 [e :U 398 ]
-[e = _KeyType -> . `E3610 5 `uc ]
-[e $U 394  ]
-[; ;rx.c: 206: case 0x0A:KeyType=ManualKey;break;
+[e = _KeyType -> . `E3610 2 `uc ]
+[e $U 395  ]
+[; ;rx.c: 206: case 0x0E:KeyType=StrongKey;break;
 "206
 [e :U 399 ]
-[e = _KeyType -> . `E3610 6 `uc ]
-[e $U 394  ]
-[; ;rx.c: 207: case 0x0C:KeyType=HeatKey;break;
+[e = _KeyType -> . `E3610 5 `uc ]
+[e $U 395  ]
+[; ;rx.c: 207: case 0x0A:KeyType=ManualKey;break;
 "207
 [e :U 400 ]
-[e = _KeyType -> . `E3610 4 `uc ]
-[e $U 394  ]
-[; ;rx.c: 208: default:RxData=0;break;
+[e = _KeyType -> . `E3610 6 `uc ]
+[e $U 395  ]
+[; ;rx.c: 208: case 0x0C:KeyType=HeatKey;break;
 "208
 [e :U 401 ]
+[e = _KeyType -> . `E3610 4 `uc ]
+[e $U 395  ]
+[; ;rx.c: 209: default:RxData=0;break;
+"209
+[e :U 402 ]
 [e = _RxData -> -> 0 `i `uc ]
-[e $U 394  ]
-"210
-}
-[; ;rx.c: 210: }
-[e $U 394  ]
-"201
-[e :U 395 ]
-[e [\ _RxData , $ -> -> 1 `i `uc 396
- , $ -> -> 8 `i `uc 397
- , $ -> -> 14 `i `uc 398
- , $ -> -> 10 `i `uc 399
- , $ -> -> 12 `i `uc 400
- 401 ]
-"210
-[e :U 394 ]
-[; ;rx.c: 211: RxData=0;
+[e $U 395  ]
 "211
-[e = _RxData -> -> 0 `i `uc ]
-[; ;rx.c: 212: dokey();
+}
+[; ;rx.c: 211: }
+[e $U 395  ]
+"202
+[e :U 396 ]
+[e [\ _RxData , $ -> -> 1 `i `uc 397
+ , $ -> -> 8 `i `uc 398
+ , $ -> -> 14 `i `uc 399
+ , $ -> -> 10 `i `uc 400
+ , $ -> -> 12 `i `uc 401
+ 402 ]
+"211
+[e :U 395 ]
+[; ;rx.c: 212: RxData=0;
 "212
-[e ( _dokey ..  ]
-[; ;rx.c: 215: }
-"215
+[e = _RxData -> -> 0 `i `uc ]
+[; ;rx.c: 216: }
+"216
 [e :UE 393 ]
 }

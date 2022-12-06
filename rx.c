@@ -197,7 +197,8 @@ void KeepRfData(void)
 
 void RxData_Drive(void)
 {
-	
+	KeepRfData();
+    if(RxData==0)return;
 		switch(RxData)
 	{
 		case 0x01:KeyType=PowerKey;break;
@@ -209,7 +210,7 @@ void RxData_Drive(void)
 
 	}
 	RxData=0;
-	dokey();
+	// dokey();
     // if(RxData==0)return;
 	
 }

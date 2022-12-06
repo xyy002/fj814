@@ -5,7 +5,7 @@ Linker command line:
 \
   --edf=D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\dat\en_msgs.txt \
   -cs -h+touchlib.sym --cmf=touchlib.cmf -z -QFT62F08X \
-  -oC:\Users\ADMINI~1\AppData\Local\Temp\s474.2 -Mtouchlib.map -E1 -ver=XC8 \
+  -oC:\Users\ADMINI~1\AppData\Local\Temp\s5po.2 -Mtouchlib.map -E1 -ver=XC8 \
   -ASTACK=0210Eh-022ffh -pstack=STACK -p_ad3nop_text=3h -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
   -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
@@ -31,7 +31,7 @@ Linker command line:
   -pconfig=CONFIG -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\ADMINI~1\AppData\Local\Temp\s474.obj touchlib.obj 
+  C:\Users\ADMINI~1\AppData\Local\Temp\s5po.obj touchlib.obj 
 
 Object code version is 3.11
 
@@ -40,28 +40,28 @@ Machine type is FT62F08X
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\ADMINI~1\AppData\Local\Temp\s474.obj
+C:\Users\ADMINI~1\AppData\Local\Temp\s5po.obj
                 end_init                             37       37        2        8       0
                 reset_vec                             0        0        2        0       0
-touchlib.obj    cinit                                39       39      77A        8       0
+touchlib.obj    cinit                                39       39      787        8       0
                 intentry                              4        4       33        8       0
-                swtext4                             7E0      7E0       20      FC0       0
-                swtext3                             818      818        C      FC0       0
-                swtext2                             80C      80C        C      FC0       0
-                text39                             1531     1531      2CF     2A62       0
-                swtext1                             800      800        C      FC0       0
-                text38                              A13      A13       7E     1426       0
-                text37                              7B3      7B3       2D        8       0
-                text35                              9F2      9F2       21     13E4       0
-                text26                              A91      A91      56F     1522       0
-                text25                              9E0      9E0       12     13C0       0
+                swtext4                             800      800       20     1000       0
+                swtext3                             838      838        C     1000       0
+                swtext2                             82C      82C        C     1000       0
+                text40                             1531     1531      2CF     2A62       0
+                swtext1                             820      820        C     1000       0
+                text39                              A13      A13       7E     1426       0
+                text38                              7C0      7C0       2D        8       0
+                text36                              9F2      9F2       21     13E4       0
+                text27                              A91      A91      56F     1522       0
+                text26                              7ED      7ED       12        8       0
                 cstackBANK0hh                        4C       4C       21       2B       1
                 cstackCOMMON                         70       70        6       70       1
-                clrtext                             9D4      9D4        C     13A8       0
+                clrtext                             9E6      9E6        C     13CC       0
                 bssBANK3                            1A0      1A0       1E      1A0       1
                 bssBANK2                            120      120       3C      120       1
-                dataBANK1                            E2       E2        8       A0       1
-                bssBANK1                             A0       A0       42       A0       1
+                dataBANK1                            E3       E3        8       A0       1
+                bssBANK1                             A0       A0       43       A0       1
                 bssBANK0hh                           2B       2B       21       2B       1
                 bssCOMMON                            77       77        5       70       1
                 bitbssCOMMON                        3B0       76        5       70       1     8
@@ -80,16 +80,16 @@ TOTAL           Name                               Link     Load   Length     Sp
 
         CLASS   CODE           
                 end_init                             37       37        2         0
-                cinit                                39       39      77A         0
+                cinit                                39       39      787         0
                 intentry                              4        4       33         0
                 reset_vec                             0        0        2         0
-                text39                             1531     1531      2CF         0
-                text38                              A13      A13       7E         0
-                text37                              7B3      7B3       2D         0
-                text35                              9F2      9F2       21         0
-                text26                              A91      A91      56F         0
-                text25                              9E0      9E0       12         0
-                clrtext                             9D4      9D4        C         0
+                text40                             1531     1531      2CF         0
+                text39                              A13      A13       7E         0
+                text38                              7C0      7C0       2D         0
+                text36                              9F2      9F2       21         0
+                text27                              A91      A91      56F         0
+                text26                              7ED      7ED       12         0
+                clrtext                             9E6      9E6        C         0
                 _ad3nop_text                          3        3        1         0
 
         CLASS   STRCODE        
@@ -105,10 +105,10 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   STRING         
 
         CLASS   CONST          
-                swtext4                             7E0      7E0       20         0
-                swtext3                             818      818        C         0
-                swtext2                             80C      80C        C         0
-                swtext1                             800      800        C         0
+                swtext4                             800      800       20         0
+                swtext3                             838      838        C         0
+                swtext2                             82C      82C        C         0
+                swtext1                             820      820        C         0
 
         CLASS   ENTRY          
 
@@ -122,8 +122,8 @@ TOTAL           Name                               Link     Load   Length     Sp
                 bssBANK0hh                           2B       2B       21         1
 
         CLASS   BANK1          
-                dataBANK1                            E2       E2        8         1
-                bssBANK1                             A0       A0       42         1
+                dataBANK1                            E3       E3        8         1
+                bssBANK1                             A0       A0       43         1
 
         CLASS   BANK2          
                 bssBANK2                            120      120       3C         1
@@ -277,19 +277,18 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
                 _ad3nop_text                   000003  000001  000004         6       0  CODE        2
-                intentry                       000004  0007DC  0007E0         8       0  CODE        2
+                intentry                       000004  0007FB  0007FF         8       0  CODE        2
                 bssBANK0hh                     00002B  000042  00006D        2B       1  BANK0       1
                 cstackCOMMON                   000070  00000C  00007C        70       1  COMMON      1
-                bssBANK1                       0000A0  00004A  0000EA        A0       1  BANK1       1
+                bssBANK1                       0000A0  00004B  0000EB        A0       1  BANK1       1
                 bssBANK2                       000120  00003C  00015C       120       1  BANK2       1
                 bssBANK3                       0001A0  00001E  0001BE       1A0       1  BANK3       1
-                swtext4                        0007E0  000044  000824       FC0       0  CONST       2
-                clrtext                        0009D4  00000C  0009E0      13A8       0  CODE        2
-                text25                         0009E0  000012  0009F2      13C0       0  CODE        2
-                text35                         0009F2  000021  000A13      13E4       0  CODE        2
-                text38                         000A13  00007E  000A91      1426       0  CODE        2
-                text26                         000A91  00056F  001000      1522       0  CODE        2
-                text39                         001531  0002CF  001800      2A62       0  CODE        2
+                swtext4                        000800  000044  000844      1000       0  CONST       2
+                clrtext                        0009E6  00000C  0009F2      13CC       0  CODE        2
+                text36                         0009F2  000021  000A13      13E4       0  CODE        2
+                text39                         000A13  00007E  000A91      1426       0  CODE        2
+                text27                         000A91  00056F  001000      1522       0  CODE        2
+                text40                         001531  0002CF  001800      2A62       0  CODE        2
                 stringtext1                    001800  0000C1  0018C1      3000       0  STRCODE     2
 
 
@@ -297,7 +296,7 @@ UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
         BANK0            006D-006F              3           1
-        BANK1            00EA-00EF              6           1
+        BANK1            00EB-00EF              5           1
         BANK2            015C-016F             14           1
         BANK3            01BE-01EF             32           1
         BANK4            0220-026F             50           1
@@ -308,23 +307,26 @@ UNUSED ADDRESS RANGES
         BANK9            04A0-04CF             30           1
         BIGRAM           2000-23EF            3F0           1
         CODE             0002-0002              1           2
-                         0824-09D3            1B0
+                         07FF-07FF              1
+                         0844-09E5            1A2
                          1000-1530            531
                          18C1-1FFF            73F
         COMMON           007C-007D              2           1
         CONFIG           8007-8008              2           2
         CONST            0002-0002              1           2
-                         0824-09D3             DC
+                         07FF-07FF              1
+                         0844-09E5             BC
                          1000-1530            100
                          18C1-1FFF            100
         EEDATA           F000-F0FF            100           2
         ENTRY            0002-0002              1           2
-                         0824-09D3             DC
+                         07FF-07FF              1
+                         0844-09E5             BC
                          1000-1530            100
                          18C1-1FFF            100
         IDLOC            8000-8003              4           2
         RAM              006D-006F              3           1
-                         00EA-00EF              6
+                         00EB-00EF              5
                          015C-016F             14
                          01BE-01EF             32
                          0220-026F             50
@@ -367,11 +369,13 @@ UNUSED ADDRESS RANGES
         SFR9             0480-049F             20           1
         STACK            210E-22FF            1F2           1
         STRCODE          0002-0002              1           2
-                         0824-09D3            1B0
+                         07FF-07FF              1
+                         0844-09E5            1A2
                          1000-1530            531
                          18C1-1FFF            73F
         STRING           0002-0002              1           2
-                         0824-09D3             DC
+                         07FF-07FF              1
+                         0844-09E5             BC
                          1000-1530            100
                          18C1-1FFF            100
 
@@ -386,58 +390,58 @@ DisplayHandler@DspCnt             bssBANK1      00D3
 DisplayHandler@LedMenuIndex       bssBANK1      00D5
 HighFreqCo@a                      cstackBANK0hh 0052
 MxSet013@a                        cstackBANK0hh 004C
-PL10                              cinit         044A
-PL100                             text38        0A89
-PL102                             text38        0A8D
-PL104                             cinit         05BA
-PL12                              cinit         0467
-PL14                              cinit         0484
-PL16                              cinit         04A0
-PL18                              cinit         04CC
-PL2                               cinit         043C
-PL20                              text26        0F02
-PL22                              cinit         04F6
-PL24                              text26        0F1F
-PL26                              text26        0F25
-PL28                              text26        0F32
-PL30                              text26        0F58
-PL32                              text26        0F61
-PL34                              text26        0F67
-PL36                              cinit         051E
-PL38                              cinit         0526
-PL4                               text26        0ECC
-PL40                              cinit         053E
-PL42                              cinit         0546
-PL44                              text26        0F85
-PL46                              cinit         0555
-PL48                              cinit         0566
-PL50                              cinit         0579
-PL52                              text26        0F8C
-PL54                              cinit         058A
-PL56                              text26        0F93
-PL58                              text26        0FA3
-PL6                               text26        0EE6
-PL60                              text39        17ED
-PL62                              cinit         0599
-PL64                              cinit         059E
-PL66                              text26        0FB1
-PL68                              text26        0FB6
-PL70                              text26        0FC0
-PL72                              text26        0FC9
-PL74                              text26        0FCF
-PL76                              text26        0FD5
-PL78                              text26        0FDB
-PL8                               text26        0EFC
-PL80                              text26        0FE1
-PL82                              text26        0FE8
-PL84                              cinit         05A4
-PL86                              cinit         05AA
-PL88                              cinit         05AF
-PL90                              text26        0FEF
-PL92                              text26        0FF5
-PL94                              text39        17FA
-PL96                              cinit         05B4
-PL98                              text26        0FFB
+PL10                              cinit         0453
+PL100                             cinit         05C3
+PL102                             text39        0A89
+PL104                             text39        0A8D
+PL12                              cinit         0470
+PL14                              cinit         048D
+PL16                              cinit         04A9
+PL18                              cinit         04D5
+PL2                               cinit         0445
+PL20                              text27        0F02
+PL22                              cinit         04FF
+PL24                              text27        0F1F
+PL26                              text27        0F25
+PL28                              text27        0F32
+PL30                              text27        0F58
+PL32                              text27        0F61
+PL34                              text27        0F67
+PL36                              cinit         0527
+PL38                              cinit         052F
+PL4                               text27        0ECC
+PL40                              cinit         0537
+PL42                              cinit         054F
+PL44                              text27        0F85
+PL46                              cinit         055E
+PL48                              cinit         0571
+PL50                              cinit         0582
+PL52                              text27        0F8C
+PL54                              cinit         0593
+PL56                              text27        0F93
+PL58                              text27        0FA3
+PL6                               text27        0EE6
+PL60                              text40        17ED
+PL62                              cinit         05A2
+PL64                              cinit         05A8
+PL66                              text27        0FB1
+PL68                              text27        0FB6
+PL70                              text27        0FC0
+PL72                              text27        0FC6
+PL74                              text27        0FCF
+PL76                              text27        0FD5
+PL78                              text27        0FDB
+PL8                               text27        0EFC
+PL80                              text27        0FE1
+PL82                              text27        0FE8
+PL84                              text27        0FEF
+PL86                              text40        17FA
+PL88                              cinit         05AD
+PL90                              cinit         05B3
+PL92                              cinit         05B9
+PL94                              cinit         05BE
+PL96                              text27        0FF5
+PL98                              text27        0FFB
 ShowLedData@DspBuf                cstackCOMMON  0070
 SpecialDisplay1@DspBuf            cstackCOMMON  0074
 SpecialDisplay2@DspBuf            cstackCOMMON  0075
@@ -448,26 +452,27 @@ _ACTIVE_SENSOR_DELTA              stringtext2   185A
 _ANSELA                           (abs)         0197
 _BuzzerCnt                        bssBANK1      00C9
 _CKOCON                           (abs)         0095
-_CheckRfCmd                       cinit         0782
+_CheckRfCmd                       cinit         07A9
 _ChkTimeEventStatus               cinit         00CF
 _DIV                              cinit         034D
-_DataProcessing                   text26        0A91
-_DisplayHandler                   text39        1531
+_DataProcessing                   text27        0A91
+_DisplayHandler                   text40        1531
 _Display_init                     cinit         00DE
-_DspIndex                         bssBANK1      00DD
+_DspIndex                         bssBANK1      00DE
 _EPIE0                            (abs)         0094
 _EPIF0                            (abs)         0014
 _EPS0                             (abs)         0118
 _EPS1                             (abs)         0119
 _FWHEELSILERB                     stringtext4   18B8
-_HeatKeyExec                      cinit         041F
-_HeatType                         bssBANK1      00E1
-_HighFreqCo                       text26        0E6B
+_HeatKeyExec                      cinit         0600
+_HeatType                         bssBANK1      00E2
+_HighFreqCo                       text27        0E6B
 _INACTIVE_SENSOR_DELTA            stringtext1   1800
 _INTCON                           (abs)         000B
 _ISR                              intentry      0004
 _ITYPE0                           (abs)         011E
 _ITYPE1                           (abs)         011F
+_KeepRfData                       cinit         0411
 _KeyCnt                           bssBANK1      00C3
 _KeyScanHandler                   cinit         038E
 _KeyType                          bssBANK0hh    0045
@@ -482,17 +487,17 @@ _LATC1                            (abs)         0871
 _LATD1                            (abs)         0879
 _LATD2                            (abs)         087A
 _LATD3                            (abs)         087B
-_LastManual                       bssBANK1      00DF
-_LastMode                         bssBANK1      00E0
+_LastManual                       bssBANK1      00E0
+_LastMode                         bssBANK1      00E1
 _M0ANALOG                         (abs)         0392
 _M1ANALOG                         (abs)         0393
 _M2ANALOG                         (abs)         0394
 _M3ANALOG                         (abs)         0395
-_ManualKeyExec                    cinit         060F
+_ManualKeyExec                    cinit         0611
 _ManualType                       bssCOMMON     0078
-_ModeKeyExec                      cinit         0633
+_ModeKeyExec                      cinit         0635
 _ModeType                         bssCOMMON     007A
-_MxSet013                         text25        09E0
+_MxSet013                         text26        07ED
 _NumD                             bssBANK0hh    0044
 _OSCCON                           (abs)         0099
 _PB4                              (abs)         006C
@@ -508,27 +513,28 @@ _PSINK2                           (abs)         019C
 _PSINK3                           (abs)         019D
 _PSRC0                            (abs)         011A
 _PSRC1                            (abs)         011B
-_PowerKeyExec                     cinit         05DC
+_PowerKeyExec                     cinit         0654
 _PwrType                          bssCOMMON     007B
 _Px_Level_Change_INITIAL          cinit         03DA
 _RFs                              bssBANK1      00A6
-_ReadRf433                        text38        0A13
+_ReadRf433                        text39        0A13
 _ReadTouchData                    cinit         0129
-_RxData                           bssBANK1      00D7
-_RxData_Drive                     cinit         0652
+_RemOutTime                       bssBANK1      00D7
+_RxData                           bssBANK1      00D8
+_RxData_Drive                     cinit         03E7
 _STATUS                           (abs)         0003
 _SWHEELSILERB                     stringtext3   18B4
-_ShowLedData                      text39        15BC
-_SpecialDisplay1                  text39        1781
-_SpecialDisplay2                  text39        17B5
+_ShowLedData                      text40        15BC
+_SpecialDisplay1                  text40        1781
+_SpecialDisplay2                  text40        17B5
 _StartHigeFreq                    cinit         020E
-_StrongKeyExec                    cinit         0430
+_StrongKeyExec                    cinit         0683
 _StrongType                       bssCOMMON     0079
 _SysFunFlg0                       bssBANK0hh    0049
 _SysFunFlg1                       bssBANK0hh    0048
 _SysFunFlg2                       bssBANK0hh    0046
-_SysPowerHandler                  cinit         05BF
-_Sys_init                         cinit         0678
+_SysPowerHandler                  cinit         0424
+_Sys_init                         cinit         06AD
 _T2UIE                            (abs)         1868
 _T2UIF                            (abs)         1870
 _T4UIE                            (abs)         0890
@@ -546,7 +552,7 @@ _TIM4EGR                          (abs)         0114
 _TIM4IER                          (abs)         0112
 _TIM4PSCR                         (abs)         0116
 _TIM4SR                           (abs)         0113
-_TIME_INIT                        cinit         060B
+_TIME_INIT                        cinit         068F
 _TKC0                             (abs)         038D
 _TKC1                             (abs)         038E
 _TKM016DH                         (abs)         0F95
@@ -589,23 +595,23 @@ _TRISC7                           (abs)         0477
 _TRISD                            (abs)         008F
 _TRISD5                           (abs)         047D
 _TXEF                             (abs)         2495
-_Time100Ms                        bssBANK1      00D9
-_Time10Ms                         bssBANK1      00DA
-_Time2Initial                     cinit         06A2
-_Time2Ms                          bssBANK1      00DB
-_Time4Initial                     cinit         06B0
+_Time100Ms                        bssBANK1      00DA
+_Time10Ms                         bssBANK1      00DB
+_Time2Initial                     cinit         0437
+_Time2Ms                          bssBANK1      00DC
+_Time4Initial                     cinit         06D7
 _TimeMin                          bssCOMMON     0077
-_TimeSec                          bssBANK1      00D8
-_TimeType                         bssBANK1      00DE
-_TimeUs                           bssBANK1      00DC
+_TimeSec                          bssBANK1      00D9
+_TimeType                         bssBANK1      00DF
+_TimeUs                           bssBANK1      00DD
 _TmpCnt                           bssBANK1      00C5
 _TouchInit                        cinit         0334
-_TouchInital                      cinit         06C1
+_TouchInital                      cinit         06E8
 _TouchKeyScan                     cinit         00E3
 _TouchTimeCount                   bssBANK1      00C7
 _TouchcapBuff1                    bssBANK2      0120
 _TouchcapBuff2                    bssBANK3      01A0
-_UART_INITIAL                     cinit         0722
+_UART_INITIAL                     cinit         0749
 _URDATAL                          (abs)         048C
 _URDLH                            (abs)         0495
 _URDLL                            (abs)         0494
@@ -613,8 +619,8 @@ _URIER                            (abs)         048E
 _URLCR                            (abs)         048F
 _URMCR                            (abs)         0491
 _URTE                             (abs)         2471
-_UartSetEmptyInt                  cinit         07AA
-_User_init                        cinit         05D2
+_UartSetEmptyInt                  cinit         06A4
+_User_init                        cinit         041A
 _WPDA                             (abs)         020C
 _WPDB                             (abs)         020D
 _WPDC                             (abs)         020E
@@ -667,7 +673,7 @@ __HbssBANK1                       bssBANK1      0000
 __HbssBANK2                       bssBANK2      0000
 __HbssBANK3                       bssBANK3      0000
 __HbssCOMMON                      bssCOMMON     0000
-__Hcinit                          cinit         07B3
+__Hcinit                          cinit         07C0
 __Hclrtext                        clrtext       0000
 __Hcode                           code          0000
 __Hcommon                         common        0000
@@ -846,7 +852,7 @@ __S0                              (abs)         18C1
 __S1                              (abs)         01BE
 __S2                              (abs)         0000
 __S3                              (abs)         0000
-___awdiv                          cinit         072F
+___awdiv                          cinit         0756
 ___awdiv@counter                  cstackBANK0hh 0050
 ___awdiv@dividend                 cstackBANK0hh 004E
 ___awdiv@divisor                  cstackBANK0hh 004C
@@ -854,128 +860,129 @@ ___awdiv@quotient                 cstackBANK0hh 0052
 ___awdiv@sign                     cstackBANK0hh 0051
 ___int_sp                         stack         0000
 ___latbits                        (abs)         0002
-___lbdiv                          text39        179D
+___lbdiv                          text40        179D
 ___lbdiv@counter                  cstackCOMMON  0072
 ___lbdiv@dividend                 cstackCOMMON  0071
 ___lbdiv@divisor                  cstackCOMMON  0070
 ___lbdiv@quotient                 cstackCOMMON  0073
-___lbmod                          text39        17D5
+___lbmod                          text40        17D5
 ___lbmod@counter                  cstackCOMMON  0073
 ___lbmod@dividend                 cstackCOMMON  0072
 ___lbmod@divisor                  cstackCOMMON  0070
 ___lbmod@rem                      cstackCOMMON  0074
 ___sp                             stack         0000
-___wmul                           text26        0E56
+___wmul                           text27        0E56
 ___wmul@multiplicand              cstackBANK0hh 004E
 ___wmul@multiplier                cstackBANK0hh 004C
 ___wmul@product                   cstackBANK0hh 0050
-__end_ofPL10                      cinit         0467
-__end_ofPL100                     text38        0A8D
-__end_ofPL102                     text38        0A91
-__end_ofPL104                     cinit         05BF
-__end_ofPL12                      cinit         0484
-__end_ofPL14                      cinit         04A0
-__end_ofPL16                      cinit         04CC
-__end_ofPL18                      cinit         04F6
-__end_ofPL2                       cinit         044A
-__end_ofPL20                      text26        0F1F
-__end_ofPL22                      cinit         051E
-__end_ofPL24                      text26        0F25
-__end_ofPL26                      text26        0F32
-__end_ofPL28                      text26        0F58
-__end_ofPL30                      text26        0F61
-__end_ofPL32                      text26        0F67
-__end_ofPL34                      text26        0F85
-__end_ofPL36                      cinit         0526
-__end_ofPL38                      cinit         053E
-__end_ofPL4                       text26        0EE6
-__end_ofPL40                      cinit         0546
-__end_ofPL42                      cinit         0555
-__end_ofPL44                      text26        0F8C
-__end_ofPL46                      cinit         0566
-__end_ofPL48                      cinit         0579
-__end_ofPL50                      cinit         058A
-__end_ofPL52                      text26        0F93
-__end_ofPL54                      cinit         0599
-__end_ofPL56                      text26        0FA3
-__end_ofPL58                      text26        0FB1
-__end_ofPL6                       text26        0EFC
-__end_ofPL60                      text39        17FA
-__end_ofPL62                      cinit         059E
-__end_ofPL64                      cinit         05A4
-__end_ofPL66                      text26        0FB6
-__end_ofPL68                      text26        0FC0
-__end_ofPL70                      text26        0FC9
-__end_ofPL72                      text26        0FCF
-__end_ofPL74                      text26        0FD5
-__end_ofPL76                      text26        0FDB
-__end_ofPL78                      text26        0FE1
-__end_ofPL8                       text26        0F02
-__end_ofPL80                      text26        0FE8
-__end_ofPL82                      text26        0FEF
-__end_ofPL84                      cinit         05AA
-__end_ofPL86                      cinit         05AF
-__end_ofPL88                      cinit         05B4
-__end_ofPL90                      text26        0FF5
-__end_ofPL92                      text26        0FFB
-__end_ofPL94                      text39        1800
-__end_ofPL96                      cinit         05BA
-__end_ofPL98                      text26        1000
+__end_ofPL10                      cinit         0470
+__end_ofPL100                     cinit         05C8
+__end_ofPL102                     text39        0A8D
+__end_ofPL104                     text39        0A91
+__end_ofPL12                      cinit         048D
+__end_ofPL14                      cinit         04A9
+__end_ofPL16                      cinit         04D5
+__end_ofPL18                      cinit         04FF
+__end_ofPL2                       cinit         0453
+__end_ofPL20                      text27        0F1F
+__end_ofPL22                      cinit         0527
+__end_ofPL24                      text27        0F25
+__end_ofPL26                      text27        0F32
+__end_ofPL28                      text27        0F58
+__end_ofPL30                      text27        0F61
+__end_ofPL32                      text27        0F67
+__end_ofPL34                      text27        0F85
+__end_ofPL36                      cinit         052F
+__end_ofPL38                      cinit         0537
+__end_ofPL4                       text27        0EE6
+__end_ofPL40                      cinit         054F
+__end_ofPL42                      cinit         055E
+__end_ofPL44                      text27        0F8C
+__end_ofPL46                      cinit         0571
+__end_ofPL48                      cinit         0582
+__end_ofPL50                      cinit         0593
+__end_ofPL52                      text27        0F93
+__end_ofPL54                      cinit         05A2
+__end_ofPL56                      text27        0FA3
+__end_ofPL58                      text27        0FB1
+__end_ofPL6                       text27        0EFC
+__end_ofPL60                      text40        17FA
+__end_ofPL62                      cinit         05A8
+__end_ofPL64                      cinit         05AD
+__end_ofPL66                      text27        0FB6
+__end_ofPL68                      text27        0FC0
+__end_ofPL70                      text27        0FC6
+__end_ofPL72                      text27        0FCF
+__end_ofPL74                      text27        0FD5
+__end_ofPL76                      text27        0FDB
+__end_ofPL78                      text27        0FE1
+__end_ofPL8                       text27        0F02
+__end_ofPL80                      text27        0FE8
+__end_ofPL82                      text27        0FEF
+__end_ofPL84                      text27        0FF5
+__end_ofPL86                      text40        1800
+__end_ofPL88                      cinit         05B3
+__end_ofPL90                      cinit         05B9
+__end_ofPL92                      cinit         05BE
+__end_ofPL94                      cinit         05C3
+__end_ofPL96                      text27        0FFB
+__end_ofPL98                      text27        1000
 __end_of_ACTIVE_SENSOR_DELTA      stringtext2   18B4
-__end_of_CheckRfCmd               cinit         0799
+__end_of_CheckRfCmd               cinit         07C0
 __end_of_ChkTimeEventStatus       cinit         00DE
 __end_of_DIV                      cinit         038E
-__end_of_DataProcessing           text26        0E56
-__end_of_DisplayHandler           text39        15BC
+__end_of_DataProcessing           text27        0E56
+__end_of_DisplayHandler           text40        15BC
 __end_of_Display_init             cinit         00E3
 __end_of_FWHEELSILERB             stringtext4   18BC
-__end_of_HeatKeyExec              cinit         0430
-__end_of_HighFreqCo               text26        0ECC
+__end_of_HeatKeyExec              cinit         0611
+__end_of_HighFreqCo               text27        0ECC
 __end_of_INACTIVE_SENSOR_DELTA    stringtext1   185A
 __end_of_IO_TOUCH_ATTR1           stringtext5   18BE
 __end_of_ISR                      intentry      0037
+__end_of_KeepRfData               cinit         041A
 __end_of_KeyScanHandler           cinit         03DA
 __end_of_LONGKEYPROTECT1          stringtext8   18C1
-__end_of_ManualKeyExec            cinit         0633
-__end_of_ModeKeyExec              cinit         0652
-__end_of_MxSet013                 text25        09F2
+__end_of_ManualKeyExec            cinit         0635
+__end_of_ModeKeyExec              cinit         0654
+__end_of_MxSet013                 text26        07FF
 __end_of_PRIMARYKEY11             stringtext7   18C0
-__end_of_PowerKeyExec             cinit         060B
+__end_of_PowerKeyExec             cinit         0683
 __end_of_Px_Level_Change_INITIAL  cinit         03E7
-__end_of_ReadRf433                text38        0A89
+__end_of_ReadRf433                text39        0A89
 __end_of_ReadTouchData            cinit         020E
-__end_of_RxData_Drive             cinit         0678
+__end_of_RxData_Drive             cinit         0411
 __end_of_SCANNINGTIME1            stringtext6   18BF
 __end_of_SWHEELSILERB             stringtext3   18B8
-__end_of_ShowLedData              text39        1781
-__end_of_SpecialDisplay1          text39        179D
-__end_of_SpecialDisplay2          text39        17D5
+__end_of_ShowLedData              text40        1781
+__end_of_SpecialDisplay1          text40        179D
+__end_of_SpecialDisplay2          text40        17D5
 __end_of_StartHigeFreq            cinit         0334
-__end_of_StrongKeyExec            cinit         043C
-__end_of_SysPowerHandler          cinit         05D2
-__end_of_Sys_init                 cinit         06A2
-__end_of_TIME_INIT                cinit         060F
-__end_of_Time2Initial             cinit         06B0
-__end_of_Time4Initial             cinit         06C1
+__end_of_StrongKeyExec            cinit         068F
+__end_of_SysPowerHandler          cinit         0437
+__end_of_Sys_init                 cinit         06D7
+__end_of_TIME_INIT                cinit         0693
+__end_of_Time2Initial             cinit         0445
+__end_of_Time4Initial             cinit         06E8
 __end_of_TouchInit                cinit         034D
-__end_of_TouchInital              cinit         0722
+__end_of_TouchInital              cinit         0749
 __end_of_TouchKeyScan             cinit         0129
-__end_of_UART_INITIAL             cinit         072F
-__end_of_UartSetEmptyInt          cinit         07B3
-__end_of_User_init                cinit         05DC
-__end_of___awdiv                  cinit         076F
-__end_of___lbdiv                  text39        17B5
-__end_of___lbmod                  text39        17ED
-__end_of___wmul                   text26        0E6B
+__end_of_UART_INITIAL             cinit         0756
+__end_of_UartSetEmptyInt          cinit         06AD
+__end_of_User_init                cinit         0424
+__end_of___awdiv                  cinit         0796
+__end_of___lbdiv                  text40        17B5
+__end_of___lbmod                  text40        17ED
+__end_of___wmul                   text27        0E6B
 __end_of__initialization          cinit         0085
 __end_of_ad3nop                   _ad3nop_text  0004
-__end_of_dokey                    cinit         041F
-__end_of_exact_event_process      text37        07E0
+__end_of_dokey                    cinit         0600
+__end_of_exact_event_process      text38        07ED
 __end_of_main                     cinit         00CF
-__end_of_readrf                   cinit         0782
-__end_of_refresh_data             cinit         07AA
-__end_of_send_uart_data           text35        0A0A
-__end_ofi1_UartSetEmptyInt        text35        0A13
+__end_of_readrf                   cinit         07A9
+__end_of_refresh_data             cinit         06A4
+__end_of_send_uart_data           text36        0A0A
+__end_ofi1_UartSetEmptyInt        text36        0A13
 __initialization                  cinit         0039
 __p_ad3nop_text                   _ad3nop_text  0003
 __pbitbssCOMMON                   bitbssCOMMON  03B0
@@ -987,7 +994,7 @@ __pbssBIGRAM                      (abs)         2300
 __pbssCOMMON                      bssCOMMON     0077
 __pcstackBANK0hh                  cstackBANK0hh 004C
 __pcstackCOMMON                   cstackCOMMON  0070
-__pdataBANK1                      dataBANK1     00E2
+__pdataBANK1                      dataBANK1     00E3
 __pidataBANK1                     idataBANK1    0000
 __pintentry                       intentry      0004
 __pmaintext                       cinit         0088
@@ -999,53 +1006,54 @@ __pstringtext5                    stringtext5   18BC
 __pstringtext6                    stringtext6   18BE
 __pstringtext7                    stringtext7   18BF
 __pstringtext8                    stringtext8   18C0
-__pswtext1                        swtext1       0800
-__pswtext2                        swtext2       080C
-__pswtext3                        swtext3       0818
-__pswtext4                        swtext4       07E0
-__ptext1                          cinit         076F
-__ptext10                         cinit         05D2
-__ptext11                         cinit         0652
-__ptext12                         cinit         03E7
-__ptext13                         cinit         0799
-__ptext14                         cinit         07AA
-__ptext15                         cinit         0430
-__ptext16                         cinit         05DC
-__ptext17                         cinit         060B
-__ptext18                         cinit         0633
-__ptext19                         cinit         060F
-__ptext2                          cinit         0782
-__ptext20                         cinit         041F
-__ptext21                         cinit         03DA
-__ptext22                         cinit         038E
-__ptext23                         cinit         00E3
-__ptext24                         cinit         0129
-__ptext25                         text25        09E0
-__ptext26                         text26        0A91
-__ptext27                         text26        0E56
-__ptext28                         cinit         020E
-__ptext29                         cinit         0334
-__ptext3                          cinit         072F
-__ptext30                         cinit         034D
-__ptext31                         text26        0E6B
-__ptext32                         cinit         00DE
-__ptext33                         cinit         00CF
-__ptext35                         text35        09F2
-__ptext36                         text35        0A0A
-__ptext37                         text37        07B3
-__ptext38                         text38        0A13
-__ptext39                         text39        1531
-__ptext4                          cinit         0722
-__ptext40                         text39        17B5
-__ptext41                         text39        17D5
-__ptext42                         text39        1781
-__ptext43                         text39        179D
-__ptext44                         text39        15BC
-__ptext5                          cinit         06C1
-__ptext6                          cinit         06B0
-__ptext7                          cinit         06A2
-__ptext8                          cinit         0678
-__ptext9                          cinit         05BF
+__pswtext1                        swtext1       0820
+__pswtext2                        swtext2       082C
+__pswtext3                        swtext3       0838
+__pswtext4                        swtext4       0800
+__ptext1                          cinit         0796
+__ptext10                         cinit         0600
+__ptext11                         cinit         0756
+__ptext12                         cinit         0749
+__ptext13                         cinit         06E8
+__ptext14                         cinit         06D7
+__ptext15                         cinit         0437
+__ptext16                         cinit         06AD
+__ptext17                         cinit         0424
+__ptext18                         cinit         041A
+__ptext19                         cinit         068F
+__ptext2                          cinit         07A9
+__ptext20                         cinit         03E7
+__ptext21                         cinit         0411
+__ptext22                         cinit         03DA
+__ptext23                         cinit         038E
+__ptext24                         cinit         00E3
+__ptext25                         cinit         0129
+__ptext26                         text26        07ED
+__ptext27                         text27        0A91
+__ptext28                         text27        0E56
+__ptext29                         cinit         020E
+__ptext3                          cinit         05C8
+__ptext30                         cinit         0334
+__ptext31                         cinit         034D
+__ptext32                         text27        0E6B
+__ptext33                         cinit         00DE
+__ptext34                         cinit         00CF
+__ptext36                         text36        09F2
+__ptext37                         text36        0A0A
+__ptext38                         text38        07C0
+__ptext39                         text39        0A13
+__ptext4                          cinit         0693
+__ptext40                         text40        1531
+__ptext41                         text40        17B5
+__ptext42                         text40        17D5
+__ptext43                         text40        1781
+__ptext44                         text40        179D
+__ptext45                         text40        15BC
+__ptext5                          cinit         06A4
+__ptext6                          cinit         0683
+__ptext7                          cinit         0654
+__ptext8                          cinit         0635
+__ptext9                          cinit         0611
 __size_of_CheckRfCmd              (abs)         0000
 __size_of_ChkTimeEventStatus      (abs)         0000
 __size_of_DIV                     (abs)         0000
@@ -1055,6 +1063,7 @@ __size_of_Display_init            (abs)         0000
 __size_of_HeatKeyExec             (abs)         0000
 __size_of_HighFreqCo              (abs)         0000
 __size_of_ISR                     (abs)         0000
+__size_of_KeepRfData              (abs)         0000
 __size_of_KeyScanHandler          (abs)         0000
 __size_of_ManualKeyExec           (abs)         0000
 __size_of_ModeKeyExec             (abs)         0000
@@ -1094,12 +1103,12 @@ __size_ofi1_UartSetEmptyInt       (abs)         0000
 _ad3nop                           _ad3nop_text  0003
 _ad3nop_absaddr                   (abs)         0003
 _buf_rec                          bssBANK1      00AC
-_dokey                            cinit         03E7
+_dokey                            cinit         05C8
 _dsp_100ms                        bssBANK1      00D6
-_exact_event_process              text37        07B3
+_exact_event_process              text38        07C0
 _fmd_AntiWaterBit                 bssBANK0hh    004A
-_fmd_DownDataTime                 dataBANK1     00E2
-_fmd_DownTouchCount               dataBANK1     00E6
+_fmd_DownDataTime                 dataBANK1     00E3
+_fmd_DownTouchCount               dataBANK1     00E7
 _fmd_HfreqOn                      bssBANK0hh    003C
 _fmd_KeyBuffPress                 bssBANK0hh    0042
 _fmd_KeyBuffUnPress               bssBANK0hh    0041
@@ -1122,8 +1131,8 @@ _fmd_ResultDataH                  (abs)         0029
 _fmd_Startgx                      bssBANK1      00CB
 _fmd_TestCount                    bssBANK1      00CE
 _fmd_TouchDataBuff_Key            bssBANK0hh    002B
-_fmd_UpDataTime                   dataBANK1     00E4
-_fmd_UpTouchCount                 dataBANK1     00E8
+_fmd_UpDataTime                   dataBANK1     00E5
+_fmd_UpTouchCount                 dataBANK1     00E9
 _fmd_a                            bssBANK0hh    004B
 _fmd_a1                           bssBANK0hh    0040
 _fmd_a2                           bssBANK0hh    003F
@@ -1149,15 +1158,15 @@ _fmd_updataFlag                   bssBANK0hh    003D
 _fmd_x                            bssBANK0hh    003B
 _main                             cinit         0088
 _readKeyNum                       bssBANK0hh    0039
-_readrf                           cinit         076F
-_refresh_data                     cinit         0799
+_readrf                           cinit         0796
+_refresh_data                     cinit         0693
 _send_buf                         bssBANK1      00A0
-_send_uart_data                   text35        09F2
+_send_uart_data                   text36        09F2
 btemp                             (abs)         007E
-clear_ram0                        clrtext       09D4
+clear_ram0                        clrtext       09E6
 end_of_initialization             cinit         0085
 i1UartSetEmptyInt@value           cstackCOMMON  0070
-i1_UartSetEmptyInt                text35        0A0A
+i1_UartSetEmptyInt                text36        0A0A
 int$flags                         (abs)         007E
 intlevel0                         functab       0000
 intlevel1                         functab       0000
@@ -1277,6 +1286,251 @@ Total ram usage:        1 bytes
 		Nothing
  This function is called by:
 		_readrf
+ This function uses a non-reentrant model
+
+
+ *************** function _dokey *****************
+ Defined at:
+		line 120 in file "sub.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON BANK0hh   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_HeatKeyExec
+		_ManualKeyExec
+		_ModeKeyExec
+		_PowerKeyExec
+		_StrongKeyExec
+		_refresh_data
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _refresh_data *****************
+ Defined at:
+		line 37 in file "sub.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON BANK0hh   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		_UartSetEmptyInt
+ This function is called by:
+		_dokey
+ This function uses a non-reentrant model
+
+
+ *************** function _UartSetEmptyInt *****************
+ Defined at:
+		line 44 in file "uart.c"
+ Parameters:    Size  Location     Type
+  value           1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  value           1    0[BANK0h] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON BANK0hh   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       1       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       1       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		Nothing
+ This function is called by:
+		_refresh_data
+ This function uses a non-reentrant model
+
+
+ *************** function _StrongKeyExec *****************
+ Defined at:
+		line 115 in file "main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON BANK0hh   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		Nothing
+ This function is called by:
+		_dokey
+ This function uses a non-reentrant model
+
+
+ *************** function _PowerKeyExec *****************
+ Defined at:
+		line 12 in file "main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON BANK0hh   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		_TIME_INIT
+ This function is called by:
+		_dokey
+ This function uses a non-reentrant model
+
+
+ *************** function _ModeKeyExec *****************
+ Defined at:
+		line 54 in file "main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON BANK0hh   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		Nothing
+ This function is called by:
+		_dokey
+ This function uses a non-reentrant model
+
+
+ *************** function _ManualKeyExec *****************
+ Defined at:
+		line 77 in file "main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON BANK0hh   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		Nothing
+ This function is called by:
+		_dokey
+ This function uses a non-reentrant model
+
+
+ *************** function _HeatKeyExec *****************
+ Defined at:
+		line 100 in file "main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON BANK0hh   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		Nothing
+ This function is called by:
+		_dokey
  This function uses a non-reentrant model
 
 
@@ -1524,192 +1778,6 @@ Total ram usage:        0 bytes
  This function uses a non-reentrant model
 
 
- *************** function _RxData_Drive *****************
- Defined at:
-		line 198 in file "rx.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON BANK0hh   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    7
- This function calls:
-		_dokey
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function _dokey *****************
- Defined at:
-		line 120 in file "sub.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON BANK0hh   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    6
- This function calls:
-		_HeatKeyExec
-		_ManualKeyExec
-		_ModeKeyExec
-		_PowerKeyExec
-		_StrongKeyExec
-		_refresh_data
- This function is called by:
-		_main
-		_RxData_Drive
- This function uses a non-reentrant model
-
-
- *************** function _refresh_data *****************
- Defined at:
-		line 37 in file "sub.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON BANK0hh   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    5
- This function calls:
-		_UartSetEmptyInt
- This function is called by:
-		_dokey
- This function uses a non-reentrant model
-
-
- *************** function _UartSetEmptyInt *****************
- Defined at:
-		line 44 in file "uart.c"
- Parameters:    Size  Location     Type
-  value           1    wreg     unsigned char 
- Auto vars:     Size  Location     Type
-  value           1    0[BANK0h] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON BANK0hh   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       1       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       1       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        1 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    4
- This function calls:
-		Nothing
- This function is called by:
-		_refresh_data
- This function uses a non-reentrant model
-
-
- *************** function _StrongKeyExec *****************
- Defined at:
-		line 115 in file "main.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON BANK0hh   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    4
- This function calls:
-		Nothing
- This function is called by:
-		_dokey
- This function uses a non-reentrant model
-
-
- *************** function _PowerKeyExec *****************
- Defined at:
-		line 12 in file "main.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON BANK0hh   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    5
- This function calls:
-		_TIME_INIT
- This function is called by:
-		_dokey
- This function uses a non-reentrant model
-
-
  *************** function _TIME_INIT *****************
  Defined at:
 		line 660 in file "CHIPINIT.C"
@@ -1741,9 +1809,9 @@ Total ram usage:        0 bytes
  This function uses a non-reentrant model
 
 
- *************** function _ModeKeyExec *****************
+ *************** function _RxData_Drive *****************
  Defined at:
-		line 54 in file "main.c"
+		line 198 in file "rx.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1751,7 +1819,7 @@ Total ram usage:        0 bytes
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, status,2, status,0
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -1763,17 +1831,17 @@ Total ram usage:        0 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
-		Nothing
+		_KeepRfData
  This function is called by:
-		_dokey
+		_main
  This function uses a non-reentrant model
 
 
- *************** function _ManualKeyExec *****************
+ *************** function _KeepRfData *****************
  Defined at:
-		line 77 in file "main.c"
+		line 186 in file "rx.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1797,37 +1865,7 @@ Total ram usage:        0 bytes
  This function calls:
 		Nothing
  This function is called by:
-		_dokey
- This function uses a non-reentrant model
-
-
- *************** function _HeatKeyExec *****************
- Defined at:
-		line 100 in file "main.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON BANK0hh   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    4
- This function calls:
-		Nothing
- This function is called by:
-		_dokey
+		_RxData_Drive
  This function uses a non-reentrant model
 
 
@@ -2575,32 +2613,32 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 CHIPINIT.C
-		_Time2Initial  		CODE           	06A2	0000	15
+		_Time2Initial  		CODE           	0437	0000	15
 		_ISR           		CODE           	0004	0000	52
-		_exact_event_process		CODE           	07B3	0000	46
-		_UART_INITIAL  		CODE           	0722	0000	14
-		_Time4Initial  		CODE           	06B0	0000	18
+		_exact_event_process		CODE           	07C0	0000	46
+		_UART_INITIAL  		CODE           	0749	0000	14
+		_Time4Initial  		CODE           	06D7	0000	18
 		_Px_Level_Change_INITIAL		CODE           	03DA	0000	14
-		_User_init     		CODE           	05D2	0000	11
-		_Sys_init      		CODE           	0678	0000	43
+		_User_init     		CODE           	041A	0000	11
+		_Sys_init      		CODE           	06AD	0000	43
 		_Display_init  		CODE           	00DE	0000	6
-		_TIME_INIT     		CODE           	060B	0000	5
+		_TIME_INIT     		CODE           	068F	0000	5
 
 CHIPINIT.C estimated size: 224
 
 uart.c
-		_UartSetEmptyInt		CODE           	07AA	0000	10
+		_UartSetEmptyInt		CODE           	06A4	0000	10
 		_send_uart_data		CODE           	09F2	0000	25
 
 uart.c estimated size: 35
 
 sub.c
 		_DisplayHandler		CODE           	1531	0000	140
-		_refresh_data  		CODE           	0799	0000	18
+		_refresh_data  		CODE           	0693	0000	18
 		_SpecialDisplay1		CODE           	1781	0000	29
 		_SpecialDisplay2		CODE           	17B5	0000	33
-		_SysPowerHandler		CODE           	05BF	0000	20
-		_dokey         		CODE           	03E7	0000	57
+		_SysPowerHandler		CODE           	0424	0000	20
+		_dokey         		CODE           	05C8	0000	57
 		_KeyScanHandler		CODE           	038E	0000	77
 		_ChkTimeEventStatus		CODE           	00CF	0000	16
 		_ShowLedData   		CODE           	15BC	0000	454
@@ -2608,7 +2646,7 @@ sub.c
 sub.c estimated size: 844
 
 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
-		___awdiv       		CODE           	072F	0000	65
+		___awdiv       		CODE           	0756	0000	65
 
 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c estimated size: 65
 
@@ -2629,76 +2667,76 @@ TOUCH.C
 		_HighFreqCo    		CODE           	0E6B	0000	98
 		_StartHigeFreq 		CODE           	020E	0000	295
 		_TouchInit     		CODE           	0334	0000	26
-		_TouchInital   		CODE           	06C1	0000	98
+		_TouchInital   		CODE           	06E8	0000	98
 		_DataProcessing		CODE           	0A91	0000	966
-		_MxSet013      		CODE           	09E0	0000	19
+		_MxSet013      		CODE           	07ED	0000	19
 
 TOUCH.C estimated size: 1869
 
 shared
-		PL12           		CODE           	0467	0000	30
-		PL50           		CODE           	0579	0000	18
+		PL12           		CODE           	0470	0000	30
+		PL50           		CODE           	0582	0000	18
 		PL8            		CODE           	0EFC	0000	7
 		_SWHEELSILERB  		STRCODE        	18B4	0000	5
-		PL22           		CODE           	04F6	0000	41
+		PL22           		CODE           	04FF	0000	41
 		PL60           		CODE           	17ED	0000	14
-		PL100          		CODE           	0A89	0000	5
+		PL100          		CODE           	05C3	0000	6
 		PL32           		CODE           	0F61	0000	7
-		PL70           		CODE           	0FC0	0000	10
-		PL42           		CODE           	0546	0000	16
+		PL70           		CODE           	0FC0	0000	7
+		PL42           		CODE           	054F	0000	16
 		PL80           		CODE           	0FE1	0000	8
-		PL14           		CODE           	0484	0000	29
+		PL14           		CODE           	048D	0000	29
 		PL52           		CODE           	0F8C	0000	8
-		PL90           		CODE           	0FEF	0000	7
+		PL90           		CODE           	05B3	0000	7
 		_PRIMARYKEY11  		STRCODE        	0000	0000	0
 		PL24           		CODE           	0F1F	0000	7
-		PL62           		CODE           	0599	0000	6
+		PL62           		CODE           	05A2	0000	7
 		PL34           		CODE           	0F67	0000	31
-		PL72           		CODE           	0FC9	0000	7
+		PL72           		CODE           	0FC6	0000	10
 		PL44           		CODE           	0F85	0000	8
 		PL82           		CODE           	0FE8	0000	8
 		_SCANNINGTIME1 		STRCODE        	0000	0000	0
-		PL16           		CODE           	04A0	0000	45
-		PL54           		CODE           	058A	0000	16
-		PL92           		CODE           	0FF5	0000	7
+		PL16           		CODE           	04A9	0000	45
+		PL54           		CODE           	0593	0000	16
+		PL92           		CODE           	05B9	0000	6
 		_ACTIVE_SENSOR_DELTA		STRCODE        	185A	0000	91
 		PL26           		CODE           	0F25	0000	14
-		PL64           		CODE           	059E	0000	7
-		PL102          		CODE           	0A8D	0000	5
-		PL36           		CODE           	051E	0000	9
+		PL64           		CODE           	05A8	0000	6
+		PL102          		CODE           	0A89	0000	5
+		PL36           		CODE           	0527	0000	9
 		PL74           		CODE           	0FCF	0000	7
-		PL46           		CODE           	0555	0000	18
-		PL84           		CODE           	05A4	0000	7
+		PL46           		CODE           	055E	0000	20
+		PL84           		CODE           	0FEF	0000	7
 		_LONGKEYPROTECT1		STRCODE        	0000	0000	0
-		PL18           		CODE           	04CC	0000	43
+		PL18           		CODE           	04D5	0000	43
 		PL56           		CODE           	0F93	0000	17
-		PL94           		CODE           	17FA	0000	7
+		PL94           		CODE           	05BE	0000	6
 		PL28           		CODE           	0F32	0000	39
 		PL66           		CODE           	0FB1	0000	6
-		PL38           		CODE           	0526	0000	25
+		PL38           		CODE           	052F	0000	9
 		PL76           		CODE           	0FD5	0000	7
-		PL48           		CODE           	0566	0000	20
-		PL86           		CODE           	05AA	0000	6
+		PL48           		CODE           	0571	0000	18
+		PL86           		CODE           	17FA	0000	7
 		PL58           		CODE           	0FA3	0000	15
-		PL96           		CODE           	05B4	0000	7
+		PL96           		CODE           	0FF5	0000	7
 		PL68           		CODE           	0FB6	0000	11
-		PL104          		CODE           	05BA	0000	6
+		PL104          		CODE           	0A8D	0000	5
 		PL78           		CODE           	0FDB	0000	7
-		PL88           		CODE           	05AF	0000	6
+		PL88           		CODE           	05AD	0000	7
 		PL98           		CODE           	0FFB	0000	6
 		__initialization		CODE           	0039	0000	77
 		_ad3nop        		CODE           	0003	0000	2
 		_INACTIVE_SENSOR_DELTA		STRCODE        	1800	0000	91
 		i1_UartSetEmptyInt		CODE           	0A0A	0000	10
-		PL2            		CODE           	043C	0000	15
+		PL2            		CODE           	0445	0000	15
 		_FWHEELSILERB  		STRCODE        	18B8	0000	5
-		PL10           		CODE           	044A	0000	30
+		PL10           		CODE           	0453	0000	30
 		PL4            		CODE           	0ECC	0000	27
 		PL20           		CODE           	0F02	0000	30
 		_IO_TOUCH_ATTR1		STRCODE        	0000	0000	0
 		PL30           		CODE           	0F58	0000	10
 		PL6            		CODE           	0EE6	0000	23
-		PL40           		CODE           	053E	0000	9
+		PL40           		CODE           	0537	0000	25
 
 shared estimated size: 1055
 
@@ -2708,20 +2746,21 @@ D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\
 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\lbdiv.c estimated size: 25
 
 rx.c
-		_RxData_Drive  		CODE           	0652	0000	39
-		_CheckRfCmd    		CODE           	0782	0000	24
+		_KeepRfData    		CODE           	0411	0000	10
+		_RxData_Drive  		CODE           	03E7	0000	43
+		_CheckRfCmd    		CODE           	07A9	0000	24
 		_ReadRf433     		CODE           	0A13	0000	119
-		_readrf        		CODE           	076F	0000	20
+		_readrf        		CODE           	0796	0000	20
 
-rx.c estimated size: 202
+rx.c estimated size: 216
 
 main.c
-		_PowerKeyExec  		CODE           	05DC	0000	48
-		_HeatKeyExec   		CODE           	041F	0000	18
-		_ModeKeyExec   		CODE           	0633	0000	32
+		_PowerKeyExec  		CODE           	0654	0000	48
+		_HeatKeyExec   		CODE           	0600	0000	18
+		_ModeKeyExec   		CODE           	0635	0000	32
 		_main          		CODE           	0088	0000	72
-		_ManualKeyExec 		CODE           	060F	0000	37
-		_StrongKeyExec 		CODE           	0430	0000	13
+		_ManualKeyExec 		CODE           	0611	0000	37
+		_StrongKeyExec 		CODE           	0683	0000	13
 
 main.c estimated size: 220
 

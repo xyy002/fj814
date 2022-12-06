@@ -164,17 +164,10 @@ void main(void)
 	SetBuzzer();
 	//RGBSwitchStautus(off);
 	while(1)
-<<<<<<< HEAD
 	{ 
 		// CLRWDT();
 		readrf();
 		// send_uart_data();	
-=======
-	{  
-		CLRWDT();
-		Rx_Drive();	
-		send_uart_data();	
->>>>>>> bf8e9d1cd41337a9688845d19e67c8191a1829b5
 		  if(TouchTimeCount>=(1000/SCANNINGTIME/(fmd_channels+1)))  	//°´¼üÉ¨ÃèÆµÂÊ
         {
             TouchTimeCount=0;
@@ -190,10 +183,7 @@ void main(void)
 		{
 			t10msFlag=0;
 			//PA7=~PA7;
-<<<<<<< HEAD
 			
-=======
->>>>>>> bf8e9d1cd41337a9688845d19e67c8191a1829b5
 			KeyScanHandler(); 
 			dokey();
 			SysPowerHandler(); 
