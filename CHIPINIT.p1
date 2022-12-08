@@ -1052,12 +1052,12 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [v _SysFunFlg2 `S344 ~T0 @X0 0 e ]
 "176
 [v _KeyType `uc ~T0 @X0 0 e ]
-"675 CHIPINIT.C
+"676 CHIPINIT.C
 [c E3610 0 1 2 3 4 5 6 7 8 .. ]
 [n E3610 . NullKey PowerKey ModeKey SizeKey HeatKey StrongKey ManualKey TimeKey TestKey  ]
 "181 sub.h
 [v _DspIndex `uc ~T0 @X0 0 e ]
-"676 CHIPINIT.C
+"677 CHIPINIT.C
 [c E3603 0 1 2 3 4 5 .. ]
 [n E3603 . DsSty DsMode DsStrong DsHeat DsManual DsTime  ]
 [; ;common.h: 13: void DisplayInitial(void);
@@ -6911,621 +6911,621 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [; ;CHIPINIT.C: 58: exact_event_process();
 "58
 [e ( _exact_event_process ..  ]
-"59
+"60
 }
 [e :U 357 ]
-[; ;CHIPINIT.C: 59: }
-[; ;CHIPINIT.C: 62: if(T4UIE && T4UIF)
-"62
-[e $ ! && _T4UIE _T4UIF 358  ]
-[; ;CHIPINIT.C: 63: {
+[; ;CHIPINIT.C: 60: }
+[; ;CHIPINIT.C: 63: if(T4UIE && T4UIF)
 "63
-{
-[; ;CHIPINIT.C: 64: T4UIF = 1;
+[e $ ! && _T4UIE _T4UIF 358  ]
+[; ;CHIPINIT.C: 64: {
 "64
+{
+[; ;CHIPINIT.C: 65: T4UIF = 1;
+"65
 [e = _T4UIF -> -> 1 `i `b ]
-[; ;CHIPINIT.C: 66: DisplayHandler();
-"66
+[; ;CHIPINIT.C: 67: DisplayHandler();
+"67
 [e ( _DisplayHandler ..  ]
-[; ;CHIPINIT.C: 68: if(BuzzerCnt)
-"68
-[e $ ! != _BuzzerCnt -> -> 0 `i `ui 359  ]
-[; ;CHIPINIT.C: 69: {
+[; ;CHIPINIT.C: 69: if(BuzzerCnt)
 "69
-{
-[; ;CHIPINIT.C: 70: PB5=~PB5;
+[e $ ! != _BuzzerCnt -> -> 0 `i `ui 359  ]
+[; ;CHIPINIT.C: 70: {
 "70
-[e = _PB5 -> ~ -> _PB5 `ui `b ]
-[; ;CHIPINIT.C: 71: BuzzerCnt--;
-"71
-[e -- _BuzzerCnt -> -> 1 `i `ui ]
-[; ;CHIPINIT.C: 72: if(BuzzerCnt==0)
-"72
-[e $ ! == _BuzzerCnt -> -> 0 `i `ui 360  ]
-[; ;CHIPINIT.C: 73: {
-"73
 {
-[; ;CHIPINIT.C: 74: PB5=0;
+[; ;CHIPINIT.C: 71: PB5=~PB5;
+"71
+[e = _PB5 -> ~ -> _PB5 `ui `b ]
+[; ;CHIPINIT.C: 72: BuzzerCnt--;
+"72
+[e -- _BuzzerCnt -> -> 1 `i `ui ]
+[; ;CHIPINIT.C: 73: if(BuzzerCnt==0)
+"73
+[e $ ! == _BuzzerCnt -> -> 0 `i `ui 360  ]
+[; ;CHIPINIT.C: 74: {
 "74
-[e = _PB5 -> -> 0 `i `b ]
+{
+[; ;CHIPINIT.C: 75: PB5=0;
 "75
-}
-[e :U 360 ]
+[e = _PB5 -> -> 0 `i `b ]
 "76
 }
-[e :U 359 ]
+[e :U 360 ]
 "77
 }
+[e :U 359 ]
+"78
+}
 [e :U 358 ]
-[; ;CHIPINIT.C: 75: }
 [; ;CHIPINIT.C: 76: }
 [; ;CHIPINIT.C: 77: }
-[; ;CHIPINIT.C: 78: if(URTE && TXEF)
-"78
-[e $ ! && _URTE _TXEF 361  ]
-[; ;CHIPINIT.C: 79: {
+[; ;CHIPINIT.C: 78: }
+[; ;CHIPINIT.C: 79: if(URTE && TXEF)
 "79
-{
-[; ;CHIPINIT.C: 80: send_uart_data();
+[e $ ! && _URTE _TXEF 361  ]
+[; ;CHIPINIT.C: 80: {
 "80
-[e ( _send_uart_data ..  ]
+{
+[; ;CHIPINIT.C: 81: send_uart_data();
 "81
+[e ( _send_uart_data ..  ]
+"82
 }
 [e :U 361 ]
-[; ;CHIPINIT.C: 81: }
-[; ;CHIPINIT.C: 82: if(EPIF0&0x10)
-"82
-[e $ ! != & -> _EPIF0 `i -> 16 `i -> 0 `i 362  ]
-[; ;CHIPINIT.C: 83: {
+[; ;CHIPINIT.C: 82: }
+[; ;CHIPINIT.C: 83: if(EPIF0&0x10)
 "83
-{
-[; ;CHIPINIT.C: 84: EPIF0|=0x10;
+[e $ ! != & -> _EPIF0 `i -> 16 `i -> 0 `i 362  ]
+[; ;CHIPINIT.C: 84: {
 "84
-[e =| _EPIF0 -> -> 16 `i `uc ]
+{
+[; ;CHIPINIT.C: 85: EPIF0|=0x10;
 "85
+[e =| _EPIF0 -> -> 16 `i `uc ]
+"86
 }
 [e :U 362 ]
-[; ;CHIPINIT.C: 85: }
 [; ;CHIPINIT.C: 86: }
-"86
+[; ;CHIPINIT.C: 87: }
+"87
 [e :UE 356 ]
 }
-"88
-[v _Sys_init `(v ~T0 @X0 1 ef ]
 "89
+[v _Sys_init `(v ~T0 @X0 1 ef ]
+"90
 {
-[; ;CHIPINIT.C: 88: void Sys_init()
-[; ;CHIPINIT.C: 89: {
+[; ;CHIPINIT.C: 89: void Sys_init()
+[; ;CHIPINIT.C: 90: {
 [e :U _Sys_init ]
 [f ]
-[; ;CHIPINIT.C: 91: OSCCON = 0B01100001;
-"91
+[; ;CHIPINIT.C: 92: OSCCON = 0B01100001;
+"92
 [e = _OSCCON -> -> 97 `i `uc ]
-[; ;CHIPINIT.C: 102: INTCON = 0B00000000;
-"102
+[; ;CHIPINIT.C: 103: INTCON = 0B00000000;
+"103
 [e = _INTCON -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 104: PORTA = 0B00000000;
-"104
-[e = _PORTA -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 105: TRISA = 0B00000000;
+[; ;CHIPINIT.C: 105: PORTA = 0B00000000;
 "105
-[e = _TRISA -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 106: PORTB = 0B00000000;
+[e = _PORTA -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 106: TRISA = 0B00000000;
 "106
-[e = _PORTB -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 107: TRISB = 0B00010000;
+[e = _TRISA -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 107: PORTB = 0B00000000;
 "107
-[e = _TRISB -> -> 16 `i `uc ]
-[; ;CHIPINIT.C: 108: PORTC = 0B00000000;
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 108: TRISB = 0B00010000;
 "108
-[e = _PORTC -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 109: TRISC = 0B00000000;
+[e = _TRISB -> -> 16 `i `uc ]
+[; ;CHIPINIT.C: 109: PORTC = 0B00000000;
 "109
-[e = _TRISC -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 110: PORTD = 0B00000000;
+[e = _PORTC -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 110: TRISC = 0B00000000;
 "110
-[e = _PORTD -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 111: TRISD = 0B00000000;
+[e = _TRISC -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 111: PORTD = 0B00000000;
 "111
+[e = _PORTD -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 112: TRISD = 0B00000000;
+"112
 [e = _TRISD -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 113: WPUA = 0B00000000;
-"113
-[e = _WPUA -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 114: WPUB = 0B00010000;
+[; ;CHIPINIT.C: 114: WPUA = 0B00000000;
 "114
-[e = _WPUB -> -> 16 `i `uc ]
-[; ;CHIPINIT.C: 115: WPUC = 0B00000000;
+[e = _WPUA -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 115: WPUB = 0B00010000;
 "115
-[e = _WPUC -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 116: WPUD = 0B00000000;
+[e = _WPUB -> -> 16 `i `uc ]
+[; ;CHIPINIT.C: 116: WPUC = 0B00000000;
 "116
+[e = _WPUC -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 117: WPUD = 0B00000000;
+"117
 [e = _WPUD -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 118: WPDA = 0B00000000;
-"118
-[e = _WPDA -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 119: WPDB = 0B00000000;
+[; ;CHIPINIT.C: 119: WPDA = 0B00000000;
 "119
-[e = _WPDB -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 120: WPDC = 0B00000000;
+[e = _WPDA -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 120: WPDB = 0B00000000;
 "120
-[e = _WPDC -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 121: WPDD = 0B00000000;
+[e = _WPDB -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 121: WPDC = 0B00000000;
 "121
+[e = _WPDC -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 122: WPDD = 0B00000000;
+"122
 [e = _WPDD -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 123: PSRC0 = 0B11111111;
-"123
+[; ;CHIPINIT.C: 124: PSRC0 = 0B11111111;
+"124
 [e = _PSRC0 -> -> 255 `i `uc ]
-[; ;CHIPINIT.C: 127: PSRC1 = 0B11111111;
-"127
+[; ;CHIPINIT.C: 128: PSRC1 = 0B11111111;
+"128
 [e = _PSRC1 -> -> 255 `i `uc ]
-[; ;CHIPINIT.C: 131: PSINK0 = 0B11111111;
-"131
-[e = _PSINK0 -> -> 255 `i `uc ]
-[; ;CHIPINIT.C: 132: PSINK1 = 0B11111111;
+[; ;CHIPINIT.C: 132: PSINK0 = 0B11111111;
 "132
-[e = _PSINK1 -> -> 255 `i `uc ]
-[; ;CHIPINIT.C: 133: PSINK2 = 0B11111111;
+[e = _PSINK0 -> -> 255 `i `uc ]
+[; ;CHIPINIT.C: 133: PSINK1 = 0B11111111;
 "133
-[e = _PSINK2 -> -> 255 `i `uc ]
-[; ;CHIPINIT.C: 134: PSINK3 = 0B11111111;
+[e = _PSINK1 -> -> 255 `i `uc ]
+[; ;CHIPINIT.C: 134: PSINK2 = 0B11111111;
 "134
+[e = _PSINK2 -> -> 255 `i `uc ]
+[; ;CHIPINIT.C: 135: PSINK3 = 0B11111111;
+"135
 [e = _PSINK3 -> -> 255 `i `uc ]
-[; ;CHIPINIT.C: 136: ANSELA = 0B00000000;
-"136
+[; ;CHIPINIT.C: 137: ANSELA = 0B00000000;
+"137
 [e = _ANSELA -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 141: }
-"141
+[; ;CHIPINIT.C: 142: }
+"142
 [e :UE 363 ]
 }
-"149
-[v _Time1Initial `(v ~T0 @X0 1 ef ]
 "150
+[v _Time1Initial `(v ~T0 @X0 1 ef ]
+"151
 {
-[; ;CHIPINIT.C: 149: void Time1Initial(void)
-[; ;CHIPINIT.C: 150: {
+[; ;CHIPINIT.C: 150: void Time1Initial(void)
+[; ;CHIPINIT.C: 151: {
 [e :U _Time1Initial ]
 [f ]
-[; ;CHIPINIT.C: 152: CKOCON=0B00100000;
-"152
-[e = _CKOCON -> -> 32 `i `uc ]
-[; ;CHIPINIT.C: 153: TCKSRC=0B00000001;
+[; ;CHIPINIT.C: 153: CKOCON=0B00100000;
 "153
+[e = _CKOCON -> -> 32 `i `uc ]
+[; ;CHIPINIT.C: 154: TCKSRC=0B00000001;
+"154
 [e = _TCKSRC -> -> 1 `i `uc ]
-[; ;CHIPINIT.C: 179: TIM1CR1 =0B10000101;
-"179
+[; ;CHIPINIT.C: 180: TIM1CR1 =0B10000101;
+"180
 [e = _TIM1CR1 -> -> 133 `i `uc ]
-[; ;CHIPINIT.C: 212: TIM1SMCR=0B00000000;
-"212
+[; ;CHIPINIT.C: 213: TIM1SMCR=0B00000000;
+"213
 [e = _TIM1SMCR -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 241: TIM1IER =0B00000000;
-"241
+[; ;CHIPINIT.C: 242: TIM1IER =0B00000000;
+"242
 [e = _TIM1IER -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 267: TIM1SR1 =0B00000000;
-"267
+[; ;CHIPINIT.C: 268: TIM1SR1 =0B00000000;
+"268
 [e = _TIM1SR1 -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 299: TIM1SR2 =0B00000000;
-"299
+[; ;CHIPINIT.C: 300: TIM1SR2 =0B00000000;
+"300
 [e = _TIM1SR2 -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 301: TIM1EGR =0B00000000;
-"301
+[; ;CHIPINIT.C: 302: TIM1EGR =0B00000000;
+"302
 [e = _TIM1EGR -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 330: TIM1CCMR1 =0B00000000;
-"330
+[; ;CHIPINIT.C: 331: TIM1CCMR1 =0B00000000;
+"331
 [e = _TIM1CCMR1 -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 365: TIM1CCMR2 =0B00000000;
-"365
-[e = _TIM1CCMR2 -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 366: TIM1CCMR3 =0B00000000;
+[; ;CHIPINIT.C: 366: TIM1CCMR2 =0B00000000;
 "366
-[e = _TIM1CCMR3 -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 367: TIM1CCMR4 =0B00000000;
+[e = _TIM1CCMR2 -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 367: TIM1CCMR3 =0B00000000;
 "367
+[e = _TIM1CCMR3 -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 368: TIM1CCMR4 =0B00000000;
+"368
 [e = _TIM1CCMR4 -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 370: TIM1CCER1 =0B00000000;
-"370
+[; ;CHIPINIT.C: 371: TIM1CCER1 =0B00000000;
+"371
 [e = _TIM1CCER1 -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 410: TIM1CCER2 =0B00000000;
-"410
+[; ;CHIPINIT.C: 411: TIM1CCER2 =0B00000000;
+"411
 [e = _TIM1CCER2 -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 412: TIM1CNTRH =0B00000000;
-"412
-[e = _TIM1CNTRH -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 413: TIM1CNTRL =0B00000000;
+[; ;CHIPINIT.C: 413: TIM1CNTRH =0B00000000;
 "413
+[e = _TIM1CNTRH -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 414: TIM1CNTRL =0B00000000;
+"414
 [e = _TIM1CNTRL -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 415: TIM1PSCRH =0B00000000;
-"415
-[e = _TIM1PSCRH -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 416: TIM1PSCRL =0B00000000;
+[; ;CHIPINIT.C: 416: TIM1PSCRH =0B00000000;
 "416
+[e = _TIM1PSCRH -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 417: TIM1PSCRL =0B00000000;
+"417
 [e = _TIM1PSCRL -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 418: TIM1ARRH =0x03;
-"418
-[e = _TIM1ARRH -> -> 3 `i `uc ]
-[; ;CHIPINIT.C: 419: TIM1ARRL =0;
+[; ;CHIPINIT.C: 419: TIM1ARRH =0x03;
 "419
+[e = _TIM1ARRH -> -> 3 `i `uc ]
+[; ;CHIPINIT.C: 420: TIM1ARRL =0;
+"420
 [e = _TIM1ARRL -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 421: TIM1RCR =0B00001111;
-"421
+[; ;CHIPINIT.C: 422: TIM1RCR =0B00001111;
+"422
 [e = _TIM1RCR -> -> 15 `i `uc ]
-[; ;CHIPINIT.C: 432: TIM1CCR4H =0B00000000;
-"432
-[e = _TIM1CCR4H -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 433: TIM1CCR4L =0B00000000;
+[; ;CHIPINIT.C: 433: TIM1CCR4H =0B00000000;
 "433
+[e = _TIM1CCR4H -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 434: TIM1CCR4L =0B00000000;
+"434
 [e = _TIM1CCR4L -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 435: TIM1BKR =0B11000000;
-"435
-[e = _TIM1BKR -> -> 192 `i `uc ]
-[; ;CHIPINIT.C: 436: TIM1DTR =0B00000111;
+[; ;CHIPINIT.C: 436: TIM1BKR =0B11000000;
 "436
+[e = _TIM1BKR -> -> 192 `i `uc ]
+[; ;CHIPINIT.C: 437: TIM1DTR =0B00000111;
+"437
 [e = _TIM1DTR -> -> 7 `i `uc ]
-[; ;CHIPINIT.C: 443: TIM1OISR =0B00000000;
-"443
+[; ;CHIPINIT.C: 444: TIM1OISR =0B00000000;
+"444
 [e = _TIM1OISR -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 453: LEBCON =0B00000000;
-"453
+[; ;CHIPINIT.C: 454: LEBCON =0B00000000;
+"454
 [e = _LEBCON -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 470: }
-"470
+[; ;CHIPINIT.C: 471: }
+"471
 [e :UE 364 ]
 }
-"479
-[v _Time2Initial `(v ~T0 @X0 1 ef ]
 "480
+[v _Time2Initial `(v ~T0 @X0 1 ef ]
+"481
 {
-[; ;CHIPINIT.C: 479: void Time2Initial(void)
-[; ;CHIPINIT.C: 480: {
+[; ;CHIPINIT.C: 480: void Time2Initial(void)
+[; ;CHIPINIT.C: 481: {
 [e :U _Time2Initial ]
 [f ]
-[; ;CHIPINIT.C: 481: PCKEN |=0B00000100;
-"481
-[e =| _PCKEN -> -> 4 `i `uc ]
-[; ;CHIPINIT.C: 482: CKOCON=0B00100000;
+[; ;CHIPINIT.C: 482: PCKEN |=0B00000100;
 "482
-[e = _CKOCON -> -> 32 `i `uc ]
-[; ;CHIPINIT.C: 483: TCKSRC|=0B00010000;
+[e =| _PCKEN -> -> 4 `i `uc ]
+[; ;CHIPINIT.C: 483: CKOCON=0B00100000;
 "483
-[e =| _TCKSRC -> -> 16 `i `uc ]
-[; ;CHIPINIT.C: 484: TIM2CR1 =0B10000101;
+[e = _CKOCON -> -> 32 `i `uc ]
+[; ;CHIPINIT.C: 484: TCKSRC|=0B00010000;
 "484
-[e = _TIM2CR1 -> -> 133 `i `uc ]
-[; ;CHIPINIT.C: 485: TIM2IER =0B00000001;
+[e =| _TCKSRC -> -> 16 `i `uc ]
+[; ;CHIPINIT.C: 485: TIM2CR1 =0B10000101;
 "485
+[e = _TIM2CR1 -> -> 133 `i `uc ]
+[; ;CHIPINIT.C: 486: TIM2IER =0B00000001;
+"486
 [e = _TIM2IER -> -> 1 `i `uc ]
-[; ;CHIPINIT.C: 488: TIM2ARRH =0x06;
-"488
-[e = _TIM2ARRH -> -> 6 `i `uc ]
-[; ;CHIPINIT.C: 489: TIM2ARRL =0x40;
+[; ;CHIPINIT.C: 489: TIM2ARRH =0x06;
 "489
+[e = _TIM2ARRH -> -> 6 `i `uc ]
+[; ;CHIPINIT.C: 490: TIM2ARRL =0x40;
+"490
 [e = _TIM2ARRL -> -> 64 `i `uc ]
-[; ;CHIPINIT.C: 491: }
-"491
+[; ;CHIPINIT.C: 492: }
+"492
 [e :UE 365 ]
 }
-"499
-[v _Time4Initial `(v ~T0 @X0 1 ef ]
 "500
+[v _Time4Initial `(v ~T0 @X0 1 ef ]
+"501
 {
-[; ;CHIPINIT.C: 499: void Time4Initial(void)
-[; ;CHIPINIT.C: 500: {
+[; ;CHIPINIT.C: 500: void Time4Initial(void)
+[; ;CHIPINIT.C: 501: {
 [e :U _Time4Initial ]
 [f ]
-[; ;CHIPINIT.C: 501: PCKEN |=0B00001000;
-"501
+[; ;CHIPINIT.C: 502: PCKEN |=0B00001000;
+"502
 [e =| _PCKEN -> -> 8 `i `uc ]
-[; ;CHIPINIT.C: 505: TIM4CR1 =0B00000101;
-"505
+[; ;CHIPINIT.C: 506: TIM4CR1 =0B00000101;
+"506
 [e = _TIM4CR1 -> -> 5 `i `uc ]
-[; ;CHIPINIT.C: 536: TIM4IER =0B00000001;
-"536
+[; ;CHIPINIT.C: 537: TIM4IER =0B00000001;
+"537
 [e = _TIM4IER -> -> 1 `i `uc ]
-[; ;CHIPINIT.C: 539: TIM4SR =0B00000000;
-"539
+[; ;CHIPINIT.C: 540: TIM4SR =0B00000000;
+"540
 [e = _TIM4SR -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 548: TIM4EGR =0B00000000;
-"548
+[; ;CHIPINIT.C: 549: TIM4EGR =0B00000000;
+"549
 [e = _TIM4EGR -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 553: TIM4CNTR=0;
-"553
+[; ;CHIPINIT.C: 554: TIM4CNTR=0;
+"554
 [e = _TIM4CNTR -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 555: TIM4PSCR=0B00000110;
-"555
+[; ;CHIPINIT.C: 556: TIM4PSCR=0B00000110;
+"556
 [e = _TIM4PSCR -> -> 6 `i `uc ]
-[; ;CHIPINIT.C: 559: TIM4ARR =124;
-"559
-[e = _TIM4ARR -> -> 124 `i `uc ]
-[; ;CHIPINIT.C: 560: TIM4ARR =22;
+[; ;CHIPINIT.C: 560: TIM4ARR =124;
 "560
-[e = _TIM4ARR -> -> 22 `i `uc ]
-[; ;CHIPINIT.C: 565: }
-"565
+[e = _TIM4ARR -> -> 124 `i `uc ]
+[; ;CHIPINIT.C: 561: TIM4ARR =24;
+"561
+[e = _TIM4ARR -> -> 24 `i `uc ]
+[; ;CHIPINIT.C: 566: }
+"566
 [e :UE 366 ]
 }
-"574
-[v _Px_Level_Change_INITIAL `(v ~T0 @X0 1 ef ]
 "575
+[v _Px_Level_Change_INITIAL `(v ~T0 @X0 1 ef ]
+"576
 {
-[; ;CHIPINIT.C: 574: void Px_Level_Change_INITIAL(void)
-[; ;CHIPINIT.C: 575: {
+[; ;CHIPINIT.C: 575: void Px_Level_Change_INITIAL(void)
+[; ;CHIPINIT.C: 576: {
 [e :U _Px_Level_Change_INITIAL ]
 [f ]
-[; ;CHIPINIT.C: 576: EPS0=0B00000000;
-"576
+[; ;CHIPINIT.C: 577: EPS0=0B00000000;
+"577
 [e = _EPS0 -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 578: EPS1=0B00000001;
-"578
+[; ;CHIPINIT.C: 579: EPS1=0B00000001;
+"579
 [e = _EPS1 -> -> 1 `i `uc ]
-[; ;CHIPINIT.C: 580: ITYPE0 = 0B00000000;
-"580
-[e = _ITYPE0 -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 581: ITYPE1 = 0B11000000;
+[; ;CHIPINIT.C: 581: ITYPE0 = 0B00000000;
 "581
-[e = _ITYPE1 -> -> 192 `i `uc ]
-[; ;CHIPINIT.C: 582: EPIE0 = 0B00010000;
+[e = _ITYPE0 -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 582: ITYPE1 = 0B11000000;
 "582
-[e = _EPIE0 -> -> 16 `i `uc ]
-[; ;CHIPINIT.C: 583: INTCON = 0B01000000;
+[e = _ITYPE1 -> -> 192 `i `uc ]
+[; ;CHIPINIT.C: 583: EPIE0 = 0B00010000;
 "583
-[e = _INTCON -> -> 64 `i `uc ]
-[; ;CHIPINIT.C: 584: }
+[e = _EPIE0 -> -> 16 `i `uc ]
+[; ;CHIPINIT.C: 584: INTCON = 0B01000000;
 "584
+[e = _INTCON -> -> 64 `i `uc ]
+[; ;CHIPINIT.C: 585: }
+"585
 [e :UE 367 ]
 }
-"592
-[v _UART_INITIAL `(v ~T0 @X0 1 ef ]
 "593
+[v _UART_INITIAL `(v ~T0 @X0 1 ef ]
+"594
 {
-[; ;CHIPINIT.C: 592: void UART_INITIAL(void)
-[; ;CHIPINIT.C: 593: {
+[; ;CHIPINIT.C: 593: void UART_INITIAL(void)
+[; ;CHIPINIT.C: 594: {
 [e :U _UART_INITIAL ]
 [f ]
-[; ;CHIPINIT.C: 594: PCKEN |=0B00100000;
-"594
+[; ;CHIPINIT.C: 595: PCKEN |=0B00100000;
+"595
 [e =| _PCKEN -> -> 32 `i `uc ]
-[; ;CHIPINIT.C: 596: URIER =0B00000000;
-"596
-[e = _URIER -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 597: URLCR =0B00000001;
+[; ;CHIPINIT.C: 597: URIER =0B00000000;
 "597
-[e = _URLCR -> -> 1 `i `uc ]
-[; ;CHIPINIT.C: 598: URMCR =0B00011000;
+[e = _URIER -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 598: URLCR =0B00000001;
 "598
+[e = _URLCR -> -> 1 `i `uc ]
+[; ;CHIPINIT.C: 599: URMCR =0B00011000;
+"599
 [e = _URMCR -> -> 24 `i `uc ]
-[; ;CHIPINIT.C: 601: URDLL =52;
-"601
-[e = _URDLL -> -> 52 `i `uc ]
-[; ;CHIPINIT.C: 602: URDLH =0;
+[; ;CHIPINIT.C: 602: URDLL =52;
 "602
-[e = _URDLH -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 603: TCF=1;
+[e = _URDLL -> -> 52 `i `uc ]
+[; ;CHIPINIT.C: 603: URDLH =0;
 "603
+[e = _URDLH -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 604: TCF=1;
+"604
 [e = _TCF -> -> 1 `i `b ]
-[; ;CHIPINIT.C: 608: }
-"608
+[; ;CHIPINIT.C: 609: }
+"609
 [e :UE 368 ]
 }
-"616
+"617
 [v _DelayUs `(v ~T0 @X0 1 ef1`uc ]
-"617
-{
-[; ;CHIPINIT.C: 616: void DelayUs(unsigned char Time)
-[; ;CHIPINIT.C: 617: {
-[e :U _DelayUs ]
-"616
-[v _Time `uc ~T0 @X0 1 r1 ]
-"617
-[f ]
 "618
-[v _a `uc ~T0 @X0 1 a ]
-[; ;CHIPINIT.C: 618: unsigned char a;
-[; ;CHIPINIT.C: 619: for(a=0;a<Time;a++)
+{
+[; ;CHIPINIT.C: 617: void DelayUs(unsigned char Time)
+[; ;CHIPINIT.C: 618: {
+[e :U _DelayUs ]
+"617
+[v _Time `uc ~T0 @X0 1 r1 ]
+"618
+[f ]
 "619
+[v _a `uc ~T0 @X0 1 a ]
+[; ;CHIPINIT.C: 619: unsigned char a;
+[; ;CHIPINIT.C: 620: for(a=0;a<Time;a++)
+"620
 {
 [e = _a -> -> 0 `i `uc ]
 [e $U 373  ]
-"620
-[e :U 370 ]
-[; ;CHIPINIT.C: 620: {
-{
-[; ;CHIPINIT.C: 621: __nop();
 "621
-[e ( ___nop ..  ]
+[e :U 370 ]
+[; ;CHIPINIT.C: 621: {
+{
+[; ;CHIPINIT.C: 622: __nop();
 "622
+[e ( ___nop ..  ]
+"623
 }
-"619
+"620
 [e ++ _a -> -> 1 `i `uc ]
 [e :U 373 ]
 [e $ < -> _a `i -> _Time `i 370  ]
 [e :U 371 ]
-"622
-}
-[; ;CHIPINIT.C: 622: }
-[; ;CHIPINIT.C: 623: }
 "623
+}
+[; ;CHIPINIT.C: 623: }
+[; ;CHIPINIT.C: 624: }
+"624
 [e :UE 369 ]
 }
-"630
+"631
 [v _DelayMs `(v ~T0 @X0 1 ef1`uc ]
-"631
-{
-[; ;CHIPINIT.C: 630: void DelayMs(unsigned char Time)
-[; ;CHIPINIT.C: 631: {
-[e :U _DelayMs ]
-"630
-[v _Time `uc ~T0 @X0 1 r1 ]
-"631
-[f ]
 "632
+{
+[; ;CHIPINIT.C: 631: void DelayMs(unsigned char Time)
+[; ;CHIPINIT.C: 632: {
+[e :U _DelayMs ]
+"631
+[v _Time `uc ~T0 @X0 1 r1 ]
+"632
+[f ]
+"633
 [v _a `uc ~T0 @X0 1 a ]
 [v _b `uc ~T0 @X0 1 a ]
-[; ;CHIPINIT.C: 632: unsigned char a,b;
-[; ;CHIPINIT.C: 633: for(a=0;a<Time;a++)
-"633
+[; ;CHIPINIT.C: 633: unsigned char a,b;
+[; ;CHIPINIT.C: 634: for(a=0;a<Time;a++)
+"634
 {
 [e = _a -> -> 0 `i `uc ]
 [e $U 378  ]
-"634
-[e :U 375 ]
-[; ;CHIPINIT.C: 634: {
-{
-[; ;CHIPINIT.C: 635: for(b=0;b<5;b++)
 "635
+[e :U 375 ]
+[; ;CHIPINIT.C: 635: {
+{
+[; ;CHIPINIT.C: 636: for(b=0;b<5;b++)
+"636
 {
 [e = _b -> -> 0 `i `uc ]
 [e $ < -> _b `i -> 5 `i 379  ]
 [e $U 380  ]
-"636
-[e :U 379 ]
-[; ;CHIPINIT.C: 636: {
-{
-[; ;CHIPINIT.C: 637: DelayUs(197);
 "637
-[e ( _DelayUs (1 -> -> 197 `i `uc ]
+[e :U 379 ]
+[; ;CHIPINIT.C: 637: {
+{
+[; ;CHIPINIT.C: 638: DelayUs(197);
 "638
+[e ( _DelayUs (1 -> -> 197 `i `uc ]
+"639
 }
-"635
+"636
 [e ++ _b -> -> 1 `i `uc ]
 [e $ < -> _b `i -> 5 `i 379  ]
 [e :U 380 ]
-"638
-}
-[; ;CHIPINIT.C: 638: }
-[; ;CHIPINIT.C: 639: asm("clrwdt");
 "639
-[; <" clrwdt ;# ">
-"640
 }
-"633
+[; ;CHIPINIT.C: 639: }
+[; ;CHIPINIT.C: 640: asm("clrwdt");
+"640
+[; <" clrwdt ;# ">
+"641
+}
+"634
 [e ++ _a -> -> 1 `i `uc ]
 [e :U 378 ]
 [e $ < -> _a `i -> _Time `i 375  ]
 [e :U 376 ]
-"640
-}
-[; ;CHIPINIT.C: 640: }
-[; ;CHIPINIT.C: 641: }
 "641
+}
+[; ;CHIPINIT.C: 641: }
+[; ;CHIPINIT.C: 642: }
+"642
 [e :UE 374 ]
 }
-"648
+"649
 [v _DelayS `(v ~T0 @X0 1 ef1`uc ]
-"649
-{
-[; ;CHIPINIT.C: 648: void DelayS(unsigned char Time)
-[; ;CHIPINIT.C: 649: {
-[e :U _DelayS ]
-"648
-[v _Time `uc ~T0 @X0 1 r1 ]
-"649
-[f ]
 "650
+{
+[; ;CHIPINIT.C: 649: void DelayS(unsigned char Time)
+[; ;CHIPINIT.C: 650: {
+[e :U _DelayS ]
+"649
+[v _Time `uc ~T0 @X0 1 r1 ]
+"650
+[f ]
+"651
 [v _a `uc ~T0 @X0 1 a ]
 [v _b `uc ~T0 @X0 1 a ]
-[; ;CHIPINIT.C: 650: unsigned char a,b;
-[; ;CHIPINIT.C: 651: for(a=0;a<Time;a++)
-"651
+[; ;CHIPINIT.C: 651: unsigned char a,b;
+[; ;CHIPINIT.C: 652: for(a=0;a<Time;a++)
+"652
 {
 [e = _a -> -> 0 `i `uc ]
 [e $U 386  ]
-"652
-[e :U 383 ]
-[; ;CHIPINIT.C: 652: {
-{
-[; ;CHIPINIT.C: 653: for(b=0;b<10;b++)
 "653
+[e :U 383 ]
+[; ;CHIPINIT.C: 653: {
+{
+[; ;CHIPINIT.C: 654: for(b=0;b<10;b++)
+"654
 {
 [e = _b -> -> 0 `i `uc ]
 [e $ < -> _b `i -> 10 `i 387  ]
 [e $U 388  ]
-"654
-[e :U 387 ]
-[; ;CHIPINIT.C: 654: {
-{
-[; ;CHIPINIT.C: 655: DelayMs(100);
 "655
-[e ( _DelayMs (1 -> -> 100 `i `uc ]
+[e :U 387 ]
+[; ;CHIPINIT.C: 655: {
+{
+[; ;CHIPINIT.C: 656: DelayMs(100);
 "656
+[e ( _DelayMs (1 -> -> 100 `i `uc ]
+"657
 }
-"653
+"654
 [e ++ _b -> -> 1 `i `uc ]
 [e $ < -> _b `i -> 10 `i 387  ]
 [e :U 388 ]
-"656
-}
 "657
 }
-"651
+"658
+}
+"652
 [e ++ _a -> -> 1 `i `uc ]
 [e :U 386 ]
 [e $ < -> _a `i -> _Time `i 383  ]
 [e :U 384 ]
-"657
+"658
 }
-[; ;CHIPINIT.C: 656: }
 [; ;CHIPINIT.C: 657: }
 [; ;CHIPINIT.C: 658: }
-"658
+[; ;CHIPINIT.C: 659: }
+"659
 [e :UE 382 ]
 }
-"660
-[v _TIME_INIT `(v ~T0 @X0 1 ef ]
 "661
+[v _TIME_INIT `(v ~T0 @X0 1 ef ]
+"662
 {
-[; ;CHIPINIT.C: 660: void TIME_INIT()
-[; ;CHIPINIT.C: 661: {
+[; ;CHIPINIT.C: 661: void TIME_INIT()
+[; ;CHIPINIT.C: 662: {
 [e :U _TIME_INIT ]
 [f ]
-[; ;CHIPINIT.C: 662: Time100Ms=0;
-"662
-[e = _Time100Ms -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 663: TimeSec=0;
+[; ;CHIPINIT.C: 663: Time100Ms=0;
 "663
+[e = _Time100Ms -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 664: TimeSec=0;
+"664
 [e = _TimeSec -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 665: }
-"665
+[; ;CHIPINIT.C: 666: }
+"666
 [e :UE 390 ]
 }
-"668
-[v _User_init `(v ~T0 @X0 1 ef ]
 "669
+[v _User_init `(v ~T0 @X0 1 ef ]
+"670
 {
-[; ;CHIPINIT.C: 668: void User_init()
-[; ;CHIPINIT.C: 669: {
+[; ;CHIPINIT.C: 669: void User_init()
+[; ;CHIPINIT.C: 670: {
 [e :U _User_init ]
 [f ]
-[; ;CHIPINIT.C: 670: SysFunFlg0.AllBits = 0;
-"670
-[e = . _SysFunFlg0 1 -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 671: SysFunFlg1.AllBits = 0;
+[; ;CHIPINIT.C: 671: SysFunFlg0.AllBits = 0;
 "671
-[e = . _SysFunFlg1 1 -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 672: SysFunFlg2.AllBits = 0;
+[e = . _SysFunFlg0 1 -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 672: SysFunFlg1.AllBits = 0;
 "672
-[e = . _SysFunFlg2 1 -> -> 0 `i `uc ]
-[; ;CHIPINIT.C: 673: TIME_INIT();
+[e = . _SysFunFlg1 1 -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 673: SysFunFlg2.AllBits = 0;
 "673
+[e = . _SysFunFlg2 1 -> -> 0 `i `uc ]
+[; ;CHIPINIT.C: 674: TIME_INIT();
+"674
 [e ( _TIME_INIT ..  ]
-[; ;CHIPINIT.C: 675: KeyType=NullKey;
-"675
-[e = _KeyType -> . `E3610 0 `uc ]
-[; ;CHIPINIT.C: 676: DspIndex =DsSty;
+[; ;CHIPINIT.C: 676: KeyType=NullKey;
 "676
-[e = _DspIndex -> . `E3603 0 `uc ]
-[; ;CHIPINIT.C: 677: }
+[e = _KeyType -> . `E3610 0 `uc ]
+[; ;CHIPINIT.C: 677: DspIndex =DsSty;
 "677
+[e = _DspIndex -> . `E3603 0 `uc ]
+[; ;CHIPINIT.C: 678: }
+"678
 [e :UE 391 ]
 }
-"679
-[v _Display_init `(v ~T0 @X0 1 ef ]
 "680
+[v _Display_init `(v ~T0 @X0 1 ef ]
+"681
 {
-[; ;CHIPINIT.C: 679: void Display_init()
-[; ;CHIPINIT.C: 680: {
+[; ;CHIPINIT.C: 680: void Display_init()
+[; ;CHIPINIT.C: 681: {
 [e :U _Display_init ]
 [f ]
-[; ;CHIPINIT.C: 695: {LATB1=0;LATD1=0;LATC1=0;LATC0=0; LATA0=0;LATB0=0;LATB3=0; LATA4=0;LATD2=0;LATA1=0;LATD3=0;}
-"695
+[; ;CHIPINIT.C: 696: {LATB1=0;LATD1=0;LATC1=0;LATC0=0; LATA0=0;LATB0=0;LATB3=0; LATA4=0;LATD2=0;LATA1=0;LATD3=0;}
+"696
 {
 [e = _LATB1 -> -> 0 `i `b ]
 [e = _LATD1 -> -> 0 `i `b ]
@@ -7539,10 +7539,10 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [e = _LATA1 -> -> 0 `i `b ]
 [e = _LATD3 -> -> 0 `i `b ]
 }
-[; ;CHIPINIT.C: 696: INTCON |= 0B11000000;
-"696
-[e =| _INTCON -> -> 192 `i `uc ]
-[; ;CHIPINIT.C: 697: }
+[; ;CHIPINIT.C: 697: INTCON |= 0B11000000;
 "697
+[e =| _INTCON -> -> 192 `i `uc ]
+[; ;CHIPINIT.C: 698: }
+"698
 [e :UE 392 ]
 }

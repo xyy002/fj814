@@ -11,9 +11,6 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj
-reset_vec CODE 0 0 0 2 2
-end_init CODE 0 37 37 2 2
 $touchlib.obj
 cinit CODE 0 807 807 7F9 2
 text27 CODE 0 698 698 12 2
@@ -46,6 +43,9 @@ dataBANK1 BANK1 1 E5 E5 8 1
 _ad3nop_text CODE 0 3 3 1 2
 clrtext CODE 0 6AA 6AA C 2
 bssCOMMON COMMON 1 77 77 5 1
+$C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 37 37 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -144,78 +144,78 @@ STRING 18C1-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $touchlib.obj
-807 cinit CODE >765:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-807 cinit CODE >768:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-807 cinit CODE >1057:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
+807 cinit CODE >765:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+807 cinit CODE >768:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+807 cinit CODE >1057:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
 808 cinit CODE >86:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-809 cinit CODE >1059:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
+809 cinit CODE >1059:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
 80A cinit CODE >86:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-80B cinit CODE >1061:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
+80B cinit CODE >1061:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
 80C cinit CODE >85:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-80D cinit CODE >1063:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
+80D cinit CODE >1063:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
 80E cinit CODE >85:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-80F cinit CODE >1065:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
+80F cinit CODE >1065:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
 810 cinit CODE >80:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-811 cinit CODE >1067:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
+811 cinit CODE >1067:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
 812 cinit CODE >80:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-813 cinit CODE >1069:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
+813 cinit CODE >1069:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
 814 cinit CODE >79:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-815 cinit CODE >1071:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
+815 cinit CODE >1071:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
 816 cinit CODE >79:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-817 cinit CODE >1073:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-818 cinit CODE >1098:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-819 cinit CODE >1097:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-81A cinit CODE >1099:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-81B cinit CODE >1100:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-81C cinit CODE >1101:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-81D cinit CODE >1103:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-81E cinit CODE >1104:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-821 cinit CODE >1120:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-822 cinit CODE >1108:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-823 cinit CODE >1112:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-824 cinit CODE >1113:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-825 cinit CODE >1114:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-826 cinit CODE >1115:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-827 cinit CODE >1116:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-828 cinit CODE >1121:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-829 cinit CODE >1122:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-82A cinit CODE >1123:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-82B cinit CODE >1124:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-82C cinit CODE >1125:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-82D cinit CODE >1126:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-82E cinit CODE >1127:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-82F cinit CODE >1128:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-832 cinit CODE >1132:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-833 cinit CODE >1133:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-834 cinit CODE >1134:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-835 cinit CODE >1135:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-836 cinit CODE >1136:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-837 cinit CODE >1137:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-838 cinit CODE >1138:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-839 cinit CODE >1139:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-83A cinit CODE >1140:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-83D cinit CODE >1144:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-83E cinit CODE >1145:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-83F cinit CODE >1146:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-840 cinit CODE >1147:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-841 cinit CODE >1148:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-842 cinit CODE >1149:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-843 cinit CODE >1150:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-844 cinit CODE >1151:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-845 cinit CODE >1152:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-848 cinit CODE >1156:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-849 cinit CODE >1157:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-84A cinit CODE >1158:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-84B cinit CODE >1159:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-84C cinit CODE >1160:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-84D cinit CODE >1161:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-84E cinit CODE >1162:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-84F cinit CODE >1163:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-850 cinit CODE >1164:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-853 cinit CODE >1170:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-853 cinit CODE >1172:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-854 cinit CODE >1173:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-855 cinit CODE >1174:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
+817 cinit CODE >1073:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+818 cinit CODE >1098:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+819 cinit CODE >1097:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+81A cinit CODE >1099:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+81B cinit CODE >1100:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+81C cinit CODE >1101:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+81D cinit CODE >1103:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+81E cinit CODE >1104:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+821 cinit CODE >1120:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+822 cinit CODE >1108:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+823 cinit CODE >1112:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+824 cinit CODE >1113:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+825 cinit CODE >1114:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+826 cinit CODE >1115:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+827 cinit CODE >1116:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+828 cinit CODE >1121:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+829 cinit CODE >1122:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+82A cinit CODE >1123:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+82B cinit CODE >1124:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+82C cinit CODE >1125:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+82D cinit CODE >1126:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+82E cinit CODE >1127:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+82F cinit CODE >1128:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+832 cinit CODE >1132:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+833 cinit CODE >1133:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+834 cinit CODE >1134:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+835 cinit CODE >1135:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+836 cinit CODE >1136:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+837 cinit CODE >1137:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+838 cinit CODE >1138:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+839 cinit CODE >1139:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+83A cinit CODE >1140:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+83D cinit CODE >1144:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+83E cinit CODE >1145:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+83F cinit CODE >1146:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+840 cinit CODE >1147:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+841 cinit CODE >1148:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+842 cinit CODE >1149:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+843 cinit CODE >1150:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+844 cinit CODE >1151:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+845 cinit CODE >1152:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+848 cinit CODE >1156:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+849 cinit CODE >1157:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+84A cinit CODE >1158:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+84B cinit CODE >1159:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+84C cinit CODE >1160:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+84D cinit CODE >1161:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+84E cinit CODE >1162:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+84F cinit CODE >1163:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+850 cinit CODE >1164:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+853 cinit CODE >1170:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+853 cinit CODE >1172:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+854 cinit CODE >1173:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+855 cinit CODE >1174:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
 856 cinit CODE >152:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
 856 cinit CODE >154:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
 858 cinit CODE >155:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
@@ -246,10 +246,10 @@ $touchlib.obj
 8A2 cinit CODE >352:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 8A6 cinit CODE >355:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 8A8 cinit CODE >358:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-8A9 cinit CODE >679:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-8A9 cinit CODE >695:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-8AB cinit CODE >696:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-8AD cinit CODE >697:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+8A9 cinit CODE >680:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+8A9 cinit CODE >696:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+8AB cinit CODE >697:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+8AD cinit CODE >698:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 8AE cinit CODE >1406:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
 8AE cinit CODE >1409:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
 8B0 cinit CODE >1411:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
@@ -547,22 +547,22 @@ B95 cinit CODE >115:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 B9F cinit CODE >116:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 B9F cinit CODE >117:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 BA4 cinit CODE >119:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-BA5 cinit CODE >574:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BA5 cinit CODE >576:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BA7 cinit CODE >578:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BA9 cinit CODE >580:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BAA cinit CODE >581:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BAC cinit CODE >582:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BAF cinit CODE >583:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BB1 cinit CODE >584:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BB2 cinit CODE >668:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BB2 cinit CODE >670:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BB4 cinit CODE >671:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BB5 cinit CODE >672:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BB6 cinit CODE >673:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BB7 cinit CODE >675:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BB9 cinit CODE >676:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BBB cinit CODE >677:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BA5 cinit CODE >575:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BA5 cinit CODE >577:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BA7 cinit CODE >579:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BA9 cinit CODE >581:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BAA cinit CODE >582:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BAC cinit CODE >583:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BAF cinit CODE >584:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BB1 cinit CODE >585:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BB2 cinit CODE >669:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BB2 cinit CODE >671:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BB4 cinit CODE >672:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BB5 cinit CODE >673:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BB6 cinit CODE >674:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BB7 cinit CODE >676:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BB9 cinit CODE >677:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BBB cinit CODE >678:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 BBC cinit CODE >167:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 BBC cinit CODE >169:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 BBE cinit CODE >171:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
@@ -572,51 +572,51 @@ BC8 cinit CODE >178:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 BCA cinit CODE >180:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 BCC cinit CODE >182:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 BCE cinit CODE >184:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-BCF cinit CODE >88:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BCF cinit CODE >91:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BD2 cinit CODE >102:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BD3 cinit CODE >104:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BD5 cinit CODE >105:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BD7 cinit CODE >106:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BD9 cinit CODE >107:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BDC cinit CODE >108:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BDE cinit CODE >109:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BE0 cinit CODE >110:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BE2 cinit CODE >111:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BE4 cinit CODE >113:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BE6 cinit CODE >114:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BE7 cinit CODE >115:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BE8 cinit CODE >116:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BE9 cinit CODE >118:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BEB cinit CODE >119:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BEC cinit CODE >120:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BED cinit CODE >121:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BEE cinit CODE >123:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BF1 cinit CODE >127:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BF2 cinit CODE >131:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BF4 cinit CODE >132:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BF5 cinit CODE >133:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BF6 cinit CODE >134:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BF7 cinit CODE >136:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BF8 cinit CODE >141:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BF9 cinit CODE >479:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BF9 cinit CODE >481:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BFA cinit CODE >482:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BFC cinit CODE >483:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-BFE cinit CODE >484:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-C00 cinit CODE >485:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-C02 cinit CODE >488:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-C04 cinit CODE >489:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-C06 cinit CODE >491:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-C07 cinit CODE >592:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-C07 cinit CODE >594:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-C09 cinit CODE >596:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-C0B cinit CODE >597:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-C0D cinit CODE >598:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-C0F cinit CODE >601:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-C11 cinit CODE >602:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-C12 cinit CODE >603:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-C13 cinit CODE >608:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BCF cinit CODE >89:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BCF cinit CODE >92:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BD2 cinit CODE >103:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BD3 cinit CODE >105:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BD5 cinit CODE >106:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BD7 cinit CODE >107:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BD9 cinit CODE >108:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BDC cinit CODE >109:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BDE cinit CODE >110:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BE0 cinit CODE >111:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BE2 cinit CODE >112:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BE4 cinit CODE >114:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BE6 cinit CODE >115:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BE7 cinit CODE >116:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BE8 cinit CODE >117:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BE9 cinit CODE >119:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BEB cinit CODE >120:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BEC cinit CODE >121:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BED cinit CODE >122:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BEE cinit CODE >124:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BF1 cinit CODE >128:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BF2 cinit CODE >132:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BF4 cinit CODE >133:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BF5 cinit CODE >134:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BF6 cinit CODE >135:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BF7 cinit CODE >137:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BF8 cinit CODE >142:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BF9 cinit CODE >480:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BF9 cinit CODE >482:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BFA cinit CODE >483:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BFC cinit CODE >484:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+BFE cinit CODE >485:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+C00 cinit CODE >486:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+C02 cinit CODE >489:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+C04 cinit CODE >490:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+C06 cinit CODE >492:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+C07 cinit CODE >593:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+C07 cinit CODE >595:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+C09 cinit CODE >597:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+C0B cinit CODE >598:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+C0D cinit CODE >599:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+C0F cinit CODE >602:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+C11 cinit CODE >603:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+C12 cinit CODE >604:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+C13 cinit CODE >609:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 D97 cinit CODE >120:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 D97 cinit CODE >122:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 D9C cinit CODE >127:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
@@ -713,10 +713,10 @@ E58 cinit CODE >127:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
 E59 cinit CODE >125:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
 E5A cinit CODE >127:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
 E5C cinit CODE >129:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
-E5D cinit CODE >660:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-E5D cinit CODE >662:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-E5F cinit CODE >663:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-E60 cinit CODE >665:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+E5D cinit CODE >661:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+E5D cinit CODE >663:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+E5F cinit CODE >664:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+E60 cinit CODE >666:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 E61 cinit CODE >37:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 E61 cinit CODE >40:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 E63 cinit CODE >41:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
@@ -785,17 +785,17 @@ F0A cinit CODE >62:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 F0B cinit CODE >64:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 F0F cinit CODE >52:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 F1D cinit CODE >68:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
-F22 cinit CODE >499:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F22 cinit CODE >501:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F24 cinit CODE >505:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F27 cinit CODE >536:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F29 cinit CODE >539:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F2A cinit CODE >548:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F2B cinit CODE >553:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F2C cinit CODE >555:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F2E cinit CODE >559:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F30 cinit CODE >560:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-F32 cinit CODE >565:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+F22 cinit CODE >500:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+F22 cinit CODE >502:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+F24 cinit CODE >506:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+F27 cinit CODE >537:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+F29 cinit CODE >540:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+F2A cinit CODE >549:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+F2B cinit CODE >554:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+F2C cinit CODE >556:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+F2E cinit CODE >560:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+F30 cinit CODE >561:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+F32 cinit CODE >566:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 F33 cinit CODE >229:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
 F33 cinit CODE >246:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
 F35 cinit CODE >254:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
@@ -875,20 +875,20 @@ FFF cinit CODE >40:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
 A intentry CODE >56:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 B intentry CODE >57:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 E intentry CODE >58:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-11 intentry CODE >62:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-15 intentry CODE >64:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-16 intentry CODE >66:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-19 intentry CODE >68:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-1E intentry CODE >70:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-21 intentry CODE >71:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-26 intentry CODE >72:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-2A intentry CODE >74:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-2C intentry CODE >77:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+11 intentry CODE >63:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+15 intentry CODE >65:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+16 intentry CODE >67:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+19 intentry CODE >69:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+1E intentry CODE >71:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+21 intentry CODE >72:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+26 intentry CODE >73:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+2A intentry CODE >75:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 2C intentry CODE >78:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-30 intentry CODE >80:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-32 intentry CODE >82:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-34 intentry CODE >84:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-35 intentry CODE >86:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+2C intentry CODE >79:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+30 intentry CODE >81:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+32 intentry CODE >83:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+34 intentry CODE >85:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+35 intentry CODE >87:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 678 swtext4 CONST >206:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 6CE swtext3 CONST >231:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 6C2 swtext2 CONST >247:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
@@ -1271,20 +1271,20 @@ FE text28 CODE >1089:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
 6A6 text27 CODE >302:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
 6A8 text27 CODE >303:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
 6A9 text27 CODE >304:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-6AA clrtext CODE >1079:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-6AA clrtext CODE >1080:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-6AB clrtext CODE >1081:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-6AB clrtext CODE >1084:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-6AC clrtext CODE >1082:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-6AD clrtext CODE >1083:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-6AE clrtext CODE >1085:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-6AF clrtext CODE >1086:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-6B0 clrtext CODE >1087:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-6B1 clrtext CODE >1088:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-6B2 clrtext CODE >1089:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-6B3 clrtext CODE >1090:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-6B4 clrtext CODE >1092:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
-6B5 clrtext CODE >1091:C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.
+6AA clrtext CODE >1079:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+6AA clrtext CODE >1080:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+6AB clrtext CODE >1081:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+6AB clrtext CODE >1084:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+6AC clrtext CODE >1082:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+6AD clrtext CODE >1083:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+6AE clrtext CODE >1085:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+6AF clrtext CODE >1086:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+6B0 clrtext CODE >1087:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+6B1 clrtext CODE >1088:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+6B2 clrtext CODE >1089:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+6B3 clrtext CODE >1090:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+6B4 clrtext CODE >1092:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
+6B5 clrtext CODE >1091:C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1351,11 +1351,11 @@ _WPUA 18C 0 ABS 0 - touchlib.obj
 _WPUB 18D 0 ABS 0 - touchlib.obj
 _WPUC 18E 0 ABS 0 - touchlib.obj
 _WPUD 18F 0 ABS 0 - touchlib.obj
-___sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj
+___sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.obj
 _main 10AC 0 CODE 0 cinit touchlib.obj
 btemp 7E 0 ABS 0 - touchlib.obj
 __size_of_TIME_INIT 0 0 ABS 0 - touchlib.obj
-start 6E 0 CODE 0 init C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj
+start 6E 0 CODE 0 init C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.obj
 __size_of___awdiv 0 0 ABS 0 - touchlib.obj
 MxSet013@a 4C 0 BANK0 1 cstackBANK0hh touchlib.obj
 _WPROOF1 38F 0 ABS 0 - touchlib.obj
@@ -1392,12 +1392,12 @@ _StrongType 79 0 COMMON 1 bssCOMMON touchlib.obj
 __size_of_ManualKeyExec 0 0 ABS 0 - touchlib.obj
 __end_of_DataProcessing 806 0 CODE 0 text28 touchlib.obj
 __end_of_MxSet013 D54 0 CODE 0 text27 touchlib.obj
-intlevel0 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj
-intlevel1 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj
-intlevel2 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj
-intlevel3 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj
-intlevel4 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj
-intlevel5 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.obj
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 __end_of_KeyScanHandler 174A 0 CODE 0 cinit touchlib.obj
 _TouchKeyScan 115C 0 CODE 0 cinit touchlib.obj
@@ -1526,7 +1526,7 @@ __size_of_Time4Initial 0 0 ABS 0 - touchlib.obj
 _RxData_Drive 1D00 0 CODE 0 cinit touchlib.obj
 __end_of_readrf 1FD2 0 CODE 0 cinit touchlib.obj
 ___lbdiv@counter 72 0 COMMON 1 cstackCOMMON touchlib.obj
-___int_sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj
+___int_sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.obj
 _Time2Ms DE 0 BANK1 1 bssBANK1 touchlib.obj
 _TimeMin 77 0 COMMON 1 bssCOMMON touchlib.obj
 _TimeSec DB 0 BANK1 1 bssBANK1 touchlib.obj
@@ -1814,7 +1814,7 @@ _exact_event_process C54 0 CODE 0 text39 touchlib.obj
 _LastMode E3 0 BANK1 1 bssBANK1 touchlib.obj
 __size_ofi1_UartSetEmptyInt 0 0 ABS 0 - touchlib.obj
 __end_of_LONGKEYPROTECT1 3182 0 STRCODE 0 stringtext8 touchlib.obj
-reset_vec 0 0 CODE 0 reset_vec C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.obj
 __size_of_DataProcessing 0 0 ABS 0 - touchlib.obj
 __size_of_KeyScanHandler 0 0 ABS 0 - touchlib.obj
 __pdataBANK1 E5 0 BANK1 1 dataBANK1 touchlib.obj
@@ -1923,8 +1923,8 @@ _fmd_Null2 24 0 ABS 1 - touchlib.obj
 _fmd_Null3 2A 0 ABS 1 - touchlib.obj
 _fmd_Keystatus1 35 0 BANK0 1 bssBANK0hh touchlib.obj
 _fmd_Keystatus2 33 0 BANK0 1 bssBANK0hh touchlib.obj
-stackhi 22FF 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj
-stacklo 210E 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj
+stackhi 22FF 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.obj
+stacklo 210E 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.obj
 __pcstackBANK0hh 4C 0 BANK0 1 cstackBANK0hh touchlib.obj
 refresh_display@keybuf 4C 0 BANK0 1 cstackBANK0hh touchlib.obj
 __pbssBIGRAM 2300 0 ABS 0 - touchlib.obj

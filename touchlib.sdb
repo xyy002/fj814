@@ -21,7 +21,7 @@ Mode3 3
 Mode4 4
 Mode5 5
 ]
-"675 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+"676 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 [e E3610 . `uc
 NullKey 0
 PowerKey 1
@@ -33,7 +33,7 @@ ManualKey 6
 TimeKey 7
 TestKey 8
 ]
-"676
+"677
 [e E3603 . `uc
 DsSty 0
 DsMode 1
@@ -97,25 +97,25 @@ TestKey 8
 [v _exact_event_process exact_event_process `(v  1 e 1 0 ]
 "51
 [v _ISR ISR `II(v  1 e 1 0 ]
-"88
+"89
 [v _Sys_init Sys_init `(v  1 e 1 0 ]
-"479
+"480
 [v _Time2Initial Time2Initial `(v  1 e 1 0 ]
-"499
+"500
 [v _Time4Initial Time4Initial `(v  1 e 1 0 ]
-"574
+"575
 [v _Px_Level_Change_INITIAL Px_Level_Change_INITIAL `(v  1 e 1 0 ]
-"592
+"593
 [v _UART_INITIAL UART_INITIAL `(v  1 e 1 0 ]
-"616
+"617
 [v _DelayUs DelayUs `(v  1 e 1 0 ]
-"630
+"631
 [v _DelayMs DelayMs `(v  1 e 1 0 ]
-"660
+"661
 [v _TIME_INIT TIME_INIT `(v  1 e 1 0 ]
-"668
+"669
 [v _User_init User_init `(v  1 e 1 0 ]
-"679
+"680
 [v _Display_init Display_init `(v  1 e 1 0 ]
 "6 D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -672,45 +672,45 @@ TestKey 8
 [v ___awdiv@dividend dividend `i  1 p 2 2 ]
 "42
 } 0
-"592 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+"593 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 [v _UART_INITIAL UART_INITIAL `(v  1 e 1 0 ]
 {
-"608
+"609
 } 0
 "229 TOUCH.C
 [v _TouchInital TouchInital `(v  1 e 1 0 ]
 {
 "295
 } 0
-"499 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+"500 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 [v _Time4Initial Time4Initial `(v  1 e 1 0 ]
 {
-"565
+"566
 } 0
-"479
+"480
 [v _Time2Initial Time2Initial `(v  1 e 1 0 ]
 {
-"491
+"492
 } 0
-"88
+"89
 [v _Sys_init Sys_init `(v  1 e 1 0 ]
 {
-"141
+"142
 } 0
 "167 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 [v _SysPowerHandler SysPowerHandler `(v  1 e 1 0 ]
 {
 "186
 } 0
-"668 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+"669 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 [v _User_init User_init `(v  1 e 1 0 ]
 {
-"677
+"678
 } 0
-"660
+"661
 [v _TIME_INIT TIME_INIT `(v  1 e 1 0 ]
 {
-"665
+"666
 } 0
 "198 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
 [v _RxData_Drive RxData_Drive `(v  1 e 1 0 ]
@@ -730,10 +730,10 @@ TestKey 8
 {
 "196
 } 0
-"574 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+"575 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 [v _Px_Level_Change_INITIAL Px_Level_Change_INITIAL `(v  1 e 1 0 ]
 {
-"584
+"585
 } 0
 "70 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 [v _KeyScanHandler KeyScanHandler `(v  1 e 1 0 ]
@@ -806,10 +806,10 @@ TestKey 8
 [v HighFreqCo@a a `uc  1 a 1 6 ]
 "1056
 } 0
-"679 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
+"680 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 [v _Display_init Display_init `(v  1 e 1 0 ]
 {
-"697
+"698
 } 0
 "345 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 [v _ChkTimeEventStatus ChkTimeEventStatus `(v  1 e 1 0 ]
@@ -819,7 +819,7 @@ TestKey 8
 "51 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"86
+"87
 } 0
 "27 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\uart.c
 [v _send_uart_data send_uart_data `(v  1 e 1 0 ]

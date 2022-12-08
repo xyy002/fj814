@@ -5,7 +5,7 @@ Linker command line:
 \
   --edf=D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\dat\en_msgs.txt \
   -cs -h+touchlib.sym --cmf=touchlib.cmf -z -QFT62F08X \
-  -oC:\Users\ADMINI~1\AppData\Local\Temp\s4hk.2 -Mtouchlib.map -E1 -ver=XC8 \
+  -oC:\Users\ADMINI~1\AppData\Local\Temp\s5h8.2 -Mtouchlib.map -E1 -ver=XC8 \
   -ASTACK=0210Eh-022ffh -pstack=STACK -p_ad3nop_text=3h -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
   -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
@@ -31,7 +31,7 @@ Linker command line:
   -pconfig=CONFIG -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj touchlib.obj 
+  C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.obj touchlib.obj 
 
 Object code version is 3.11
 
@@ -40,7 +40,7 @@ Machine type is FT62F08X
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\ADMINI~1\AppData\Local\Temp\s4hk.obj
+C:\Users\ADMINI~1\AppData\Local\Temp\s5h8.obj
                 end_init                             37       37        2        8       0
                 reset_vec                             0        0        2        0       0
 touchlib.obj    cinit                               807      807      7F9     100E       0
@@ -1578,7 +1578,7 @@ Total ram usage:        8 bytes
 
  *************** function _UART_INITIAL *****************
  Defined at:
-		line 592 in file "CHIPINIT.C"
+		line 593 in file "CHIPINIT.C"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1638,7 +1638,7 @@ Total ram usage:        2 bytes
 
  *************** function _Time4Initial *****************
  Defined at:
-		line 499 in file "CHIPINIT.C"
+		line 500 in file "CHIPINIT.C"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1668,7 +1668,7 @@ Total ram usage:        0 bytes
 
  *************** function _Time2Initial *****************
  Defined at:
-		line 479 in file "CHIPINIT.C"
+		line 480 in file "CHIPINIT.C"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1698,7 +1698,7 @@ Total ram usage:        0 bytes
 
  *************** function _Sys_init *****************
  Defined at:
-		line 88 in file "CHIPINIT.C"
+		line 89 in file "CHIPINIT.C"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1758,7 +1758,7 @@ Total ram usage:        0 bytes
 
  *************** function _User_init *****************
  Defined at:
-		line 668 in file "CHIPINIT.C"
+		line 669 in file "CHIPINIT.C"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1789,7 +1789,7 @@ Total ram usage:        0 bytes
 
  *************** function _TIME_INIT *****************
  Defined at:
-		line 660 in file "CHIPINIT.C"
+		line 661 in file "CHIPINIT.C"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1911,7 +1911,7 @@ Total ram usage:        0 bytes
 
  *************** function _Px_Level_Change_INITIAL *****************
  Defined at:
-		line 574 in file "CHIPINIT.C"
+		line 575 in file "CHIPINIT.C"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -2255,7 +2255,7 @@ Total ram usage:        7 bytes
 
  *************** function _Display_init *****************
  Defined at:
-		line 679 in file "CHIPINIT.C"
+		line 680 in file "CHIPINIT.C"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
