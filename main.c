@@ -158,7 +158,7 @@ void main(void)
 	Time4Initial();
 	// WDT_INITIAL ();
     UART_INITIAL();	
-    Px_Level_Change_INITIAL();	
+    // Px_Level_Change_INITIAL();	
 	User_init(); 
 	Display_init();
 	SetBuzzer();

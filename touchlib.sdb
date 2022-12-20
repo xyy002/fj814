@@ -103,8 +103,6 @@ TestKey 8
 [v _Time2Initial Time2Initial `(v  1 e 1 0 ]
 "500
 [v _Time4Initial Time4Initial `(v  1 e 1 0 ]
-"575
-[v _Px_Level_Change_INITIAL Px_Level_Change_INITIAL `(v  1 e 1 0 ]
 "593
 [v _UART_INITIAL UART_INITIAL `(v  1 e 1 0 ]
 "617
@@ -252,8 +250,6 @@ TestKey 8
 [v _TRISD TRISD `VEuc  1 e 1 @143 ]
 "591
 [v _TRISD5 TRISD5 `VEb  1 e 0 @1149 ]
-"627
-[v _EPIE0 EPIE0 `VEuc  1 e 1 @148 ]
 "632
 [v _CKOCON CKOCON `VEuc  1 e 1 @149 ]
 "752
@@ -300,18 +296,10 @@ TestKey 8
 [v _TIM4PSCR TIM4PSCR `VEuc  1 e 1 @278 ]
 "1126
 [v _TIM4ARR TIM4ARR `VEuc  1 e 1 @279 ]
-"1131
-[v _EPS0 EPS0 `VEuc  1 e 1 @280 ]
-"1136
-[v _EPS1 EPS1 `VEuc  1 e 1 @281 ]
 "1141
 [v _PSRC0 PSRC0 `VEuc  1 e 1 @282 ]
 "1146
 [v _PSRC1 PSRC1 `VEuc  1 e 1 @283 ]
-"1180
-[v _ITYPE0 ITYPE0 `VEuc  1 e 1 @286 ]
-"1186
-[v _ITYPE1 ITYPE1 `VEuc  1 e 1 @287 ]
 "1196
 [v _WPUA WPUA `VEuc  1 e 1 @396 ]
 "1225
@@ -430,9 +418,9 @@ TestKey 8
 [v _ad3nop ad3nop `DCuc  1 e 1 @3 ]
 "8 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\rx.c
 [v _RxData RxData `uc  1 e 1 0 ]
-[s S11397 . 6 `E3752 1 RFsp 1 0 `VEuc 1 tRFH 1 1 `VEuc 1 tRFL 1 2 `VEuc 1 BitCount 1 3 `VEuc 1 Bptr 1 4 `VEuc 1 RecBufFull 1 5 ]
+[s S11393 . 6 `E3752 1 RFsp 1 0 `VEuc 1 tRFH 1 1 `VEuc 1 tRFL 1 2 `VEuc 1 BitCount 1 3 `VEuc 1 Bptr 1 4 `VEuc 1 RecBufFull 1 5 ]
 "10
-[v _RFs RFs `VES11397  1 e 6 0 ]
+[v _RFs RFs `VES11393  1 e 6 0 ]
 "11
 [v _buf_rec buf_rec `VE[5]uc  1 e 5 0 ]
 "15
@@ -729,11 +717,6 @@ TestKey 8
 [v _KeepRfData KeepRfData `(v  1 e 1 0 ]
 {
 "196
-} 0
-"575 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\CHIPINIT.C
-[v _Px_Level_Change_INITIAL Px_Level_Change_INITIAL `(v  1 e 1 0 ]
-{
-"585
 } 0
 "70 E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\sub.c
 [v _KeyScanHandler KeyScanHandler `(v  1 e 1 0 ]

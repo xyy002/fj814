@@ -1,3 +1,8 @@
+/*
+ * @Author: 青衫衫
+ * @Date: 2022-12-06 08:49:11
+ * @LastEditTime: 2022-12-20 11:12:31
+ */
 //*********************************************************
 #ifndef _rx_h_
 #define _rx_h_
@@ -25,7 +30,7 @@ WARM KEY          0x08 0xe7 0x70 0x8f          MODE KEY          0x08 0xe7 0x28 
 
 #define NBIT		24
 #define RFHEADH_MAX	6		// 0.4ms L    1.2ms H
-#define RFHEADH_MIN	2		// 
+#define RFHEADH_MIN	0		// 
 #define RFHEADL_MAX	135		// 12.3ms
 #define RFHEADL_MIN	105		// 
 #define RFH_MAX		16		// 
