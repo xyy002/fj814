@@ -179,7 +179,7 @@ void readrf()
 
     RxData=buf_rec[2];
 
-	RemOutTime=100;
+	RemOutTime=120;
 }
 
 //每10ms调用一次

@@ -4303,7 +4303,7 @@ if(!CheckRfCmd(buf_rec[2]))return;
 
 RxData=buf_rec[2];
 
-RemOutTime=100;
+RemOutTime=120;
 }
 
 

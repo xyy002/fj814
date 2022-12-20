@@ -11,9 +11,6 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.obj
-reset_vec CODE 0 0 0 2 2
-end_init CODE 0 37 37 2 2
 $touchlib.obj
 cinit CODE 0 816 816 7EA 2
 text26 CODE 0 692 692 12 2
@@ -46,6 +43,9 @@ dataBANK1 BANK1 1 E5 E5 8 1
 _ad3nop_text CODE 0 3 3 1 2
 clrtext CODE 0 6A4 6A4 C 2
 bssCOMMON COMMON 1 77 77 5 1
+$C:\Users\ADMINI~1\AppData\Local\Temp\s41s.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 37 37 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -144,78 +144,78 @@ STRING 18C1-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $touchlib.obj
-816 cinit CODE >754:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-816 cinit CODE >757:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-816 cinit CODE >1046:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
+816 cinit CODE >754:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+816 cinit CODE >757:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+816 cinit CODE >1046:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
 817 cinit CODE >86:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-818 cinit CODE >1048:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
+818 cinit CODE >1048:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
 819 cinit CODE >86:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-81A cinit CODE >1050:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
+81A cinit CODE >1050:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
 81B cinit CODE >85:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-81C cinit CODE >1052:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
+81C cinit CODE >1052:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
 81D cinit CODE >85:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-81E cinit CODE >1054:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
+81E cinit CODE >1054:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
 81F cinit CODE >80:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-820 cinit CODE >1056:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
+820 cinit CODE >1056:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
 821 cinit CODE >80:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-822 cinit CODE >1058:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
+822 cinit CODE >1058:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
 823 cinit CODE >79:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-824 cinit CODE >1060:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
+824 cinit CODE >1060:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
 825 cinit CODE >79:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-826 cinit CODE >1062:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-827 cinit CODE >1087:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-828 cinit CODE >1086:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-829 cinit CODE >1088:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-82A cinit CODE >1089:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-82B cinit CODE >1090:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-82C cinit CODE >1092:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-82D cinit CODE >1093:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-830 cinit CODE >1109:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-831 cinit CODE >1097:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-832 cinit CODE >1101:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-833 cinit CODE >1102:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-834 cinit CODE >1103:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-835 cinit CODE >1104:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-836 cinit CODE >1105:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-837 cinit CODE >1110:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-838 cinit CODE >1111:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-839 cinit CODE >1112:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-83A cinit CODE >1113:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-83B cinit CODE >1114:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-83C cinit CODE >1115:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-83D cinit CODE >1116:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-83E cinit CODE >1117:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-841 cinit CODE >1121:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-842 cinit CODE >1122:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-843 cinit CODE >1123:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-844 cinit CODE >1124:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-845 cinit CODE >1125:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-846 cinit CODE >1126:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-847 cinit CODE >1127:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-848 cinit CODE >1128:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-849 cinit CODE >1129:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-84C cinit CODE >1133:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-84D cinit CODE >1134:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-84E cinit CODE >1135:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-84F cinit CODE >1136:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-850 cinit CODE >1137:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-851 cinit CODE >1138:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-852 cinit CODE >1139:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-853 cinit CODE >1140:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-854 cinit CODE >1141:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-857 cinit CODE >1145:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-858 cinit CODE >1146:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-859 cinit CODE >1147:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-85A cinit CODE >1148:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-85B cinit CODE >1149:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-85C cinit CODE >1150:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-85D cinit CODE >1151:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-85E cinit CODE >1152:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-85F cinit CODE >1153:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-862 cinit CODE >1159:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-862 cinit CODE >1161:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-863 cinit CODE >1162:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-864 cinit CODE >1163:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
+826 cinit CODE >1062:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+827 cinit CODE >1087:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+828 cinit CODE >1086:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+829 cinit CODE >1088:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+82A cinit CODE >1089:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+82B cinit CODE >1090:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+82C cinit CODE >1092:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+82D cinit CODE >1093:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+830 cinit CODE >1109:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+831 cinit CODE >1097:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+832 cinit CODE >1101:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+833 cinit CODE >1102:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+834 cinit CODE >1103:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+835 cinit CODE >1104:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+836 cinit CODE >1105:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+837 cinit CODE >1110:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+838 cinit CODE >1111:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+839 cinit CODE >1112:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+83A cinit CODE >1113:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+83B cinit CODE >1114:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+83C cinit CODE >1115:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+83D cinit CODE >1116:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+83E cinit CODE >1117:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+841 cinit CODE >1121:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+842 cinit CODE >1122:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+843 cinit CODE >1123:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+844 cinit CODE >1124:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+845 cinit CODE >1125:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+846 cinit CODE >1126:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+847 cinit CODE >1127:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+848 cinit CODE >1128:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+849 cinit CODE >1129:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+84C cinit CODE >1133:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+84D cinit CODE >1134:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+84E cinit CODE >1135:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+84F cinit CODE >1136:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+850 cinit CODE >1137:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+851 cinit CODE >1138:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+852 cinit CODE >1139:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+853 cinit CODE >1140:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+854 cinit CODE >1141:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+857 cinit CODE >1145:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+858 cinit CODE >1146:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+859 cinit CODE >1147:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+85A cinit CODE >1148:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+85B cinit CODE >1149:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+85C cinit CODE >1150:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+85D cinit CODE >1151:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+85E cinit CODE >1152:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+85F cinit CODE >1153:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+862 cinit CODE >1159:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+862 cinit CODE >1161:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+863 cinit CODE >1162:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+864 cinit CODE >1163:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
 865 cinit CODE >152:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
 865 cinit CODE >154:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
 867 cinit CODE >155:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\main.c
@@ -1259,20 +1259,20 @@ FE text27 CODE >1089:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
 6A0 text26 CODE >302:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
 6A2 text26 CODE >303:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
 6A3 text26 CODE >304:E:\yy\pro\foot_prj\FJ813\FJ814-C-002key\FJ814\TOUCH.C
-6A4 clrtext CODE >1068:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-6A4 clrtext CODE >1069:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-6A5 clrtext CODE >1070:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-6A5 clrtext CODE >1073:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-6A6 clrtext CODE >1071:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-6A7 clrtext CODE >1072:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-6A8 clrtext CODE >1074:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-6A9 clrtext CODE >1075:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-6AA clrtext CODE >1076:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-6AB clrtext CODE >1077:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-6AC clrtext CODE >1078:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-6AD clrtext CODE >1079:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-6AE clrtext CODE >1081:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
-6AF clrtext CODE >1080:C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.
+6A4 clrtext CODE >1068:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+6A4 clrtext CODE >1069:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+6A5 clrtext CODE >1070:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+6A5 clrtext CODE >1073:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+6A6 clrtext CODE >1071:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+6A7 clrtext CODE >1072:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+6A8 clrtext CODE >1074:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+6A9 clrtext CODE >1075:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+6AA clrtext CODE >1076:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+6AB clrtext CODE >1077:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+6AC clrtext CODE >1078:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+6AD clrtext CODE >1079:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+6AE clrtext CODE >1081:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
+6AF clrtext CODE >1080:C:\Users\ADMINI~1\AppData\Local\Temp\s41s.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1337,11 +1337,11 @@ _WPUA 18C 0 ABS 0 - touchlib.obj
 _WPUB 18D 0 ABS 0 - touchlib.obj
 _WPUC 18E 0 ABS 0 - touchlib.obj
 _WPUD 18F 0 ABS 0 - touchlib.obj
-___sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.obj
+___sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\s41s.obj
 _main 10CA 0 CODE 0 cinit touchlib.obj
 btemp 7E 0 ABS 0 - touchlib.obj
 __size_of_TIME_INIT 0 0 ABS 0 - touchlib.obj
-start 6E 0 CODE 0 init C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.obj
+start 6E 0 CODE 0 init C:\Users\ADMINI~1\AppData\Local\Temp\s41s.obj
 __size_of___awdiv 0 0 ABS 0 - touchlib.obj
 MxSet013@a 4C 0 BANK0 1 cstackBANK0hh touchlib.obj
 _WPROOF1 38F 0 ABS 0 - touchlib.obj
@@ -1378,12 +1378,12 @@ _StrongType 79 0 COMMON 1 bssCOMMON touchlib.obj
 __size_of_ManualKeyExec 0 0 ABS 0 - touchlib.obj
 __end_of_DataProcessing 806 0 CODE 0 text27 touchlib.obj
 __end_of_MxSet013 D48 0 CODE 0 text26 touchlib.obj
-intlevel0 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.obj
-intlevel1 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.obj
-intlevel2 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.obj
-intlevel3 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.obj
-intlevel4 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.obj
-intlevel5 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s41s.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s41s.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s41s.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s41s.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s41s.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\ADMINI~1\AppData\Local\Temp\s41s.obj
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 __end_of_KeyScanHandler 1764 0 CODE 0 cinit touchlib.obj
 _TouchKeyScan 1176 0 CODE 0 cinit touchlib.obj
@@ -1509,7 +1509,7 @@ __size_of_Time4Initial 0 0 ABS 0 - touchlib.obj
 _RxData_Drive 1D08 0 CODE 0 cinit touchlib.obj
 __end_of_readrf 1FD2 0 CODE 0 cinit touchlib.obj
 ___lbdiv@counter 72 0 COMMON 1 cstackCOMMON touchlib.obj
-___int_sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.obj
+___int_sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\s41s.obj
 _Time2Ms DE 0 BANK1 1 bssBANK1 touchlib.obj
 _TimeMin 77 0 COMMON 1 bssCOMMON touchlib.obj
 _TimeSec DB 0 BANK1 1 bssBANK1 touchlib.obj
@@ -1797,7 +1797,7 @@ _exact_event_process C48 0 CODE 0 text38 touchlib.obj
 _LastMode E3 0 BANK1 1 bssBANK1 touchlib.obj
 __size_ofi1_UartSetEmptyInt 0 0 ABS 0 - touchlib.obj
 __end_of_LONGKEYPROTECT1 3182 0 STRCODE 0 stringtext8 touchlib.obj
-reset_vec 0 0 CODE 0 reset_vec C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\ADMINI~1\AppData\Local\Temp\s41s.obj
 __size_of_DataProcessing 0 0 ABS 0 - touchlib.obj
 __size_of_KeyScanHandler 0 0 ABS 0 - touchlib.obj
 __pdataBANK1 E5 0 BANK1 1 dataBANK1 touchlib.obj
@@ -1905,8 +1905,8 @@ _fmd_Null2 24 0 ABS 1 - touchlib.obj
 _fmd_Null3 2A 0 ABS 1 - touchlib.obj
 _fmd_Keystatus1 35 0 BANK0 1 bssBANK0hh touchlib.obj
 _fmd_Keystatus2 33 0 BANK0 1 bssBANK0hh touchlib.obj
-stackhi 22FF 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.obj
-stacklo 210E 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.obj
+stackhi 22FF 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\s41s.obj
+stacklo 210E 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\s41s.obj
 __pcstackBANK0hh 4C 0 BANK0 1 cstackBANK0hh touchlib.obj
 refresh_display@keybuf 4C 0 BANK0 1 cstackBANK0hh touchlib.obj
 __pbssBIGRAM 2300 0 ABS 0 - touchlib.obj

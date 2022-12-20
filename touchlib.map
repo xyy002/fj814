@@ -5,7 +5,7 @@ Linker command line:
 \
   --edf=D:\Documents\WeChat Files\wxid_25ac4ia98up622\FileStorage\File\2022-10\IDE3.0.9\data\dat\en_msgs.txt \
   -cs -h+touchlib.sym --cmf=touchlib.cmf -z -QFT62F08X \
-  -oC:\Users\ADMINI~1\AppData\Local\Temp\s7h0.2 -Mtouchlib.map -E1 -ver=XC8 \
+  -oC:\Users\ADMINI~1\AppData\Local\Temp\s41s.2 -Mtouchlib.map -E1 -ver=XC8 \
   -ASTACK=0210Eh-022ffh -pstack=STACK -p_ad3nop_text=3h -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
   -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
@@ -31,7 +31,7 @@ Linker command line:
   -pconfig=CONFIG -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.obj touchlib.obj 
+  C:\Users\ADMINI~1\AppData\Local\Temp\s41s.obj touchlib.obj 
 
 Object code version is 3.11
 
@@ -40,7 +40,7 @@ Machine type is FT62F08X
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\ADMINI~1\AppData\Local\Temp\s7h0.obj
+C:\Users\ADMINI~1\AppData\Local\Temp\s41s.obj
                 end_init                             37       37        2        8       0
                 reset_vec                             0        0        2        0       0
 touchlib.obj    cinit                               816      816      7EA     102C       0

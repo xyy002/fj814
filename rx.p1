@@ -7314,9 +7314,9 @@ Version 3.2   GCC8 Compiled Intermediate Code
 [; ;rx.c: 180: RxData=buf_rec[2];
 "180
 [e = _RxData *U + &U _buf_rec * -> -> -> 2 `i `ui `ux -> -> # *U &U _buf_rec `ui `ux ]
-[; ;rx.c: 182: RemOutTime=100;
+[; ;rx.c: 182: RemOutTime=120;
 "182
-[e = _RemOutTime -> -> 100 `i `uc ]
+[e = _RemOutTime -> -> 120 `i `uc ]
 [; ;rx.c: 183: }
 "183
 [e :UE 386 ]

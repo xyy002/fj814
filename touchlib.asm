@@ -4745,8 +4745,8 @@
 		LDR 	2EH, 0H 			//0FE4 	182E
 		STR 	5AH 			//0FE5 	10DA
 
-		//;rx.c: 182: RemOutTime=100;
-		LDWI 	64H 			//0FE6 	0064
+		//;rx.c: 182: RemOutTime=120;
+		LDWI 	78H 			//0FE6 	0078
 		STR 	59H 			//0FE7 	10D9
 		RET 					//0FE8 	1008
 		MOVLB 	0H 			//0FE9 	1020
